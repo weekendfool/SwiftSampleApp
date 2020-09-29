@@ -14,12 +14,15 @@ var label1 = UILabel()
 struct Label {
     var label2 = UILabel()
     
-//    @IBOutlet weak var label3:UILabel!
+    
 }
 
 class MakeLabel {
+    var label2 = UILabel()
+//    @IBOutlet weak var label3:UILabel!
+    
     func make(view:UIView) {
-        var label2 = UILabel()
+        
 //        // グローバル変数
 //        label1.frame = CGRect(x: 10, y: 30, width: 160, height: 30)
 //        label1.text = "Buttn Name 1"
