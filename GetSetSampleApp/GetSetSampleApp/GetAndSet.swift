@@ -25,11 +25,12 @@ class Item {
         
         // intextPriceの本体に値がセットされるた時に呼ばれる
         // intextPric自身を使ってクラス内のメンバ変数に値をsetするイメージ
-        set(num){ // numにはintextPricePの値が代入されている
+        set { // numにはintextPricePの値が代入されている
             print("-------------------------------------")
-            answer = Int(price * num)
+            answer = Int(price * newValue) //newValueとは新しく定義されたintextPriceのこと
             print("price:\(price)")
-            print("num:\(num)")
+//            print("num:\(num)")
+            print("newValue:\(newValue)")
             print("Done Set")
         }
     }
