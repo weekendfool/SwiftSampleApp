@@ -44,7 +44,6 @@
 		8C6975DF2525BF1900DFE717 = {
 			isa = PBXGroup;
 			children = (
-				8C6976022525BF3C00DFE717 /* GetAndSet.swift */,
 				8C6975EA2525BF1900DFE717 /* GetSetSampleApp */,
 				8C6975E92525BF1900DFE717 /* Products */,
 			);
@@ -64,6 +63,7 @@
 				8C6975EB2525BF1900DFE717 /* AppDelegate.swift */,
 				8C6975ED2525BF1900DFE717 /* SceneDelegate.swift */,
 				8C6975EF2525BF1900DFE717 /* ViewController.swift */,
+				8C6976022525BF3C00DFE717 /* GetAndSet.swift */,
 				8C6975F12525BF1900DFE717 /* Main.storyboard */,
 				8C6975F72525BF1C00DFE717 /* Assets.xcassets */,
 				8C6975F92525BF1C00DFE717 /* LaunchScreen.storyboard */,

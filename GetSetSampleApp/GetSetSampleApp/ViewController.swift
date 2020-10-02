@@ -16,8 +16,13 @@ class ViewController: UIViewController {
         // Itemクラスのインスタンスを生成
         var item = Item()
         // Itemのgetを起動させる
-        item.intextPrice = 110
-        print(item.price)
+        item.price = 100
+        print("税込み価格\(item.intextPrice)")
+        
+        item.intextPrice = 200
+//        item.num = 10
+        
+        print("合計価格\(item.answer)")
     }
 
 
