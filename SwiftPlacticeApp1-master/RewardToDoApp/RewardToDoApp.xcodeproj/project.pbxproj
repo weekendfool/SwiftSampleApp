@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8CB1FD9C24A9000A00E7259D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1FD9B24A9000A00E7259D /* AppDelegate.swift */; };
+		8CB1FD9E24A9000A00E7259D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1FD9D24A9000A00E7259D /* SceneDelegate.swift */; };
+		8CB1FDA324A9000A00E7259D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1FDA124A9000A00E7259D /* Main.storyboard */; };
+		8CB1FDA624A9000B00E7259D /* RewardToDoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1FDA424A9000B00E7259D /* RewardToDoApp.xcdatamodeld */; };
+		8CB1FDA824A9000D00E7259D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1FDA724A9000D00E7259D /* Assets.xcassets */; };
+		8CB1FDAB24A9000D00E7259D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1FDA924A9000D00E7259D /* LaunchScreen.storyboard */; };
+		8CB1FDBA24A92C1800E7259D /* MakeToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1FDB924A92C1800E7259D /* MakeToDoViewController.swift */; };
+		8CB1FDBC24A9CFDF00E7259D /* ClearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1FDBB24A9CFDF00E7259D /* ClearViewController.swift */; };
+		8CB1FDBE24A9D00400E7259D /* SetRewardPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1FDBD24A9D00400E7259D /* SetRewardPointViewController.swift */; };
+		8CB1FDC024A9DD5A00E7259D /* QuestBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1FDBF24A9DD5A00E7259D /* QuestBoardViewController.swift */; };
+		8CB1FDE824B060F300E7259D /* RewardPointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1FDE724B060F300E7259D /* RewardPointTableViewCell.swift */; };
+		8CB1FDEA24B0612300E7259D /* QuestBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1FDE924B0612300E7259D /* QuestBoardTableViewCell.swift */; };
+		8CB1FDEC24B0617E00E7259D /* MakeToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1FDEB24B0617E00E7259D /* MakeToDoTableViewCell.swift */; };
+		8CDD07AA24C973AF000D8555 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDD07A924C973AF000D8555 /* CoreData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8CB1FD9824A9000A00E7259D /* RewardToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RewardToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CB1FD9B24A9000A00E7259D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8CB1FD9D24A9000A00E7259D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8CB1FDA224A9000A00E7259D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8CB1FDA524A9000B00E7259D /* RewardToDoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RewardToDoApp.xcdatamodel; sourceTree = "<group>"; };
+		8CB1FDA724A9000D00E7259D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CB1FDAA24A9000D00E7259D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8CB1FDAC24A9000D00E7259D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CB1FDB924A92C1800E7259D /* MakeToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeToDoViewController.swift; sourceTree = "<group>"; };
+		8CB1FDBB24A9CFDF00E7259D /* ClearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearViewController.swift; sourceTree = "<group>"; };
+		8CB1FDBD24A9D00400E7259D /* SetRewardPointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRewardPointViewController.swift; sourceTree = "<group>"; };
+		8CB1FDBF24A9DD5A00E7259D /* QuestBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestBoardViewController.swift; sourceTree = "<group>"; };
+		8CB1FDE724B060F300E7259D /* RewardPointTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPointTableViewCell.swift; sourceTree = "<group>"; };
+		8CB1FDE924B0612300E7259D /* QuestBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestBoardTableViewCell.swift; sourceTree = "<group>"; };
+		8CB1FDEB24B0617E00E7259D /* MakeToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeToDoTableViewCell.swift; sourceTree = "<group>"; };
+		8CDD07A924C973AF000D8555 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CB1FD9524A9000A00E7259D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8CB1FD8F24A9000A00E7259D = {
+			isa = PBXGroup;
+			children = (
+				8CB1FD9A24A9000A00E7259D /* RewardToDoApp */,
+				8CB1FD9924A9000A00E7259D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8CB1FD9924A9000A00E7259D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CB1FD9824A9000A00E7259D /* RewardToDoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CB1FD9A24A9000A00E7259D /* RewardToDoApp */ = {
+			isa = PBXGroup;
+			children = (
+				8CB1FDB624A901C200E7259D /* Model */,
+				8CB1FDB724A901CF00E7259D /* View */,
+				8CB1FDB824A901DC00E7259D /* Controoler */,
+				8CB1FDAC24A9000D00E7259D /* Info.plist */,
+				8CB1FDA424A9000B00E7259D /* RewardToDoApp.xcdatamodeld */,
+			);
+			path = RewardToDoApp;
+			sourceTree = "<group>";
+		};
+		8CB1FDB624A901C200E7259D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CDD07A924C973AF000D8555 /* CoreData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8CB1FDB724A901CF00E7259D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CB1FDA124A9000A00E7259D /* Main.storyboard */,
+				8CB1FDA724A9000D00E7259D /* Assets.xcassets */,
+				8CB1FDA924A9000D00E7259D /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CB1FDB824A901DC00E7259D /* Controoler */ = {
+			isa = PBXGroup;
+			children = (
+				8CB1FD9B24A9000A00E7259D /* AppDelegate.swift */,
+				8CB1FD9D24A9000A00E7259D /* SceneDelegate.swift */,
+				8CB1FDB924A92C1800E7259D /* MakeToDoViewController.swift */,
+				8CB1FDBB24A9CFDF00E7259D /* ClearViewController.swift */,
+				8CB1FDBD24A9D00400E7259D /* SetRewardPointViewController.swift */,
+				8CB1FDBF24A9DD5A00E7259D /* QuestBoardViewController.swift */,
+				8CDD07AB24CEB2B7000D8555 /* CellController */,
+			);
+			path = Controoler;
+			sourceTree = "<group>";
+		};
+		8CDD07AB24CEB2B7000D8555 /* CellController */ = {
+			isa = PBXGroup;
+			children = (
+				8CB1FDE724B060F300E7259D /* RewardPointTableViewCell.swift */,
+				8CB1FDE924B0612300E7259D /* QuestBoardTableViewCell.swift */,
+				8CB1FDEB24B0617E00E7259D /* MakeToDoTableViewCell.swift */,
+			);
+			path = CellController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8CB1FD9724A9000A00E7259D /* RewardToDoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CB1FDAF24A9000D00E7259D /* Build configuration list for PBXNativeTarget "RewardToDoApp" */;
+			buildPhases = (
+				8CB1FD9424A9000A00E7259D /* Sources */,
+				8CB1FD9524A9000A00E7259D /* Frameworks */,
+				8CB1FD9624A9000A00E7259D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RewardToDoApp;
+			productName = RewardToDoApp;
+			productReference = 8CB1FD9824A9000A00E7259D /* RewardToDoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CB1FD9024A9000A00E7259D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "尾原徳泰";
+				TargetAttributes = {
+					8CB1FD9724A9000A00E7259D = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 8CB1FD9324A9000A00E7259D /* Build configuration list for PBXProject "RewardToDoApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8CB1FD8F24A9000A00E7259D;
+			productRefGroup = 8CB1FD9924A9000A00E7259D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CB1FD9724A9000A00E7259D /* RewardToDoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CB1FD9624A9000A00E7259D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CB1FDAB24A9000D00E7259D /* LaunchScreen.storyboard in Resources */,
+				8CB1FDA824A9000D00E7259D /* Assets.xcassets in Resources */,
+				8CB1FDA324A9000A00E7259D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CB1FD9424A9000A00E7259D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CB1FD9C24A9000A00E7259D /* AppDelegate.swift in Sources */,
+				8CB1FDA624A9000B00E7259D /* RewardToDoApp.xcdatamodeld in Sources */,
+				8CB1FDBE24A9D00400E7259D /* SetRewardPointViewController.swift in Sources */,
+				8CB1FDBA24A92C1800E7259D /* MakeToDoViewController.swift in Sources */,
+				8CDD07AA24C973AF000D8555 /* CoreData.swift in Sources */,
+				8CB1FDBC24A9CFDF00E7259D /* ClearViewController.swift in Sources */,
+				8CB1FDC024A9DD5A00E7259D /* QuestBoardViewController.swift in Sources */,
+				8CB1FDE824B060F300E7259D /* RewardPointTableViewCell.swift in Sources */,
+				8CB1FDEC24B0617E00E7259D /* MakeToDoTableViewCell.swift in Sources */,
+				8CB1FD9E24A9000A00E7259D /* SceneDelegate.swift in Sources */,
+				8CB1FDEA24B0612300E7259D /* QuestBoardTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8CB1FDA124A9000A00E7259D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CB1FDA224A9000A00E7259D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8CB1FDA924A9000D00E7259D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CB1FDAA24A9000D00E7259D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8CB1FDAD24A9000D00E7259D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8CB1FDAE24A9000D00E7259D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CB1FDB024A9000D00E7259D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = RewardToDoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.RewardToDoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8CB1FDB124A9000D00E7259D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = RewardToDoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.RewardToDoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CB1FD9324A9000A00E7259D /* Build configuration list for PBXProject "RewardToDoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CB1FDAD24A9000D00E7259D /* Debug */,
+				8CB1FDAE24A9000D00E7259D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CB1FDAF24A9000D00E7259D /* Build configuration list for PBXNativeTarget "RewardToDoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CB1FDB024A9000D00E7259D /* Debug */,
+				8CB1FDB124A9000D00E7259D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8CB1FDA424A9000B00E7259D /* RewardToDoApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8CB1FDA524A9000B00E7259D /* RewardToDoApp.xcdatamodel */,
+			);
+			currentVersion = 8CB1FDA524A9000B00E7259D /* RewardToDoApp.xcdatamodel */;
+			path = RewardToDoApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8CB1FD9024A9000A00E7259D /* Project object */;
+}

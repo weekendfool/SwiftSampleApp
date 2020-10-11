@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BrP-k8-Ben">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="8rV-bN-akH">
+            <objects>
+                <viewController id="BrP-k8-Ben" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2NJ-UL-lV4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homes" translatesAutoresizingMaskIntoConstraints="NO" id="UVX-OR-af2">
+                                <rect key="frame" x="130" y="0.0" width="245" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="YrO-vm-Sb5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMN-Cj-RAW">
+                                <rect key="frame" x="0.0" y="85" width="375" height="50.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="GNs-YG-t7x"/>
+                                    <constraint firstAttribute="height" constant="50.5" id="lKd-Vg-Vyi"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="踊る暗号メーカー">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="43" name="TsukuARdGothic-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spy" translatesAutoresizingMaskIntoConstraints="NO" id="Hml-dZ-f0w">
+                                <rect key="frame" x="0.0" y="0.0" width="245" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="yXQ-Yo-6BT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75712697819999997" green="0.87986834089999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UVX-OR-af2" firstAttribute="top" secondItem="sAS-tb-W4G" secondAttribute="top" id="7hB-xJ-reB"/>
+                            <constraint firstItem="UMN-Cj-RAW" firstAttribute="top" secondItem="sAS-tb-W4G" secondAttribute="top" constant="85" id="F8l-ho-LwH"/>
+                            <constraint firstItem="Hml-dZ-f0w" firstAttribute="bottom" secondItem="sAS-tb-W4G" secondAttribute="bottom" id="L3G-KN-6aG"/>
+                            <constraint firstAttribute="trailing" secondItem="UMN-Cj-RAW" secondAttribute="trailing" id="Mdq-hs-zHa"/>
+                            <constraint firstItem="UMN-Cj-RAW" firstAttribute="leading" secondItem="sAS-tb-W4G" secondAttribute="leading" id="P5P-m6-MdU"/>
+                            <constraint firstItem="UVX-OR-af2" firstAttribute="trailing" secondItem="sAS-tb-W4G" secondAttribute="trailing" id="TyD-kp-r3P"/>
+                            <constraint firstItem="Hml-dZ-f0w" firstAttribute="top" secondItem="sAS-tb-W4G" secondAttribute="top" id="srK-Fb-uf6"/>
+                            <constraint firstItem="Hml-dZ-f0w" firstAttribute="leading" secondItem="sAS-tb-W4G" secondAttribute="leading" id="tfv-fZ-LKs"/>
+                            <constraint firstItem="sAS-tb-W4G" firstAttribute="bottom" secondItem="UVX-OR-af2" secondAttribute="bottom" id="vdf-Qs-dZm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sAS-tb-W4G"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wdf-oc-Vhx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7178" y="-301"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homes" width="500" height="500"/>
+        <image name="spy" width="500" height="500"/>
+    </resources>
+</document>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="whingingEater" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backImageMan" translatesAutoresizingMaskIntoConstraints="NO" id="wG5-50-M8W">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="愚痴をぶちまけろ!" textAlignment="center" minimumFontSize="17" background="speachBubble" translatesAutoresizingMaskIntoConstraints="NO" id="Tkl-pg-Exd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="315"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="315" id="7cP-Um-DgH"/>
+                                    <constraint firstAttribute="width" constant="375" id="EGd-Qd-Pno"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Tkl-pg-Exd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9D1-nI-bNs"/>
+                            <constraint firstItem="Tkl-pg-Exd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FT7-7s-e9i"/>
+                            <constraint firstItem="Tkl-pg-Exd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mn0-ua-Mmt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wG5-50-M8W" secondAttribute="trailing" id="SjR-cJ-9zs"/>
+                            <constraint firstItem="wG5-50-M8W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zf7-4V-Q1A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wG5-50-M8W" secondAttribute="bottom" id="gTn-1W-v9s"/>
+                            <constraint firstItem="wG5-50-M8W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="npL-A8-zSY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xED-y4-Qlm"/>
+                    <connections>
+                        <outlet property="textField" destination="Tkl-pg-Exd" id="IzN-jx-aJh"/>
+                        <segue destination="9wM-8V-cx0" kind="presentation" identifier="toNext" modalPresentationStyle="fullScreen" id="668-9t-eiT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077.5999999999999" y="129.98500749625188"/>
+        </scene>
+        <!--Animation View Controller-->
+        <scene sceneID="ndl-XK-4YG">
+            <objects>
+                <viewController id="9wM-8V-cx0" customClass="AnimationViewController" customModule="whingingEater" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YA8-zO-AwY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badkimageSea" translatesAutoresizingMaskIntoConstraints="NO" id="Ems-hg-Xo6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUN-Xt-9tp">
+                                <rect key="frame" x="24" y="52" width="321" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="そんなもんは食わせちまえ！">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="eatButtonAction:" destination="9wM-8V-cx0" eventType="touchUpInside" id="Mu2-Hx-4ld"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ems-hg-Xo6" firstAttribute="top" secondItem="EQ5-8t-ttp" secondAttribute="top" id="FgB-9V-1MF"/>
+                            <constraint firstItem="EQ5-8t-ttp" firstAttribute="trailing" secondItem="Ems-hg-Xo6" secondAttribute="trailing" id="Ols-vL-zcc"/>
+                            <constraint firstItem="Ems-hg-Xo6" firstAttribute="leading" secondItem="EQ5-8t-ttp" secondAttribute="leading" id="tKh-xd-6uL"/>
+                            <constraint firstItem="Ems-hg-Xo6" firstAttribute="bottom" secondItem="EQ5-8t-ttp" secondAttribute="bottom" id="xhw-Bg-9hl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EQ5-8t-ttp"/>
+                    </view>
+                    <connections>
+                        <outlet property="eatButton" destination="ZUN-Xt-9tp" id="P9x-OQ-RXQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hsd-7j-eGD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876" y="129.98500749625188"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backImageMan" width="640" height="640"/>
+        <image name="badkimageSea" width="640" height="480"/>
+        <image name="speachBubble" width="640" height="462"/>
+    </resources>
+</document>

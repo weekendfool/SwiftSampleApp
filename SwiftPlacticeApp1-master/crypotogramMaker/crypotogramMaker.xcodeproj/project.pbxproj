@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C26D496244C7BFF0058C4B5 /* CopyUILabelFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26D495244C7BFF0058C4B5 /* CopyUILabelFile.swift */; };
+		8C69682C244E2DEE00F628AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C69682B244E2DEE00F628AC /* LaunchScreen.storyboard */; };
+		8C8F09942447751B00E6C981 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8F09932447751B00E6C981 /* HomeViewController.swift */; };
+		8C8F0996244775AE00E6C981 /* BeforeEncryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8F0995244775AE00E6C981 /* BeforeEncryptViewController.swift */; };
+		8C8F09982447760100E6C981 /* AfterEncryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8F09972447760100E6C981 /* AfterEncryptViewController.swift */; };
+		8C8F099A2447770900E6C981 /* LastTimeKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8F09992447770900E6C981 /* LastTimeKeyViewController.swift */; };
+		8C8F099C2447775300E6C981 /* BeforeDecryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8F099B2447775300E6C981 /* BeforeDecryptViewController.swift */; };
+		8C8F099E2447776F00E6C981 /* AfterDecryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8F099D2447776F00E6C981 /* AfterDecryptViewController.swift */; };
+		8CA43DE1244CCAA30068D318 /* PlaceHolderTextViewFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA43DE0244CCAA30068D318 /* PlaceHolderTextViewFile.swift */; };
+		8CBFBD4C243F1E160001A8A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBFBD4B243F1E160001A8A7 /* AppDelegate.swift */; };
+		8CBFBD4E243F1E160001A8A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBFBD4D243F1E160001A8A7 /* SceneDelegate.swift */; };
+		8CBFBD53243F1E160001A8A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBFBD51243F1E160001A8A7 /* Main.storyboard */; };
+		8CBFBD55243F1E1A0001A8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CBFBD54243F1E1A0001A8A7 /* Assets.xcassets */; };
+		8CE5C075244595230060B6F2 /* HiraganaFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE5C074244595230060B6F2 /* HiraganaFile.swift */; };
+		8CE5C077244599EF0060B6F2 /* KatakanaFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE5C076244599EF0060B6F2 /* KatakanaFile.swift */; };
+		8CE5C0792445A6AD0060B6F2 /* NumberFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE5C0782445A6AD0060B6F2 /* NumberFile.swift */; };
+		8CE5C07B2445A6DB0060B6F2 /* AlphabetFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE5C07A2445A6DB0060B6F2 /* AlphabetFile.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8C26D495244C7BFF0058C4B5 /* CopyUILabelFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyUILabelFile.swift; sourceTree = "<group>"; };
+		8C69682B244E2DEE00F628AC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C8F09932447751B00E6C981 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8C8F0995244775AE00E6C981 /* BeforeEncryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeEncryptViewController.swift; sourceTree = "<group>"; };
+		8C8F09972447760100E6C981 /* AfterEncryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterEncryptViewController.swift; sourceTree = "<group>"; };
+		8C8F09992447770900E6C981 /* LastTimeKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTimeKeyViewController.swift; sourceTree = "<group>"; };
+		8C8F099B2447775300E6C981 /* BeforeDecryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeDecryptViewController.swift; sourceTree = "<group>"; };
+		8C8F099D2447776F00E6C981 /* AfterDecryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterDecryptViewController.swift; sourceTree = "<group>"; };
+		8CA43DE0244CCAA30068D318 /* PlaceHolderTextViewFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextViewFile.swift; sourceTree = "<group>"; };
+		8CBFBD48243F1E160001A8A7 /* 暗号メーカー.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "暗号メーカー.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CBFBD4B243F1E160001A8A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8CBFBD4D243F1E160001A8A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8CBFBD52243F1E160001A8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8CBFBD54243F1E1A0001A8A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CBFBD59243F1E1A0001A8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CE5C074244595230060B6F2 /* HiraganaFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaFile.swift; sourceTree = "<group>"; };
+		8CE5C076244599EF0060B6F2 /* KatakanaFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatakanaFile.swift; sourceTree = "<group>"; };
+		8CE5C0782445A6AD0060B6F2 /* NumberFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFile.swift; sourceTree = "<group>"; };
+		8CE5C07A2445A6DB0060B6F2 /* AlphabetFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetFile.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CBFBD45243F1E160001A8A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8CBFBD3F243F1E160001A8A7 = {
+			isa = PBXGroup;
+			children = (
+				8CBFBD4A243F1E160001A8A7 /* crypotogramMaker */,
+				8CBFBD49243F1E160001A8A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8CBFBD49243F1E160001A8A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CBFBD48243F1E160001A8A7 /* 暗号メーカー.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CBFBD4A243F1E160001A8A7 /* crypotogramMaker */ = {
+			isa = PBXGroup;
+			children = (
+				8CE5C0732445932D0060B6F2 /* Model */,
+				8CE5C072244593270060B6F2 /* View */,
+				8CE5C071244593220060B6F2 /* Controller */,
+				8CBFBD59243F1E1A0001A8A7 /* Info.plist */,
+			);
+			path = crypotogramMaker;
+			sourceTree = "<group>";
+		};
+		8CE5C071244593220060B6F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8CBFBD4B243F1E160001A8A7 /* AppDelegate.swift */,
+				8CBFBD4D243F1E160001A8A7 /* SceneDelegate.swift */,
+				8C8F09932447751B00E6C981 /* HomeViewController.swift */,
+				8C8F0995244775AE00E6C981 /* BeforeEncryptViewController.swift */,
+				8C8F09972447760100E6C981 /* AfterEncryptViewController.swift */,
+				8C8F09992447770900E6C981 /* LastTimeKeyViewController.swift */,
+				8C8F099B2447775300E6C981 /* BeforeDecryptViewController.swift */,
+				8C8F099D2447776F00E6C981 /* AfterDecryptViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8CE5C072244593270060B6F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CBFBD51243F1E160001A8A7 /* Main.storyboard */,
+				8CBFBD54243F1E1A0001A8A7 /* Assets.xcassets */,
+				8C69682B244E2DEE00F628AC /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CE5C0732445932D0060B6F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CE5C074244595230060B6F2 /* HiraganaFile.swift */,
+				8CE5C076244599EF0060B6F2 /* KatakanaFile.swift */,
+				8CE5C07A2445A6DB0060B6F2 /* AlphabetFile.swift */,
+				8CE5C0782445A6AD0060B6F2 /* NumberFile.swift */,
+				8C26D495244C7BFF0058C4B5 /* CopyUILabelFile.swift */,
+				8CA43DE0244CCAA30068D318 /* PlaceHolderTextViewFile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8CBFBD47243F1E160001A8A7 /* crypotogramMaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CBFBD5C243F1E1A0001A8A7 /* Build configuration list for PBXNativeTarget "crypotogramMaker" */;
+			buildPhases = (
+				8CBFBD44243F1E160001A8A7 /* Sources */,
+				8CBFBD45243F1E160001A8A7 /* Frameworks */,
+				8CBFBD46243F1E160001A8A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = crypotogramMaker;
+			productName = crypotogramMaker;
+			productReference = 8CBFBD48243F1E160001A8A7 /* 暗号メーカー.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CBFBD40243F1E160001A8A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "尾原徳泰";
+				TargetAttributes = {
+					8CBFBD47243F1E160001A8A7 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 8CBFBD43243F1E160001A8A7 /* Build configuration list for PBXProject "crypotogramMaker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8CBFBD3F243F1E160001A8A7;
+			productRefGroup = 8CBFBD49243F1E160001A8A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CBFBD47243F1E160001A8A7 /* crypotogramMaker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CBFBD46243F1E160001A8A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C69682C244E2DEE00F628AC /* LaunchScreen.storyboard in Resources */,
+				8CBFBD55243F1E1A0001A8A7 /* Assets.xcassets in Resources */,
+				8CBFBD53243F1E160001A8A7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CBFBD44243F1E160001A8A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CE5C075244595230060B6F2 /* HiraganaFile.swift in Sources */,
+				8C8F09982447760100E6C981 /* AfterEncryptViewController.swift in Sources */,
+				8C8F099E2447776F00E6C981 /* AfterDecryptViewController.swift in Sources */,
+				8C8F099C2447775300E6C981 /* BeforeDecryptViewController.swift in Sources */,
+				8C8F099A2447770900E6C981 /* LastTimeKeyViewController.swift in Sources */,
+				8CE5C077244599EF0060B6F2 /* KatakanaFile.swift in Sources */,
+				8C8F09942447751B00E6C981 /* HomeViewController.swift in Sources */,
+				8CA43DE1244CCAA30068D318 /* PlaceHolderTextViewFile.swift in Sources */,
+				8C8F0996244775AE00E6C981 /* BeforeEncryptViewController.swift in Sources */,
+				8CBFBD4C243F1E160001A8A7 /* AppDelegate.swift in Sources */,
+				8CBFBD4E243F1E160001A8A7 /* SceneDelegate.swift in Sources */,
+				8CE5C07B2445A6DB0060B6F2 /* AlphabetFile.swift in Sources */,
+				8CE5C0792445A6AD0060B6F2 /* NumberFile.swift in Sources */,
+				8C26D496244C7BFF0058C4B5 /* CopyUILabelFile.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8CBFBD51243F1E160001A8A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CBFBD52243F1E160001A8A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8CBFBD5A243F1E1A0001A8A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8CBFBD5B243F1E1A0001A8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CBFBD5D243F1E1A0001A8A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.4;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = crypotogramMaker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.cryptogramMaker;
+				PRODUCT_NAME = "暗号メーカー";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8CBFBD5E243F1E1A0001A8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.4;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = crypotogramMaker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.cryptogramMaker;
+				PRODUCT_NAME = "暗号メーカー";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CBFBD43243F1E160001A8A7 /* Build configuration list for PBXProject "crypotogramMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CBFBD5A243F1E1A0001A8A7 /* Debug */,
+				8CBFBD5B243F1E1A0001A8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CBFBD5C243F1E1A0001A8A7 /* Build configuration list for PBXNativeTarget "crypotogramMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CBFBD5D243F1E1A0001A8A7 /* Debug */,
+				8CBFBD5E243F1E1A0001A8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8CBFBD40243F1E160001A8A7 /* Project object */;
+}
