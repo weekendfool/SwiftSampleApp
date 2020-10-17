@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7039EFF6-782C-4EE2-8C59-A3B59898B742"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A23E098-BA30-479D-A950-C38C4C51B5A3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UIButtonSetTimingSampleApp/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4A23E098-BA30-479D-A950-C38C4C51B5A3 - 70ab327f527e2cfc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UIButtonSetTimingSampleApp.ViewController.label.getter : __C.UILabel"
+                  moduleName = "UIButtonSetTimingSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/Documents/GitHub/SwiftSampleApp/UIButtonSetTimingSampleApp/UIButtonSetTimingSampleApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "4A23E098-BA30-479D-A950-C38C4C51B5A3 - 6f74e3e48692c9b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UIButtonSetTimingSampleApp.ViewController.label.setter : __C.UILabel"
+                  moduleName = "UIButtonSetTimingSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/Documents/GitHub/SwiftSampleApp/UIButtonSetTimingSampleApp/UIButtonSetTimingSampleApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "4A23E098-BA30-479D-A950-C38C4C51B5A3 - 1021c8cf9616f7b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UIButtonSetTimingSampleApp.ViewController.label.modify : __C.UILabel"
+                  moduleName = "UIButtonSetTimingSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/Documents/GitHub/SwiftSampleApp/UIButtonSetTimingSampleApp/UIButtonSetTimingSampleApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "4A23E098-BA30-479D-A950-C38C4C51B5A3 - a3b9008ad93c34a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UIButtonSetTimingSampleApp.ViewController.label.modify : __C.UILabel with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "UIButtonSetTimingSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/Documents/GitHub/SwiftSampleApp/UIButtonSetTimingSampleApp/UIButtonSetTimingSampleApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "4A23E098-BA30-479D-A950-C38C4C51B5A3 - cdf417efac9d1c66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UIButtonSetTimingSampleApp.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; UIButtonSetTimingSampleApp.ViewController"
+                  moduleName = "UIButtonSetTimingSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/Documents/GitHub/SwiftSampleApp/UIButtonSetTimingSampleApp/UIButtonSetTimingSampleApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "175">
+               </Location>
+               <Location
+                  uuid = "4A23E098-BA30-479D-A950-C38C4C51B5A3 - 75c1c495cb261020"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UIButtonSetTimingSampleApp.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;UIButtonSetTimingSampleApp.ViewController&gt;"
+                  moduleName = "UIButtonSetTimingSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/Documents/GitHub/SwiftSampleApp/UIButtonSetTimingSampleApp/UIButtonSetTimingSampleApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "125">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
