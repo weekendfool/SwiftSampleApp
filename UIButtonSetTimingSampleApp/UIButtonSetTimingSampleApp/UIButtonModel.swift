@@ -12,7 +12,8 @@ import UIKit
 
 class MakeButton {
     
-    @IBOutlet weak var button: UIButton!
+//    @IBOutlet weak var button: UIButton!
+    var button = UIButton()
     
     func setUIButton() {
         
