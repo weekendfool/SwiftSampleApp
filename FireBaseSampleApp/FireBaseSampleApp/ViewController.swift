@@ -12,6 +12,7 @@ import Firebase
 class ViewController: UIViewController {
 
     @IBOutlet weak var sampleTextField: UITextField!
+    @IBOutlet weak var sampleLabel: UILabel!
     
     // インスタンス変数
     var DBRef: DatabaseReference!
@@ -25,10 +26,17 @@ class ViewController: UIViewController {
 
     @IBAction func tappedAddButton(_ sender: Any) {
         // inputされたデータを変数に格納
-        let data = ["naem": sampleTextField.text!]
+        let data = ["name": sampleTextField.text!]
         DBRef.child("user/01").setValue(data)
         
     }
     
+    @IBAction func tappedGetButton(_ sender: Any) {
+        // どの部分を読み出してくるか
+        let defaultName = DBRef.child("user/01/name")
+        // 読み出し
+        defaultName.observe(.value) { (snap: DataSnapshot) in self.sampleLabel.text = (snap.value! as! String).description
+        }
+    }
 }
 
