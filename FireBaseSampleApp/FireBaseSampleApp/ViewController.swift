@@ -41,5 +41,8 @@ class ViewController: UIViewController {
         defaultName.observe(.value) { (snap: DataSnapshot) in self.sampleLabel.text = (snap.value! as! String).description
         }
     }
+    @IBAction func tappedRemovebutton(_ sender: Any) {
+        DBRef.child("user/01/name").removeValue()
+    }
 }
 
