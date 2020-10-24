@@ -27,7 +27,10 @@ class ViewController: UIViewController {
     @IBAction func tappedAddButton(_ sender: Any) {
         // inputされたデータを変数に格納
         let data = ["name": sampleTextField.text!]
-        DBRef.child("user/01").setValue(data)
+        let data2 = ["name2": sampleTextField.text!]
+//        DBRef.child("user/01").setValue(data)
+        DBRef.child("user/01").updateChildValues(data2)
+        
         
     }
     
