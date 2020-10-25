@@ -36,7 +36,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         // サインアップ処理
         // 第一引数にメールアドレス、第二引数にパスワード
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-          // ...
+          
         }
 
     }
