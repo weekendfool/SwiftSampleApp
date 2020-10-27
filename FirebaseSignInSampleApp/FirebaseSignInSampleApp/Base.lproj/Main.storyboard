@@ -58,8 +58,8 @@
                     <connections>
                         <outlet property="emailTextField" destination="Yf8-FU-x78" id="FsW-na-yOg"/>
                         <outlet property="passwordTextField" destination="xEo-qv-fE8" id="7YX-Qv-vSD"/>
-                        <segue destination="dPB-Qz-L0g" kind="show" id="vLr-Xz-iwi"/>
-                        <segue destination="6mR-W7-4Nv" kind="show" id="vgo-12-hpt"/>
+                        <segue destination="dPB-Qz-L0g" kind="show" identifier="toLogin" id="vLr-Xz-iwi"/>
+                        <segue destination="6mR-W7-4Nv" kind="show" identifier="toView" id="vgo-12-hpt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="2618.840579710145" y="129.91071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="q0G-yS-yVo">
             <objects>
-                <viewController id="dPB-Qz-L0g" sceneMemberID="viewController">
+                <viewController id="dPB-Qz-L0g" customClass="LoginViewController" customModule="FirebaseSignInSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rA7-c3-MKG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

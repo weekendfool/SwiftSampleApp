@@ -13,7 +13,7 @@
 		8C121E0A2543ED9000D4C186 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C121E092543ED9000D4C186 /* SignupViewController.swift */; };
 		8CAFFC682543E60100480E03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFFC672543E60100480E03 /* AppDelegate.swift */; };
 		8CAFFC6A2543E60100480E03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFFC692543E60100480E03 /* SceneDelegate.swift */; };
-		8CAFFC6C2543E60100480E03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFFC6B2543E60100480E03 /* ViewController.swift */; };
+		8CAFFC6C2543E60100480E03 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFFC6B2543E60100480E03 /* LoginViewController.swift */; };
 		8CAFFC6F2543E60100480E03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAFFC6D2543E60100480E03 /* Main.storyboard */; };
 		8CAFFC722543E60100480E03 /* FirebaseSignInSampleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFFC702543E60100480E03 /* FirebaseSignInSampleApp.xcdatamodeld */; };
 		8CAFFC742543E60200480E03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CAFFC732543E60200480E03 /* Assets.xcassets */; };
@@ -49,7 +49,7 @@
 		8CAFFC642543E60100480E03 /* FirebaseSignInSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseSignInSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAFFC672543E60100480E03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CAFFC692543E60100480E03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8CAFFC6B2543E60100480E03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8CAFFC6B2543E60100480E03 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8CAFFC6E2543E60100480E03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CAFFC712543E60100480E03 /* FirebaseSignInSampleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FirebaseSignInSampleApp.xcdatamodel; sourceTree = "<group>"; };
 		8CAFFC732543E60200480E03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 			children = (
 				8CAFFC672543E60100480E03 /* AppDelegate.swift */,
 				8CAFFC692543E60100480E03 /* SceneDelegate.swift */,
-				8CAFFC6B2543E60100480E03 /* ViewController.swift */,
+				8CAFFC6B2543E60100480E03 /* LoginViewController.swift */,
 				8C121E092543ED9000D4C186 /* SignupViewController.swift */,
 				8CAFFC6D2543E60100480E03 /* Main.storyboard */,
 				8CAFFC732543E60200480E03 /* Assets.xcassets */,
@@ -418,7 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CAFFC722543E60100480E03 /* FirebaseSignInSampleApp.xcdatamodeld in Sources */,
-				8CAFFC6C2543E60100480E03 /* ViewController.swift in Sources */,
+				8CAFFC6C2543E60100480E03 /* LoginViewController.swift in Sources */,
 				8C121E0A2543ED9000D4C186 /* SignupViewController.swift in Sources */,
 				8CAFFC682543E60100480E03 /* AppDelegate.swift in Sources */,
 				8CAFFC6A2543E60100480E03 /* SceneDelegate.swift in Sources */,
