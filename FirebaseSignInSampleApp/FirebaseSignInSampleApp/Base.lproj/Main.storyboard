@@ -10,7 +10,7 @@
         <!--Signup View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignupViewController" customModule="FirebaseSignInSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="SignupViewController" customModule="FirebaseSignInSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,7 @@
         <!--View Controller-->
         <scene sceneID="C9Q-tj-CgF">
             <objects>
-                <viewController id="g9R-cm-aoO" sceneMemberID="viewController">
+                <viewController id="g9R-cm-aoO" customClass="ViewController" customModule="FirebaseSignInSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HAC-bl-dRY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,6 +117,9 @@
                                 <rect key="frame" x="157" y="537" width="101" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logout:" destination="g9R-cm-aoO" eventType="touchUpInside" id="yJ0-S2-F5f"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebR-S6-Svg">
                                 <rect key="frame" x="20" y="147" width="374" height="34"/>
@@ -128,12 +131,19 @@
                                 <rect key="frame" x="157" y="450" width="101" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="post:" destination="g9R-cm-aoO" eventType="touchUpInside" id="ePp-NE-4QB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="FjQ-0u-N2z"/>
                     </view>
                     <navigationItem key="navigationItem" id="RON-vg-6Ac"/>
+                    <connections>
+                        <outlet property="label" destination="wta-Sz-xSh" id="zxD-4m-4Zr"/>
+                        <outlet property="textField" destination="ebR-S6-Svg" id="P6s-zU-9QP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Tr-1N-VPm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,6 +219,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pnU-Fz-r1w"/>
+        <segue reference="vgo-12-hpt"/>
     </inferredMetricsTieBreakers>
 </document>
