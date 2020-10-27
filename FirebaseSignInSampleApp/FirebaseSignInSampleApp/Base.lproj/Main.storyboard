@@ -154,13 +154,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ivu-QM-O5Z">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ivu-QM-O5Z">
                                 <rect key="frame" x="20" y="173" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCh-xP-n0h">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fCh-xP-n0h">
                                 <rect key="frame" x="20" y="247" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -170,6 +170,9 @@
                                 <rect key="frame" x="96" y="386" width="222" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="didRefgisterUser:" destination="dPB-Qz-L0g" eventType="touchUpInside" id="bbr-Nx-k6G"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -177,7 +180,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="NdW-Kw-xDL"/>
                     <connections>
-                        <segue destination="6mR-W7-4Nv" kind="show" id="pnU-Fz-r1w"/>
+                        <outlet property="emailTextField" destination="ivu-QM-O5Z" id="zbM-r9-NH1"/>
+                        <outlet property="passwordTextField" destination="fCh-xP-n0h" id="8RS-VL-lmo"/>
+                        <segue destination="6mR-W7-4Nv" kind="show" identifier="toVC" id="pnU-Fz-r1w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7O-Am-48a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
