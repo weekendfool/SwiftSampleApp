@@ -10,12 +10,10 @@
 		307A97F5347713ADD1F01C64 /* Pods_FirebaseSignInSampleApp_FirebaseSignInSampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBBB41D52F576128CFC3FACB /* Pods_FirebaseSignInSampleApp_FirebaseSignInSampleAppUITests.framework */; };
 		633D3EB64BB37B8FEBD9DD2A /* Pods_FirebaseSignInSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D990CA30CF80EA42E3F6FA /* Pods_FirebaseSignInSampleAppTests.framework */; };
 		77048D6B301B16E50DC8E9C3 /* Pods_FirebaseSignInSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B85CD79105A3CF275B64CCE /* Pods_FirebaseSignInSampleApp.framework */; };
-		8C0257492547C80000C2D0A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0257482547C80000C2D0A3 /* ViewController.swift */; };
-		8C02574B2547D28B00C2D0A3 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C02574A2547D28B00C2D0A3 /* ListViewController.swift */; };
-		8C121E0A2543ED9000D4C186 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C121E092543ED9000D4C186 /* SignupViewController.swift */; };
+		8C0257512548019600C2D0A3 /* UserEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0257502548019600C2D0A3 /* UserEditViewController.swift */; };
+		8C025753254801D200C2D0A3 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C025752254801D200C2D0A3 /* UsersListViewController.swift */; };
 		8CAFFC682543E60100480E03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFFC672543E60100480E03 /* AppDelegate.swift */; };
 		8CAFFC6A2543E60100480E03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFFC692543E60100480E03 /* SceneDelegate.swift */; };
-		8CAFFC6C2543E60100480E03 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFFC6B2543E60100480E03 /* LoginViewController.swift */; };
 		8CAFFC6F2543E60100480E03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAFFC6D2543E60100480E03 /* Main.storyboard */; };
 		8CAFFC722543E60100480E03 /* FirebaseSignInSampleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFFC702543E60100480E03 /* FirebaseSignInSampleApp.xcdatamodeld */; };
 		8CAFFC742543E60200480E03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CAFFC732543E60200480E03 /* Assets.xcassets */; };
@@ -47,13 +45,11 @@
 		2DF579EB2038AD052A4ED95A /* Pods-FirebaseSignInSampleAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSignInSampleAppTests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseSignInSampleAppTests/Pods-FirebaseSignInSampleAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		5859EDC3246684FFC38A6539 /* Pods-FirebaseSignInSampleApp-FirebaseSignInSampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSignInSampleApp-FirebaseSignInSampleAppUITests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseSignInSampleApp-FirebaseSignInSampleAppUITests/Pods-FirebaseSignInSampleApp-FirebaseSignInSampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7C74615E53ABF2676C6A923D /* Pods-FirebaseSignInSampleApp-FirebaseSignInSampleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSignInSampleApp-FirebaseSignInSampleAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseSignInSampleApp-FirebaseSignInSampleAppUITests/Pods-FirebaseSignInSampleApp-FirebaseSignInSampleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8C0257482547C80000C2D0A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8C02574A2547D28B00C2D0A3 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		8C121E092543ED9000D4C186 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		8C0257502548019600C2D0A3 /* UserEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditViewController.swift; sourceTree = "<group>"; };
+		8C025752254801D200C2D0A3 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
 		8CAFFC642543E60100480E03 /* FirebaseSignInSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseSignInSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAFFC672543E60100480E03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CAFFC692543E60100480E03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8CAFFC6B2543E60100480E03 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8CAFFC6E2543E60100480E03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CAFFC712543E60100480E03 /* FirebaseSignInSampleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FirebaseSignInSampleApp.xcdatamodel; sourceTree = "<group>"; };
 		8CAFFC732543E60200480E03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,10 +137,8 @@
 			children = (
 				8CAFFC672543E60100480E03 /* AppDelegate.swift */,
 				8CAFFC692543E60100480E03 /* SceneDelegate.swift */,
-				8CAFFC6B2543E60100480E03 /* LoginViewController.swift */,
-				8C121E092543ED9000D4C186 /* SignupViewController.swift */,
-				8C0257482547C80000C2D0A3 /* ViewController.swift */,
-				8C02574A2547D28B00C2D0A3 /* ListViewController.swift */,
+				8C0257502548019600C2D0A3 /* UserEditViewController.swift */,
+				8C025752254801D200C2D0A3 /* UsersListViewController.swift */,
 				8CAFFC6D2543E60100480E03 /* Main.storyboard */,
 				8CAFFC732543E60200480E03 /* Assets.xcassets */,
 				8CAFFC752543E60200480E03 /* LaunchScreen.storyboard */,
@@ -423,13 +417,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C0257492547C80000C2D0A3 /* ViewController.swift in Sources */,
 				8CAFFC722543E60100480E03 /* FirebaseSignInSampleApp.xcdatamodeld in Sources */,
-				8CAFFC6C2543E60100480E03 /* LoginViewController.swift in Sources */,
-				8C121E0A2543ED9000D4C186 /* SignupViewController.swift in Sources */,
 				8CAFFC682543E60100480E03 /* AppDelegate.swift in Sources */,
+				8C025753254801D200C2D0A3 /* UsersListViewController.swift in Sources */,
 				8CAFFC6A2543E60100480E03 /* SceneDelegate.swift in Sources */,
-				8C02574B2547D28B00C2D0A3 /* ListViewController.swift in Sources */,
+				8C0257512548019600C2D0A3 /* UserEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

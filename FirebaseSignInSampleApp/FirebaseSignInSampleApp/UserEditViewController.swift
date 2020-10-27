@@ -1,5 +1,5 @@
 //
-//  ListViewController.swift
+//  UserEditViewController.swift
 //  FirebaseSignInSampleApp
 //
 //  Created by 尾原徳泰 on 2020/10/27.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+class UserEditViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
