@@ -13,4 +13,10 @@ struct User {
     var name: String = ""
     var age: Int = 0
     var favoriteBook: String = ""
+    
+    mutating func setFromDictionary(_ dictionary: [String: Any]) {
+        name = dictionary["name"] as? String ?? ""
+        age = dictionary["age"] as? Int ?? 0
+        favoriteBook = dictionary["favoriteBook"] as? String ?? ""
+    }
 }
