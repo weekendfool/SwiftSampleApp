@@ -10,9 +10,18 @@ import UIKit
 import Firebase
 
 struct User {
+    
     var name: String = ""
     var age: Int = 0
     var favoriteBook: String = ""
+    
+    var toDictionary: [String: Any] {
+        return [
+            "name": name,
+            "age": age,
+            "favoriteBook": favoriteBook
+        ]
+    }
     
     mutating func setFromDictionary(_ dictionary: [String: Any]) {
         name = dictionary["name"] as? String ?? ""
