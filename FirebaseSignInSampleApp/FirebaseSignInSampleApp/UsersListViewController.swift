@@ -7,24 +7,71 @@
 //
 
 import UIKit
+import Firebase
 
-class UsersListViewController: UIViewController {
-
+class UsersListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    
+    @IBOutlet weak var usersTableView: UITableView!
+    
+    var users: [User]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // デリゲートの設定
+        usersTableView.delegate = self
+        usersTableView.dataSource = self
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // firebaseのルートを宣言
+        let ref = Database.database().reference()
+        
+        ref.child("Users").observe(.value) { (snapshot) in
+            // 初期化
+            self.users = []
+            
+            for data in snapshot.children {
+                let snapData = data as! DataSnapshot
+                let decitionarySnapData = snapData.value as! [String: Any]
+                // Userクラスのインスタンス生成
+                var user = User()
+                // 取得した内容をユーザー型にセット
+                user.setFromDictionary(decitionarySnapData)
+                // ユーザリストに追加
+                self.users.append(user)
+            }
+            
+            // 全てリストに格納したらtableViewを更新
+            self.usersTableView.reloadData()
+        }
+    }
 
-        // Do any additional setup after loading the view.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let _users = users else { return 0}
+        return _users.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = usersTableView.dequeueReusableCell(withIdentifier: "UserTableCell", for: indexPath)
+        let user = users[indexPath.row]
+        
+        let nameLabel = cell.viewWithTag(1) as! UILabel
+        nameLabel.text = user.name
+        
+        let ageLabel = cell.viewWithTag(2) as! UILabel
+        ageLabel.text = String(user.age)
+        
+        let favoriteLabel = cell.viewWithTag(3) as! UILabel
+        favoriteLabel.text = user.favoriteBook
+        
+        return cell
     }
-    */
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+    }
+    
 
 }

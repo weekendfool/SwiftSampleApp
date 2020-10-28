@@ -139,6 +139,7 @@
 			children = (
 				8CAFFC672543E60100480E03 /* AppDelegate.swift */,
 				8CAFFC692543E60100480E03 /* SceneDelegate.swift */,
+				8C0257542549B8CC00C2D0A3 /* UserModel.swift */,
 				8C0257502548019600C2D0A3 /* UserEditViewController.swift */,
 				8C025752254801D200C2D0A3 /* UsersListViewController.swift */,
 				8CAFFC6D2543E60100480E03 /* Main.storyboard */,
@@ -147,7 +148,6 @@
 				8CAFFC782543E60200480E03 /* Info.plist */,
 				8CAFFC702543E60100480E03 /* FirebaseSignInSampleApp.xcdatamodeld */,
 				8CAFFC9A2543E6B700480E03 /* GoogleService-Info.plist */,
-				8C0257542549B8CC00C2D0A3 /* UserModel.swift */,
 			);
 			path = FirebaseSignInSampleApp;
 			sourceTree = "<group>";
