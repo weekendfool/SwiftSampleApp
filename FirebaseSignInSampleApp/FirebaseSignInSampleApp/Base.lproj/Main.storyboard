@@ -108,6 +108,9 @@
                                 <rect key="frame" x="20" y="403" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="登録"/>
+                                <connections>
+                                    <action selector="submitButtonTaped:" destination="y1c-LE-Qc8" eventType="touchUpInside" id="g1X-eq-rV3"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="年齢" borderStyle="roundedRect" placeholder="名前" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NwP-Kt-goF">
                                 <rect key="frame" x="20" y="224" width="374" height="34"/>
@@ -120,6 +123,11 @@
                         <viewLayoutGuide key="safeArea" id="xV7-QW-CtR"/>
                     </view>
                     <navigationItem key="navigationItem" title="ユーザー一覧" leftItemsSupplementBackButton="YES" id="vp3-16-dSG"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="NwP-Kt-goF" id="E4X-Or-Ha0"/>
+                        <outlet property="favoriteBookTextField" destination="Aag-V7-dBN" id="FhT-0a-hrM"/>
+                        <outlet property="nameTextField" destination="xbg-IL-RUK" id="7V0-4B-Sq9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="74l-Gc-gG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
