@@ -23,9 +23,16 @@ struct User {
         ]
     }
     
+    // firebaceからの返信をdictionaryで受け取る
+    // 受け取った情報を自身Userの要素に格納
     mutating func setFromDictionary(_ dictionary: [String: Any]) {
         name = dictionary["name"] as? String ?? ""
         age = dictionary["age"] as? Int ?? 0
         favoriteBook = dictionary["favoriteBook"] as? String ?? ""
+    }
+    
+    enum DisplayMode {
+        case insert
+        case update
     }
 }

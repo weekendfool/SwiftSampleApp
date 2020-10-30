@@ -112,6 +112,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8C025756254C49A500C2D0A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C0257542549B8CC00C2D0A3 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C025757254C49B000C2D0A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CAFFC6D2543E60100480E03 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C025758254C49B700C2D0A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8C0257502548019600C2D0A3 /* UserEditViewController.swift */,
+				8C025752254801D200C2D0A3 /* UsersListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		8CAFFC5B2543E60100480E03 = {
 			isa = PBXGroup;
 			children = (
@@ -137,12 +162,11 @@
 		8CAFFC662543E60100480E03 /* FirebaseSignInSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				8C025756254C49A500C2D0A3 /* Model */,
+				8C025757254C49B000C2D0A3 /* View */,
+				8C025758254C49B700C2D0A3 /* Controller */,
 				8CAFFC672543E60100480E03 /* AppDelegate.swift */,
 				8CAFFC692543E60100480E03 /* SceneDelegate.swift */,
-				8C0257542549B8CC00C2D0A3 /* UserModel.swift */,
-				8C0257502548019600C2D0A3 /* UserEditViewController.swift */,
-				8C025752254801D200C2D0A3 /* UsersListViewController.swift */,
-				8CAFFC6D2543E60100480E03 /* Main.storyboard */,
 				8CAFFC732543E60200480E03 /* Assets.xcassets */,
 				8CAFFC752543E60200480E03 /* LaunchScreen.storyboard */,
 				8CAFFC782543E60200480E03 /* Info.plist */,

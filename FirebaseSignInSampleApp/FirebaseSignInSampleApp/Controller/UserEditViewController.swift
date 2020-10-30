@@ -15,10 +15,22 @@ class UserEditViewController: UIViewController {
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var favoriteBookTextField: UITextField!
     
+    var user: User!
+    var key: String!
+    var displayMode: DisplayMode = .insert
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 全画面から受け取った値をセットする
+        nameTextField.text = user.name
+        ageTextField.text = String(user.age)
+        favoriteBookTextField.text = user.favoriteBook
     }
     
 

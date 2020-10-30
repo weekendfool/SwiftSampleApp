@@ -20,7 +20,7 @@ class UsersListViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         // デリゲートの設定
-        usersTableView.delegate = self
+//        usersTableView.delegate = self
         usersTableView.dataSource = self
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -74,4 +74,13 @@ class UsersListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
 
+    // セル削除時のデータ削除機能
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "削除") { (action, sourceview, completionHandler) in
+            completionHandler(true)
+            
+            let ref = Database.database().reference()
+            ref.child("Users").child(self.keys[indexPath.row]).removeValue()
+        }
+    }
 }
