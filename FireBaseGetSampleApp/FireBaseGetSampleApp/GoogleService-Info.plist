@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>443480360046-tl5tdpksu2n6fn51na2n8eoqc213tl6g.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.443480360046-tl5tdpksu2n6fn51na2n8eoqc213tl6g</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBGqr31ZPs5WDA_0taWeNqjRBerCgGE7Io</string>
+	<key>GCM_SENDER_ID</key>
+	<string>443480360046</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gmail.tukareta.nori.FireBaseGetSampleApp</string>
+	<key>PROJECT_ID</key>
+	<string>fir-getsampleapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fir-getsampleapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:443480360046:ios:8c31ed7cdca1fcba05527f</string>
+	<key>DATABASE_URL</key>
+	<string>https://fir-getsampleapp.firebaseio.com</string>
+</dict>
+</plist>
