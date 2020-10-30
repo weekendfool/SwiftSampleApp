@@ -7,32 +7,46 @@
 //
 
 import UIKit
+import Firebase
 
-class GetViewController: UIViewController {
+class GetViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var passLabel: UILabel!
     
+    // 取得した情報を入れておく配列
+    // 構造体を要素に持つ
+    var players: [User]!
+    
     @IBOutlet weak var passTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        passTextField.delegate = self
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func sarchButtonAction(_ sender: Any) {
+        
+        //　passが入力されてるかの確認
+        guard let passText = passTextField else { return }
+        
+        // fireBaseのルートを宣言
+        let ref = Database.database().reference()
+        
+        
+        // 情報の検索
+        let referencr = ref.when
+        //　情報の取得
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        passTextField.resignFirstResponder()
+        
+        return true
     }
-    */
 
 }

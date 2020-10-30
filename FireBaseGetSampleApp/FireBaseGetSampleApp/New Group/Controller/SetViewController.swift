@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class SetViewController: UIViewController {
+class SetViewController: UIViewController, UITextFieldDelegate {
 
     // パーツの紐付け
     @IBOutlet weak var nameTextField: UITextField!
@@ -22,6 +22,9 @@ class SetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        nameTextField.delegate = self
+        ageTextField.delegate = self
+        passTextField.delegate = self
     }
     
     @IBAction func addButtonAction(_ sender: Any) {
@@ -49,6 +52,12 @@ class SetViewController: UIViewController {
         
     }
     
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        ageTextField.resignFirstResponder()
+        passTextField.resignFirstResponder()
+        
+        return true
+    }
 
 }
