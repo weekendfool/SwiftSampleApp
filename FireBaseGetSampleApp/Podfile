@@ -1,3 +1,4 @@
+
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
@@ -8,6 +9,7 @@ target 'FireBaseGetSampleApp' do
   # Pods for FireBaseGetSampleApp
 pod 'Firebase'
 pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
 pod 'Firebase/Database'
   target 'FireBaseGetSampleAppTests' do
     inherit! :search_paths

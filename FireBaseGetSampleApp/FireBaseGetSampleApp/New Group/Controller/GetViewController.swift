@@ -32,15 +32,29 @@ class GetViewController: UIViewController, UITextFieldDelegate {
     @IBAction func sarchButtonAction(_ sender: Any) {
         
         //　passが入力されてるかの確認
-        guard let passText = passTextField else { return }
+        guard let passText = passTextField.text else { return }
         
         // fireBaseのルートを宣言
         let ref = Database.database().reference()
-        
+        let db = Firestore.firestore()
         
         // 情報の検索
-        let referencr = ref.when
+        let reference = db.collection("Player").whereField("pass", isEqualTo: passText)
         //　情報の取得
+        reference.getDocuments { (_snapshot, _error) in
+            if let error = _error {
+                print(error)
+                return
+            }
+            
+            let datas = _snapshot!.documents.compactMap { $0.data() }
+            print(datas)
+            
+            // 表示する
+//            nameLabel.text = datas[0
+//            ageLabel.text = datas[1]
+//            passLabel.text = datas[2
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
