@@ -42,12 +42,15 @@ class GetViewController: UIViewController, UITextFieldDelegate {
         let reference = db.collection("Player").whereField("pass", isEqualTo: passText)
         //　情報の取得
         reference.getDocuments { (_snapshot, _error) in
+            print("------------------------------------")
+            
             if let error = _error {
                 print(error)
                 return
             }
             
             let datas = _snapshot!.documents.compactMap { $0.data() }
+            print("OK")
             print(datas)
             
             // 表示する
