@@ -39,25 +39,23 @@ class GetViewController: UIViewController, UITextFieldDelegate {
         let db = Firestore.firestore()
         
         // 情報の検索
-        let reference = db.collection("Player").whereField("pass", isEqualTo: passText)
+//        let reference = db.collection("Player").whereField("pass", isEqualTo: passText)
         //　情報の取得
-        reference.getDocuments { (_snapshot, _error) in
-            print("------------------------------------")
-            
-            if let error = _error {
-                print(error)
+        print("--------------------------------------------------")
+        var box = db.collection("Players").whereField("pass", isEqualTo: passText)
+        print(box)
+        box.getDocuments() { (snapshot, error) in
+            if let error = error {
+                print("error")
                 return
             }
-            
-            let datas = _snapshot!.documents.compactMap { $0.data() }
-            print("OK")
-            print(datas)
-            
+            print(snapshot)
+        }
             // 表示する
 //            nameLabel.text = datas[0
 //            ageLabel.text = datas[1]
 //            passLabel.text = datas[2
-        }
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
