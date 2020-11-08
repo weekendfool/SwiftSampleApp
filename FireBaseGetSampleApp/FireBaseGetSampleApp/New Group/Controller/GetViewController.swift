@@ -42,13 +42,19 @@ class GetViewController: UIViewController, UITextFieldDelegate {
 //        let reference = db.collection("Player").whereField("pass", isEqualTo: passText)
         //　情報の取得
         print("--------------------------------------------------")
+        var box2 = ref.child("Players").queryEqual(toValue: passText)
         var box = db.collection("Players").whereField("pass", isEqualTo: passText)
-        print(box)
-        box.getDocuments() { (snapshot, error) in
-            if let error = error {
-                print("error")
-                return
-            }
+        print(box2)
+//        box.getDocuments() { (snapshot, error) in
+//            if let error = error {
+//                print("error")
+//                return
+//            }
+//            print(snapshot)
+//        }
+        
+        box2.observeSingleEvent(of: .value) { (snapshot) in
+            print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
             print(snapshot)
         }
             // 表示する
