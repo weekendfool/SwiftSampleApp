@@ -43,8 +43,16 @@ class GetViewController: UIViewController, UITextFieldDelegate {
         //　情報の取得
         print("--------------------------------------------------")
         var box2 = ref.child("Players").queryEqual(toValue: passText)
-        var box = db.collection("Players").whereField("pass", isEqualTo: passText)
-        print(box2)
+        db.collection("Players").whereField("pass", isEqualTo: passText).getDocuments { (snapshot, error) in
+            if let error = error {
+                print("Error Getting Documents: \(error)")
+            } else {
+                for document in snapshot!.documents {
+                    print("document: \(document)")
+                }
+            }
+        }
+//        print(box2)
 //        box.getDocuments() { (snapshot, error) in
 //            if let error = error {
 //                print("error")
@@ -53,10 +61,10 @@ class GetViewController: UIViewController, UITextFieldDelegate {
 //            print(snapshot)
 //        }
         
-        box2.observeSingleEvent(of: .value) { (snapshot) in
-            print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
-            print(snapshot)
-        }
+//        box2.observeSingleEvent(of: .value) { (snapshot) in
+//            print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+//            print(snapshot)
+//        }
             // 表示する
 //            nameLabel.text = datas[0
 //            ageLabel.text = datas[1]
