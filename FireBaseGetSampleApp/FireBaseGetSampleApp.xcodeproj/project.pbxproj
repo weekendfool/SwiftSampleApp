@@ -20,6 +20,7 @@
 		8C02579F254C5C3E00C2D0A3 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C02579E254C5C3E00C2D0A3 /* SetViewController.swift */; };
 		8C0257A1254C5C4C00C2D0A3 /* GetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0257A0254C5C4C00C2D0A3 /* GetViewController.swift */; };
 		8C0257A3254C5C5E00C2D0A3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0257A2254C5C5E00C2D0A3 /* UserModel.swift */; };
+		8C72178A255ED324003FA3A8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C721789255ED324003FA3A8 /* TestViewController.swift */; };
 		D4D1F0CCA3779AA2A21E1936 /* Pods_FireBaseGetSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A79D0B0FD91920AE11EBA3 /* Pods_FireBaseGetSampleApp.framework */; };
 		E7EC47E23C48C889E48797E4 /* Pods_FireBaseGetSampleApp_FireBaseGetSampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E674EBEBE0CBDC56307033 /* Pods_FireBaseGetSampleApp_FireBaseGetSampleAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		8C02579E254C5C3E00C2D0A3 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		8C0257A0254C5C4C00C2D0A3 /* GetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetViewController.swift; sourceTree = "<group>"; };
 		8C0257A2254C5C5E00C2D0A3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8C721789255ED324003FA3A8 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		90E674EBEBE0CBDC56307033 /* Pods_FireBaseGetSampleApp_FireBaseGetSampleAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireBaseGetSampleApp_FireBaseGetSampleAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E02A4E9A9BC67688D7E87E /* Pods-FireBaseGetSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireBaseGetSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-FireBaseGetSampleApp/Pods-FireBaseGetSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BB9AED4EB641F293351942EF /* Pods-FireBaseGetSampleApp-FireBaseGetSampleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireBaseGetSampleApp-FireBaseGetSampleAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-FireBaseGetSampleApp-FireBaseGetSampleAppUITests/Pods-FireBaseGetSampleApp-FireBaseGetSampleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			children = (
 				8C02579E254C5C3E00C2D0A3 /* SetViewController.swift */,
 				8C0257A0254C5C4C00C2D0A3 /* GetViewController.swift */,
+				8C721789255ED324003FA3A8 /* TestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C72178A255ED324003FA3A8 /* TestViewController.swift in Sources */,
 				8C025766254C4F9E00C2D0A3 /* AppDelegate.swift in Sources */,
 				8C02579F254C5C3E00C2D0A3 /* SetViewController.swift in Sources */,
 				8C0257A1254C5C4C00C2D0A3 /* GetViewController.swift in Sources */,
