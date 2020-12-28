@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>443480360046-tl5tdpksu2n6fn51na2n8eoqc213tl6g.apps.googleusercontent.com</string>
+	<string>896300856831-frtg59tspmn9spr01o3c87o5a589bqae.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.443480360046-tl5tdpksu2n6fn51na2n8eoqc213tl6g</string>
+	<string>com.googleusercontent.apps.896300856831-frtg59tspmn9spr01o3c87o5a589bqae</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBGqr31ZPs5WDA_0taWeNqjRBerCgGE7Io</string>
+	<string>AIzaSyDIfTbN1-7Pg7TTjZkP3Ofoia-XWEB2RJw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>443480360046</string>
+	<string>896300856831</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.gmail.tukareta.nori.FireBaseGetSampleApp</string>
+	<string>com.gmail.tukareta.nori.FirebaseGetSampleApp</string>
 	<key>PROJECT_ID</key>
-	<string>fir-getsampleapp</string>
+	<string>fir-getsampleapp-d37f6</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fir-getsampleapp.appspot.com</string>
+	<string>fir-getsampleapp-d37f6.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:443480360046:ios:8c31ed7cdca1fcba05527f</string>
-	<key>DATABASE_URL</key>
-	<string>https://fir-getsampleapp.firebaseio.com</string>
+	<string>1:896300856831:ios:25f8f160b6606cde3ee3ca</string>
 </dict>
 </plist>

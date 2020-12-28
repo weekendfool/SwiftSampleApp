@@ -1,6 +1,0 @@
-framework module Pods_FireBaseGetSampleApp_FireBaseGetSampleAppUITests {
-  umbrella header "Pods-FireBaseGetSampleApp-FireBaseGetSampleAppUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

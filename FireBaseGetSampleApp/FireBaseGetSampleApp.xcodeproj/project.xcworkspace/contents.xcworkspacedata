@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FireBaseGetSampleApp.xcodeproj">
+      location = "self:FirebaseGetSampleApp.xcodeproj">
    </FileRef>
 </Workspace>

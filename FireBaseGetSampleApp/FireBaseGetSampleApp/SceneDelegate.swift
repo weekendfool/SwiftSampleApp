@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  FireBaseGetSampleApp
+//  FirebaseGetSampleApp
 //
-//  Created by 尾原徳泰 on 2020/10/30.
+//  Created by 尾原徳泰 on 2020/12/28.
 //  Copyright © 2020 尾原徳泰. All rights reserved.
 //
 

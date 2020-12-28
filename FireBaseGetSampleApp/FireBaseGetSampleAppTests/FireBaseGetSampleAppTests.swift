@@ -1,15 +1,15 @@
 //
-//  FireBaseGetSampleAppTests.swift
-//  FireBaseGetSampleAppTests
+//  FirebaseGetSampleAppTests.swift
+//  FirebaseGetSampleAppTests
 //
-//  Created by 尾原徳泰 on 2020/10/30.
+//  Created by 尾原徳泰 on 2020/12/28.
 //  Copyright © 2020 尾原徳泰. All rights reserved.
 //
 
 import XCTest
-@testable import FireBaseGetSampleApp
+@testable import FirebaseGetSampleApp
 
-class FireBaseGetSampleAppTests: XCTestCase {
+class FirebaseGetSampleAppTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
