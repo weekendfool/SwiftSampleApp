@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 class ViewController: UIViewController {
     
@@ -14,9 +16,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
     
+    // インスタンス変数
+    var DBRef: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // インスタンスの作成
+        DBRef = Database.database().reference()
+    }
+    
+    // 情報を書き込む処理
+    func setData() {
+        
     }
 
     @IBAction func setButtonPressed(_ sender: Any) {
