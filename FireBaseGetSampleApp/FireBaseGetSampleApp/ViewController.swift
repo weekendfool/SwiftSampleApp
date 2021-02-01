@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var passTextField: UITextField!
     
     // インスタンス変数
-    var DBRef: DatabaseReference!
+    var DBRef: DatabaseReference?
+    var dic: [String: Any]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,12 @@ class ViewController: UIViewController {
     
     // 情報を書き込む処理
     func setData() {
+        // 情報を辞書に格納する
+        dic!["name"] = nameTextField.text
+        dic!["age"] =  Int(ageTextField.text!) ?? 0
+        dic!["pass"] = passTextField.text
         
+        DBRef!.child("users").childByAutoId().setValue(dic!)
     }
 
     @IBAction func setButtonPressed(_ sender: Any) {
