@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 
 class ViewController: UIViewController {
@@ -20,23 +21,26 @@ class ViewController: UIViewController {
     var DBRef: DatabaseReference?
     var dic: [String: Any]?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // インスタンスの作成
-        DBRef = Database.database().reference()
+        
     }
     
     // 情報を書き込む処理
     func setData() {
+        DBRef = Database.database().reference()
         // 情報を辞書に格納する
         dic!["name"] = nameTextField.text
         dic!["age"] =  Int(ageTextField.text!) ?? 0
         dic!["pass"] = passTextField.text
         
-        DBRef!.child("users").childByAutoId().setValue(dic!)
+        
     }
 
     @IBAction func setButtonPressed(_ sender: Any) {
+        setData()
     }
     
 }

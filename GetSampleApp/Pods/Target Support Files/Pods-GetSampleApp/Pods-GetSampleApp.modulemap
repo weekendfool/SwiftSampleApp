@@ -1,0 +1,6 @@
+framework module Pods_GetSampleApp {
+  umbrella header "Pods-GetSampleApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
