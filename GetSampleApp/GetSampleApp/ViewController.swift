@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var wordFourTextField: UITextField!
     
     
-    var user: [String: String] = ["name": "", "age": "", "pass":"", "wordOne": "",  "wordTwo": "",  "wordThree": "",  "wordFour": ""]
+    var user: [String: String] = ["name": "", "age": "", "pass":"", "roomID": "",  "loginFlag": "",  "achFlag": "",  "wordFour": ""]
     
     
     override func viewDidLoad() {
