@@ -16,6 +16,8 @@ class RoomViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        makeDate()
+//        print("-----------------------------")
     }
     
 
@@ -28,6 +30,27 @@ class RoomViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func makeDate() {
+        // インスタンス作成
+        let dt = Date()
+        let dateFormatter = DateFormatter()
+        
+        // 取得する形式を決定
+        dateFormatter.dateFormat = "mmssSS"
+        
+        var roomKye = dateFormatter.string(from: dt)
+        var randomRoomKey = ""
+        
+        for string in roomKye.shuffled() {
+            randomRoomKey += String(string)
+        }
+        
+        
+        print("----------------------------------")
+        print(roomKye)
+        print(randomRoomKey)
+    }
+    
     @IBAction func tappedRoomIDButton(_ sender: Any) {
     }
     
