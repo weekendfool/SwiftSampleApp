@@ -28,13 +28,12 @@ struct OperateDatabase {
                 // エラーが発生した場合の目印:print("-----------------------------------------")
                 print("-----------------------------------------")
                 print("Error At makeDatabase(): \(err)")
-            } else {
-            // 成功した場合
-                // 成功した場合の目印:print("==========================================")
-                print("==========================================")
-                print("document added with ID: \(ref!.documentID)")
             }
         }
+        // 成功した場合
+            // 成功した場合の目印:print("==========================================")
+            print("==========================================")
+            print("document added with ID: \(ref!.documentID)")
         // ユーザーのユニークIDを発行してもらう
         return ref!.documentID
         

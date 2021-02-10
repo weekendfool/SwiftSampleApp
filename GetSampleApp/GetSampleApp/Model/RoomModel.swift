@@ -57,7 +57,7 @@ struct RoomData {
         "fourthMoveCordinate": "",
         "fifthMoveCordinate": "",
         "sixthMoveCordinate": "",
-        "sevenMoveCordinate": "",
+        "seventhMoveCordinate": "",
         "eighthMoveCordinate": "",
         "ninthMoveCordinate": "",
         "tenthMoveCordinate": "",
@@ -85,7 +85,7 @@ struct RoomData {
         userDatabaseDic["fourthMoveCordinate"] = fourthMoveCordinate
         userDatabaseDic["fifthMoveCordinate"] = fifthMoveCordinate
         userDatabaseDic["sixthMoveCordinate"] = sixthMoveCordinate
-        userDatabaseDic["sevenMoveCordinate"] = sevenMoveCordinate
+        userDatabaseDic["seventhMoveCordinate"] = sevenMoveCordinate
         userDatabaseDic["eighthMoveCordinate"] = eighthMoveCordinate
         userDatabaseDic["ninthMoveCordinate"] = ninthMoveCordinate
         userDatabaseDic["tenthMoveCordinate"] = tenthMoveCordinate
