@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var wordFourTextField: UITextField!
     
     
-    var user: [String: String] = ["name": "", "age": "", "pass":"", "roomID": "",  "loginFlag": "",  "achFlag": "",  "wordFour": ""]
+    var user: [String: String] = ["name": "", "age": "", "pass":"", "roomID": "",  "loginFlag": "",  "achFlag": ""]
     
     
     override func viewDidLoad() {
@@ -54,7 +54,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         sampleTableView.delegate = self
         sampleTableView.dataSource = self
         array = []
-        realTime()
+//        realTime()
     
         // Do any additional setup after loading the view.
 //        ref = db.collection("users").addDocument(data: [
@@ -178,23 +178,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         user["name"] = nameTextField.text ?? "No Name"
         user["age"] = ageTextField.text ?? "No Age"
         user["pass"] = passTextField.text ?? "passWord"
-        user["wordOne"] = wordOneTextField.text ?? "wordOne"
-        user["wordTwo"] = wordTwoTextField.text ?? "wordTwo"
-        user["wordThree"] = wordThreeTextField.text ?? "wordThree"
-        user["wordFour"] = wordFourTextField.text ?? "wordFour"
+        user["roomID"] = wordOneTextField.text ?? "None"
+        user["loginFlag"] = wordTwoTextField.text ?? "loginFlag"
+        user["achFlag"] = wordThreeTextField.text ?? "achFlag"
+//        user["wordFour"] = wordFourTextField.text ?? "wordFour"
         
-        set1()
-        set2()
-        set3()
-        set4()
-//        ref = db.collection("users").addDocument(data: user) { [self] err in
-//            if let err = err {
-//                print("error adding document: \(err)")
-//            } else {
-//                print("document added with ID: \(ref!.documentID)")
-//            }
-//        }
-//
+//        set1()
+//        set2()
+//        set3()
+//        set4()
+        ref = db.collection("users").addDocument(data: user) { [self] err in
+            if let err = err {
+                print("error adding document: \(err)")
+            } else {
+                print("document added with ID: \(ref!.documentID)")
+            }
+        }
+
         
         
     }

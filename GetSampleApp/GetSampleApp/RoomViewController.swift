@@ -6,17 +6,21 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class RoomViewController: UIViewController {
 
     @IBOutlet weak var roomIDLabel: UILabel!
     @IBOutlet weak var inputRoomIDTextField: UITextField!
     
+    var db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        makeDate()
+//        makeDate()
 //        print("-----------------------------")
     }
     
@@ -30,7 +34,7 @@ class RoomViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    func makeDate() {
+    func makeDate() -> String {
         // インスタンス作成
         let dt = Date()
         let dateFormatter = DateFormatter()
@@ -49,11 +53,28 @@ class RoomViewController: UIViewController {
         print("----------------------------------")
         print(roomKye)
         print(randomRoomKey)
+        
+        return randomRoomKey
+    }
+    
+    func set(randomRoomKey: String) {
+        let washingtonRef = db.collection("users").document("9hSUopdBlZxXarqvmuni")
+        washingtonRef.updateData(["roomID": randomRoomKey]) { (err) in
+            if let err = err {
+                print("error updating document: \(err)")
+            } else {
+                print("document successfully updated")
+            }
+        }
     }
     
     @IBAction func tappedRoomIDButton(_ sender: Any) {
+        var randomRoomKey = makeDate()
+        roomIDLabel.text = randomRoomKey
+        set(randomRoomKey: randomRoomKey)
     }
     
     @IBAction func tappedInputRoomIDButton(_ sender: Any) {
+        
     }
 }
