@@ -20,6 +20,10 @@
 		8C5189AC25C8735A004F82C5 /* GetSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5189AB25C8735A004F82C5 /* GetSampleAppTests.swift */; };
 		8C5189B725C8735A004F82C5 /* GetSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5189B625C8735A004F82C5 /* GetSampleAppUITests.swift */; };
 		8C5189C825C874DC004F82C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C5189C725C874DC004F82C5 /* GoogleService-Info.plist */; };
+		8C5297B925D4082D00724697 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5297B825D4082D00724697 /* UserModel.swift */; };
+		8C5297BE25D4084500724697 /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5297BD25D4084500724697 /* RoomModel.swift */; };
+		8C5297C325D4085C00724697 /* OperateDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5297C225D4085C00724697 /* OperateDatabaseModel.swift */; };
+		8C5297C925D408CB00724697 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5297C825D408CB00724697 /* TestViewController.swift */; };
 		BA3138C385B33700C6AC1BBD /* Pods_GetSampleApp_GetSampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB36A4A103E64CF603D59FFB /* Pods_GetSampleApp_GetSampleAppUITests.framework */; };
 		F85A3563EC17C8F52D0F8F67 /* Pods_GetSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4EEAA55E3C29C6B80E415E /* Pods_GetSampleAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +69,10 @@
 		8C5189B625C8735A004F82C5 /* GetSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSampleAppUITests.swift; sourceTree = "<group>"; };
 		8C5189B825C8735A004F82C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C5189C725C874DC004F82C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8C5297B825D4082D00724697 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8C5297BD25D4084500724697 /* RoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
+		8C5297C225D4085C00724697 /* OperateDatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperateDatabaseModel.swift; sourceTree = "<group>"; };
+		8C5297C825D408CB00724697 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		A11A9D0734647E919AC08316 /* Pods-GetSampleApp-GetSampleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSampleApp-GetSampleAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-GetSampleApp-GetSampleAppUITests/Pods-GetSampleApp-GetSampleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4654C678153688F6C8E540A /* Pods-GetSampleApp-GetSampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSampleApp-GetSampleAppUITests.release.xcconfig"; path = "Target Support Files/Pods-GetSampleApp-GetSampleAppUITests/Pods-GetSampleApp-GetSampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA4EEAA55E3C29C6B80E415E /* Pods_GetSampleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetSampleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +145,8 @@
 		8C51899025C87358004F82C5 /* GetSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				8C5297C725D408AD00724697 /* Controller */,
+				8C5297B725D4080C00724697 /* Model */,
 				8C51899125C87358004F82C5 /* AppDelegate.swift */,
 				8C51899325C87358004F82C5 /* SceneDelegate.swift */,
 				8C51899525C87358004F82C5 /* ViewController.swift */,
@@ -168,6 +178,24 @@
 				8C5189B825C8735A004F82C5 /* Info.plist */,
 			);
 			path = GetSampleAppUITests;
+			sourceTree = "<group>";
+		};
+		8C5297B725D4080C00724697 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C5297B825D4082D00724697 /* UserModel.swift */,
+				8C5297BD25D4084500724697 /* RoomModel.swift */,
+				8C5297C225D4085C00724697 /* OperateDatabaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C5297C725D408AD00724697 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8C5297C825D408CB00724697 /* TestViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		ABC05679D0BA8E88703E1331 /* Frameworks */ = {
@@ -419,7 +447,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C5297C925D408CB00724697 /* TestViewController.swift in Sources */,
+				8C5297BE25D4084500724697 /* RoomModel.swift in Sources */,
 				8C2002B725CD56F200C21307 /* NextViewController.swift in Sources */,
+				8C5297B925D4082D00724697 /* UserModel.swift in Sources */,
+				8C5297C325D4085C00724697 /* OperateDatabaseModel.swift in Sources */,
 				8C51899C25C87358004F82C5 /* GetSampleApp.xcdatamodeld in Sources */,
 				8C51899625C87358004F82C5 /* ViewController.swift in Sources */,
 				8C2002BF25D117B000C21307 /* RoomViewController.swift in Sources */,
