@@ -45,12 +45,28 @@
                                     <action selector="tappedRoomIDButton:" destination="aeu-3O-6d4" eventType="touchUpInside" id="JR4-a5-TGB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtw-7N-yKU">
+                                <rect key="frame" x="20" y="263" width="374" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L6-ZL-GhX">
+                                <rect key="frame" x="20" y="303" width="374" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eri-jG-ccq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="ageLabel" destination="5L6-ZL-GhX" id="tQu-Ya-wgb"/>
                         <outlet property="inputRoomIDTextField" destination="tAZ-H9-maH" id="oOu-nw-3Qp"/>
+                        <outlet property="nameLabel" destination="xtw-7N-yKU" id="706-X0-j02"/>
                         <outlet property="roomIDLabel" destination="dPP-oE-IXa" id="C3J-0Y-x8m"/>
                     </connections>
                 </viewController>

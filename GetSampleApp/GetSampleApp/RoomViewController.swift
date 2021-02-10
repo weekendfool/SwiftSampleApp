@@ -13,6 +13,8 @@ class RoomViewController: UIViewController {
 
     @IBOutlet weak var roomIDLabel: UILabel!
     @IBOutlet weak var inputRoomIDTextField: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
     
     var db = Firestore.firestore()
     
@@ -68,6 +70,23 @@ class RoomViewController: UIViewController {
         }
     }
     
+    func sarch() {
+        var pass = inputRoomIDTextField.text
+        var docRef = db.collection("users").whereField("roomID", isEqualTo: pass)
+        
+        docRef.getDocuments { [self] (querySnapshot, err) in
+            if let err = err {
+                print("err geting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    nameLabel.text = document.data()["name"] as! String
+                    ageLabel.text = document.data()["age"] as! String
+                }
+            }
+        }
+    }
+    
     @IBAction func tappedRoomIDButton(_ sender: Any) {
         var randomRoomKey = makeDate()
         roomIDLabel.text = randomRoomKey
@@ -75,6 +94,7 @@ class RoomViewController: UIViewController {
     }
     
     @IBAction func tappedInputRoomIDButton(_ sender: Any) {
+        sarch()
         
     }
 }
