@@ -10,6 +10,7 @@ import Foundation
 struct UserData {
     
     // MARK: - ユーザーの情報を宣言
+    // データのローカルでの保存場所及び、ターゲットとして使用
     // ユーザーの登録名
     var userName = ""
     // ユーザーのパスワード
@@ -38,6 +39,7 @@ struct UserData {
     ]
 
     // MARK: - データベースに登録するユーザーの情報を辞書に格納する
+    // 辞書はデータベースの書込みのみに使用
     mutating func registeruserDatabaseDic() {
         userDatabaseDic["userName"] = userName
         userDatabaseDic["passWord"] = passWord

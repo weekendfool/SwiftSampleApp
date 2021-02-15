@@ -35,10 +35,11 @@ class TestViewController: UIViewController {
     @IBOutlet weak var fifteenthCordinateText: UITextField!
     @IBOutlet weak var sixteenthMoveCordinateText: UITextField!
     
+    @IBOutlet weak var outPutLabel: UILabel!
     // インスタンスの宣言
     let user = UserData()
-    let room = RoomData()
-    let operateDatabase = OperateDatabase()
+    var room = RoomData()
+    var operateDatabase = OperateDatabase()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,61 @@ class TestViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func writeData() {
+        // データのセッティング
+        room.roomID = roomIDText.text ?? "No Room"
+        room.hostUserID = hostUserIDText.text ?? "No Host"
+        room.invitedUserID = invitedUserIDText.text ?? "No humen"
+        room.betrayerOfHostUser = betrayerOfHostUserText.text ?? "0"
+        room.betrayerOfInvitedUser = betrayerOfInvitedUserText.text ?? "0"
+        
+        // 打った手の座標を記録する変数
+        room.firstMoveCordinate = firstMoveCordinateText.text ?? "0"
+        room.secondMoveCordinate = secondMoveCordinateText.text ?? "0"
+        room.thirdMoveCordinate = thirdMoveCordinateText.text ?? "0"
+        room.fourthMoveCordinate = fourthMoveCordinateText.text ?? "0"
+        room.fifthMoveCordinate = fifthMoveCordinateText.text ?? "0"
+        room.sixthMoveCordinate = sixthMoveCordinateText.text ?? "0"
+        room.seventhMoveCordinate = seventhMoveCordinateText.text ?? "0"
+        room.eighthMoveCordinate = eighthMoveCordinateText.text ?? "0"
+        room.ninthMoveCordinate = ninthMoveCordinateText.text ?? "0"
+        room.tenthMoveCordinate = tenthMoveCordinateText.text ?? "0"
+        room.eleventhMoveCordinate = eleventhMoveCordinateText.text ?? "0"
+        room.twelfthMoveCordinate = twelfthMoveCordinateText.text ?? "0"
+        room.thirteenthMoveCordinate = thirteenthMoveCordinateText.text ?? "0"
+        room.fourteenthCordinate = fourteenthCordinateText.text ?? "0"
+        room.fifteenthCordinate = fifteenthCordinateText.text ?? "0"
+        room.sixteenthMoveCordinate = sixteenthMoveCordinateText.text ?? "0"
+        
+        // 書き込み用の辞書を更新
+        room.registeruserDatabaseDic()
+        
+        // 実際に書き込む処理
+        operateDatabase.makeDatabase(targetCollection: "Rooms", inputDataDic: room.userDatabaseDic)
+    }
+    
+    func updateData() {
+        // 打った手の座標を記録する変数
+        room.firstMoveCordinate = firstMoveCordinateText.text ?? "0"
+        room.secondMoveCordinate = secondMoveCordinateText.text ?? "0"
+        room.thirdMoveCordinate = thirdMoveCordinateText.text ?? "0"
+        room.fourthMoveCordinate = fourthMoveCordinateText.text ?? "0"
+        room.fifthMoveCordinate = fifthMoveCordinateText.text ?? "0"
+        room.sixthMoveCordinate = sixthMoveCordinateText.text ?? "0"
+        room.seventhMoveCordinate = seventhMoveCordinateText.text ?? "0"
+        room.eighthMoveCordinate = eighthMoveCordinateText.text ?? "0"
+        room.ninthMoveCordinate = ninthMoveCordinateText.text ?? "0"
+        room.tenthMoveCordinate = tenthMoveCordinateText.text ?? "0"
+        room.eleventhMoveCordinate = eleventhMoveCordinateText.text ?? "0"
+        room.twelfthMoveCordinate = twelfthMoveCordinateText.text ?? "0"
+        room.thirteenthMoveCordinate = thirteenthMoveCordinateText.text ?? "0"
+        room.fourteenthCordinate = fourteenthCordinateText.text ?? "0"
+        room.fifteenthCordinate = fifteenthCordinateText.text ?? "0"
+        room.sixteenthMoveCordinate = sixteenthMoveCordinateText.text ?? "0"
+        
+//        operateDatabase.updateDatabase(targetCollection: "Rooms", userID: <#T##String#>, TargetFieldName: <#T##String#>, dicOfTarget: <#T##[String : Any]#>)
+//    }
 
     @IBAction func buttonTapped(_ sender: Any) {
     }

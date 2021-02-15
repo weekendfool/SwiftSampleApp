@@ -175,6 +175,14 @@
                                     <action selector="parmitRandomMatchRoomFlag:" destination="BYZ-38-t0r" eventType="valueChanged" id="pwc-tB-QtM"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mJ-dG-XIg">
+                                <rect key="frame" x="50" y="311" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="上書き"/>
+                                <connections>
+                                    <action selector="updataButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8I9-7S-3GA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -401,6 +409,13 @@
                                     <action selector="realtimeSwitch:" destination="jfh-gl-Ou3" eventType="valueChanged" id="7Ji-Ry-pqG"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCt-Uz-H1x">
+                                <rect key="frame" x="20" y="582" width="374" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VWv-Db-hle"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -420,6 +435,7 @@
                         <outlet property="invitedUserIDText" destination="pg0-Bz-W7V" id="MrL-zS-U1c"/>
                         <outlet property="invitedUserStartFlagText" destination="Hxf-hq-wZ6" id="Yzf-oa-RbN"/>
                         <outlet property="ninthMoveCordinateText" destination="TJJ-e5-6wa" id="8On-dz-bMh"/>
+                        <outlet property="outPutLabel" destination="aCt-Uz-H1x" id="QR4-cs-GbX"/>
                         <outlet property="roomIDText" destination="y2J-li-wNy" id="pwK-yU-Cqj"/>
                         <outlet property="secondMoveCordinateText" destination="th9-MO-91p" id="wUN-XM-2gs"/>
                         <outlet property="seventhMoveCordinateText" destination="NMX-2Y-ouZ" id="TiH-cG-P4f"/>
@@ -433,7 +449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ez1-mS-WM6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="634.78260869565224" y="655.58035714285711"/>
+            <point key="canvasLocation" x="244.92753623188409" y="527.67857142857144"/>
         </scene>
     </scenes>
     <resources>

@@ -31,7 +31,7 @@ struct RoomData {
     var fourthMoveCordinate = ""
     var fifthMoveCordinate = ""
     var sixthMoveCordinate = ""
-    var sevenMoveCordinate = ""
+    var seventhMoveCordinate = ""
     var eighthMoveCordinate = ""
     var ninthMoveCordinate = ""
     var tenthMoveCordinate = ""
@@ -85,7 +85,7 @@ struct RoomData {
         userDatabaseDic["fourthMoveCordinate"] = fourthMoveCordinate
         userDatabaseDic["fifthMoveCordinate"] = fifthMoveCordinate
         userDatabaseDic["sixthMoveCordinate"] = sixthMoveCordinate
-        userDatabaseDic["seventhMoveCordinate"] = sevenMoveCordinate
+        userDatabaseDic["seventhMoveCordinate"] = seventhMoveCordinate
         userDatabaseDic["eighthMoveCordinate"] = eighthMoveCordinate
         userDatabaseDic["ninthMoveCordinate"] = ninthMoveCordinate
         userDatabaseDic["tenthMoveCordinate"] = tenthMoveCordinate

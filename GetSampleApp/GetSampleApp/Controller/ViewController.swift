@@ -61,15 +61,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func realtimeSwitch(_ sender: UISwitch) {
         if sender.isOn {
-            user.banWritingMatchingFlag = true
+            print(user.userDatabaseDic["waitRandomMatchFlag"])
+            // リアルタイム変更の監視：waitRandomMatchFlagについてのみテスト
+            var gotData = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: users, targetCorectionIsRooms: rooms, targetFieldName: waitRandomMatchFlag, numberOfTargets: 1)
+            user.userDatabaseDic["waitRandomMatchFlag"] = gotData
+            print("=============================")
+            print(user.userDatabaseDic["waitRandomMatchFlag"])
         } else {
-            user.banWritingMatchingFlag = false
+            operateDatabase.stopRealTimeMonitor()
         }
     }
     
     @IBAction func waitRandomMatchFlag(_ sender: UISwitch) {
         if sender.isOn {
             user.waitRandomMatchFlag = true
+            
         } else {
             user.waitRandomMatchFlag = false
         }
@@ -77,9 +83,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func banWritingMatchingFlag(_ sender: UISwitch) {
         if sender.isOn {
-            operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: users, targetCorectionIsRooms: rooms, targetFieldName: waitRandomMatchFlag, numberOfTargets: 1)
+            user.banWritingMatchingFlag = true
         } else {
-            operateDatabase.stopRealTimeMonitor()
+            user.banWritingMatchingFlag = false
         }
     }
     @IBAction func parmitRandomMatchRoomFlag(_ sender: UISwitch) {
@@ -98,13 +104,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         user.registeruserDatabaseDic()
         
         //  データの書き込み
+        // ユーザーID発行
         userID = operateDatabase.makeDatabase(targetCollection: users, inputDataDic: user.userDatabaseDic)
         
 //        print("##########################")
         print(userID)
+        // テーブルの更新
         sampleTableView.reloadData()
-     
-        
+        // userの辞書にuserIDを格納
+        user.userID = userID
+        user.registeruserDatabaseDic()
+        // データ本体に上書き
+        operateDatabase.updateDatabase(targetCollection: users, userID: userID, TargetFieldName: "userID", dicOfTarget: user.userDatabaseDic)
+
+    }
+    
+    @IBAction func updataButtonPressed(_ sender: Any) {
+        // trueとfalseを反転
+        if user.waitRandomMatchFlag {
+            user.waitRandomMatchFlag = false
+        } else {
+            
+        }
+        operateDatabase.updateDatabase(targetCollection: users, userID: user.userID, TargetFieldName: "waitRandomMatchFlag", dicOfTarget: user.userDatabaseDic)
     }
 }
 
