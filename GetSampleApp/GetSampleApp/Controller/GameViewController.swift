@@ -69,6 +69,7 @@ class GameViewController: UIViewController {
     var hostFlag = false
     var myColor = UIColor.red
     var yourColor = UIColor.blue
+    var betrayerFlag = false
     
     var uiButtonDic: [String: UIButton] = [:]
     var uiLabelDic: [String: UILabel] = [:]
@@ -104,6 +105,7 @@ class GameViewController: UIViewController {
                 } else if winer == 3 {
                     wiinerLabel.text = "引き分け"
             }
+                operateDatabase.stopRealTimeMonitor()
         }
     }
 }
@@ -147,6 +149,9 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
 
         realTimeChangeColors = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "MoveCordinate", numberOfTargets: 2) as! String
+        
+        realTimeChangeBetrayers = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "betrayersDic", numberOfTargets: 2) as! String
+        
         // Do any additional setup after loading the view.
         uiButtonDic = [
             "1": inputButton1,
@@ -196,10 +201,11 @@ class GameViewController: UIViewController {
         // userでルームidを持っている人を検索する
         let gotData = operateDatabase.searchDatabase(targetCorection: targetUserCorection, targetFieldName: "roomID", dicOfTarget: userData.userDatabaseDic)
         
-        if gotData as! String == "" {
+        if gotData as! String == "mySampleRoom" {
 //            // ルームの作成
 //            operateDatabase.makeDatabase(targetCollection: targetRoomCorection, inputDataDic: roomData.roomDatabaseDic)
 //
+            ourRoomID = gotData as! String
             // フラグを立てる
             // hostFlagがonのとき
             if hostFlag {
@@ -237,6 +243,9 @@ class GameViewController: UIViewController {
     
     // 自分の色を変更する
     func buttonAction(buttonNumber: Int, buttonUI: UIButton, label: UILabel) {
+        if betrayerFlag {
+            betray(buttonNumber: buttonNumber)
+        }
         //　ボタンの色を変更する
         buttonUI.backgroundColor = myColor
         label.backgroundColor = myColor
@@ -244,7 +253,7 @@ class GameViewController: UIViewController {
         buttonUI.isEnabled = true
         
         // アプリ内に書き込み
-        roomData.MoveCordinate[""] = [
+        roomData.MoveCordinate[cordinateNumber[buttonNumber]!] = [
             ["plyerInfo": "me"]:
             ["numberInfo": String(buttonNumber)]
         ]
@@ -262,45 +271,80 @@ class GameViewController: UIViewController {
     
     // MARK: -　ボタンアクション
     @IBAction func tappedInputButton1(_ sender: Any) {
+        let buttonNumber = 1
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     
     @IBAction func tappedInputButton2(_ sender: Any) {
+        let buttonNumber = 2
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     @IBAction func tappedInputButton3(_ sender: Any) {
+        let buttonNumber = 3
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
    
     @IBAction func tappedInputButton4(_ sender: Any) {
+        let buttonNumber = 4
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     
     @IBAction func tappedInputButton5(_ sender: Any) {
+        let buttonNumber = 5
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     
     @IBAction func tappedInputButton6(_ sender: Any) {
+        let buttonNumber = 6
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     @IBAction func tappedInputButton7(_ sender: Any) {
+        let buttonNumber = 7
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     @IBAction func tappedInputButton8(_ sender: Any) {
+        let buttonNumber = 8
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     @IBAction func tappedInputButton9(_ sender: Any) {
+        let buttonNumber = 9
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     @IBAction func tappedInputButton10(_ sender: Any) {
+        let buttonNumber = 10
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     @IBAction func tappedInputButton11(_ sender: Any) {
+        let buttonNumber = 11
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     @IBAction func tappedInputButton12(_ sender: Any) {
+        let buttonNumber = 12
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     @IBAction func tappedInputButton13(_ sender: Any) {
+        let buttonNumber = 13
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     @IBAction func tappedInputButton14(_ sender: Any) {
+        let buttonNumber = 14
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     @IBAction func tappedInputButton15(_ sender: Any) {
+        let buttonNumber = 15
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     @IBAction func tappedInputButton16(_ sender: Any) {
+        let buttonNumber = 16
+        buttonAction(buttonNumber: buttonNumber, buttonUI: uiButtonDic[String(buttonNumber)]!, label: uiLabelDic[String(buttonNumber)]!)
     }
     
     @IBAction func tappedInputButtonN(_ sender: Any) {
+        betrayerFlag = false
+        
     }
     @IBAction func tappedInputButtonB(_ sender: Any) {
+        betrayerFlag = true
     }
     
     @IBAction func onHostSwitch(_ sender: UISwitch) {
@@ -309,16 +353,27 @@ class GameViewController: UIViewController {
             hostFlag = true
             myColor = UIColor.red
             yourColor = UIColor.blue
+            ourRoomID = "mySampleRoom"
+            myUserID = "host"
         } else {
             // userIDに招待客として書き込むフラグを立てる
             hostFlag = false
             myColor = UIColor.blue
             yourColor = UIColor.red
+            myUserID = "invited"
+            searchRoomID()
         }
+        roomData.hostUserID = myUserID
     }
     
     @IBAction func tappedStartButton(_ sender: Any) {
         // ゲームのスタートをする
+        if hostFlag {
+            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: myUserID, TargetFieldName: "hostUserID", dicOfTarget: roomData.roomDatabaseDic)
+        } else {
+            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: myUserID, TargetFieldName: "invitedUserID", dicOfTarget: roomData.roomDatabaseDic)
+        }
+        
         // リアルタイム監視の開始処理
         operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetRoomCorection, targetCorectionIsRooms: ourRoomID, targetFieldName: "MoveCordinate", numberOfTargets: 2)
     }
