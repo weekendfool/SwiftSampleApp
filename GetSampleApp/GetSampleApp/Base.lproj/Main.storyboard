@@ -529,6 +529,13 @@
                                     <action selector="tappedStartButton:" destination="pD5-Vt-0tm" eventType="touchUpInside" id="zAk-3A-D3t"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccn-0c-1Bl">
+                                <rect key="frame" x="20" y="394" width="374" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sfz-Fk-42J"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -569,11 +576,12 @@
                         <outlet property="outputLabel8" destination="pwJ-3O-yzn" id="SJc-NC-qWb"/>
                         <outlet property="outputLabel9" destination="lOg-5Y-Ard" id="slO-3U-Mhv"/>
                         <outlet property="startButton" destination="fQ3-NJ-Ng6" id="bck-cH-9Zc"/>
+                        <outlet property="wiinerLabel" destination="ccn-0c-1Bl" id="wkJ-Wo-2lJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWO-RG-caq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1725" y="155"/>
+            <point key="canvasLocation" x="1724.6376811594205" y="154.6875"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="bXu-Wa-dJA">

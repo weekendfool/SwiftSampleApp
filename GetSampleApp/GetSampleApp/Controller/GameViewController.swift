@@ -50,12 +50,16 @@ class GameViewController: UIViewController {
     @IBOutlet weak var inputButtonB: UIButton!
     
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var wiinerLabel: UILabel!
     
     
     // MARK: - インスタンスの生成
     var roomData = RoomData()
     var operateDatabase = OperateDatabase()
     var userData = UserData()
+    var saveColor = SaveColor()
+    var judgmentWiner = JudgmentWiner()
+    var judgementBetrayer = JudgementBetrayer()
     
     let targetRoomCorection = "Rooms"
     let targetUserCorection = "Users"
@@ -84,14 +88,25 @@ class GameViewController: UIViewController {
             uiLabelDic[realTimeChangeColors]!.backgroundColor = yourColor
             // ボタンの無効化
             uiButtonDic[realTimeChangeColors]!.isEnabled = true
-            
+            // 色の格納
+            saveColor.saveColor(inputColor: "you", placeNumber: Int(realTimeChangeColors)!)
             // 勝者判定
             if realTimeChangeColors == "16" {
+                // 裏切り者の色変更処理
+                saveColor.changeColorOfBetrayer(inputMyNumber: judgementBetrayer.betrayerDic["me"]!, inputYourNumber: judgementBetrayer.betrayerDic["you"]!)
+                // 勝敗判定
+                var winer = judgmentWiner.judgmentWiner(afterColorDic: saveColor.colorDic)
                 
+                if winer == 1 {
+                    wiinerLabel.text = "You Win"
+                } else if winer == 2 {
+                    wiinerLabel.text = "You Lose"
+                } else if winer == 3 {
+                    wiinerLabel.text = "引き分け"
             }
-            
         }
     }
+}
     
     var realTimeChangeBetrayers = "" {
         didSet{
@@ -105,6 +120,7 @@ class GameViewController: UIViewController {
             // 裏切りの書き込み
             roomData.betrayersDic[yourBetrayerName] = String(realTimeChangeBetrayers)
             roomData.registeruserDatabaseDic()
+            judgementBetrayer.recordBetrayer(playerName: "you", choosePlaceNumber: Int(realTimeChangeBetrayers)!)
         }
     }
     
@@ -194,10 +210,7 @@ class GameViewController: UIViewController {
             
         }
     }
-    // ルームに入る
-    func getRoom() {
-        
-    }
+    
     
     // 裏切りの処理
     // 自分が裏切った時の処理
@@ -214,6 +227,7 @@ class GameViewController: UIViewController {
         roomData.betrayersDic[myBetrayerName] = String(buttonNumber)
         roomData.registeruserDatabaseDic()
         operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: myUserID, TargetFieldName: myBetrayerName, dicOfTarget: roomData.roomDatabaseDic)
+        judgementBetrayer.recordBetrayer(playerName: "me", choosePlaceNumber: buttonNumber)
     }
     
     // 相手のボタンの動きに対応して自分の色を変更する
@@ -237,6 +251,9 @@ class GameViewController: UIViewController {
         roomData.registeruserDatabaseDic()
         // firebaseに書き込み
         operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: myUserID, TargetFieldName: "MoveCordinate", dicOfTarget: roomData.roomDatabaseDic)
+        
+        // 色の格納
+        saveColor.saveColor(inputColor: "me", placeNumber: buttonNumber)
         
     }
     
