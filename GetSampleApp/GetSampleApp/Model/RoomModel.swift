@@ -21,81 +21,107 @@ struct RoomData {
     // 招待されたユーザーがフィールドを展開したかどうかのフラグ
     var hostUserStartFlag = false
     // 招待されたユーザーの裏切りが何手目かを記録する変数
-    var betrayerOfInvitedUser = ""
-    // ルームを作成したユーザーの裏切りが何手目かを記録する変数
-    var betrayerOfHostUser = ""
+    var betrayersDic: [String: String] = [
+        "betrayerOfInvitedUser": "",
+        "betrayerOfHostUser": ""
+    ]
+//    var betrayerOfInvitedUser = ""
+//    // ルームを作成したユーザーの裏切りが何手目かを記録する変数
+//    var betrayerOfHostUser = ""
     // 打った手の座標を記録する変数
-    var firstMoveCordinate = ""
-    var secondMoveCordinate = ""
-    var thirdMoveCordinate = ""
-    var fourthMoveCordinate = ""
-    var fifthMoveCordinate = ""
-    var sixthMoveCordinate = ""
-    var seventhMoveCordinate = ""
-    var eighthMoveCordinate = ""
-    var ninthMoveCordinate = ""
-    var tenthMoveCordinate = ""
-    var eleventhMoveCordinate = ""
-    var twelfthMoveCordinate = ""
-    var thirteenthMoveCordinate = ""
-    var fourteenthCordinate = ""
-    var fifteenthCordinate = ""
-    var sixteenthMoveCordinate = ""
+    var MoveCordinate: [String: [[String: String]: [String: String]]] = [
+        "firstMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "secondMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "thirdMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "fourthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "fifthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "sixthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "seventhMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "eighthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "ninthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "tenthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "eleventhMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "twelfthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "thirteenthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "fourteenthCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "fifteenthCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "MoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+    ]
     
     // MARK: - データベースに登録するユーザーの変数宣言
-    var userDatabaseDic: [String: Any] = [
+    var roomDatabaseDic: [String: Any] = [
         "roomID": "",
         "invitedUserID": "",
         "hostUserID": "",
         "invitedUserStartFlag": false,
         "hostUserStartFlag": false,
-        "betrayerOfInvitedUser": "",
-        "betrayerOfHostUser": "",
-        "firstMoveCordinate": "",
-        "secondMoveCordinate": "",
-        "thirdMoveCordinate": "",
-        "fourthMoveCordinate": "",
-        "fifthMoveCordinate": "",
-        "sixthMoveCordinate": "",
-        "seventhMoveCordinate": "",
-        "eighthMoveCordinate": "",
-        "ninthMoveCordinate": "",
-        "tenthMoveCordinate": "",
-        "eleventhMoveCordinate": "",
-        "twelfthMoveCordinate": "",
-        "thirteenthMoveCordinate": "",
-        "fourteenthCordinate": "",
-        "fifteenthCordinate": "",
-        "sixteenthMoveCordinate": "",
+        "betrayersDic": "",
+//        "betrayerOfHostUser": "",
+        "MoveCordinate": "",
+//        "firstMoveCordinate": "",
+//        "secondMoveCordinate": "",
+//        "thirdMoveCordinate": "",
+//        "fourthMoveCordinate": "",
+//        "fifthMoveCordinate": "",
+//        "sixthMoveCordinate": "",
+//        "seventhMoveCordinate": "",
+//        "eighthMoveCordinate": "",
+//        "ninthMoveCordinate": "",
+//        "tenthMoveCordinate": "",
+//        "eleventhMoveCordinate": "",
+//        "twelfthMoveCordinate": "",
+//        "thirteenthMoveCordinate": "",
+//        "fourteenthCordinate": "",
+//        "fifteenthCordinate": "",
+//        "sixteenthMoveCordinate": "",
     ]
 
     // MARK: - データベースの操作
     // データベースに登録するユーザーの情報を格納する
     mutating func registeruserDatabaseDic() {
-        userDatabaseDic["roomID"] = roomID
-        userDatabaseDic["invitedUserID"] = invitedUserID
-        userDatabaseDic["hostUserID"] = hostUserID
-        userDatabaseDic["invitedUserStartFlag"] = invitedUserStartFlag
-        userDatabaseDic["hostUserStartFlag"] = hostUserStartFlag
-        userDatabaseDic["betrayerOfInvitedUser"] = betrayerOfInvitedUser
-        userDatabaseDic["betrayerOfHostUser"] = betrayerOfHostUser
-        userDatabaseDic["firstMoveCordinate"] = firstMoveCordinate
-        userDatabaseDic["secondMoveCordinate"] = secondMoveCordinate
-        userDatabaseDic["thirdMoveCordinate"] = thirdMoveCordinate
-        userDatabaseDic["fourthMoveCordinate"] = fourthMoveCordinate
-        userDatabaseDic["fifthMoveCordinate"] = fifthMoveCordinate
-        userDatabaseDic["sixthMoveCordinate"] = sixthMoveCordinate
-        userDatabaseDic["seventhMoveCordinate"] = seventhMoveCordinate
-        userDatabaseDic["eighthMoveCordinate"] = eighthMoveCordinate
-        userDatabaseDic["ninthMoveCordinate"] = ninthMoveCordinate
-        userDatabaseDic["tenthMoveCordinate"] = tenthMoveCordinate
-        userDatabaseDic["eleventhMoveCordinate"] = eleventhMoveCordinate
-        userDatabaseDic["twelfthMoveCordinate"] = twelfthMoveCordinate
-        userDatabaseDic["thirteenthMoveCordinate"] = thirteenthMoveCordinate
-        userDatabaseDic["fourteenthCordinate"] = fourteenthCordinate
-        userDatabaseDic["fifteenthCordinate"] = fifteenthCordinate
-        userDatabaseDic["sixteenthMoveCordinate"] = sixteenthMoveCordinate
+        roomDatabaseDic["roomID"] = roomID
+        roomDatabaseDic["invitedUserID"] = invitedUserID
+        roomDatabaseDic["hostUserID"] = hostUserID
+        roomDatabaseDic["invitedUserStartFlag"] = invitedUserStartFlag
+        roomDatabaseDic["hostUserStartFlag"] = hostUserStartFlag
+        roomDatabaseDic["betrayersDic"] = betrayersDic["betrayerOfInvitedUser"]
+        roomDatabaseDic["betrayersDic"] = betrayersDic["betrayerOfHostUser"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["firstMoveCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["secondMoveCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["thirdMoveCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["fourthMoveCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["fifthMoveCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["sixthMoveCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["seventhMoveCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["eighthMoveCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["ninthMoveCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["tenthMoveCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["eleventhMoveCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["twelfthMoveCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["thirteenthMoveCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["fourteenthCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["fifteenthCordinate"]
+        roomDatabaseDic["MoveCordinate"] = MoveCordinate["sixteenthMoveCordinate"]
         
+        
+        
+//        roomDatabaseDic["firstMoveCordinate"] = firstMoveCordinate
+//        roomDatabaseDic["secondMoveCordinate"] = secondMoveCordinate
+//        roomDatabaseDic["thirdMoveCordinate"] = thirdMoveCordinate
+//        roomDatabaseDic["fourthMoveCordinate"] = fourthMoveCordinate
+//        roomDatabaseDic["fifthMoveCordinate"] = fifthMoveCordinate
+//        roomDatabaseDic["sixthMoveCordinate"] = sixthMoveCordinate
+//        roomDatabaseDic["seventhMoveCordinate"] = seventhMoveCordinate
+//        roomDatabaseDic["eighthMoveCordinate"] = eighthMoveCordinate
+//        roomDatabaseDic["ninthMoveCordinate"] = ninthMoveCordinate
+//        roomDatabaseDic["tenthMoveCordinate"] = tenthMoveCordinate
+//        roomDatabaseDic["eleventhMoveCordinate"] = eleventhMoveCordinate
+//        roomDatabaseDic["twelfthMoveCordinate"] = twelfthMoveCordinate
+//        roomDatabaseDic["thirteenthMoveCordinate"] = thirteenthMoveCordinate
+//        roomDatabaseDic["fourteenthCordinate"] = fourteenthCordinate
+//        roomDatabaseDic["fifteenthCordinate"] = fifteenthCordinate
+//        roomDatabaseDic["sixteenthMoveCordinate"] = sixteenthMoveCordinate
+//
     }
     
 }

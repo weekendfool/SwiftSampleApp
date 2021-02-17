@@ -24,6 +24,8 @@
 		8C5297BE25D4084500724697 /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5297BD25D4084500724697 /* RoomModel.swift */; };
 		8C5297C325D4085C00724697 /* OperateDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5297C225D4085C00724697 /* OperateDatabaseModel.swift */; };
 		8C5297C925D408CB00724697 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5297C825D408CB00724697 /* TestViewController.swift */; };
+		8C5CA09E25DAF1B30012A012 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CA09D25DAF1B30012A012 /* GameViewController.swift */; };
+		8C5CA0A325DCC76F0012A012 /* SaveColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CA0A225DCC76F0012A012 /* SaveColorModel.swift */; };
 		BA3138C385B33700C6AC1BBD /* Pods_GetSampleApp_GetSampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB36A4A103E64CF603D59FFB /* Pods_GetSampleApp_GetSampleAppUITests.framework */; };
 		F85A3563EC17C8F52D0F8F67 /* Pods_GetSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4EEAA55E3C29C6B80E415E /* Pods_GetSampleAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +75,8 @@
 		8C5297BD25D4084500724697 /* RoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
 		8C5297C225D4085C00724697 /* OperateDatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperateDatabaseModel.swift; sourceTree = "<group>"; };
 		8C5297C825D408CB00724697 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		8C5CA09D25DAF1B30012A012 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8C5CA0A225DCC76F0012A012 /* SaveColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveColorModel.swift; sourceTree = "<group>"; };
 		A11A9D0734647E919AC08316 /* Pods-GetSampleApp-GetSampleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSampleApp-GetSampleAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-GetSampleApp-GetSampleAppUITests/Pods-GetSampleApp-GetSampleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4654C678153688F6C8E540A /* Pods-GetSampleApp-GetSampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSampleApp-GetSampleAppUITests.release.xcconfig"; path = "Target Support Files/Pods-GetSampleApp-GetSampleAppUITests/Pods-GetSampleApp-GetSampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA4EEAA55E3C29C6B80E415E /* Pods_GetSampleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetSampleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +189,7 @@
 				8C5297B825D4082D00724697 /* UserModel.swift */,
 				8C5297BD25D4084500724697 /* RoomModel.swift */,
 				8C5297C225D4085C00724697 /* OperateDatabaseModel.swift */,
+				8C5CA0A225DCC76F0012A012 /* SaveColorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			children = (
 				8C5297C825D408CB00724697 /* TestViewController.swift */,
 				8C51899525C87358004F82C5 /* ViewController.swift */,
+				8C5CA09D25DAF1B30012A012 /* GameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -453,9 +459,11 @@
 				8C5297B925D4082D00724697 /* UserModel.swift in Sources */,
 				8C5297C325D4085C00724697 /* OperateDatabaseModel.swift in Sources */,
 				8C51899C25C87358004F82C5 /* GetSampleApp.xcdatamodeld in Sources */,
+				8C5CA0A325DCC76F0012A012 /* SaveColorModel.swift in Sources */,
 				8C51899625C87358004F82C5 /* ViewController.swift in Sources */,
 				8C2002BF25D117B000C21307 /* RoomViewController.swift in Sources */,
 				8C51899225C87358004F82C5 /* AppDelegate.swift in Sources */,
+				8C5CA09E25DAF1B30012A012 /* GameViewController.swift in Sources */,
 				8C51899425C87358004F82C5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
