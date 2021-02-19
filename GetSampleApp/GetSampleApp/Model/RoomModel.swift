@@ -26,9 +26,8 @@ struct RoomData {
         "betrayerOfInvitedUser": "",
         "betrayerOfHostUser": ""
     ]
-//    var betrayerOfInvitedUser = ""
-//    // ルームを作成したユーザーの裏切りが何手目かを記録する変数
-//    var betrayerOfHostUser = ""
+
+    // ルームを作成したユーザーの裏切りが何手目かを記録する変数
     // 打った手の座標を記録する変数
     var moveCordinate: [String: [[String: String]: [String: String]]] = [
         "firstMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
@@ -46,7 +45,7 @@ struct RoomData {
         "thirteenthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
         "fourteenthCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
         "fifteenthCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "sixteenthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
+        "sixteenthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]]
     ]
     
     // MARK: - データベースに登録するユーザーの変数宣言
@@ -57,25 +56,9 @@ struct RoomData {
         "hostUserID": "",
         "invitedUserStartFlag": false,
         "hostUserStartFlag": false,
-        "betrayersDic": "",
-//        "betrayerOfHostUser": "",
-        "moveCordinate": "",
-//        "firstMoveCordinate": "",
-//        "secondMoveCordinate": "",
-//        "thirdMoveCordinate": "",
-//        "fourthMoveCordinate": "",
-//        "fifthMoveCordinate": "",
-//        "sixthMoveCordinate": "",
-//        "seventhMoveCordinate": "",
-//        "eighthMoveCordinate": "",
-//        "ninthMoveCordinate": "",
-//        "tenthMoveCordinate": "",
-//        "eleventhMoveCordinate": "",
-//        "twelfthMoveCordinate": "",
-//        "thirteenthMoveCordinate": "",
-//        "fourteenthCordinate": "",
-//        "fifteenthCordinate": "",
-//        "sixteenthMoveCordinate": "",
+        "betrayersDic": ["": ""],
+        "moveCordinate": ["": [["": ""]: ["": ""]]]
+
     ]
 
     // MARK: - データベースの操作
