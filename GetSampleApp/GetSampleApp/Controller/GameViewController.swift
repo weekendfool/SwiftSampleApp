@@ -75,42 +75,46 @@ class GameViewController: UIViewController {
     var uiLabelDic: [String: UILabel] = [:]
     
     
-    var realTimeChangeColors = "" {
+    var realTimeChangeColors: String? {
         didSet {
-            
+        
             // アプリ内に書き込み
-            roomData.MoveCordinate[""] = [
+            roomData.moveCordinate[""] = [
                 ["plyerInfo": "you"]:
-                ["numberInfo": realTimeChangeColors]
+                ["numberInfo": realTimeChangeColors as! String]
             ]
             roomData.registeruserDatabaseDic()
             //　ボタンの色を変更する
-            uiButtonDic[realTimeChangeColors]!.backgroundColor = yourColor
-            uiLabelDic[realTimeChangeColors]!.backgroundColor = yourColor
-            // ボタンの無効化
-            uiButtonDic[realTimeChangeColors]!.isEnabled = true
-            // 色の格納
-            saveColor.saveColor(inputColor: "you", placeNumber: Int(realTimeChangeColors)!)
-            // 勝者判定
-            if realTimeChangeColors == "16" {
-                // 裏切り者の色変更処理
-                saveColor.changeColorOfBetrayer(inputMyNumber: judgementBetrayer.betrayerDic["me"]!, inputYourNumber: judgementBetrayer.betrayerDic["you"]!)
-                // 勝敗判定
-                var winer = judgmentWiner.judgmentWiner(afterColorDic: saveColor.colorDic)
-                
-                if winer == 1 {
-                    wiinerLabel.text = "You Win"
-                } else if winer == 2 {
-                    wiinerLabel.text = "You Lose"
-                } else if winer == 3 {
-                    wiinerLabel.text = "引き分け"
+            if let realTimeChangeColor = realTimeChangeColors {
+                if realTimeChangeColor != "" {
+                    uiButtonDic[realTimeChangeColor as! String]!.backgroundColor = yourColor
+                    uiLabelDic[realTimeChangeColor as! String]!.backgroundColor = yourColor
+                    // ボタンの無効化
+                    uiButtonDic[realTimeChangeColor as! String]!.isEnabled = true
+                    // 色の格納
+                    saveColor.saveColor(inputColor: "you", placeNumber: Int(realTimeChangeColor as! String)!)
+                    // 勝者判定
+                    if realTimeChangeColor as! String == "16" {
+                        // 裏切り者の色変更処理
+                        saveColor.changeColorOfBetrayer(inputMyNumber: judgementBetrayer.betrayerDic["me"]!, inputYourNumber: judgementBetrayer.betrayerDic["you"]!)
+                        // 勝敗判定
+                        var winer = judgmentWiner.judgmentWiner(afterColorDic: saveColor.colorDic)
+                        
+                        if winer == 1 {
+                            wiinerLabel.text = "You Win"
+                        } else if winer == 2 {
+                            wiinerLabel.text = "You Lose"
+                        } else if winer == 3 {
+                            wiinerLabel.text = "引き分け"
+                    }
+                        operateDatabase.stopRealTimeMonitor()
+                }
             }
-                operateDatabase.stopRealTimeMonitor()
         }
     }
 }
     
-    var realTimeChangeBetrayers = "" {
+    var realTimeChangeBetrayers: String? {
         didSet{
             // 相手が裏切った時の処理
             var yourBetrayerName = ""
@@ -120,9 +124,13 @@ class GameViewController: UIViewController {
                 yourBetrayerName = "betrayerOfInvitedUser"
             }
             // 裏切りの書き込み
-            roomData.betrayersDic[yourBetrayerName] = String(realTimeChangeBetrayers)
+            roomData.betrayersDic[yourBetrayerName] = String(realTimeChangeBetrayers!)
             roomData.registeruserDatabaseDic()
-            judgementBetrayer.recordBetrayer(playerName: "you", choosePlaceNumber: Int(realTimeChangeBetrayers)!)
+            if let realTimeChangeBetrayer = realTimeChangeBetrayers {
+                if realTimeChangeBetrayer != "" {
+                    judgementBetrayer.recordBetrayer(playerName: "you", choosePlaceNumber: Int(realTimeChangeBetrayer)!)
+                }
+            }
         }
     }
     
@@ -142,15 +150,16 @@ class GameViewController: UIViewController {
         13: "thirteenthMoveCordinate",
         14: "fourteenthCordinate",
         15: "fifteenthCordinate",
-        16: "MoveCordinate",
+        16: "moveCordinate",
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        realTimeChangeColors = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "MoveCordinate", numberOfTargets: 2) as! String
         
-        realTimeChangeBetrayers = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "betrayersDic", numberOfTargets: 2) as! String
+//        realTimeChangeColors = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "MoveCordinate", numberOfTargets: 2) as! String
+        
+//        realTimeChangeBetrayers = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "betrayersDic", numberOfTargets: 2) as! String
         
         // Do any additional setup after loading the view.
         uiButtonDic = [
@@ -199,7 +208,7 @@ class GameViewController: UIViewController {
     func searchRoomID() {
         // ルームを検索する
         // userでルームidを持っている人を検索する
-        let gotData = operateDatabase.searchDatabase(targetCorection: targetUserCorection, targetFieldName: "roomID", dicOfTarget: userData.userDatabaseDic)
+        let gotData = operateDatabase.searchDatabase2(targetCorection: targetUserCorection, targetDocumentName: "mySampleRoom")
         
         if gotData as! String == "mySampleRoom" {
 //            // ルームの作成
@@ -209,9 +218,9 @@ class GameViewController: UIViewController {
             // フラグを立てる
             // hostFlagがonのとき
             if hostFlag {
-                operateDatabase.updateDatabase(targetCollection: targetUserCorection, userID: myUserID, TargetFieldName: roomData.hostUserID, dicOfTarget: roomData.roomDatabaseDic)
+                operateDatabase.updateDatabase(targetCollection: targetUserCorection, userID: roomData.roomID, TargetFieldName: roomData.hostUserID, dicOfTarget: roomData.roomDatabaseDic)
             } else {
-                operateDatabase.updateDatabase(targetCollection: targetUserCorection, userID: myUserID, TargetFieldName: roomData.invitedUserID, dicOfTarget: roomData.roomDatabaseDic)
+                operateDatabase.updateDatabase(targetCollection: targetUserCorection, userID: roomData.roomID, TargetFieldName: roomData.invitedUserID, dicOfTarget: roomData.roomDatabaseDic)
             }
             
         }
@@ -232,7 +241,7 @@ class GameViewController: UIViewController {
         // 裏切りの書き込み
         roomData.betrayersDic[myBetrayerName] = String(buttonNumber)
         roomData.registeruserDatabaseDic()
-        operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: myUserID, TargetFieldName: myBetrayerName, dicOfTarget: roomData.roomDatabaseDic)
+        operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomID, TargetFieldName: myBetrayerName, dicOfTarget: roomData.roomDatabaseDic)
         judgementBetrayer.recordBetrayer(playerName: "me", choosePlaceNumber: buttonNumber)
     }
     
@@ -253,13 +262,13 @@ class GameViewController: UIViewController {
         buttonUI.isEnabled = true
         
         // アプリ内に書き込み
-        roomData.MoveCordinate[cordinateNumber[buttonNumber]!] = [
+        roomData.moveCordinate[cordinateNumber[buttonNumber]!] = [
             ["plyerInfo": "me"]:
             ["numberInfo": String(buttonNumber)]
         ]
         roomData.registeruserDatabaseDic()
         // firebaseに書き込み
-        operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: myUserID, TargetFieldName: "MoveCordinate", dicOfTarget: roomData.roomDatabaseDic)
+        operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomID, TargetFieldName: "moveCordinate", dicOfTarget: roomData.roomDatabaseDic)
         
         // 色の格納
         saveColor.saveColor(inputColor: "me", placeNumber: buttonNumber)
@@ -355,27 +364,47 @@ class GameViewController: UIViewController {
             yourColor = UIColor.blue
             ourRoomID = "mySampleRoom"
             myUserID = "host"
+            roomData.hostUserID = myUserID
+            roomData.roomID = ourRoomID
+            roomData.invitedUserID = ""
+            roomData.registeruserDatabaseDic()
+//            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomName, TargetFieldName: "hostUserID", dicOfTarget: roomData.roomDatabaseDic)
+//
+//            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomName, TargetFieldName: "roomID", dicOfTarget: roomData.roomDatabaseDic)
         } else {
             // userIDに招待客として書き込むフラグを立てる
             hostFlag = false
             myColor = UIColor.blue
             yourColor = UIColor.red
             myUserID = "invited"
-            searchRoomID()
+            roomData.invitedUserID = myUserID
+            roomData.hostUserID = ""
+            roomData.registeruserDatabaseDic()
+            
+//            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomName, TargetFieldName: "invitedUserID", dicOfTarget: roomData.roomDatabaseDic)
         }
-        roomData.hostUserID = myUserID
     }
     
     @IBAction func tappedStartButton(_ sender: Any) {
+        
+        print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
+        print(myUserID)
         // ゲームのスタートをする
         if hostFlag {
-            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: myUserID, TargetFieldName: "hostUserID", dicOfTarget: roomData.roomDatabaseDic)
+            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomID, TargetFieldName: "hostUserID", dicOfTarget: roomData.roomDatabaseDic)
+            
+            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomID, TargetFieldName: "roomID", dicOfTarget: roomData.roomDatabaseDic)
         } else {
-            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: myUserID, TargetFieldName: "invitedUserID", dicOfTarget: roomData.roomDatabaseDic)
+            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomID, TargetFieldName: "invitedUserID", dicOfTarget: roomData.roomDatabaseDic)
         }
         
         // リアルタイム監視の開始処理
-        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetRoomCorection, targetCorectionIsRooms: ourRoomID, targetFieldName: "MoveCordinate", numberOfTargets: 2)
+//        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetRoomCorection, targetCorectionIsRooms: ourRoomID, targetFieldName: "MoveCordinate", numberOfTargets: 2)
+//
+        realTimeChangeColors = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", numberOfTargets: 2) as! String
+
+        realTimeChangeBetrayers = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", numberOfTargets: 2) as! String
+
     }
     
 }

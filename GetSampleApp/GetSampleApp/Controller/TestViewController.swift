@@ -41,6 +41,8 @@ class TestViewController: UIViewController {
     var room = RoomData()
     var operateDatabase = OperateDatabase()
     
+    var roomName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,25 +53,42 @@ class TestViewController: UIViewController {
     
     
     func writeData() {
+        
         // データのセッティング
         room.roomID = roomIDText.text ?? "No Room"
         room.hostUserID = hostUserIDText.text ?? "No Host"
         room.invitedUserID = invitedUserIDText.text ?? "No humen"
         
-        
         // 書き込み用の辞書を更新
         room.registeruserDatabaseDic()
         
-        // 実際に書き込む処理
-        operateDatabase.makeDatabase(targetCollection: "Rooms", inputDataDic: room.roomDatabaseDic)
+//        roomName = operateDatabase.makeDatabase(targetCollection: "Rooms", inputDataDic: room.roomDatabaseDic)
+//        room.roomName = roomName
+        
+//        // 書き込み用の辞書を更新
+//        room.registeruserDatabaseDic()
+//
+//        // 実際に書き込む処理
+//        operateDatabase.updateDatabase(targetCollection: "Rooms", userID: roomName, TargetFieldName: "roomName", dicOfTarget: room.roomDatabaseDic)
+//
+//        print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+//        print(roomName)
+        operateDatabase.makeDatabase2(targetCollection: "Rooms", inputName: "mySampleRoom", inputDataDic: room.roomDatabaseDic)
+        
+        
     }
     
    
 
     @IBAction func buttonTapped(_ sender: Any) {
         writeData()
+        
     }
     
     @IBAction func realtimeSwitch(_ sender: Any) {
+    }
+    @IBAction func tappedWriteButton(_ sender: Any) {
+        // 実際に書き込む処理
+        operateDatabase.updateDatabase(targetCollection: "Rooms", userID: roomName, TargetFieldName: "roomName", dicOfTarget: room.roomDatabaseDic)
     }
 }

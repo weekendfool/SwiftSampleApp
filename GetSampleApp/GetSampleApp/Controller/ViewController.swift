@@ -103,9 +103,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         user.roomID = roomIDTextField.text ?? ""
         user.registeruserDatabaseDic()
         
+//        operateDatabase.makeDatabase2(targetCollection: users, inputName: <#String#>, inputDataDic: user.userDatabaseDic)
+        
         //  データの書き込み
         // ユーザーID発行
-        userID = operateDatabase.makeDatabase(targetCollection: users, inputDataDic: user.userDatabaseDic)
+//        userID = operateDatabase.makeDatabase(targetCollection: users, inputDataDic: user.userDatabaseDic)
         
 //        print("##########################")
         print(userID)
@@ -115,7 +117,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         user.userID = userID
         user.registeruserDatabaseDic()
         // データ本体に上書き
-        operateDatabase.updateDatabase(targetCollection: users, userID: userID, TargetFieldName: "userID", dicOfTarget: user.userDatabaseDic)
+//        operateDatabase.updateDatabase(targetCollection: users, userID: userID, TargetFieldName: "userID", dicOfTarget: user.userDatabaseDic)
 
     }
     
