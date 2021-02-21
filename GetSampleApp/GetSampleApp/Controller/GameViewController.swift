@@ -208,7 +208,7 @@ class GameViewController: UIViewController {
     func searchRoomID() {
         // ルームを検索する
         // userでルームidを持っている人を検索する
-        let gotData = operateDatabase.searchDatabase2(targetCorection: targetUserCorection, targetDocumentName: "mySampleRoom")
+        let gotData = operateDatabase.searchDatabase(targetCorection: targetUserCorection, targetDocumentName: "mySampleRoom")
         
         if gotData as! String == "mySampleRoom" {
 //            // ルームの作成
@@ -218,9 +218,9 @@ class GameViewController: UIViewController {
             // フラグを立てる
             // hostFlagがonのとき
             if hostFlag {
-                operateDatabase.updateDatabase(targetCollection: targetUserCorection, userID: roomData.roomID, TargetFieldName: roomData.hostUserID, dicOfTarget: roomData.roomDatabaseDic)
+                operateDatabase.updateDatabase(targetCollection: targetUserCorection, targetDocument: roomData.roomID, TargetFieldName: roomData.hostUserID, dicOfTarget: roomData.roomDatabaseDic)
             } else {
-                operateDatabase.updateDatabase(targetCollection: targetUserCorection, userID: roomData.roomID, TargetFieldName: roomData.invitedUserID, dicOfTarget: roomData.roomDatabaseDic)
+                operateDatabase.updateDatabase(targetCollection: targetUserCorection, targetDocument: roomData.roomID, TargetFieldName: roomData.invitedUserID, dicOfTarget: roomData.roomDatabaseDic)
             }
             
         }
@@ -241,7 +241,7 @@ class GameViewController: UIViewController {
         // 裏切りの書き込み
         roomData.betrayersDic[myBetrayerName] = String(buttonNumber)
         roomData.registeruserDatabaseDic()
-        operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomID, TargetFieldName: myBetrayerName, dicOfTarget: roomData.roomDatabaseDic)
+        operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: myBetrayerName, dicOfTarget: roomData.roomDatabaseDic)
         judgementBetrayer.recordBetrayer(playerName: "me", choosePlaceNumber: buttonNumber)
     }
     
@@ -268,7 +268,7 @@ class GameViewController: UIViewController {
         ]
         roomData.registeruserDatabaseDic()
         // firebaseに書き込み
-        operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomID, TargetFieldName: "moveCordinate", dicOfTarget: roomData.roomDatabaseDic)
+        operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "moveCordinate", dicOfTarget: roomData.roomDatabaseDic)
         
         // 色の格納
         saveColor.saveColor(inputColor: "me", placeNumber: buttonNumber)
@@ -391,11 +391,11 @@ class GameViewController: UIViewController {
         print(myUserID)
         // ゲームのスタートをする
         if hostFlag {
-            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomID, TargetFieldName: "hostUserID", dicOfTarget: roomData.roomDatabaseDic)
+            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "hostUserID", dicOfTarget: roomData.roomDatabaseDic)
             
-            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomID, TargetFieldName: "roomID", dicOfTarget: roomData.roomDatabaseDic)
+            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "roomID", dicOfTarget: roomData.roomDatabaseDic)
         } else {
-            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomID, TargetFieldName: "invitedUserID", dicOfTarget: roomData.roomDatabaseDic)
+            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "invitedUserID", dicOfTarget: roomData.roomDatabaseDic)
         }
         
         // リアルタイム監視の開始処理

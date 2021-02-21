@@ -117,7 +117,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         user.userID = userID
         user.registeruserDatabaseDic()
         // データ本体に上書き
-//        operateDatabase.updateDatabase(targetCollection: users, userID: userID, TargetFieldName: "userID", dicOfTarget: user.userDatabaseDic)
+        operateDatabase.writeUserDatabase(targetCollection: users, inputDataDic: user.userDatabaseDic)
 
     }
     
@@ -128,7 +128,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else {
             
         }
-        operateDatabase.updateDatabase(targetCollection: users, userID: user.userID, TargetFieldName: "waitRandomMatchFlag", dicOfTarget: user.userDatabaseDic)
+        operateDatabase.updateDatabase(targetCollection: users, targetDocument: user.userID, TargetFieldName: "waitRandomMatchFlag", dicOfTarget: user.userDatabaseDic)
     }
 }
 

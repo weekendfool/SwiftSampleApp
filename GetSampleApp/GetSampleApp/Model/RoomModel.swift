@@ -12,7 +12,6 @@ struct RoomData {
     // MARK: - データベース内でのルームが持つ情報を宣言
     // 作成されたルームのID
     var roomID = ""
-    var roomName = ""
     // 招待されたユーザーのID
     var invitedUserID = ""
     // ルームを作成したユーザーのID
@@ -65,7 +64,6 @@ struct RoomData {
     // データベースに登録するユーザーの情報を格納する
     mutating func registeruserDatabaseDic() {
         roomDatabaseDic["roomID"] = roomID
-        roomDatabaseDic["roomName"] = roomName
         roomDatabaseDic["invitedUserID"] = invitedUserID
         roomDatabaseDic["hostUserID"] = hostUserID
         roomDatabaseDic["invitedUserStartFlag"] = invitedUserStartFlag
@@ -89,25 +87,6 @@ struct RoomData {
         roomDatabaseDic["moveCordinate"] = moveCordinate["fifteenthCordinate"] ?? ""
         roomDatabaseDic["moveCordinate"] = moveCordinate["sixteenthMoveCordinate"] ?? ""
         
-        
-        
-//        roomDatabaseDic["firstMoveCordinate"] = firstMoveCordinate
-//        roomDatabaseDic["secondMoveCordinate"] = secondMoveCordinate
-//        roomDatabaseDic["thirdMoveCordinate"] = thirdMoveCordinate
-//        roomDatabaseDic["fourthMoveCordinate"] = fourthMoveCordinate
-//        roomDatabaseDic["fifthMoveCordinate"] = fifthMoveCordinate
-//        roomDatabaseDic["sixthMoveCordinate"] = sixthMoveCordinate
-//        roomDatabaseDic["seventhMoveCordinate"] = seventhMoveCordinate
-//        roomDatabaseDic["eighthMoveCordinate"] = eighthMoveCordinate
-//        roomDatabaseDic["ninthMoveCordinate"] = ninthMoveCordinate
-//        roomDatabaseDic["tenthMoveCordinate"] = tenthMoveCordinate
-//        roomDatabaseDic["eleventhMoveCordinate"] = eleventhMoveCordinate
-//        roomDatabaseDic["twelfthMoveCordinate"] = twelfthMoveCordinate
-//        roomDatabaseDic["thirteenthMoveCordinate"] = thirteenthMoveCordinate
-//        roomDatabaseDic["fourteenthCordinate"] = fourteenthCordinate
-//        roomDatabaseDic["fifteenthCordinate"] = fifteenthCordinate
-//        roomDatabaseDic["sixteenthMoveCordinate"] = sixteenthMoveCordinate
-//
     }
     
 }

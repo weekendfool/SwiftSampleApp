@@ -20,14 +20,14 @@ struct OperateDatabase {
     
     // MARK: - データベースの操作
     // データベースへの書き込み処理
-    mutating func makeDatabase(targetCollection: String, inputDataDic: [String: Any]) -> String {
+    mutating func writeUserDatabase(targetCollection: String, inputDataDic: [String: Any]) -> String {
         // 格納先、格納するデータを指定して格納
         ref = database.collection(targetCollection).addDocument(data: inputDataDic) { [self] err in
             // エラーが発生した場合
             if let err = err {
                 // エラーが発生した場合の目印:print("-----------------------------------------")
                 print("-----------------------------------------")
-                print("Error At makeDatabase(): \(err)")
+                print("Error At writeUserDatabase(): \(err)")
             }
         }
         // 成功した場合
@@ -40,15 +40,25 @@ struct OperateDatabase {
     }
     
     // データベースへの書き込み処理
-    mutating func makeDatabase2(targetCollection: String, inputName: String, inputDataDic: [String: Any]) {
+    mutating func writeRoomDatabase(targetCollection: String, inputDocumentName: String, inputDataDic: [String: Any])  {
         // 格納先、格納するデータを指定して格納
-         database.collection(targetCollection).document(inputName).setData(inputDataDic)
-        
+        database.collection(targetCollection).document(inputDocumentName).setData(inputDataDic) { err in
+            if let err = err {
+                // エラーが発生した場合
+                print("-----------------------------------------")
+                print("Error At makeDatabase(): \(err)")
+            } else {
+                // 成功した場合
+                print("==========================================")
+                print("Document successfully Writen: RoomDatabase")
+            }
+        }
     }
+    
     // データベースへの書き込み処理
-    mutating func updateDatabase(targetCollection: String, userID: String, TargetFieldName: String, dicOfTarget: [String: Any]) {
+    mutating func updateDatabase(targetCollection: String, targetDocument: String, TargetFieldName: String, dicOfTarget: [String: Any]) {
         // 格納先を指定
-        ref = database.collection(targetCollection).document(userID)
+        ref = database.collection(targetCollection).document(targetDocument)
         ref!.updateData([TargetFieldName: dicOfTarget[TargetFieldName]]) { (err) in
             // エラーが発生した場合
             if let err = err {
@@ -62,33 +72,33 @@ struct OperateDatabase {
         }
     }
     
+//    // データベースの検索処理
+//    mutating func searchDatabase(targetCorection: String, targetFieldName: String, dicOfTarget: [String: Any]) -> Any {
+//        // 検索したい条件を設定
+//        var docRef = database.collection(targetCorection).whereField(targetFieldName, isEqualTo: dicOfTarget[targetFieldName])
+//        // データ返却用の変数
+//        var getData: Any?
+//        // 実際に検索する
+//        docRef.getDocuments { [self] (querySnapshot, err) in
+//            if let err = err {
+//                print("-----------------------------------------")
+//                print("Error At searchDatabase(): \(err)")
+//            } else {
+//                print("==========================================")
+//                print("document successfully searched")
+//                for document in querySnapshot!.documents {
+//                    // 取得したデータを返却
+//                    getData = document.data()[targetFieldName]
+//
+//                }
+//            }
+//        }
+//        return getData!
+//
+//    }
+//
     // データベースの検索処理
-    mutating func searchDatabase(targetCorection: String, targetFieldName: String, dicOfTarget: [String: Any]) -> Any {
-        // 検索したい条件を設定
-        var docRef = database.collection(targetCorection).whereField(targetFieldName, isEqualTo: dicOfTarget[targetFieldName])
-        // データ返却用の変数
-        var getData: Any?
-        // 実際に検索する
-        docRef.getDocuments { [self] (querySnapshot, err) in
-            if let err = err {
-                print("-----------------------------------------")
-                print("Error At searchDatabase(): \(err)")
-            } else {
-                print("==========================================")
-                print("document successfully searched")
-                for document in querySnapshot!.documents {
-                    // 取得したデータを返却
-                    getData = document.data()[targetFieldName]
-                                        
-                }
-            }
-        }
-        return getData!
-
-    }
-    
-    // データベースの検索処理
-    mutating func searchDatabase2(targetCorection: String, targetDocumentName: String) -> Any {
+    mutating func searchDatabase(targetCorection: String, targetDocumentName: String) -> Any {
         // 検索したい条件を設定
         var docRef = database.collection(targetCorection).document(targetDocumentName)
         // データ返却用の変数
