@@ -29,25 +29,26 @@ struct RoomData {
     // ルームを作成したユーザーの裏切りが何手目かを記録する変数
     // 打った手の座標を記録する変数
     var moveCordinate: [String: [[String: String]: [String: String]]] = [
-        "firstMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "secondMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "thirdMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "fourthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "fifthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "sixthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "seventhMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "eighthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "ninthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "tenthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "eleventhMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "twelfthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "thirteenthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "fourteenthCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "fifteenthCordinate": [["plyerInfo": ""]: ["numberInfo": ""]],
-        "sixteenthMoveCordinate": [["plyerInfo": ""]: ["numberInfo": ""]]
+        "firstMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "secondMoveCordinate": ["plyerInfo": "","numberInfo": ""],
+        "thirdMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "fourthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "fifthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "sixthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "seventhMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "eighthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "ninthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "tenthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "eleventhMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "twelfthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "thirteenthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "fourteenthCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "fifteenthCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "sixteenthMoveCordinate": ["plyerInfo": "", "numberInfo": ""]
     ]
     
     // MARK: - データベースに登録するユーザーの変数宣言
+    
     var roomDatabaseDic: [String: Any] = [
         "roomID": "",
         "roomName": "",
@@ -55,11 +56,62 @@ struct RoomData {
         "hostUserID": "",
         "invitedUserStartFlag": false,
         "hostUserStartFlag": false,
-        "betrayersDic": ["": ""],
-        "moveCordinate": ["": [["": ""]: ["": ""]]]
-
+        "betrayersDic": [
+            "betrayerOfInvitedUser": "",
+            "betrayerOfHostUser": ""
+        ],
+        "moveCordinate": [
+            "firstMoveCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "secondMoveCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "thirdMoveCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "fourthMoveCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "fifthMoveCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "sixthMoveCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "seventhMoveCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "eighthMoveCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "ninthMoveCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "tenthMoveCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "eleventhMoveCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "twelfthMoveCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "thirteenthMoveCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "fourteenthCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "fifteenthCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ],
+            "sixteenthMoveCordinate": [
+                ["plyerInfo": "","numberInfo": ""]
+            ]
+        ]
     ]
-
+    
     // MARK: - データベースの操作
     // データベースに登録するユーザーの情報を格納する
     mutating func registeruserDatabaseDic() {

@@ -29,7 +29,10 @@ class NewViewController: UIViewController {
         roomData.registeruserDatabaseDic()
         
         // firebaseに書き込み
-        operateDatabase.writeRoomDatabase(targetCollection: "Users", inputDocumentName: "SampleRoom", inputDataDic: roomData.roomDatabaseDic)
+//        operateDatabase.writeRoomDatabase(targetCollection: "Rooms", inputDocumentName: "SampleRoom", inputDataDic: roomData.roomDatabaseDic)
+        print("&&&&&&&&&&&&&&&&&&&&&")
+        print(roomData.roomDic)
+        operateDatabase.writeUserDatabase(targetCollection: "Rooms", inputDataDic: roomData.roomDic)
         
     }
     
