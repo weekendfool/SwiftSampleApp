@@ -78,15 +78,18 @@ class GameViewController: UIViewController {
     var realTimeChangeColors: String? {
         didSet {
         
-            // アプリ内に書き込み
-            roomData.moveCordinate[""] = [
-                ["plyerInfo": "you"]:
-                ["numberInfo": realTimeChangeColors as! String]
-            ]
             roomData.registeruserDatabaseDic()
             //　ボタンの色を変更する
             if let realTimeChangeColor = realTimeChangeColors {
                 if realTimeChangeColor != "" {
+//                    var buttonNumber = realTimeChangeColor["numberInfo"]
+//                    // アプリ内に書き込み
+//                    roomData.moveCordinate[cordinateNumber[realTimeChangeColor]!]!["plyerInfo"] = "you"
+//                    roomData.moveCordinate[cordinateNumber[realTimeChangeColor]!]!["numberInfo"] = String(buttonNumber)
+//
+                    print("####################")
+                    print(realTimeChangeColor)
+                    
                     uiButtonDic[realTimeChangeColor as! String]!.backgroundColor = yourColor
                     uiLabelDic[realTimeChangeColor as! String]!.backgroundColor = yourColor
                     // ボタンの無効化
@@ -262,10 +265,10 @@ class GameViewController: UIViewController {
         buttonUI.isEnabled = true
         
         // アプリ内に書き込み
-        roomData.moveCordinate[cordinateNumber[buttonNumber]!] = [
-            ["plyerInfo": "me"]:
-            ["numberInfo": String(buttonNumber)]
-        ]
+        roomData.moveCordinate[cordinateNumber[buttonNumber]!]!["plyerInfo"] = "me"
+        roomData.moveCordinate[cordinateNumber[buttonNumber]!]!["numberInfo"] = String(buttonNumber)
+            
+        
         roomData.registeruserDatabaseDic()
         // firebaseに書き込み
         operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "moveCordinate", dicOfTarget: roomData.roomDatabaseDic)

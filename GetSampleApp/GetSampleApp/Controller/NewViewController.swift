@@ -31,9 +31,9 @@ class NewViewController: UIViewController {
         // firebaseに書き込み
 //        operateDatabase.writeRoomDatabase(targetCollection: "Rooms", inputDocumentName: "SampleRoom", inputDataDic: roomData.roomDatabaseDic)
         print("&&&&&&&&&&&&&&&&&&&&&")
-        print(roomData.roomDic)
-        operateDatabase.writeUserDatabase(targetCollection: "Rooms", inputDataDic: roomData.roomDic)
-        
+//        print(roomData.roomDic)
+//        operateDatabase.writeUserDatabase(targetCollection: "Rooms", inputDataDic: roomData.roomDic)
+//
     }
     
    

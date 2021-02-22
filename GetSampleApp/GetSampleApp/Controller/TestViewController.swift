@@ -63,9 +63,9 @@ class TestViewController: UIViewController {
         print(room.roomDatabaseDic)
         
         // firebaseに書き込み処理
-//        operateDatabase.writeRoomDatabase(targetCollection: "Room", inputDocumentName: "Sample", inputDataDic: room.roomDatabaseDic)
+        operateDatabase.writeRoomDatabase(targetCollection: "Rooms", inputDocumentName: "1111", inputDataDic: room.roomDatabaseDic)
 
-        operateDatabase.writeUserDatabase(targetCollection: "Users", inputDataDic: room.roomDatabaseDic)
+//        operateDatabase.writeUserDatabase(targetCollection: "Users", inputDataDic: room.roomDatabaseDic)
         
         
     }

@@ -28,7 +28,7 @@ struct RoomData {
 
     // ルームを作成したユーザーの裏切りが何手目かを記録する変数
     // 打った手の座標を記録する変数
-    var moveCordinate: [String: [[String: String]: [String: String]]] = [
+    var moveCordinate: [String: [String: String]] = [
         "firstMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
         "secondMoveCordinate": ["plyerInfo": "","numberInfo": ""],
         "thirdMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
@@ -51,7 +51,6 @@ struct RoomData {
     
     var roomDatabaseDic: [String: Any] = [
         "roomID": "",
-        "roomName": "",
         "invitedUserID": "",
         "hostUserID": "",
         "invitedUserStartFlag": false,
@@ -122,22 +121,56 @@ struct RoomData {
         roomDatabaseDic["hostUserStartFlag"] = hostUserStartFlag
         roomDatabaseDic["betrayersDic"] = betrayersDic["betrayerOfInvitedUser"]
         roomDatabaseDic["betrayersDic"] = betrayersDic["betrayerOfHostUser"]
-        roomDatabaseDic["moveCordinate"] = moveCordinate["firstMoveCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["secondMoveCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["thirdMoveCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["fourthMoveCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["fifthMoveCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["sixthMoveCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["seventhMoveCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["eighthMoveCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["ninthMoveCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["tenthMoveCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["eleventhMoveCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["twelfthMoveCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["thirteenthMoveCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["fourteenthCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["fifteenthCordinate"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["sixteenthMoveCordinate"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["firstMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["firstMoveCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["firstMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["firstMoveCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["secondMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["secondMoveCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["thirdMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["thirdMoveCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["fourthMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["fourthMoveCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["fifthMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["fifthMoveCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["sixthMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["sixthMoveCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["seventhMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["seventhMoveCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["eighthMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["eighthMoveCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["ninthMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["ninthMoveCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["tenthMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["tenthMoveCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["eleventhMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["eleventhMoveCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["twelfthMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["twelfthMoveCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["thirteenthMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["thirteenthMoveCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["fourteenthCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["fourteenthCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["fifteenthCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["fifteenthCordinate"]!["numberInfo"] ?? ""
+        
+        roomDatabaseDic["moveCordinate"] = moveCordinate["sixteenthMoveCordinate"]!["plyerInfo"] ?? ""
+        roomDatabaseDic["moveCordinate"] = moveCordinate["sixteenthMoveCordinate"]!["numberInfo"] ?? ""
         
     }
     
