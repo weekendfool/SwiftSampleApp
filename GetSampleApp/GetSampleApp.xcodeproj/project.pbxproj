@@ -24,6 +24,7 @@
 		8C5297BE25D4084500724697 /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5297BD25D4084500724697 /* RoomModel.swift */; };
 		8C5297C325D4085C00724697 /* OperateDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5297C225D4085C00724697 /* OperateDatabaseModel.swift */; };
 		8C5297C925D408CB00724697 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5297C825D408CB00724697 /* TestViewController.swift */; };
+		8C55899E25E354D000C0E2C9 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C55899D25E354D000C0E2C9 /* NewViewController.swift */; };
 		8C5CA09E25DAF1B30012A012 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CA09D25DAF1B30012A012 /* GameViewController.swift */; };
 		8C5CA0A325DCC76F0012A012 /* SaveColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CA0A225DCC76F0012A012 /* SaveColorModel.swift */; };
 		8C5CA0A825DCC9B20012A012 /* JudgementWiinerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CA0A725DCC9B20012A012 /* JudgementWiinerModel.swift */; };
@@ -77,6 +78,7 @@
 		8C5297BD25D4084500724697 /* RoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
 		8C5297C225D4085C00724697 /* OperateDatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperateDatabaseModel.swift; sourceTree = "<group>"; };
 		8C5297C825D408CB00724697 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		8C55899D25E354D000C0E2C9 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		8C5CA09D25DAF1B30012A012 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8C5CA0A225DCC76F0012A012 /* SaveColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveColorModel.swift; sourceTree = "<group>"; };
 		8C5CA0A725DCC9B20012A012 /* JudgementWiinerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgementWiinerModel.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				8C5297C825D408CB00724697 /* TestViewController.swift */,
 				8C51899525C87358004F82C5 /* ViewController.swift */,
 				8C5CA09D25DAF1B30012A012 /* GameViewController.swift */,
+				8C55899D25E354D000C0E2C9 /* NewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				8C51899625C87358004F82C5 /* ViewController.swift in Sources */,
 				8C2002BF25D117B000C21307 /* RoomViewController.swift in Sources */,
 				8C51899225C87358004F82C5 /* AppDelegate.swift in Sources */,
+				8C55899E25E354D000C0E2C9 /* NewViewController.swift in Sources */,
 				8C5CA09E25DAF1B30012A012 /* GameViewController.swift in Sources */,
 				8C51899425C87358004F82C5 /* SceneDelegate.swift in Sources */,
 			);

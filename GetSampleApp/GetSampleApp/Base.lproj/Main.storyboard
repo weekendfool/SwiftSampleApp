@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fpV-s8-WY6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -197,6 +197,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-391.304347826087" y="118.52678571428571"/>
+        </scene>
+        <!--New View Controller-->
+        <scene sceneID="oNH-JI-eaY">
+            <objects>
+                <viewController id="fpV-s8-WY6" customClass="NewViewController" customModule="GetSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3za-eu-gnW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpQ-y0-vyq">
+                                <rect key="frame" x="20" y="283" width="374" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tappedButtonAction:" destination="fpV-s8-WY6" eventType="touchUpInside" id="OF0-OI-5Yh"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFh-07-w2L">
+                                <rect key="frame" x="20" y="130" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ccA-dC-yXa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="pFh-07-w2L" id="lTw-2O-1x9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1tc-Bx-Apy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434.78260869565219" y="701.11607142857144"/>
         </scene>
         <!--Next View Controller-->
         <scene sceneID="n6A-lb-EzW">
@@ -734,15 +768,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="buttonTapped:" destination="jfh-gl-Ou3" eventType="touchUpInside" id="hcg-1c-9f1"/>
+                                    <action selector="buttonTapped:" destination="jfh-gl-Ou3" eventType="touchUpInside" id="cuu-se-JYM"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSK-9X-VSS">
                                 <rect key="frame" x="347" y="750" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="realtimeSwitch:" destination="jfh-gl-Ou3" eventType="valueChanged" id="7Ji-Ry-pqG"/>
-                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCt-Uz-H1x">
                                 <rect key="frame" x="20" y="582" width="374" height="46"/>
@@ -755,9 +786,6 @@
                                 <rect key="frame" x="105" y="666" width="186" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="tappedWriteButton:" destination="jfh-gl-Ou3" eventType="touchUpInside" id="QPh-kf-8gp"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VWv-Db-hle"/>
@@ -778,7 +806,6 @@
                         <outlet property="invitedUserIDText" destination="pg0-Bz-W7V" id="MrL-zS-U1c"/>
                         <outlet property="invitedUserStartFlagText" destination="Hxf-hq-wZ6" id="Yzf-oa-RbN"/>
                         <outlet property="ninthMoveCordinateText" destination="TJJ-e5-6wa" id="8On-dz-bMh"/>
-                        <outlet property="outPutLabel" destination="aCt-Uz-H1x" id="QR4-cs-GbX"/>
                         <outlet property="roomIDText" destination="y2J-li-wNy" id="pwK-yU-Cqj"/>
                         <outlet property="secondMoveCordinateText" destination="th9-MO-91p" id="wUN-XM-2gs"/>
                         <outlet property="seventhMoveCordinateText" destination="NMX-2Y-ouZ" id="TiH-cG-P4f"/>
@@ -792,7 +819,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ez1-mS-WM6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244.92753623188409" y="527.67857142857144"/>
+            <point key="canvasLocation" x="1797" y="-387"/>
         </scene>
     </scenes>
     <resources>

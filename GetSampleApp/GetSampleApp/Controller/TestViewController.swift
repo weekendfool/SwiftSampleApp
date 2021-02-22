@@ -55,10 +55,18 @@ class TestViewController: UIViewController {
     func writeData() {
         
         // データのセッティング
-        
+        room.roomID = roomIDText.text ?? "Non"
         
         // 書き込み用の辞書を更新
+        room.registeruserDatabaseDic()
+        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+        print(room.roomDatabaseDic)
+        
+        // firebaseに書き込み処理
+//        operateDatabase.writeRoomDatabase(targetCollection: "Room", inputDocumentName: "Sample", inputDataDic: room.roomDatabaseDic)
 
+        operateDatabase.writeUserDatabase(targetCollection: "Users", inputDataDic: room.roomDatabaseDic)
+        
         
     }
     
