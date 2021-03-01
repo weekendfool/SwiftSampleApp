@@ -404,7 +404,12 @@ class GameViewController: UIViewController {
         // リアルタイム監視の開始処理
 //        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetRoomCorection, targetCorectionIsRooms: ourRoomID, targetFieldName: "MoveCordinate", numberOfTargets: 2)
 //
-        realTimeChangeColors = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", numberOfTargets: 2) as! String
+        var n: Any
+        n = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", numberOfTargets: 2)
+        if n != nil {
+            realTimeChangeColors = n as! String
+        }
+        
 
         realTimeChangeBetrayers = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", numberOfTargets: 2) as! String
 

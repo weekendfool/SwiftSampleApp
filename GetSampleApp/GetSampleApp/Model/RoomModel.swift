@@ -121,8 +121,6 @@ struct RoomData {
         roomDatabaseDic["hostUserStartFlag"] = hostUserStartFlag
         roomDatabaseDic["betrayersDic"] = betrayersDic["betrayerOfInvitedUser"]
         roomDatabaseDic["betrayersDic"] = betrayersDic["betrayerOfHostUser"]
-        roomDatabaseDic["moveCordinate"] = moveCordinate["firstMoveCordinate"]!["plyerInfo"] ?? ""
-        roomDatabaseDic["moveCordinate"] = moveCordinate["firstMoveCordinate"]!["numberInfo"] ?? ""
         
         roomDatabaseDic["moveCordinate"] = moveCordinate["firstMoveCordinate"]!["plyerInfo"] ?? ""
         roomDatabaseDic["moveCordinate"] = moveCordinate["firstMoveCordinate"]!["numberInfo"] ?? ""
