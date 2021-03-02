@@ -69,13 +69,38 @@ class NewViewController: UIViewController {
 
     }
     
+    var DatabaseDic: [String: Any] = [
+        "roomID": "",
+        "betrayersDic": ""
+    ]
+    
    
     @IBAction func updataButton(_ sender: Any) {
-        //  データの書き込み
-        userData.roomID = inputTextField.text!
-        userData.registeruserDatabaseDic()
-        operateDatabase.updateDatabase(targetCollection: "Rooms", targetDocument: "Sample", TargetFieldName: "roomID", dicOfTarget: userData.userDatabaseDic)
-
+//        //  データの書き込み
+//        userData.roomID = inputTextField.text!
+//        userData.registeruserDatabaseDic()
+//        operateDatabase.updateDatabase(targetCollection: "Rooms", targetDocument: "Sample", TargetFieldName: "roomID", dicOfTarget: userData.userDatabaseDic)
+//        roomData.first()
+//        roomData.moveCordinate["firstMoveCordinate"]!["plyerInfo"] = "me"
+//        roomData.moveCordinate["firstMoveCordinate"]!["numberInfo"] = "6"
+//        roomData.roomDatabaseDic["moveCordinate"]!["firstMoveCordinate"] = "0"
+        print("========================")
+        DatabaseDic["betrayersDic"] = [
+            "betrayerOfInvitedUser": "0",
+            "betrayerOfHostUser": "2"
+            ]
+        
+//        DatabaseDic["betrayersDic"] = 18
+        print("DatabaseDic:\(DatabaseDic)")
+        
+//        roomData.registeruserDatabaseDic()
+        
+        print("========================")
+        print(roomData.roomDatabaseDic["betrayersDic"]!)
+        print("========================")
+        print(roomData.moveCordinate)
+        print("========================")
+        print(roomData.roomDatabaseDic)
     }
     
 }

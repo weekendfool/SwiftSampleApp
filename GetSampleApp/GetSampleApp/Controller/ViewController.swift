@@ -63,8 +63,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if sender.isOn {
             print(user.userDatabaseDic["waitRandomMatchFlag"])
             // リアルタイム変更の監視：waitRandomMatchFlagについてのみテスト
-            var gotData = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: users, targetCorectionIsRooms: rooms, targetFieldName: waitRandomMatchFlag, numberOfTargets: 1)
-            user.userDatabaseDic["waitRandomMatchFlag"] = gotData
+//            var gotData = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: users, targetCorectionIsRooms: rooms, targetFieldName: waitRandomMatchFlag, numberOfTargets: 1)
+//            user.userDatabaseDic["waitRandomMatchFlag"] = gotData
             print("=============================")
             print(user.userDatabaseDic["waitRandomMatchFlag"])
         } else {

@@ -71,6 +71,8 @@ class GameViewController: UIViewController {
     var yourColor = UIColor.blue
     var betrayerFlag = false
     
+    var count: Int?
+    
     var uiButtonDic: [String: UIButton] = [:]
     var uiLabelDic: [String: UILabel] = [:]
     
@@ -211,9 +213,9 @@ class GameViewController: UIViewController {
     func searchRoomID() {
         // ルームを検索する
         // userでルームidを持っている人を検索する
-        let gotData = operateDatabase.searchDatabase(targetCorection: targetUserCorection, targetDocumentName: "mySampleRoom")
+        let gotData = operateDatabase.searchDatabase(targetCorection: targetUserCorection, targetDocumentName: "Sample")
         
-        if gotData as! String == "mySampleRoom" {
+        if gotData as! String == "Sample" {
 //            // ルームの作成
 //            operateDatabase.makeDatabase(targetCollection: targetRoomCorection, inputDataDic: roomData.roomDatabaseDic)
 //
@@ -255,6 +257,7 @@ class GameViewController: UIViewController {
     
     // 自分の色を変更する
     func buttonAction(buttonNumber: Int, buttonUI: UIButton, label: UILabel) {
+        count! += 1
         if betrayerFlag {
             betray(buttonNumber: buttonNumber)
         }
@@ -265,11 +268,16 @@ class GameViewController: UIViewController {
         buttonUI.isEnabled = true
         
         // アプリ内に書き込み
-        roomData.moveCordinate[cordinateNumber[buttonNumber]!]!["plyerInfo"] = "me"
-        roomData.moveCordinate[cordinateNumber[buttonNumber]!]!["numberInfo"] = String(buttonNumber)
+        roomData.moveCordinate[cordinateNumber[count!]!]!["plyerInfo"] = "me"
+        roomData.moveCordinate[cordinateNumber[count!]!]!["numberInfo"] = String(buttonNumber)
             
         
         roomData.registeruserDatabaseDic()
+        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+        print(roomData.roomDatabaseDic)
+        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+        print(roomData.moveCordinate)
+        
         // firebaseに書き込み
         operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "moveCordinate", dicOfTarget: roomData.roomDatabaseDic)
         
@@ -365,17 +373,19 @@ class GameViewController: UIViewController {
             hostFlag = true
             myColor = UIColor.red
             yourColor = UIColor.blue
-            ourRoomID = "mySampleRoom"
+            ourRoomID = "Sample"
             myUserID = "host"
             roomData.hostUserID = myUserID
             roomData.roomID = ourRoomID
             roomData.invitedUserID = ""
             roomData.registeruserDatabaseDic()
+            count = 0
 //            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomName, TargetFieldName: "hostUserID", dicOfTarget: roomData.roomDatabaseDic)
 //
 //            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomName, TargetFieldName: "roomID", dicOfTarget: roomData.roomDatabaseDic)
         } else {
             // userIDに招待客として書き込むフラグを立てる
+            count = 1
             hostFlag = false
             myColor = UIColor.blue
             yourColor = UIColor.red
@@ -384,7 +394,7 @@ class GameViewController: UIViewController {
             roomData.hostUserID = ""
             roomData.registeruserDatabaseDic()
             
-//            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, userID: roomData.roomName, TargetFieldName: "invitedUserID", dicOfTarget: roomData.roomDatabaseDic)
+
         }
     }
     
@@ -402,17 +412,8 @@ class GameViewController: UIViewController {
         }
         
         // リアルタイム監視の開始処理
-//        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetRoomCorection, targetCorectionIsRooms: ourRoomID, targetFieldName: "MoveCordinate", numberOfTargets: 2)
-//
-        var n: Any
-        n = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", numberOfTargets: 2)
-        if n != nil {
-            realTimeChangeColors = n as! String
-        }
-        
-
-        realTimeChangeBetrayers = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", numberOfTargets: 2) as! String
-
+        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "Sample", targetDocumentName: "moveCordinate", numberOfTargets: 2)
     }
+
     
 }
