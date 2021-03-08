@@ -32,6 +32,13 @@ class NewViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func changeGotData(inputDatas: Any) {
+        // inputしたデータを細かくする
+        for inputData in inputDatas {
+            
+        }
+    }
+    
     @IBAction func tappedButtonAction(_ sender: Any) {
 //        database.collection("Rooms").document("Sample")
 //            .addSnapshotListener { documentSnapshot, error in
@@ -49,7 +56,7 @@ class NewViewController: UIViewController {
 //
         // データ返却用の変数
         
-        listener = database.collection("Rooms").document("Sample").addSnapshotListener { [self]
+        listener = database.collection("Rooms").document("Sample").addSnapshotListener(includeMetadataChanges: true) { [self]
             documentSnapshot, err in
             if let err = err {
                 print("-----------------------------------------")
@@ -58,10 +65,13 @@ class NewViewController: UIViewController {
                 // 更新されたデータを取得
                 if let document = documentSnapshot {
                     if let data = document.data() {
-                        getData = data["roomID"]!
+                        getData = data["betrayersDic"]!
                         print("========================")
                         print("Current data: \(data)")
                         print("Current getData: \(getData)")
+                        if let getData = getData {
+                            print(getData)
+                        }
                     }
                 }
             }
@@ -76,31 +86,31 @@ class NewViewController: UIViewController {
     
    
     @IBAction func updataButton(_ sender: Any) {
-//        //  データの書き込み
-//        userData.roomID = inputTextField.text!
-//        userData.registeruserDatabaseDic()
-//        operateDatabase.updateDatabase(targetCollection: "Rooms", targetDocument: "Sample", TargetFieldName: "roomID", dicOfTarget: userData.userDatabaseDic)
-//        roomData.first()
-//        roomData.moveCordinate["firstMoveCordinate"]!["plyerInfo"] = "me"
-//        roomData.moveCordinate["firstMoveCordinate"]!["numberInfo"] = "6"
-//        roomData.roomDatabaseDic["moveCordinate"]!["firstMoveCordinate"] = "0"
-        print("========================")
-        DatabaseDic["betrayersDic"] = [
-            "betrayerOfInvitedUser": "0",
-            "betrayerOfHostUser": "2"
-            ]
+//        print("========================")
+        //  データの書き込み
         
-//        DatabaseDic["betrayersDic"] = 18
-        print("DatabaseDic:\(DatabaseDic)")
-        
-//        roomData.registeruserDatabaseDic()
-        
-        print("========================")
-        print(roomData.roomDatabaseDic["betrayersDic"]!)
-        print("========================")
-        print(roomData.moveCordinate)
+        roomData.betrayersDic["betrayerOfHostUser"] = "2"
+        roomData.betrayersDic["betrayerOfInvitedUser"] = "9"
         print("========================")
         print(roomData.roomDatabaseDic)
+        print(roomData.roomDatabaseDic["betrayersDic"]!)
+        
+        roomData.registeruserDatabaseDic()
+        operateDatabase.updateDatabase(targetCollection: "Rooms", targetDocument: "Sample", TargetFieldName: "betrayersDic", dataOfTarget: roomData.roomDatabaseDic)
+               
+//        DatabaseDic["betrayersDic"] = [
+//            "betrayerOfInvitedUser": "0",
+//            "betrayerOfHostUser": "2"
+//            ]
+//
+////        DatabaseDic["betrayersDic"] = 18
+//        print("DatabaseDic:\(DatabaseDic)")
+//
+//        roomData.registeruserDatabaseDic()
+//
+        print("========================")
+       
+        
     }
     
 }

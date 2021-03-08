@@ -228,6 +228,11 @@
                                     <action selector="updataButton:" destination="fpV-s8-WY6" eventType="touchUpInside" id="Gze-n5-7C7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adK-Nz-myn">
+                                <rect key="frame" x="184" y="400" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ccA-dC-yXa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -390,9 +395,12 @@
                                     <action selector="tappedInputButton1:" destination="pD5-Vt-0tm" eventType="touchUpInside" id="Gju-r3-fSb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEQ-BG-O7b">
-                                <rect key="frame" x="36" y="765" width="138" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEQ-BG-O7b">
+                                <rect key="frame" x="36" y="767" width="138" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="7HC-qb-6RT"/>
+                                    <constraint firstAttribute="height" constant="45" id="AiL-YZ-Hur"/>
+                                </constraints>
                                 <state key="normal" title="normal"/>
                                 <connections>
                                     <action selector="tappedInputButtonN:" destination="pD5-Vt-0tm" eventType="touchUpInside" id="RRJ-CL-8fA"/>
@@ -546,9 +554,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwt-6p-iB3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwt-6p-iB3">
                                 <rect key="frame" x="232" y="765" width="130" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="LCd-1x-h8g"/>
+                                    <constraint firstAttribute="width" constant="130" id="NFT-mj-EJO"/>
+                                </constraints>
                                 <state key="normal" title="betrayer"/>
                                 <connections>
                                     <action selector="tappedInputButtonB:" destination="pD5-Vt-0tm" eventType="touchUpInside" id="oOl-9p-wyK"/>
@@ -579,6 +590,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sfz-Fk-42J"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Sfz-Fk-42J" firstAttribute="bottom" secondItem="tEQ-BG-O7b" secondAttribute="bottom" constant="50" id="7pC-Sm-MCY"/>
+                            <constraint firstItem="tEQ-BG-O7b" firstAttribute="leading" secondItem="Sfz-Fk-42J" secondAttribute="leading" constant="36" id="fiu-Re-2s9"/>
+                            <constraint firstItem="Sfz-Fk-42J" firstAttribute="trailing" secondItem="cwt-6p-iB3" secondAttribute="trailing" constant="52" id="ixP-8u-CNC"/>
+                            <constraint firstItem="Sfz-Fk-42J" firstAttribute="bottom" secondItem="cwt-6p-iB3" secondAttribute="bottom" constant="52" id="jg1-8b-RJK"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="inputButton1" destination="JBb-X0-gWh" id="Ccf-dj-wSW"/>

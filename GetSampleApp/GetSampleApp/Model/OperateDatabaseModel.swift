@@ -56,10 +56,10 @@ struct OperateDatabase {
     }
     
     // データベースへの書き込み処理
-    mutating func updateDatabase(targetCollection: String, targetDocument: String, TargetFieldName: String, dicOfTarget: [String: Any]) {
+    mutating func updateDatabase(targetCollection: String, targetDocument: String, TargetFieldName: String, dataOfTarget: Any) {
         // 格納先を指定
         ref = database.collection(targetCollection).document(targetDocument)
-        ref!.updateData([TargetFieldName: dicOfTarget[TargetFieldName]]) { (err) in
+        ref!.updateData([TargetFieldName: dataOfTarget]) { (err) in
             // エラーが発生した場合
             if let err = err {
                 print("-----------------------------------------")

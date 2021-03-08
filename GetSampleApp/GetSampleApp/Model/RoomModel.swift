@@ -58,10 +58,11 @@ struct RoomData {
         "invitedUserStartFlag": false,
         "hostUserStartFlag": false,
         "betrayersDic": [
-            "betrayerOfInvitedUser": "",
-            "betrayerOfHostUser": ""
+            "betrayerOfInvitedUser": "0",
+            "betrayerOfHostUser": "0"
+            
             ],
-//        "moveCordinate": ""
+
         "moveCordinate": [
             "firstMoveCordinate": [
                 ["plyerInfo": "non", "numberInfo": "0"]
@@ -123,74 +124,74 @@ struct RoomData {
         roomDatabaseDic["invitedUserStartFlag"] = invitedUserStartFlag
         roomDatabaseDic["hostUserStartFlag"] = hostUserStartFlag
         roomDatabaseDic["betrayersDic"] = [
-            "betrayerOfInvitedUser": betrayersDic["betrayerOfInvitedUser"],
-            "betrayerOfHostUser": betrayersDic["betrayerOfHostUser"]
+            "betrayerOfInvitedUser": betrayersDic["betrayerOfInvitedUser"]!,
+            "betrayerOfHostUser": betrayersDic["betrayerOfHostUser"]!
             ]
         
         roomDatabaseDic["moveCordinate"] = [
             "firstMoveCordinate": [
-                moveCordinate["firstMoveCordinate"]!["plyerInfo"],
-                moveCordinate["firstMoveCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["firstMoveCordinate"]!["plyerInfo"]!,
+                "numberInfo": moveCordinate["firstMoveCordinate"]!["numberInfo"]!
             ],
             "secondMoveCordinate": [
-                moveCordinate["secondMoveCordinate"]!["plyerInfo"],
-                moveCordinate["secondMoveCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["secondMoveCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["secondMoveCordinate"]!["numberInfo"]
             ],
             "thirdMoveCordinate": [
-                moveCordinate["thirdMoveCordinate"]!["plyerInfo"],
-                moveCordinate["thirdMoveCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["thirdMoveCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["thirdMoveCordinate"]!["numberInfo"]
             ],
             "fourthMoveCordinate": [
-                moveCordinate["fourthMoveCordinate"]!["plyerInfo"],
-                moveCordinate["fourthMoveCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["fourthMoveCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["fourthMoveCordinate"]!["numberInfo"]
             ],
             "fifthMoveCordinate": [
-                moveCordinate["fifthMoveCordinate"]!["plyerInfo"],
-                moveCordinate["fifthMoveCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["fifthMoveCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["fifthMoveCordinate"]!["numberInfo"]
             ],
             "sixthMoveCordinate": [
-                moveCordinate["sixthMoveCordinate"]!["plyerInfo"],
-                moveCordinate["sixthMoveCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["sixthMoveCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["sixthMoveCordinate"]!["numberInfo"]
             ],
             "seventhMoveCordinate": [
-                moveCordinate["seventhMoveCordinate"]!["plyerInfo"],
-                moveCordinate["seventhMoveCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["seventhMoveCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["seventhMoveCordinate"]!["numberInfo"]
             ],
             "eighthMoveCordinate": [
-                moveCordinate["eighthMoveCordinate"]!["plyerInfo"],
-                moveCordinate["eighthMoveCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["eighthMoveCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["eighthMoveCordinate"]!["numberInfo"]
             ],
             "ninthMoveCordinate": [
-            moveCordinate["ninthMoveCordinate"]!["plyerInfo"],
-            moveCordinate["ninthMoveCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["ninthMoveCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["ninthMoveCordinate"]!["numberInfo"]
             ],
             "tenthMoveCordinate": [
-                moveCordinate["tenthMoveCordinate"]!["plyerInfo"],
-                moveCordinate["tenthMoveCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["tenthMoveCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["tenthMoveCordinate"]!["numberInfo"]
             ],
             "eleventhMoveCordinate": [
-                moveCordinate["eleventhMoveCordinate"]!["plyerInfo"],
-                moveCordinate["eleventhMoveCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["eleventhMoveCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["eleventhMoveCordinate"]!["numberInfo"]
             ],
             "twelfthMoveCordinate": [
-                moveCordinate["twelfthMoveCordinate"]!["plyerInfo"],
-                moveCordinate["twelfthMoveCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["twelfthMoveCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["twelfthMoveCordinate"]!["numberInfo"]
             ],
             "thirteenthMoveCordinate": [
-                moveCordinate["thirteenthMoveCordinate"]!["plyerInfo"],
-                moveCordinate["thirteenthMoveCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["thirteenthMoveCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["thirteenthMoveCordinate"]!["numberInfo"]
             ],
             "fourteenthCordinate": [
-                moveCordinate["fourteenthCordinate"]!["plyerInfo"],
-                moveCordinate["fourteenthCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["fourteenthCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["fourteenthCordinate"]!["numberInfo"]
             ],
             "fifteenthCordinate": [
-                moveCordinate["fifteenthCordinate"]!["plyerInfo"],
-                moveCordinate["fifteenthCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["fifteenthCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["fifteenthCordinate"]!["numberInfo"]
             ],
             "sixteenthMoveCordinate": [
-                moveCordinate["sixteenthMoveCordinate"]!["plyerInfo"],
-                moveCordinate["sixteenthMoveCordinate"]!["numberInfo"]
+                "plyerInfo": moveCordinate["sixteenthMoveCordinate"]!["plyerInfo"],
+                "numberInfo": moveCordinate["sixteenthMoveCordinate"]!["numberInfo"]
             ]
         ]
     }

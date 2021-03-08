@@ -128,7 +128,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else {
             
         }
-        operateDatabase.updateDatabase(targetCollection: users, targetDocument: user.userID, TargetFieldName: "waitRandomMatchFlag", dicOfTarget: user.userDatabaseDic)
+        operateDatabase.updateDatabase(targetCollection: users, targetDocument: user.userID, TargetFieldName: "waitRandomMatchFlag", dataOfTarget: user.userDatabaseDic)
     }
 }
 

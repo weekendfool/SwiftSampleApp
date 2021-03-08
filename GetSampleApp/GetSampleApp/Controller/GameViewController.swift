@@ -83,12 +83,12 @@ class GameViewController: UIViewController {
             roomData.registeruserDatabaseDic()
             //　ボタンの色を変更する
             if let realTimeChangeColor = realTimeChangeColors {
-                if realTimeChangeColor != "" {
-//                    var buttonNumber = realTimeChangeColor["numberInfo"]
+                if realTimeChangeColor != "no data" {
+//                    var buttonNumber = realTimeChangeColor["roomID"]
 //                    // アプリ内に書き込み
-//                    roomData.moveCordinate[cordinateNumber[realTimeChangeColor]!]!["plyerInfo"] = "you"
-//                    roomData.moveCordinate[cordinateNumber[realTimeChangeColor]!]!["numberInfo"] = String(buttonNumber)
-//
+                    roomData.moveCordinate[cordinateNumber[count!]!]!["plyerInfo"]! = "you"
+//                    roomData.moveCordinate[cordinateNumber[count!]!]!["numberInfo"]! = String(buttonNumber)
+
                     print("####################")
                     print(realTimeChangeColor)
                     
@@ -160,6 +160,9 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // リアルタイム監視の開始処理
+        
 
         
 //        realTimeChangeColors = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "MoveCordinate", numberOfTargets: 2) as! String
@@ -223,9 +226,9 @@ class GameViewController: UIViewController {
             // フラグを立てる
             // hostFlagがonのとき
             if hostFlag {
-                operateDatabase.updateDatabase(targetCollection: targetUserCorection, targetDocument: roomData.roomID, TargetFieldName: roomData.hostUserID, dicOfTarget: roomData.roomDatabaseDic)
+                operateDatabase.updateDatabase(targetCollection: targetUserCorection, targetDocument: roomData.roomID, TargetFieldName: "", dataOfTarget: roomData.roomDatabaseDic)
             } else {
-                operateDatabase.updateDatabase(targetCollection: targetUserCorection, targetDocument: roomData.roomID, TargetFieldName: roomData.invitedUserID, dicOfTarget: roomData.roomDatabaseDic)
+                operateDatabase.updateDatabase(targetCollection: targetUserCorection, targetDocument: roomData.roomID, TargetFieldName: roomData.invitedUserID, dataOfTarget: roomData.roomDatabaseDic)
             }
             
         }
@@ -246,7 +249,7 @@ class GameViewController: UIViewController {
         // 裏切りの書き込み
         roomData.betrayersDic[myBetrayerName] = String(buttonNumber)
         roomData.registeruserDatabaseDic()
-        operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: myBetrayerName, dicOfTarget: roomData.roomDatabaseDic)
+        operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: myBetrayerName, dataOfTarget: roomData.betrayersDic[myBetrayerName])
         judgementBetrayer.recordBetrayer(playerName: "me", choosePlaceNumber: buttonNumber)
     }
     
@@ -268,23 +271,25 @@ class GameViewController: UIViewController {
         buttonUI.isEnabled = true
         
         // アプリ内に書き込み
-        roomData.moveCordinate[cordinateNumber[count!]!]!["plyerInfo"] = "me"
-        roomData.moveCordinate[cordinateNumber[count!]!]!["numberInfo"] = String(buttonNumber)
+        roomData.moveCordinate[cordinateNumber[count!]!]!["plyerInfo"]! = "me"
+        roomData.moveCordinate[cordinateNumber[count!]!]!["numberInfo"]! = String(buttonNumber)
             
         
         roomData.registeruserDatabaseDic()
-        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-        print(roomData.roomDatabaseDic)
-        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-        print(roomData.moveCordinate)
-        
+//        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+//        print(roomData.roomDatabaseDic)
+//        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+//        print(roomData.moveCordinate)
+//        
         // firebaseに書き込み
-        operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "moveCordinate", dicOfTarget: roomData.roomDatabaseDic)
+        operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "moveCordinate", dataOfTarget: roomData.moveCordinate)
         
         // 色の格納
         saveColor.saveColor(inputColor: "me", placeNumber: buttonNumber)
         
     }
+    
+   
     
     // 裏切り者の判定
     
@@ -386,12 +391,14 @@ class GameViewController: UIViewController {
         } else {
             // userIDに招待客として書き込むフラグを立てる
             count = 1
+            ourRoomID = "Sample"
             hostFlag = false
             myColor = UIColor.blue
             yourColor = UIColor.red
             myUserID = "invited"
             roomData.invitedUserID = myUserID
             roomData.hostUserID = ""
+            roomData.roomID = ourRoomID
             roomData.registeruserDatabaseDic()
             
 
@@ -404,15 +411,15 @@ class GameViewController: UIViewController {
         print(myUserID)
         // ゲームのスタートをする
         if hostFlag {
-            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "hostUserID", dicOfTarget: roomData.roomDatabaseDic)
+            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "hostUserID", dataOfTarget: roomData.hostUserID)
             
-            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "roomID", dicOfTarget: roomData.roomDatabaseDic)
+            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "roomID", dataOfTarget: roomData.roomID)
         } else {
-            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "invitedUserID", dicOfTarget: roomData.roomDatabaseDic)
+            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "invitedUserID", dataOfTarget: roomData.invitedUserID)
         }
         
         // リアルタイム監視の開始処理
-        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "Sample", targetDocumentName: "moveCordinate", numberOfTargets: 2)
+        realTimeChangeColors = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2) as! String
     }
 
     
