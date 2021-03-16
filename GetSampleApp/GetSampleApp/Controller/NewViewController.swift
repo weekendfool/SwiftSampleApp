@@ -32,12 +32,8 @@ class NewViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func changeGotData(inputDatas: Any) {
-        // inputしたデータを細かくする
-        for inputData in inputDatas {
-            
-        }
-    }
+    
+    
     
     @IBAction func tappedButtonAction(_ sender: Any) {
 //        database.collection("Rooms").document("Sample")
@@ -65,7 +61,7 @@ class NewViewController: UIViewController {
                 // 更新されたデータを取得
                 if let document = documentSnapshot {
                     if let data = document.data() {
-                        getData = data["betrayersDic"]!
+                        getData = data["moveCordinate"]!
                         print("========================")
                         print("Current data: \(data)")
                         print("Current getData: \(getData)")
@@ -78,6 +74,8 @@ class NewViewController: UIViewController {
         }
 
     }
+    
+    
     
     var DatabaseDic: [String: Any] = [
         "roomID": "",
@@ -111,6 +109,10 @@ class NewViewController: UIViewController {
         print("========================")
        
         
+    }
+    
+    @IBAction func changeInputData(_ sender: Any) {
+       
     }
     
 }

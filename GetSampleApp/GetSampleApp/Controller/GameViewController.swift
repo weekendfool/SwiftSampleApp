@@ -9,8 +9,8 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class GameViewController: UIViewController {
-
+class GameViewController: UIViewController, gotDatasProtocol {
+   
     // MARK: - コードの紐付け
     @IBOutlet weak var outputLabel1: UILabel!
     @IBOutlet weak var outputLabel2: UILabel!
@@ -65,6 +65,7 @@ class GameViewController: UIViewController {
     let targetUserCorection = "Users"
     
     var myUserID = ""
+    var yourUserID = ""
     var ourRoomID = ""
     var hostFlag = false
     var myColor = UIColor.red
@@ -72,52 +73,70 @@ class GameViewController: UIViewController {
     var betrayerFlag = false
     
     var count: Int?
+    var number = 1
     
     var uiButtonDic: [String: UIButton] = [:]
     var uiLabelDic: [String: UILabel] = [:]
     
+   
     
-    var realTimeChangeColors: String? {
-        didSet {
+    
+    func checkedGotDatas() {
+//        realTimeChangeColors = operateDatabase.getDataOfStartRealTimeMonitor
+        realTimeChangeColors = operateDatabase.getDataOfStartRealTimeMonitor!
         
-            roomData.registeruserDatabaseDic()
-            //　ボタンの色を変更する
-            if let realTimeChangeColor = realTimeChangeColors {
-                if realTimeChangeColor != "no data" {
-//                    var buttonNumber = realTimeChangeColor["roomID"]
-//                    // アプリ内に書き込み
-                    roomData.moveCordinate[cordinateNumber[count!]!]!["plyerInfo"]! = "you"
-//                    roomData.moveCordinate[cordinateNumber[count!]!]!["numberInfo"]! = String(buttonNumber)
+//        print("####################")
+        print(realTimeChangeColors)
+    }
+    
 
-                    print("####################")
-                    print(realTimeChangeColor)
-                    
-                    uiButtonDic[realTimeChangeColor as! String]!.backgroundColor = yourColor
-                    uiLabelDic[realTimeChangeColor as! String]!.backgroundColor = yourColor
-                    // ボタンの無効化
-                    uiButtonDic[realTimeChangeColor as! String]!.isEnabled = true
-                    // 色の格納
-                    saveColor.saveColor(inputColor: "you", placeNumber: Int(realTimeChangeColor as! String)!)
-                    // 勝者判定
-                    if realTimeChangeColor as! String == "16" {
-                        // 裏切り者の色変更処理
-                        saveColor.changeColorOfBetrayer(inputMyNumber: judgementBetrayer.betrayerDic["me"]!, inputYourNumber: judgementBetrayer.betrayerDic["you"]!)
-                        // 勝敗判定
-                        var winer = judgmentWiner.judgmentWiner(afterColorDic: saveColor.colorDic)
-                        
-                        if winer == 1 {
-                            wiinerLabel.text = "You Win"
-                        } else if winer == 2 {
-                            wiinerLabel.text = "You Lose"
-                        } else if winer == 3 {
-                            wiinerLabel.text = "引き分け"
-                    }
-                        operateDatabase.stopRealTimeMonitor()
-                }
-            }
-        }
+    var realTimeChangeColors: Any? {
+        didSet {
+            changeColor()
+            
     }
 }
+    
+    func changeColor() {
+        roomData.registeruserDatabaseDic()
+        //　ボタンの色を変更する
+        var inputName = cordinateNumber[number]
+//            var inputPlace: [String: String] = realTimeChangeColors![inputName]
+        
+        if let realTimeChangeColor = realTimeChangeColors {
+            
+//                    var buttonNumber = realTimeChangeColor["roomID"]
+//                    // アプリ内に書き込み
+            roomData.moveCordinate[cordinateNumber[count!]!]!["plyerInfo"]! = yourUserID
+//                    roomData.moveCordinate[cordinateNumber[count!]!]!["numberInfo"]! = String(buttonNumber)
+
+                print("####################")
+                print(realTimeChangeColor)
+                type(of: realTimeChangeColor)
+                uiButtonDic[realTimeChangeColor as! String]!.backgroundColor = yourColor
+                uiLabelDic[realTimeChangeColor as! String]!.backgroundColor = yourColor
+                // ボタンの無効化
+                uiButtonDic[realTimeChangeColor as! String]!.isEnabled = true
+                // 色の格納
+                saveColor.saveColor(inputColor: "you", placeNumber: Int(realTimeChangeColor as! String)!)
+                // 勝者判定
+                if realTimeChangeColor as! String == "16" {
+                    // 裏切り者の色変更処理
+                    saveColor.changeColorOfBetrayer(inputMyNumber: judgementBetrayer.betrayerDic["myUserID"]!, inputYourNumber: judgementBetrayer.betrayerDic["you"]!)
+                    // 勝敗判定
+                    var winer = judgmentWiner.judgmentWiner(afterColorDic: saveColor.colorDic)
+                    
+                    if winer == 1 {
+                        wiinerLabel.text = "You Win"
+                    } else if winer == 2 {
+                        wiinerLabel.text = "You Lose"
+                    } else if winer == 3 {
+                        wiinerLabel.text = "引き分け"
+                }
+                    operateDatabase.stopRealTimeMonitor()
+        }
+    }
+    }
     
     var realTimeChangeBetrayers: String? {
         didSet{
@@ -133,7 +152,7 @@ class GameViewController: UIViewController {
             roomData.registeruserDatabaseDic()
             if let realTimeChangeBetrayer = realTimeChangeBetrayers {
                 if realTimeChangeBetrayer != "" {
-                    judgementBetrayer.recordBetrayer(playerName: "you", choosePlaceNumber: Int(realTimeChangeBetrayer)!)
+                    judgementBetrayer.recordBetrayer(playerName: yourUserID, choosePlaceNumber: Int(realTimeChangeBetrayer)!)
                 }
             }
         }
@@ -160,14 +179,6 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // リアルタイム監視の開始処理
-        
-
-        
-//        realTimeChangeColors = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "MoveCordinate", numberOfTargets: 2) as! String
-        
-//        realTimeChangeBetrayers = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "betrayersDic", numberOfTargets: 2) as! String
         
         // Do any additional setup after loading the view.
         uiButtonDic = [
@@ -209,6 +220,9 @@ class GameViewController: UIViewController {
             
         ]
         
+        operateDatabase.view = self
+//        checkedGotDatas()
+        
     }
     
     // MARK: - 必要な関数の生成
@@ -226,9 +240,9 @@ class GameViewController: UIViewController {
             // フラグを立てる
             // hostFlagがonのとき
             if hostFlag {
-                operateDatabase.updateDatabase(targetCollection: targetUserCorection, targetDocument: roomData.roomID, TargetFieldName: "", dataOfTarget: roomData.roomDatabaseDic)
+                operateDatabase.updateDatabase(targetCollection: targetUserCorection, targetDocument: roomData.roomID, TargetFieldName: "hostUserID", dataOfTarget: roomData.roomDatabaseDic)
             } else {
-                operateDatabase.updateDatabase(targetCollection: targetUserCorection, targetDocument: roomData.roomID, TargetFieldName: roomData.invitedUserID, dataOfTarget: roomData.roomDatabaseDic)
+                operateDatabase.updateDatabase(targetCollection: targetUserCorection, targetDocument: roomData.roomID, TargetFieldName: "invitedUserID", dataOfTarget: roomData.roomDatabaseDic)
             }
             
         }
@@ -250,11 +264,22 @@ class GameViewController: UIViewController {
         roomData.betrayersDic[myBetrayerName] = String(buttonNumber)
         roomData.registeruserDatabaseDic()
         operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: myBetrayerName, dataOfTarget: roomData.betrayersDic[myBetrayerName])
-        judgementBetrayer.recordBetrayer(playerName: "me", choosePlaceNumber: buttonNumber)
+        judgementBetrayer.recordBetrayer(playerName: "myUserID", choosePlaceNumber: buttonNumber)
     }
     
     // 相手のボタンの動きに対応して自分の色を変更する
     func turnColor(buttonUI: UIButton, label: UILabel) {
+        
+    }
+    
+    func changeGotData(inputDatas: Any) {
+        // inputしたデータを細かくする
+        print("111111111111111111111111")
+        print(inputDatas)
+        
+        
+            
+        
         
     }
     
@@ -271,7 +296,7 @@ class GameViewController: UIViewController {
         buttonUI.isEnabled = true
         
         // アプリ内に書き込み
-        roomData.moveCordinate[cordinateNumber[count!]!]!["plyerInfo"]! = "me"
+        roomData.moveCordinate[cordinateNumber[count!]!]!["plyerInfo"]! = "myUserID"
         roomData.moveCordinate[cordinateNumber[count!]!]!["numberInfo"]! = String(buttonNumber)
             
         
@@ -379,7 +404,8 @@ class GameViewController: UIViewController {
             myColor = UIColor.red
             yourColor = UIColor.blue
             ourRoomID = "Sample"
-            myUserID = "host"
+            myUserID = "invited"
+            yourUserID = "host"
             roomData.hostUserID = myUserID
             roomData.roomID = ourRoomID
             roomData.invitedUserID = ""
@@ -396,6 +422,7 @@ class GameViewController: UIViewController {
             myColor = UIColor.blue
             yourColor = UIColor.red
             myUserID = "invited"
+            yourUserID = "host"
             roomData.invitedUserID = myUserID
             roomData.hostUserID = ""
             roomData.roomID = ourRoomID
@@ -419,7 +446,7 @@ class GameViewController: UIViewController {
         }
         
         // リアルタイム監視の開始処理
-        realTimeChangeColors = operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2) as! String
+        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
     }
 
     

@@ -29,6 +29,7 @@
 		8C5CA0A325DCC76F0012A012 /* SaveColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CA0A225DCC76F0012A012 /* SaveColorModel.swift */; };
 		8C5CA0A825DCC9B20012A012 /* JudgementWiinerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CA0A725DCC9B20012A012 /* JudgementWiinerModel.swift */; };
 		8C5CA0AD25DCCE850012A012 /* JudgementBetrayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CA0AC25DCCE850012A012 /* JudgementBetrayerModel.swift */; };
+		8C601E7925F6A327001585F1 /* GotDatasProtocolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C601E7825F6A327001585F1 /* GotDatasProtocolModel.swift */; };
 		BA3138C385B33700C6AC1BBD /* Pods_GetSampleApp_GetSampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB36A4A103E64CF603D59FFB /* Pods_GetSampleApp_GetSampleAppUITests.framework */; };
 		F85A3563EC17C8F52D0F8F67 /* Pods_GetSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4EEAA55E3C29C6B80E415E /* Pods_GetSampleAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 		8C5CA0A225DCC76F0012A012 /* SaveColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveColorModel.swift; sourceTree = "<group>"; };
 		8C5CA0A725DCC9B20012A012 /* JudgementWiinerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgementWiinerModel.swift; sourceTree = "<group>"; };
 		8C5CA0AC25DCCE850012A012 /* JudgementBetrayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgementBetrayerModel.swift; sourceTree = "<group>"; };
+		8C601E7825F6A327001585F1 /* GotDatasProtocolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotDatasProtocolModel.swift; sourceTree = "<group>"; };
 		A11A9D0734647E919AC08316 /* Pods-GetSampleApp-GetSampleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSampleApp-GetSampleAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-GetSampleApp-GetSampleAppUITests/Pods-GetSampleApp-GetSampleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4654C678153688F6C8E540A /* Pods-GetSampleApp-GetSampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSampleApp-GetSampleAppUITests.release.xcconfig"; path = "Target Support Files/Pods-GetSampleApp-GetSampleAppUITests/Pods-GetSampleApp-GetSampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA4EEAA55E3C29C6B80E415E /* Pods_GetSampleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetSampleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +200,7 @@
 				8C5CA0A225DCC76F0012A012 /* SaveColorModel.swift */,
 				8C5CA0A725DCC9B20012A012 /* JudgementWiinerModel.swift */,
 				8C5CA0AC25DCCE850012A012 /* JudgementBetrayerModel.swift */,
+				8C601E7825F6A327001585F1 /* GotDatasProtocolModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C5297C925D408CB00724697 /* TestViewController.swift in Sources */,
+				8C601E7925F6A327001585F1 /* GotDatasProtocolModel.swift in Sources */,
 				8C5CA0A825DCC9B20012A012 /* JudgementWiinerModel.swift in Sources */,
 				8C5297BE25D4084500724697 /* RoomModel.swift in Sources */,
 				8C5CA0AD25DCCE850012A012 /* JudgementBetrayerModel.swift in Sources */,

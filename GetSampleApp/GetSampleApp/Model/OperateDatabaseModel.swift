@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 
-struct OperateDatabase {
+class OperateDatabase {
     
     // MARK: - データベースの操作に必要な変数宣言
     // データベースへのパスの指定
@@ -18,9 +18,21 @@ struct OperateDatabase {
     // リアルタイム更新に必要な監視状態のフラグ？
     var listener: ListenerRegistration?
     
+    weak var view: gotDatasProtocol?
+    
+    // データ返却用の変数
+    var getDataOfStartRealTimeMonitor: Any? = "no data"  {
+        didSet {
+            view?.checkedGotDatas()
+        }
+    }
+    
+   
+    
+    
     // MARK: - データベースの操作
     // データベースへの書き込み処理
-    mutating func writeUserDatabase(targetCollection: String, inputDataDic: [String: Any]) -> String {
+    func writeUserDatabase(targetCollection: String, inputDataDic: [String: Any]) -> String {
         // 格納先、格納するデータを指定して格納
         ref = database.collection(targetCollection).addDocument(data: inputDataDic) { [self] err in
             // エラーが発生した場合
@@ -40,7 +52,7 @@ struct OperateDatabase {
     }
     
     // データベースへの書き込み処理
-    mutating func writeRoomDatabase(targetCollection: String, inputDocumentName: String, inputDataDic: [String: Any])  {
+    func writeRoomDatabase(targetCollection: String, inputDocumentName: String, inputDataDic: [String: Any])  {
         // 格納先、格納するデータを指定して格納
         database.collection(targetCollection).document(inputDocumentName).setData(inputDataDic) { err in
             if let err = err {
@@ -56,7 +68,7 @@ struct OperateDatabase {
     }
     
     // データベースへの書き込み処理
-    mutating func updateDatabase(targetCollection: String, targetDocument: String, TargetFieldName: String, dataOfTarget: Any) {
+    func updateDatabase(targetCollection: String, targetDocument: String, TargetFieldName: String, dataOfTarget: Any) {
         // 格納先を指定
         ref = database.collection(targetCollection).document(targetDocument)
         ref!.updateData([TargetFieldName: dataOfTarget]) { (err) in
@@ -72,33 +84,9 @@ struct OperateDatabase {
         }
     }
     
-//    // データベースの検索処理
-//    mutating func searchDatabase(targetCorection: String, targetFieldName: String, dicOfTarget: [String: Any]) -> Any {
-//        // 検索したい条件を設定
-//        var docRef = database.collection(targetCorection).whereField(targetFieldName, isEqualTo: dicOfTarget[targetFieldName])
-//        // データ返却用の変数
-//        var getData: Any?
-//        // 実際に検索する
-//        docRef.getDocuments { [self] (querySnapshot, err) in
-//            if let err = err {
-//                print("-----------------------------------------")
-//                print("Error At searchDatabase(): \(err)")
-//            } else {
-//                print("==========================================")
-//                print("document successfully searched")
-//                for document in querySnapshot!.documents {
-//                    // 取得したデータを返却
-//                    getData = document.data()[targetFieldName]
-//
-//                }
-//            }
-//        }
-//        return getData!
-//
-//    }
-//
+
     // データベースの検索処理
-    mutating func searchDatabase(targetCorection: String, targetDocumentName: String) -> Any {
+    func searchDatabase(targetCorection: String, targetDocumentName: String) -> Any {
         // 検索したい条件を設定
         var docRef = database.collection(targetCorection).document(targetDocumentName)
         // データ返却用の変数
@@ -121,9 +109,10 @@ struct OperateDatabase {
     }
     
     // データベースのリアルタイム更新の監視開始処理
-    mutating func startRealTimeMonitor(targetCorectionIsUsers: String, targetCorectionIsRooms: String, targetFieldName: String, targetDocumentName: String, numberOfTargets: Int) -> Any {
-        // データ返却用の変数
-        var getData: Any?
+    func startRealTimeMonitor(targetCorectionIsUsers: String, targetCorectionIsRooms: String, targetFieldName: String, targetDocumentName: String, numberOfTargets: Int) {
+        
+        
+        
         var target: String?
         // どのfieldを監視するかの場合わけ
         switch numberOfTargets {
@@ -134,68 +123,32 @@ struct OperateDatabase {
             //　ルームのみ監視
             target = targetCorectionIsRooms
         default:
-            return "Error at startRealTimeMonitor"
+            return 
         }
         
         // 実際の監視処理
-        listener = database.collection(target!).document(targetDocumentName).addSnapshotListener(includeMetadataChanges: true, listener: { documentSnapshot , error  in
+        listener = database.collection(target!).document(targetDocumentName).addSnapshotListener(includeMetadataChanges: false, listener: { [self] documentSnapshot , error  in
             if let error = error {
                 print("-----------------------------------------")
                 print("Error At startRealTimeMonitor(),numberOfTargets Is : \(error)")
             } else {
                 if let document = documentSnapshot {
                     if let data = document.data() {
-                        getData = data[targetFieldName]!
+                        getDataOfStartRealTimeMonitor = data[targetFieldName]!
                         print("========================")
-                        print("Current data: \(data)")
-                        print("Current getData: \(getData)")
+//                        print("Current data: \(data)")
+                        print("Current getData: \(getDataOfStartRealTimeMonitor!)")
+                        
                     }
+                    
                 }
             }
         })
-        return getData ?? "no data"
+        
+        
     }
     
-//    // リアルタイム更新でデータを取得する関数
-//    mutating func getDatas(targetCorection: String, targetFieldName: String, targetFieldName) -> Any {
-//        // データ返却用の変数
-//        var getData: Any?
-//        listener = database.collection(targetCorection).document(<#T##documentPath: String##String#>) .addSnapshotListener {
-//            documentSnapshot, err in
-//            if let err = err {
-//                print("-----------------------------------------")
-//                print("Error At startRealTimeMonitor(),numberOfTargets Is \(targetCorection): \(err)")
-//            } else {
-//                // 更新されたデータを取得
-//                if let documentSnapshots = documentSnapshot?.documents {
-//                    for document in documentSnapshots {
-//                        getData = document.data()[targetFieldName]
-//                    }
-//                }
-//            }
-//        }
-//        return getData
-//    }
-//
-//    mutating func getDatas2(targetCorection: String, targetFieldName: String) -> String {
-//        var gotData: Any?
-//        database.collection(targetCorection).document(targetFieldName).addSnapshotListener { documentSnapshot, error in
-//            guard let document = documentSnapshot else {
-//                print("-----------------------------------------")
-//                print("Error At getDatas2(): \(error)")
-//                return
-//            }
-//            guard let data = document.data() else {
-//                print("-----------------------------------------")
-//                print("document data was empty")
-//                return
-//            }
-//            print("==========================================")
-//            print("document successfully getting")
-//            gotData = data
-//        }
-//        return gotData as! String
-//    }
+
     
     // データベースのリアルタイム更新の監視終了処理
     func stopRealTimeMonitor() {
