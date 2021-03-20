@@ -20,10 +20,32 @@ class OperateDatabase {
     
     weak var view: gotDatasProtocol?
     
+    // 打った手の座標を記録する変数
+    var getDataOfMoveCordinate: [String: [String: String]] = [
+        "firstMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "secondMoveCordinate": ["plyerInfo": "","numberInfo": ""],
+        "thirdMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "fourthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "fifthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "sixthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "seventhMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "eighthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "ninthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "tenthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "eleventhMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "twelfthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "thirteenthMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "fourteenthCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "fifteenthCordinate": ["plyerInfo": "", "numberInfo": ""],
+        "sixteenthMoveCordinate": ["plyerInfo": "", "numberInfo": ""]
+    ]
+    
     // データ返却用の変数
     var getDataOfStartRealTimeMonitor: Any? = "no data"  {
         didSet {
             view?.checkedGotDatas()
+            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+            print(getDataOfStartRealTimeMonitor)
         }
     }
     
@@ -135,6 +157,7 @@ class OperateDatabase {
                 if let document = documentSnapshot {
                     if let data = document.data() {
                         getDataOfStartRealTimeMonitor = data[targetFieldName]!
+//                        getDataOfMoveCordinate["firstMoveCordinate"]!["plyerInfo"] = data[targetFieldName][]
                         print("========================")
 //                        print("Current data: \(data)")
                         print("Current getData: \(getDataOfStartRealTimeMonitor!)")

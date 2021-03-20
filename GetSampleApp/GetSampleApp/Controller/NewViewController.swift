@@ -24,7 +24,7 @@ class NewViewController: UIViewController {
     // リアルタイム更新に必要な監視状態のフラグ？
     var listener: ListenerRegistration?
     
-    var getData: Any?
+    var getData:[String: [String: String]]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,9 +50,9 @@ class NewViewController: UIViewController {
 //              print("Current data: \(data)")
 //            }
 //
-        // データ返却用の変数
+//         データ返却用の変数
         
-        listener = database.collection("Rooms").document("Sample").addSnapshotListener(includeMetadataChanges: true) { [self]
+        listener = database.collection("Rooms").document("Sample").addSnapshotListener(includeMetadataChanges: false) { [self]
             documentSnapshot, err in
             if let err = err {
                 print("-----------------------------------------")
@@ -61,20 +61,25 @@ class NewViewController: UIViewController {
                 // 更新されたデータを取得
                 if let document = documentSnapshot {
                     if let data = document.data() {
-                        getData = data["moveCordinate"]!
+                        getData = data["moveCordinate"] as! [String : [String : String]]
+                        var getDataFin = getData!["firstMoveCordinate"]!["plyerInfo"]!
                         print("========================")
                         print("Current data: \(data)")
                         print("Current getData: \(getData)")
+                        print("Current getDataFin: \(getDataFin)")
                         if let getData = getData {
-                            print(getData)
+//                            print(getData)
                         }
                     }
                 }
             }
         }
 
+//        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: "User", targetCorectionIsRooms: "Rooms", targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
     }
-    
+    @IBAction func changeInputData(_ sender: Any) {
+       
+    }
     
     
     var DatabaseDic: [String: Any] = [
@@ -111,8 +116,6 @@ class NewViewController: UIViewController {
         
     }
     
-    @IBAction func changeInputData(_ sender: Any) {
-       
-    }
+   
     
 }
