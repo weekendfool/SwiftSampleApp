@@ -83,7 +83,7 @@ class GameViewController: UIViewController, gotDatasProtocol {
     
     func checkedGotDatas() {
         // firebaseから取ってきたデータを入力する
-        realTimeChangeColors = operateDatabase.getDataOfStartRealTimeMonitor!
+        realTimeChangeColors = operateDatabase.getDataOfStartRealTimeMonitorDic!["firstMoveCordinate"]!["plyerInfo"]
         
         print("####################")
         print(realTimeChangeColors)
@@ -459,7 +459,7 @@ class GameViewController: UIViewController, gotDatasProtocol {
         }
         
         // リアルタイム監視の開始処理
-        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
+        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2, targetNumber: <#String#>)
     }
 
     

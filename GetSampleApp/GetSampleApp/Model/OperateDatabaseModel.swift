@@ -21,7 +21,8 @@ class OperateDatabase {
     weak var view: gotDatasProtocol?
     
     // 打った手の座標を記録する変数
-    var getDataOfMoveCordinate: [String: [String: String]] = [
+    // データ返却用の変数
+    var getDataOfStartRealTimeMonitorDic: [String: [String: String]]?  = [
         "firstMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
         "secondMoveCordinate": ["plyerInfo": "","numberInfo": ""],
         "thirdMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
@@ -38,14 +39,11 @@ class OperateDatabase {
         "fourteenthCordinate": ["plyerInfo": "", "numberInfo": ""],
         "fifteenthCordinate": ["plyerInfo": "", "numberInfo": ""],
         "sixteenthMoveCordinate": ["plyerInfo": "", "numberInfo": ""]
-    ]
-    
-    // データ返却用の変数
-    var getDataOfStartRealTimeMonitor: Any? = "no data"  {
+    ]{
         didSet {
             view?.checkedGotDatas()
             print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-            print(getDataOfStartRealTimeMonitor)
+            print(getDataOfStartRealTimeMonitorDic)
         }
     }
     
@@ -131,7 +129,7 @@ class OperateDatabase {
     }
     
     // データベースのリアルタイム更新の監視開始処理
-    func startRealTimeMonitor(targetCorectionIsUsers: String, targetCorectionIsRooms: String, targetFieldName: String, targetDocumentName: String, numberOfTargets: Int) {
+    func startRealTimeMonitor(targetCorectionIsUsers: String, targetCorectionIsRooms: String, targetFieldName: String, targetDocumentName: String, numberOfTargets: Int, targetNumber: String) {
         
         
         
@@ -156,11 +154,11 @@ class OperateDatabase {
             } else {
                 if let document = documentSnapshot {
                     if let data = document.data() {
-                        getDataOfStartRealTimeMonitor = data[targetFieldName]!
+                        getDataOfStartRealTimeMonitorDic = data[targetFieldName] as! [String : [String : String]]
 //                        getDataOfMoveCordinate["firstMoveCordinate"]!["plyerInfo"] = data[targetFieldName][]
                         print("========================")
 //                        print("Current data: \(data)")
-                        print("Current getData: \(getDataOfStartRealTimeMonitor!)")
+                        print("Current getData: \(getDataOfStartRealTimeMonitorDic!)")
                         
                     }
                     
