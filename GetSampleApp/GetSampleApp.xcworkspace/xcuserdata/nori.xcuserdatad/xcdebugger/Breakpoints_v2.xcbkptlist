@@ -62,10 +62,10 @@
             filePath = "GetSampleApp/Model/OperateDatabaseModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "startRealTimeMonitor(targetCorectionIsUsers:targetCorectionIsRooms:targetFieldName:targetDocumentName:numberOfTargets:)"
-            landmarkType = "7">
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "OperateDatabase"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -78,8 +78,8 @@
             filePath = "GetSampleApp/Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "checkedGotDatas()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "GetSampleApp/Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
             landmarkName = "changeGotData(inputDatas:)"
             landmarkType = "7">
          </BreakpointContent>

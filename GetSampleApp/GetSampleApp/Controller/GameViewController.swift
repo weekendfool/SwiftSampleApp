@@ -80,14 +80,12 @@ class GameViewController: UIViewController, gotDatasProtocol {
     
    
     
-    
+    // リアルタイムに更新された時にはしる処理
+    // 更新されたデータの代入
     func checkedGotDatas() {
         // firebaseから取ってきたデータを入力する
-        realTimeChangeColors = operateDatabase.getDataOfStartRealTimeMonitorDic!["firstMoveCordinate"]!["plyerInfo"]
+        realTimeChangeColors = operateDatabase.getDataOfStartRealTimeMonitorDic![cordinateNumber[count!]!]!["plyerInfo"]
         
-        print("####################")
-        print(realTimeChangeColors)
-        type(of: realTimeChangeColors)
     }
     
 
@@ -105,28 +103,14 @@ class GameViewController: UIViewController, gotDatasProtocol {
     func changeColor() {
         
         
-            // 相手のカウントと場所を変数に格納する
-            // 相手のターンにするためにcount変数プラスいちする
-            var yourCount = count! + 1
-//        var yourPlaseNumber = realTimeChangeColors[""]
-            //　ボタンの色を変更する
-//            var inputName = cordinateNumber[number]
-            
-//                    var buttonNumber = realTimeChangeColor["roomID"]
-//                    // アプリ内に書き込み
-//            print("##################################")
-//            print("count:\(count)")
-//            print("yourUserID:\(yourUserID)")
-////            var count1 = count!
-//            print("count1:\(count1)")
-            roomData.moveCordinate[cordinateNumber[count!]!]!["plyerInfo"] = yourUserID
-//                    roomData.moveCordinate[cordinateNumber[count!]!]!["numberInfo"]! = String(buttonNumber)
+        // 相手のカウントと場所を変数に格納する
+        // 相手のターンにするためにcount変数プラスいちする
+        var yourCount = count! + 1
+        //　ボタンの色を変更する
 
-//                print("####################")
-//                print(realTimeChangeColor)
-//                type(of: realTimeChangeColor)
-                uiButtonDic[realTimeChangeColors as! String]!.backgroundColor = yourColor
-                uiLabelDic[realTimeChangeColors as! String]!.backgroundColor = yourColor
+        roomData.moveCordinate[cordinateNumber[count!]!]!["plyerInfo"] = yourUserID
+        uiButtonDic[realTimeChangeColors as! String]!.backgroundColor = yourColor
+        uiLabelDic[realTimeChangeColors as! String]!.backgroundColor = yourColor
             
                 // ボタンの無効化
                 uiButtonDic[realTimeChangeColors as! String]!.isEnabled = true
@@ -459,7 +443,7 @@ class GameViewController: UIViewController, gotDatasProtocol {
         }
         
         // リアルタイム監視の開始処理
-        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2, targetNumber: <#String#>)
+        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
     }
 
     

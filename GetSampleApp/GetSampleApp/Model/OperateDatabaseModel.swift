@@ -22,7 +22,7 @@ class OperateDatabase {
     
     // 打った手の座標を記録する変数
     // データ返却用の変数
-    var getDataOfStartRealTimeMonitorDic: [String: [String: String]]?  = [
+    var realTimeMonitorMoveCordinateDic: [String: [String: String]]?  = [
         "firstMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
         "secondMoveCordinate": ["plyerInfo": "","numberInfo": ""],
         "thirdMoveCordinate": ["plyerInfo": "", "numberInfo": ""],
@@ -43,7 +43,19 @@ class OperateDatabase {
         didSet {
             view?.checkedGotDatas()
             print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-            print(getDataOfStartRealTimeMonitorDic)
+            print(realTimeMonitorMoveCordinateDic)
+        }
+    }
+    
+    // データ返却用の変数
+    var realTimeMonitorbetrayersDic: [String: String]? = [
+        "betrayerOfInvitedUser": "",
+        "betrayerOfHostUser": ""
+    ]{
+        didSet {
+            view?.checkedGotDatas()
+            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+            print(realTimeMonitorbetrayersDic)
         }
     }
     
@@ -129,9 +141,7 @@ class OperateDatabase {
     }
     
     // データベースのリアルタイム更新の監視開始処理
-    func startRealTimeMonitor(targetCorectionIsUsers: String, targetCorectionIsRooms: String, targetFieldName: String, targetDocumentName: String, numberOfTargets: Int, targetNumber: String) {
-        
-        
+    func startRealTimeMonitor(targetCorectionIsUsers: String, targetCorectionIsRooms: String, targetFieldName: String, targetDocumentName: String, numberOfTargets: Int) {
         
         var target: String?
         // どのfieldを監視するかの場合わけ
@@ -154,22 +164,21 @@ class OperateDatabase {
             } else {
                 if let document = documentSnapshot {
                     if let data = document.data() {
-                        getDataOfStartRealTimeMonitorDic = data[targetFieldName] as! [String : [String : String]]
-//                        getDataOfMoveCordinate["firstMoveCordinate"]!["plyerInfo"] = data[targetFieldName][]
+                        if targetFieldName == "moveCordinate" {
+                            realTimeMonitorMoveCordinateDic = data[targetFieldName] as! [String : [String : String]]
+                        } else if targetFieldName == "moveCordinate" {
+                            
+                        }
+                        
                         print("========================")
-//                        print("Current data: \(data)")
-                        print("Current getData: \(getDataOfStartRealTimeMonitorDic!)")
+                        print("Current data: \(data)")
                         
                     }
                     
                 }
             }
         })
-        
-        
     }
-    
-
     
     // データベースのリアルタイム更新の監視終了処理
     func stopRealTimeMonitor() {
