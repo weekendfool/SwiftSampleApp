@@ -60,7 +60,6 @@ struct RoomData {
         "betrayersDic": [
             "betrayerOfInvitedUser": "0",
             "betrayerOfHostUser": "0"
-            
             ],
 
         "moveCordinate": [
@@ -127,7 +126,6 @@ struct RoomData {
             "betrayerOfInvitedUser": betrayersDic["betrayerOfInvitedUser"]!,
             "betrayerOfHostUser": betrayersDic["betrayerOfHostUser"]!
             ]
-        
         roomDatabaseDic["moveCordinate"] = [
             "firstMoveCordinate": [
                 "plyerInfo": moveCordinate["firstMoveCordinate"]!["plyerInfo"]!,

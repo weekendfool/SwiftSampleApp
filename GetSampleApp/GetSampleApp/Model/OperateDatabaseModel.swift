@@ -41,9 +41,9 @@ class OperateDatabase {
         "sixteenthMoveCordinate": ["plyerInfo": "", "numberInfo": ""]
     ]{
         didSet {
-            view?.checkedGotDatas()
-            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-            print(realTimeMonitorMoveCordinateDic)
+//            view?.checkedGotDatas()
+//            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+//            print(realTimeMonitorMoveCordinateDic)
         }
     }
     
@@ -59,6 +59,13 @@ class OperateDatabase {
         }
     }
     
+    var returnData: Any? {
+        didSet {
+//    view?.checkedGotDatas()
+//    print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+//    print(realTimeMonitorbetrayersDic)
+        }
+}
    
     
     
@@ -123,21 +130,33 @@ class OperateDatabase {
         var docRef = database.collection(targetCorection).document(targetDocumentName)
         // データ返却用の変数
         var getData: Any?
+        var returnDatas: Any?
         // 実際に検索する
         docRef.getDocument { (document, err) in
-            if let document = document, document.exists {
-                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                print("==========================================")
-                print("Document data: \(dataDescription)")
-                getData = dataDescription
-            } else {
+            if let err = err {
+                getData = nil
                 print("-----------------------------------------")
                 print("Error At searchDatabase(): \(err)")
+                               
+            } else {
+                if let document = document, document.exists {
+                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    // 該当データがない場合の処理
+                    if document.exists == false {
+                        print("-----------------------------------------")
+                        print("Error At searchDatabase(): Not The Data")
+//                        getData = nil
+                    } else {
+                        // 該当データがある場合の処理
+                        print("==========================================")
+                        print("Document data: \(dataDescription)")
+                        getData = dataDescription
+                    }
+                }
             }
         }
-        
-        return getData!
-
+        print("getData:\(getData)")
+        return getData
     }
     
     // データベースのリアルタイム更新の監視開始処理
@@ -172,12 +191,54 @@ class OperateDatabase {
                         
                         print("========================")
                         print("Current data: \(data)")
+                        type(of: data)
                         
                     }
                     
                 }
             }
         })
+    }
+    
+    // データベースのリアルタイム更新の監視開始処理
+    func startRealTimeMonitor2(targetCorectionIsUsers: String, targetCorectionIsRooms: String, targetFieldName: String, targetDocumentName: String, numberOfTargets: Int) -> [String: Any] {
+        
+        
+        var target: String?
+        // どのfieldを監視するかの場合わけ
+        switch numberOfTargets {
+        case 1:
+            // ユーザーのみ監視
+            target = targetCorectionIsUsers
+        case 2:
+            //　ルームのみ監視
+            target = targetCorectionIsRooms
+        default:
+            break
+        }
+        
+        // 実際の監視処理
+        listener = database.collection(target!).document(targetDocumentName).addSnapshotListener(includeMetadataChanges: false, listener: { [self] documentSnapshot , error  in
+            if let error = error {
+                print("-----------------------------------------")
+                print("Error At startRealTimeMonitor(),numberOfTargets Is : \(error)")
+            } else {
+                if let document = documentSnapshot {
+                    if let data = document.data() {
+                        if targetFieldName == "moveCordinate" {
+                            realTimeMonitorMoveCordinateDic = data[targetFieldName] as! [String : [String : String]]
+                        } else if targetFieldName == "moveCordinate" {
+                            
+                        }
+                        
+                        print("========================")
+                        print("Current data: \(data)")
+                        returnData = data
+                    }
+                }
+            }
+        })
+        return returnData as! [String : Any]
     }
     
     // データベースのリアルタイム更新の監視終了処理

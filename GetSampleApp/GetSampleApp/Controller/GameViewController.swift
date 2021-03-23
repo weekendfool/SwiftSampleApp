@@ -78,13 +78,15 @@ class GameViewController: UIViewController, gotDatasProtocol {
     var uiButtonDic: [String: UIButton] = [:]
     var uiLabelDic: [String: UILabel] = [:]
     
-   
+    var a:Any?
     
     // リアルタイムに更新された時にはしる処理
     // 更新されたデータの代入
     func checkedGotDatas() {
         // firebaseから取ってきたデータを入力する
-        realTimeChangeColors = operateDatabase.getDataOfStartRealTimeMonitorDic![cordinateNumber[count!]!]!["plyerInfo"]
+        realTimeChangeColors = operateDatabase.realTimeMonitorMoveCordinateDic![cordinateNumber[count!]!]!["plyerInfo"]
+        // firebaseから取ってきたデータをRoomDataに入力する
+//        roomData.roomID = operateDatabase.returnData[] as String
         
     }
     
@@ -94,15 +96,11 @@ class GameViewController: UIViewController, gotDatasProtocol {
             if count != 0 {
                 changeColor()
             }
-            
-            
     }
 }
     
     // 対戦相手の行動による色の変化
     func changeColor() {
-        
-        
         // 相手のカウントと場所を変数に格納する
         // 相手のターンにするためにcount変数プラスいちする
         var yourCount = count! + 1
@@ -273,11 +271,6 @@ class GameViewController: UIViewController, gotDatasProtocol {
         // inputしたデータを細かくする
         print("111111111111111111111111")
         print(inputDatas)
-        
-        
-            
-        
-        
     }
     
     // 自分の色を変更する
@@ -429,22 +422,50 @@ class GameViewController: UIViewController, gotDatasProtocol {
         }
     }
     
+    func search() {
+        // Samleがあるかどうか検索
+        var getData = operateDatabase.searchDatabase(targetCorection: "Rooms", targetDocumentName: "Sample")
+        print("getData!!!!!!!!!!!!!!!!!!!!!!!1111!!!!!!!:\(getData)")
+        if getData != nil {
+            // sampleがなければ追加処理
+            print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+            print("getData:\(getData)")
+    
+//            roomData.registeruserDatabaseDic()
+            operateDatabase.writeRoomDatabase(targetCollection: "Rooms", inputDocumentName: "Sample", inputDataDic: roomData.roomDatabaseDic)
+//            operateDatabase.updateDatabase(targetCollection: "Rooms", targetDocument: "Sample", TargetFieldName: <#T##String#>, dataOfTarget: <#T##Any#>)
+        } else if getData == nil {
+            print("#################################")
+            print("getData:\(getData)")
+        }
+    }
+    
     @IBAction func tappedStartButton(_ sender: Any) {
         
         print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
         print(myUserID)
         // ゲームのスタートをする
         if hostFlag {
+            // Samleがあるかどうか詮索、ない場合は登録
+            search()
             operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "hostUserID", dataOfTarget: roomData.hostUserID)
             
             operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "roomID", dataOfTarget: roomData.roomID)
         } else {
+            // Samleがあるかどうか詮索、ない場合は登録
+            search()
             operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "invitedUserID", dataOfTarget: roomData.invitedUserID)
         }
         
+       
+        
         // リアルタイム監視の開始処理
-        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
+//        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
+//       a = operateDatabase.startRealTimeMonitor2(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
+        
+        
     }
 
+   
     
 }
