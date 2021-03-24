@@ -41,7 +41,7 @@ class OperateDatabase {
         "sixteenthMoveCordinate": ["plyerInfo": "", "numberInfo": ""]
     ]{
         didSet {
-//            view?.checkedGotDatas()
+//            view?.checkedRealTimeMonitorMoveCordinateDic()
 //            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
 //            print(realTimeMonitorMoveCordinateDic)
         }
@@ -53,19 +53,17 @@ class OperateDatabase {
         "betrayerOfHostUser": ""
     ]{
         didSet {
-            view?.checkedGotDatas()
+            view?.checkedRealTimeMonitorbetrayersDic()
             print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
             print(realTimeMonitorbetrayersDic)
         }
     }
     
-    var returnData: Any? {
-        didSet {
-//    view?.checkedGotDatas()
-//    print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-//    print(realTimeMonitorbetrayersDic)
+    var getDataOfsearchDatabase: Any? {
+        didSet{
+//            view?.checkedGotDatas()
         }
-}
+    }
    
     
     
@@ -133,12 +131,14 @@ class OperateDatabase {
         
         // 実際に検索する
         docRef.getDocument { (document, err) in
+            // 検索時にエラーが発生した場合
             if let err = err {
                 
                 print("-----------------------------------------")
                 print("Error At searchDatabase(): \(err)")
                                
             } else {
+                // 検索時にエラーが発生しなかった場合
                 if let document = document, document.exists {
                     print("-----------------------------------------")
                     print("document.exists: \(document.exists)")
@@ -148,12 +148,13 @@ class OperateDatabase {
                         print("-----------------------------------------")
                         print("Error At searchDatabase(): Not The Data")
                         print("document.exists: \(document.exists)")
-
                     } else {
                         // 該当データがある場合の処理
                         print("==========================================")
-                        print("Document data: \(dataDescription)")
+                        print("Document getDataOfsearchDatabase: \(dataDescription)")
                         print("document.exists: \(document.exists)")
+                        // 取得した情報を格納
+                        self.getDataOfsearchDatabase = dataDescription
                         successfullyFlag = document.exists
                     }
                 }
@@ -179,6 +180,8 @@ class OperateDatabase {
             return 
         }
         
+        
+        
         // 実際の監視処理
         listener = database.collection(target!).document(targetDocumentName).addSnapshotListener(includeMetadataChanges: false, listener: { [self] documentSnapshot , error  in
             if let error = error {
@@ -187,63 +190,66 @@ class OperateDatabase {
             } else {
                 if let document = documentSnapshot {
                     if let data = document.data() {
-                        if targetFieldName == "moveCordinate" {
+                        switch targetFieldName {
+                        case "moveCordinate":
                             realTimeMonitorMoveCordinateDic = data[targetFieldName] as! [String : [String : String]]
-                        } else if targetFieldName == "moveCordinate" {
-                            
+                            print("========================")
+                            print("Current data: \(data)")
+                        case "betrayersDic":
+                            realTimeMonitorbetrayersDic = data[targetFieldName] as! [String : String]
+                            print("========================")
+                            print("Current data: \(data)")
+                        default:
+                            print("-----------------------------------------")
+                            print("Error At startRealTimeMonitor(): targetFieldName is Unknow")
+                            return
                         }
-                        
-                        print("========================")
-                        print("Current data: \(data)")
-                        type(of: data)
-                        
                     }
-                    
                 }
             }
         })
     }
     
-    // データベースのリアルタイム更新の監視開始処理
-    func startRealTimeMonitor2(targetCorectionIsUsers: String, targetCorectionIsRooms: String, targetFieldName: String, targetDocumentName: String, numberOfTargets: Int) -> [String: Any] {
-        
-        
-        var target: String?
-        // どのfieldを監視するかの場合わけ
-        switch numberOfTargets {
-        case 1:
-            // ユーザーのみ監視
-            target = targetCorectionIsUsers
-        case 2:
-            //　ルームのみ監視
-            target = targetCorectionIsRooms
-        default:
-            break
-        }
-        
-        // 実際の監視処理
-        listener = database.collection(target!).document(targetDocumentName).addSnapshotListener(includeMetadataChanges: false, listener: { [self] documentSnapshot , error  in
-            if let error = error {
-                print("-----------------------------------------")
-                print("Error At startRealTimeMonitor(),numberOfTargets Is : \(error)")
-            } else {
-                if let document = documentSnapshot {
-                    if let data = document.data() {
-                        if targetFieldName == "moveCordinate" {
-                            realTimeMonitorMoveCordinateDic = data[targetFieldName] as! [String : [String : String]]
-                        } else if targetFieldName == "moveCordinate" {
-                            
-                        }
-                        
-                        print("========================")
-                        print("Current data: \(data)")
-                        returnData = data
-                    }
-                }
-            }
-        })
-        return returnData as! [String : Any]
-    }
+//    // データベースのリアルタイム更新の監視開始処理
+//    func startRealTimeMonitor2(targetCorectionIsUsers: String, targetCorectionIsRooms: String, targetFieldName: String, targetDocumentName: String, numberOfTargets: Int) -> [String: Any] {
+//
+//
+//        var target: String?
+//        // どのfieldを監視するかの場合わけ
+//        switch numberOfTargets {
+//        case 1:
+//            // ユーザーのみ監視
+//            target = targetCorectionIsUsers
+//        case 2:
+//            //　ルームのみ監視
+//            target = targetCorectionIsRooms
+//        default:
+//            break
+//        }
+//
+//        // 実際の監視処理
+//        listener = database.collection(target!).document(targetDocumentName).addSnapshotListener(includeMetadataChanges: false, listener: { [self] documentSnapshot , error  in
+//            if let error = error {
+//                print("-----------------------------------------")
+//                print("Error At startRealTimeMonitor(),numberOfTargets Is : \(error)")
+//            } else {
+//                if let document = documentSnapshot {
+//                    if let data = document.data() {
+//                        if targetFieldName == "moveCordinate" {
+//                            realTimeMonitorMoveCordinateDic = data[targetFieldName] as! [String : [String : String]]
+//                        } else if targetFieldName == "moveCordinate" {
+//
+//                        }
+//
+//                        print("========================")
+//                        print("Current data: \(data)")
+//                        returnData = data
+//                    }
+//                }
+//            }
+//        })
+//        return returnData as! [String : Any]
+//    }
     
     // データベースのリアルタイム更新の監視終了処理
     func stopRealTimeMonitor() {

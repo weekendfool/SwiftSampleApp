@@ -82,11 +82,17 @@ class GameViewController: UIViewController, gotDatasProtocol {
     
     // リアルタイムに更新された時にはしる処理
     // 更新されたデータの代入
-    func checkedGotDatas() {
+    func checkedRealTimeMonitorMoveCordinateDic() {
         // firebaseから取ってきたデータを入力する
         realTimeChangeColors = operateDatabase.realTimeMonitorMoveCordinateDic![cordinateNumber[count!]!]!["plyerInfo"]
         // firebaseから取ってきたデータをRoomDataに入力する
 //        roomData.roomID = operateDatabase.returnData[] as String
+        
+    }
+    
+    // リアルタイムに更新された時にはしる処理
+    // 更新されたデータの代入
+    func checkedRealTimeMonitorbetrayersDic() {
         
     }
     
@@ -426,14 +432,10 @@ class GameViewController: UIViewController, gotDatasProtocol {
         // Samleがあるかどうか検索
         var getData: Bool?
         getData = operateDatabase.searchDatabase(targetCorection: "Rooms", targetDocumentName: "Sample")
-        print("getData!!!!!!!!!!!!!!!!!!!!!!!1111!!!!!!!:\(getData)")
         if let getData = getData {
             if getData {
-                
                 print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
                 print("getData:\(getData)")
-        
-
             } else {
                 // sampleがなければ追加処理
                 operateDatabase.writeRoomDatabase(targetCollection: "Rooms", inputDocumentName: "Sample", inputDataDic: roomData.roomDatabaseDic)
