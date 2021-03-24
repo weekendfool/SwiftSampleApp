@@ -125,38 +125,42 @@ class OperateDatabase {
     
 
     // データベースの検索処理
-    func searchDatabase(targetCorection: String, targetDocumentName: String) -> Any {
+    func searchDatabase(targetCorection: String, targetDocumentName: String) -> Bool {
         // 検索したい条件を設定
         var docRef = database.collection(targetCorection).document(targetDocumentName)
-        // データ返却用の変数
-        var getData: Any?
-        var returnDatas: Any?
+        // データの取得た成功したかの判定
+        var successfullyFlag = false
+        
         // 実際に検索する
         docRef.getDocument { (document, err) in
             if let err = err {
-                getData = nil
+                
                 print("-----------------------------------------")
                 print("Error At searchDatabase(): \(err)")
                                
             } else {
                 if let document = document, document.exists {
+                    print("-----------------------------------------")
+                    print("document.exists: \(document.exists)")
                     let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
                     // 該当データがない場合の処理
                     if document.exists == false {
                         print("-----------------------------------------")
                         print("Error At searchDatabase(): Not The Data")
-//                        getData = nil
+                        print("document.exists: \(document.exists)")
+
                     } else {
                         // 該当データがある場合の処理
                         print("==========================================")
                         print("Document data: \(dataDescription)")
-                        getData = dataDescription
+                        print("document.exists: \(document.exists)")
+                        successfullyFlag = document.exists
                     }
                 }
             }
         }
-        print("getData:\(getData)")
-        return getData
+        print("successfullyFlag:\(successfullyFlag)")
+        return successfullyFlag
     }
     
     // データベースのリアルタイム更新の監視開始処理

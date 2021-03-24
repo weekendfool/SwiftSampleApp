@@ -424,20 +424,24 @@ class GameViewController: UIViewController, gotDatasProtocol {
     
     func search() {
         // Samleがあるかどうか検索
-        var getData = operateDatabase.searchDatabase(targetCorection: "Rooms", targetDocumentName: "Sample")
+        var getData: Bool?
+        getData = operateDatabase.searchDatabase(targetCorection: "Rooms", targetDocumentName: "Sample")
         print("getData!!!!!!!!!!!!!!!!!!!!!!!1111!!!!!!!:\(getData)")
-        if getData != nil {
-            // sampleがなければ追加処理
-            print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
-            print("getData:\(getData)")
-    
-//            roomData.registeruserDatabaseDic()
-            operateDatabase.writeRoomDatabase(targetCollection: "Rooms", inputDocumentName: "Sample", inputDataDic: roomData.roomDatabaseDic)
-//            operateDatabase.updateDatabase(targetCollection: "Rooms", targetDocument: "Sample", TargetFieldName: <#T##String#>, dataOfTarget: <#T##Any#>)
-        } else if getData == nil {
-            print("#################################")
-            print("getData:\(getData)")
+        if let getData = getData {
+            if getData {
+                
+                print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+                print("getData:\(getData)")
+        
+
+            } else {
+                // sampleがなければ追加処理
+                operateDatabase.writeRoomDatabase(targetCollection: "Rooms", inputDocumentName: "Sample", inputDataDic: roomData.roomDatabaseDic)
+                print("#################################")
+                print("getData:\(getData)")
+            }
         }
+        
     }
     
     @IBAction func tappedStartButton(_ sender: Any) {
