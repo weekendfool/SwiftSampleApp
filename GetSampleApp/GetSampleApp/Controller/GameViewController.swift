@@ -92,10 +92,28 @@ class GameViewController: UIViewController, gotDatasProtocol {
     
     // リアルタイムに更新された時にはしる処理
     // 更新されたデータの代入
-    func checkedRealTimeMonitorbetrayersDic() {
+    func checkedRealTimeMonitorBetrayersDic() {
+        // 相手が裏切った時の処理
+        var yourBetrayerName = ""
+//        var myBetrayerName = ""
+        if hostFlag {
+            yourBetrayerName = "betrayerOfHostUser"
+//            myBetrayerName = "betrayerOfInvitedUser"
+        } else {
+            yourBetrayerName = "betrayerOfInvitedUser"
+//            myBetrayerName = "betrayerOfHostUser"
+        }
+        
+        if count! % 2 == 0 {
+            // 裏切りの書き込み
+            roomData.betrayersDic[yourBetrayerName] = operateDatabase.realTimeMonitorBetrayersDic![yourBetrayerName]
+            roomData.registeruserDatabaseDic()
+        }
+        
+        
         
     }
-    
+
 
     var realTimeChangeColors: Any? {
         didSet {
@@ -136,27 +154,7 @@ class GameViewController: UIViewController, gotDatasProtocol {
                 }
                     operateDatabase.stopRealTimeMonitor()
         
-    }
-    }
-    
-    var realTimeChangeBetrayers: String? {
-        didSet{
-            // 相手が裏切った時の処理
-            var yourBetrayerName = ""
-            if hostFlag {
-                yourBetrayerName = "betrayerOfHostUser"
-            } else {
-                yourBetrayerName = "betrayerOfInvitedUser"
-            }
-            // 裏切りの書き込み
-            roomData.betrayersDic[yourBetrayerName] = String(realTimeChangeBetrayers!)
-            roomData.registeruserDatabaseDic()
-            if let realTimeChangeBetrayer = realTimeChangeBetrayers {
-                if realTimeChangeBetrayer != "" {
-                    judgementBetrayer.recordBetrayer(playerName: yourUserID, choosePlaceNumber: Int(realTimeChangeBetrayer)!)
                 }
-            }
-        }
     }
     
     var cordinateNumber: [Int: String] = [

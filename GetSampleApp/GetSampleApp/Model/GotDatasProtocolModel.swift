@@ -10,5 +10,5 @@ import Foundation
 protocol gotDatasProtocol: class {
     // データが変更されたらコントローラー側で再代入する関数
     func checkedRealTimeMonitorMoveCordinateDic()
-    func checkedRealTimeMonitorbetrayersDic()
+    func checkedRealTimeMonitorBetrayersDic()
 }

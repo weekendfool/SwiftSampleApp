@@ -48,14 +48,14 @@ class OperateDatabase {
     }
     
     // データ返却用の変数
-    var realTimeMonitorbetrayersDic: [String: String]? = [
+    var realTimeMonitorBetrayersDic: [String: String]? = [
         "betrayerOfInvitedUser": "",
         "betrayerOfHostUser": ""
     ]{
         didSet {
-            view?.checkedRealTimeMonitorbetrayersDic()
+            view?.checkedRealTimeMonitorBetrayersDic()
             print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-            print(realTimeMonitorbetrayersDic)
+            print(realTimeMonitorBetrayersDic)
         }
     }
     
@@ -196,7 +196,7 @@ class OperateDatabase {
                             print("========================")
                             print("Current data: \(data)")
                         case "betrayersDic":
-                            realTimeMonitorbetrayersDic = data[targetFieldName] as! [String : String]
+                            realTimeMonitorBetrayersDic = data[targetFieldName] as! [String : String]
                             print("========================")
                             print("Current data: \(data)")
                         default:
@@ -210,46 +210,7 @@ class OperateDatabase {
         })
     }
     
-//    // データベースのリアルタイム更新の監視開始処理
-//    func startRealTimeMonitor2(targetCorectionIsUsers: String, targetCorectionIsRooms: String, targetFieldName: String, targetDocumentName: String, numberOfTargets: Int) -> [String: Any] {
-//
-//
-//        var target: String?
-//        // どのfieldを監視するかの場合わけ
-//        switch numberOfTargets {
-//        case 1:
-//            // ユーザーのみ監視
-//            target = targetCorectionIsUsers
-//        case 2:
-//            //　ルームのみ監視
-//            target = targetCorectionIsRooms
-//        default:
-//            break
-//        }
-//
-//        // 実際の監視処理
-//        listener = database.collection(target!).document(targetDocumentName).addSnapshotListener(includeMetadataChanges: false, listener: { [self] documentSnapshot , error  in
-//            if let error = error {
-//                print("-----------------------------------------")
-//                print("Error At startRealTimeMonitor(),numberOfTargets Is : \(error)")
-//            } else {
-//                if let document = documentSnapshot {
-//                    if let data = document.data() {
-//                        if targetFieldName == "moveCordinate" {
-//                            realTimeMonitorMoveCordinateDic = data[targetFieldName] as! [String : [String : String]]
-//                        } else if targetFieldName == "moveCordinate" {
-//
-//                        }
-//
-//                        print("========================")
-//                        print("Current data: \(data)")
-//                        returnData = data
-//                    }
-//                }
-//            }
-//        })
-//        return returnData as! [String : Any]
-//    }
+
     
     // データベースのリアルタイム更新の監視終了処理
     func stopRealTimeMonitor() {
