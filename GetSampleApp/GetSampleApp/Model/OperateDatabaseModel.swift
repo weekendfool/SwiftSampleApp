@@ -136,7 +136,7 @@ class OperateDatabase {
                 
                 print("-----------------------------------------")
                 print("Error At searchDatabase(): \(err)")
-                               
+                successfullyFlag = false
             } else {
                 // 検索時にエラーが発生しなかった場合
                 if let document = document, document.exists {
@@ -148,6 +148,7 @@ class OperateDatabase {
                         print("-----------------------------------------")
                         print("Error At searchDatabase(): Not The Data")
                         print("document.exists: \(document.exists)")
+                        successfullyFlag = document.exists
                     } else {
                         // 該当データがある場合の処理
                         print("==========================================")
@@ -157,12 +158,71 @@ class OperateDatabase {
                         self.getDataOfsearchDatabase = dataDescription
                         successfullyFlag = document.exists
                     }
+                    print("successfullyFlag1:\(successfullyFlag)")
                 }
+                print("successfullyFlag2:\(successfullyFlag)")
             }
+            print("successfullyFlag3:\(successfullyFlag)")
         }
-        print("successfullyFlag:\(successfullyFlag)")
+        print("successfullyFlag4:\(successfullyFlag)")
+        
         return successfullyFlag
     }
+    
+    // データベースの検索処理
+    func searchDatabase2(targetCorection: String, targetDocumentName: String, completion: @escaping (Bool) -> Void) {
+        // 検索したい条件を設定
+        var docRef = database.collection(targetCorection).document(targetDocumentName)
+        // データの取得た成功したかの判定
+        var successfullyFlag = false
+        var n = 0
+        // 実際に検索する
+            docRef.getDocument { (document, err) in
+                // 検索時にエラーが発生した場合
+                if let err = err {
+                    
+                    print("-----------------------------------------")
+                    print("Error At searchDatabase(): \(err)")
+                    completion(successfullyFlag)
+                } else {
+                    // 検索時にエラーが発生しなかった場合
+                    if let document = document, document.exists {
+                        print("-----------------------------------------")
+                        print("document.exists: \(document.exists)")
+                        let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                       
+                        // 該当データがない場合の処理
+                        if document.exists == false {
+                            print("-----------------------------------------")
+                            print("Error At searchDatabase(): Not The Data")
+                            print("document.exists: \(document.exists)")
+                            successfullyFlag = document.exists
+                            completion(successfullyFlag)
+                            n += 1
+                        } else if document.exists == true {
+                            // 該当データがある場合の処理
+                            print("==========================================")
+                            print("Document getDataOfsearchDatabase: \(dataDescription)")
+                            print("document.exists: \(document.exists)")
+                            // 取得した情報を格納
+                            self.getDataOfsearchDatabase = dataDescription
+                            successfullyFlag = document.exists
+                            completion(successfullyFlag)
+                            n += 1
+                        }
+                }
+                   
+            }
+                if n == 0 {
+                    print("-----------------------------------------")
+                    print("Error At searchDatabase(): Not The Data")
+                    successfullyFlag = document!.exists
+                    completion(successfullyFlag)
+                }
+                
+        }
+    }
+      
     
     // データベースのリアルタイム更新の監視開始処理
     func startRealTimeMonitor(targetCorectionIsUsers: String, targetCorectionIsRooms: String, targetFieldName: String, targetDocumentName: String, numberOfTargets: Int) {

@@ -436,11 +436,28 @@ class GameViewController: UIViewController, gotDatasProtocol {
                 print("getData:\(getData)")
             } else {
                 // sampleがなければ追加処理
-                operateDatabase.writeRoomDatabase(targetCollection: "Rooms", inputDocumentName: "Sample", inputDataDic: roomData.roomDatabaseDic)
+//                operateDatabase.writeRoomDatabase(targetCollection: "Rooms", inputDocumentName: "Sample", inputDataDic: roomData.roomDatabaseDic)
                 print("#################################")
                 print("getData:\(getData)")
             }
         }
+    }
+    
+    func search2() {
+        // Samleがあるかどうか検索
+        var getData: Bool?
+        operateDatabase.searchDatabase2(targetCorection: "Rooms", targetDocumentName: "Sample", completion: { [self]  successfullyFlag in
+            // クロージャー内の処理
+                if successfullyFlag {
+                    print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+                    print("successfullyFlag:\(successfullyFlag)")
+                } else {
+                   // sampleがなければ追加処理
+                    operateDatabase.writeRoomDatabase(targetCollection: "Rooms", inputDocumentName: "Sample", inputDataDic: roomData.roomDatabaseDic)
+                    print("#################################")
+                    print("successfullyFlag:\(successfullyFlag)")
+                }
+        })
         
     }
     
@@ -451,14 +468,14 @@ class GameViewController: UIViewController, gotDatasProtocol {
         // ゲームのスタートをする
         if hostFlag {
             // Samleがあるかどうか詮索、ない場合は登録
-            search()
-            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "hostUserID", dataOfTarget: roomData.hostUserID)
+            search2()
+//            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "hostUserID", dataOfTarget: roomData.hostUserID)
             
-            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "roomID", dataOfTarget: roomData.roomID)
+//            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "roomID", dataOfTarget: roomData.roomID)
         } else {
             // Samleがあるかどうか詮索、ない場合は登録
-            search()
-            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "invitedUserID", dataOfTarget: roomData.invitedUserID)
+            search2()
+//            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "invitedUserID", dataOfTarget: roomData.invitedUserID)
         }
         
        
