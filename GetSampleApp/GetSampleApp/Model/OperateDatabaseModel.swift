@@ -41,9 +41,9 @@ class OperateDatabase {
         "sixteenthMoveCordinate": ["plyerInfo": "", "numberInfo": ""]
     ]{
         didSet {
-//            view?.checkedRealTimeMonitorMoveCordinateDic()
+            view?.checkedRealTimeMonitorMoveCordinateDic()
 //            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-//            print(realTimeMonitorMoveCordinateDic)
+//            print("realTimeMonitorMoveCordinateDic:\(realTimeMonitorMoveCordinateDic)")
         }
     }
     
@@ -193,8 +193,6 @@ class OperateDatabase {
         default:
             return 
         }
-        
-        
         
         // 実際の監視処理
         listener = database.collection(target!).document(targetDocumentName).addSnapshotListener(includeMetadataChanges: false, listener: { [self] documentSnapshot , error  in

@@ -55,22 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "93343BD4-7796-464D-B672-E2AD3AE6FE27"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GetSampleApp/Controller/GameViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "checkedRealTimeMonitorMoveCordinateDic()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C5F51D3E-96C6-45D3-8583-8E48013C14A6"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -78,8 +62,8 @@
             filePath = "GetSampleApp/Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "287"
-            endingLineNumber = "287"
+            startingLineNumber = "291"
+            endingLineNumber = "291"
             landmarkName = "changeGotData(inputDatas:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -103,94 +87,139 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "209220C9-588D-4834-812E-B7BB86956D4F"
+            uuid = "FA75B44C-2975-46F0-AF3C-45EC9FBE2514"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GetSampleApp/Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "447"
-            endingLineNumber = "447"
-            landmarkName = "search()"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "checkedRealTimeMonitorMoveCordinateDic()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5FF0A0B2-CC05-475D-A769-7AE620D5D771"
+            uuid = "2D42D1A5-7915-4DB7-B3AE-FDAC23AF90F6"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GetSampleApp/Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "452"
-            endingLineNumber = "452"
-            landmarkName = "search()"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "checkedRealTimeMonitorBetrayersDic()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "54272A6D-0F0C-42E3-8791-6811CB8A9619"
+            uuid = "884C5670-34D8-4008-971C-C4B29DDF2574"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GetSampleApp/Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "445"
-            endingLineNumber = "445"
-            landmarkName = "search()"
-            landmarkType = "7">
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "realTimeChangeColors"
+            landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "54272A6D-0F0C-42E3-8791-6811CB8A9619 - b92a92eeceee72b6"
+                  uuid = "884C5670-34D8-4008-971C-C4B29DDF2574 - d171f66601bb8909"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "GetSampleApp.GameViewController.search() -&gt; ()"
+                  symbolName = "GetSampleApp.GameViewController.realTimeChangeColors.getter : Swift.Optional&lt;Any&gt;"
                   moduleName = "GetSampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nori/GitHub/SwiftSampleApp/GetSampleApp/GetSampleApp/Controller/GameViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "445"
-                  endingLineNumber = "445"
-                  offsetFromSymbolStart = "34">
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "91">
                </Location>
                <Location
-                  uuid = "54272A6D-0F0C-42E3-8791-6811CB8A9619 - b92a92eeceee72b6"
+                  uuid = "884C5670-34D8-4008-971C-C4B29DDF2574 - 9e16a793ba354d15"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "GetSampleApp.GameViewController.search() -&gt; ()"
+                  symbolName = "GetSampleApp.GameViewController.realTimeChangeColors.setter : Swift.Optional&lt;Any&gt;"
                   moduleName = "GetSampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nori/GitHub/SwiftSampleApp/GetSampleApp/GetSampleApp/Controller/GameViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "445"
-                  endingLineNumber = "445"
-                  offsetFromSymbolStart = "125">
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "166">
                </Location>
                <Location
-                  uuid = "54272A6D-0F0C-42E3-8791-6811CB8A9619 - a5de2946ea62abdb"
+                  uuid = "884C5670-34D8-4008-971C-C4B29DDF2574 - ba550872f623d8bb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in GetSampleApp.GameViewController.search() -&gt; ()"
+                  symbolName = "GetSampleApp.GameViewController.realTimeChangeColors.modify : Swift.Optional&lt;Any&gt;"
                   moduleName = "GetSampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nori/GitHub/SwiftSampleApp/GetSampleApp/GetSampleApp/Controller/GameViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "447"
-                  endingLineNumber = "447"
-                  offsetFromSymbolStart = "172">
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  uuid = "884C5670-34D8-4008-971C-C4B29DDF2574 - 50983f2a2adcd52f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GetSampleApp.GameViewController.realTimeChangeColors.modify : Swift.Optional&lt;Any&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "GetSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/GetSampleApp/GetSampleApp/Controller/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "10">
+               </Location>
+               <Location
+                  uuid = "884C5670-34D8-4008-971C-C4B29DDF2574 - e372ca0682b82689"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GetSampleApp.GameViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; GetSampleApp.GameViewController"
+                  moduleName = "GetSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/GetSampleApp/GetSampleApp/Controller/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "8269">
+               </Location>
+               <Location
+                  uuid = "884C5670-34D8-4008-971C-C4B29DDF2574 - 19b7c6551d5f9d92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GetSampleApp.GameViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GetSampleApp.GameViewController&gt;"
+                  moduleName = "GetSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/GetSampleApp/GetSampleApp/Controller/GameViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "8201">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -198,32 +227,128 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "70551C33-08C2-4EDD-9BCD-DE7F9EFBA480"
+            uuid = "B1CEFE5E-845F-4DBB-A9E1-0C61C6919149"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GetSampleApp/Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "467"
-            endingLineNumber = "467"
-            landmarkName = "tappedStartButton(_:)"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "changeColor()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E713A2CD-121F-40C6-8584-10F7DEAE56FB"
+            uuid = "B7EFA9C9-2D37-4D01-9D43-4DCEFC6C4EF1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GetSampleApp/Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "473"
-            endingLineNumber = "473"
-            landmarkName = "tappedStartButton(_:)"
+            startingLineNumber = "461"
+            endingLineNumber = "461"
+            landmarkName = "search()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8264C2E4-695A-4E71-A26D-2E3A1C59A7B7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GetSampleApp/Model/OperateDatabaseModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "startRealTimeMonitor(targetCorectionIsUsers:targetCorectionIsRooms:targetFieldName:targetDocumentName:numberOfTargets:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28593675-B9B0-4978-989A-B8B35C187E4B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GetSampleApp/Model/OperateDatabaseModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "realTimeMonitorMoveCordinateDic"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D34FCC50-A227-48DA-B5A1-1B11880902E3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GetSampleApp/Controller/GameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "checkedRealTimeMonitorMoveCordinateDic()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9981D753-F2F0-4C7A-8B88-ED329C16A3DA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GetSampleApp/Model/OperateDatabaseModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "startRealTimeMonitor(targetCorectionIsUsers:targetCorectionIsRooms:targetFieldName:targetDocumentName:numberOfTargets:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0022A253-63DF-4EFB-8BEC-A195152AFACC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GetSampleApp/Model/OperateDatabaseModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "startRealTimeMonitor(targetCorectionIsUsers:targetCorectionIsRooms:targetFieldName:targetDocumentName:numberOfTargets:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7115D48C-AC88-41C2-A580-A91C4F415677"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GetSampleApp/Model/OperateDatabaseModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "startRealTimeMonitor(targetCorectionIsUsers:targetCorectionIsRooms:targetFieldName:targetDocumentName:numberOfTargets:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

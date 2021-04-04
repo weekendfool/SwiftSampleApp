@@ -84,7 +84,10 @@ class GameViewController: UIViewController, gotDatasProtocol {
     // 更新されたデータの代入
     func checkedRealTimeMonitorMoveCordinateDic() {
         // firebaseから取ってきたデータを入力する
-        realTimeChangeColors = operateDatabase.realTimeMonitorMoveCordinateDic![cordinateNumber[count!]!]!["plyerInfo"]
+//        print("realTimeChangeColors:\(operateDatabase.realTimeMonitorMoveCordinateDic![cordinateNumber[count!]!]!["plyerInfo"])")
+//        realTimeChangeColors = operateDatabase.realTimeMonitorMoveCordinateDic![cordinateNumber[count!]!]!["plyerInfo"]
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("realTimeChangeColors:\(operateDatabase.realTimeMonitorMoveCordinateDic!["secondMoveCordinate"]!["plyerInfo"]!)")
         // firebaseから取ってきたデータをRoomDataに入力する
 //        roomData.roomID = operateDatabase.returnData[] as String
         
@@ -118,7 +121,8 @@ class GameViewController: UIViewController, gotDatasProtocol {
     var realTimeChangeColors: Any? {
         didSet {
             if count != 0 {
-                changeColor()
+//                changeColor()
+//                print("realTimeChangeColors:\(realTimeChangeColors)")
             }
     }
 }
@@ -433,8 +437,8 @@ class GameViewController: UIViewController, gotDatasProtocol {
             roomData.roomID = ourRoomID
             roomData.registeruserDatabaseDic()
             
-            // リアルタイム監視の開始処理
-            operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
+//            // リアルタイム監視の開始処理
+//            operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
         }
     }
     
@@ -453,6 +457,8 @@ class GameViewController: UIViewController, gotDatasProtocol {
                     print("#################################")
                     print("successfullyFlag:\(successfullyFlag)")
                 }
+            // リアルタイム監視の開始処理
+            operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
         })
         
     }
@@ -465,19 +471,19 @@ class GameViewController: UIViewController, gotDatasProtocol {
         if hostFlag {
             // Samleがあるかどうか詮索、ない場合は登録
             search()
-//            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "hostUserID", dataOfTarget: roomData.hostUserID)
+            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "hostUserID", dataOfTarget: roomData.hostUserID)
             
-//            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "roomID", dataOfTarget: roomData.roomID)
+            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "roomID", dataOfTarget: roomData.roomID)
         } else {
             // Samleがあるかどうか詮索、ない場合は登録
             search()
-//            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "invitedUserID", dataOfTarget: roomData.invitedUserID)
+            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "invitedUserID", dataOfTarget: roomData.invitedUserID)
         }
         
        
         
         // リアルタイム監視の開始処理
-        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
+//        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
        
         
         
