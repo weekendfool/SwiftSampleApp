@@ -229,7 +229,18 @@ class GameViewController: UIViewController, gotDatasProtocol {
     func searchRoomID() {
         // ルームを検索する
         // userでルームidを持っている人を検索する
-        let gotData = operateDatabase.searchDatabase(targetCorection: targetUserCorection, targetDocumentName: "Sample")
+        let gotData = operateDatabase.searchDatabase(targetCorection: targetUserCorection, targetDocumentName: "Sample", completion: { [self]  successfullyFlag in
+            // クロージャー内の処理
+                if successfullyFlag {
+                    print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+                    print("successfullyFlag:\(successfullyFlag)")
+                } else {
+                   // sampleがなければ追加処理
+                    operateDatabase.writeRoomDatabase(targetCollection: "Rooms", inputDocumentName: "Sample", inputDataDic: roomData.roomDatabaseDic)
+                    print("#################################")
+                    print("successfullyFlag:\(successfullyFlag)")
+                }
+        })
         
         if gotData as! String == "Sample" {
 //            // ルームの作成
@@ -422,31 +433,16 @@ class GameViewController: UIViewController, gotDatasProtocol {
             roomData.roomID = ourRoomID
             roomData.registeruserDatabaseDic()
             
-
+            // リアルタイム監視の開始処理
+            operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
         }
     }
+    
     
     func search() {
         // Samleがあるかどうか検索
         var getData: Bool?
-        getData = operateDatabase.searchDatabase(targetCorection: "Rooms", targetDocumentName: "Sample")
-        if let getData = getData {
-            if getData {
-                print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
-                print("getData:\(getData)")
-            } else {
-                // sampleがなければ追加処理
-//                operateDatabase.writeRoomDatabase(targetCollection: "Rooms", inputDocumentName: "Sample", inputDataDic: roomData.roomDatabaseDic)
-                print("#################################")
-                print("getData:\(getData)")
-            }
-        }
-    }
-    
-    func search2() {
-        // Samleがあるかどうか検索
-        var getData: Bool?
-        operateDatabase.searchDatabase2(targetCorection: "Rooms", targetDocumentName: "Sample", completion: { [self]  successfullyFlag in
+        operateDatabase.searchDatabase(targetCorection: "Rooms", targetDocumentName: "Sample", completion: { [self]  successfullyFlag in
             // クロージャー内の処理
                 if successfullyFlag {
                     print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
@@ -468,21 +464,21 @@ class GameViewController: UIViewController, gotDatasProtocol {
         // ゲームのスタートをする
         if hostFlag {
             // Samleがあるかどうか詮索、ない場合は登録
-            search2()
+            search()
 //            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "hostUserID", dataOfTarget: roomData.hostUserID)
             
 //            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "roomID", dataOfTarget: roomData.roomID)
         } else {
             // Samleがあるかどうか詮索、ない場合は登録
-            search2()
+            search()
 //            operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: "invitedUserID", dataOfTarget: roomData.invitedUserID)
         }
         
        
         
         // リアルタイム監視の開始処理
-//        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
-//       a = operateDatabase.startRealTimeMonitor2(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
+        operateDatabase.startRealTimeMonitor(targetCorectionIsUsers: targetUserCorection, targetCorectionIsRooms: targetRoomCorection, targetFieldName: "moveCordinate", targetDocumentName: "Sample", numberOfTargets: 2)
+       
         
         
     }
