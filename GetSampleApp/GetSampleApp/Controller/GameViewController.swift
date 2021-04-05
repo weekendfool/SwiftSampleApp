@@ -84,9 +84,10 @@ class GameViewController: UIViewController, gotDatasProtocol {
     // 更新されたデータの代入
     func checkedRealTimeMonitorMoveCordinateDic() {
         // firebaseから取ってきたデータを入力する
-//        print("realTimeChangeColors:\(operateDatabase.realTimeMonitorMoveCordinateDic![cordinateNumber[count!]!]!["plyerInfo"])")
-//        realTimeChangeColors = operateDatabase.realTimeMonitorMoveCordinateDic![cordinateNumber[count!]!]!["plyerInfo"]
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("realTimeChangeColors:\(operateDatabase.realTimeMonitorMoveCordinateDic!["secondMoveCordinate"]!["plyerInfo"])")
+        realTimeChangeColors = operateDatabase.realTimeMonitorMoveCordinateDic![cordinateNumber[count!]!]!["plyerInfo"]
+        
         print("realTimeChangeColors:\(operateDatabase.realTimeMonitorMoveCordinateDic!["secondMoveCordinate"]!["plyerInfo"]!)")
         // firebaseから取ってきたデータをRoomDataに入力する
 //        roomData.roomID = operateDatabase.returnData[] as String
@@ -122,7 +123,7 @@ class GameViewController: UIViewController, gotDatasProtocol {
         didSet {
             if count != 0 {
 //                changeColor()
-//                print("realTimeChangeColors:\(realTimeChangeColors)")
+                print("realTimeChangeColors:\(realTimeChangeColors)")
             }
     }
 }

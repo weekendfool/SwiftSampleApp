@@ -41,9 +41,9 @@ class OperateDatabase {
         "sixteenthMoveCordinate": ["plyerInfo": "", "numberInfo": ""]
     ]{
         didSet {
+            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+            print("realTimeMonitorMoveCordinateDic:\(realTimeMonitorMoveCordinateDic)")
             view?.checkedRealTimeMonitorMoveCordinateDic()
-//            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-//            print("realTimeMonitorMoveCordinateDic:\(realTimeMonitorMoveCordinateDic)")
         }
     }
     
