@@ -78,18 +78,24 @@ class GameViewController: UIViewController, gotDatasProtocol {
     var uiButtonDic: [String: UIButton] = [:]
     var uiLabelDic: [String: UILabel] = [:]
     
-    var a:Any?
+    var a = 0
     
     // リアルタイムに更新された時にはしる処理
     // 更新されたデータの代入
     func checkedRealTimeMonitorMoveCordinateDic() {
         // firebaseから取ってきたデータを入力する
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print("realTimeChangeColors:\(operateDatabase.realTimeMonitorMoveCordinateDic!["secondMoveCordinate"]!["plyerInfo"])")
-        realTimeChangeColors = operateDatabase.realTimeMonitorMoveCordinateDic![cordinateNumber[count!]!]!["plyerInfo"]
         
-        print("realTimeChangeColors:\(operateDatabase.realTimeMonitorMoveCordinateDic!["secondMoveCordinate"]!["plyerInfo"]!)")
-        // firebaseから取ってきたデータをRoomDataに入力する
+//        print("realTimeChangeColors:\(operateDatabase.realTimeMonitorMoveCordinateDic!["secondMoveCordinate"]!["plyerInfo"]!)")
+        if let realTimeChangeColor = operateDatabase.realTimeMonitorMoveCordinateDic!["secondMoveCordinate"]!["plyerInfo"] {
+            realTimeChangeColors = realTimeChangeColor
+            print("a:\(a)")
+            print("realTimeChangeColors:\(realTimeChangeColors)")
+        }
+        
+           
+                
+//         firebaseから取ってきたデータをRoomDataに入力する
 //        roomData.roomID = operateDatabase.returnData[] as String
         
     }
@@ -123,7 +129,7 @@ class GameViewController: UIViewController, gotDatasProtocol {
         didSet {
             if count != 0 {
 //                changeColor()
-                print("realTimeChangeColors:\(realTimeChangeColors)")
+//                print("realTimeChangeColors:\(realTimeChangeColors)")
             }
     }
 }

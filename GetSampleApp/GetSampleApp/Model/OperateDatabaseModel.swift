@@ -41,6 +41,7 @@ class OperateDatabase {
         "sixteenthMoveCordinate": ["plyerInfo": "", "numberInfo": ""]
     ]{
         didSet {
+            
             print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
             print("realTimeMonitorMoveCordinateDic:\(realTimeMonitorMoveCordinateDic)")
             view?.checkedRealTimeMonitorMoveCordinateDic()
@@ -204,11 +205,11 @@ class OperateDatabase {
                     if let data = document.data() {
                         switch targetFieldName {
                         case "moveCordinate":
-                            realTimeMonitorMoveCordinateDic = data[targetFieldName] as! [String : [String : String]]
+                            realTimeMonitorMoveCordinateDic = data[targetFieldName] as! [String : [String : String]]?
                             print("========================")
                             print("Current data: \(data)")
                         case "betrayersDic":
-                            realTimeMonitorBetrayersDic = data[targetFieldName] as! [String : String]
+                            realTimeMonitorBetrayersDic = data[targetFieldName] as! [String : String]?
                             print("========================")
                             print("Current data: \(data)")
                         default:
