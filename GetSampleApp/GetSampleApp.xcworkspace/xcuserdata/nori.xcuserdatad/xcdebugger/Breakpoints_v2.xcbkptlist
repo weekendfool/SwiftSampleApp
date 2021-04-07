@@ -112,8 +112,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
             endingLineNumber = "105"
-            landmarkName = "GameViewController"
-            landmarkType = "3">
+            landmarkName = "checkedRealTimeMonitorBetrayersDic()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -128,8 +128,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "128"
             endingLineNumber = "128"
-            landmarkName = "GameViewController"
-            landmarkType = "3">
+            landmarkName = "realTimeChangeColors"
+            landmarkType = "24">
             <Locations>
                <Location
                   uuid = "884C5670-34D8-4008-971C-C4B29DDF2574 - e372ca0682b82570"
@@ -176,8 +176,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "138"
             endingLineNumber = "138"
-            landmarkName = "GameViewController"
-            landmarkType = "3">
+            landmarkName = "changeColor()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
