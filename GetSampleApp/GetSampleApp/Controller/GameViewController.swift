@@ -73,30 +73,54 @@ class GameViewController: UIViewController, gotDatasProtocol {
     var betrayerFlag = false
     
     var count: Int?
-//    var number = 1
     
     var uiButtonDic: [String: UIButton] = [:]
     var uiLabelDic: [String: UILabel] = [:]
     
-    var a = 0
+    
     
     // リアルタイムに更新された時にはしる処理
     // 更新されたデータの代入
     func checkedRealTimeMonitorMoveCordinateDic() {
         // firebaseから取ってきたデータを入力する
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        
 //        print("realTimeChangeColors:\(operateDatabase.realTimeMonitorMoveCordinateDic!["secondMoveCordinate"]!["plyerInfo"]!)")
-        if let realTimeChangeColor = operateDatabase.realTimeMonitorMoveCordinateDic!["secondMoveCordinate"]!["plyerInfo"] {
-            realTimeChangeColors = realTimeChangeColor
-            print("a:\(a)")
+        if let realTimeChangeColorPlyerInfo = operateDatabase.realTimeMonitorMoveCordinateDic![cordinateNumber[userData.playerCount]!]!["plyerInfo"] {
+            if let realTimeChangeColorNumberInfo = operateDatabase.realTimeMonitorMoveCordinateDic![cordinateNumber[userData.playerCount]!]!["numberInfo"] {
             print("realTimeChangeColors:\(realTimeChangeColors)")
+            // countの偶数,奇数で場合わけ
+            if userData.playerCount % 2 != 0 {
+                //　ボタンの色を変更する
+//                roomData.moveCordinate[cordinateNumber[userData.playerCount]!]!["plyerInfo"] = yourUserID
+                uiButtonDic[realTimeChangeColorNumberInfo]!.backgroundColor = yourColor
+                uiLabelDic[realTimeChangeColorNumberInfo]!.backgroundColor = yourColor
+                    
+                        // ボタンの無効化
+                        uiButtonDic[realTimeChangeColorNumberInfo]!.isEnabled = true
+                        // 色の格納
+                        saveColor.saveColor(inputColor: "you", placeNumber: Int(realTimeChangeColorNumberInfo)!)
+                        // 勝者判定
+                        if userData.playerCount == 16 {
+                            // 裏切り者の色変更処理
+                            saveColor.changeColorOfBetrayer(inputMyNumber: judgementBetrayer.betrayerDic["myUserID"]!, inputYourNumber: judgementBetrayer.betrayerDic["you"]!)
+                            // 勝敗判定
+                            var winer = judgmentWiner.judgmentWiner(afterColorDic: saveColor.colorDic)
+                            
+                            if winer == 1 {
+                                wiinerLabel.text = "You Win"
+                            } else if winer == 2 {
+                                wiinerLabel.text = "You Lose"
+                            } else if winer == 3 {
+                                wiinerLabel.text = "引き分け"
+                        }
+                            operateDatabase.stopRealTimeMonitor()
+                        }
+            }
+            }
+            // カウントアップ
+            userData.countUP()
         }
         
-           
-                
-//         firebaseから取ってきたデータをRoomDataに入力する
-//        roomData.roomID = operateDatabase.returnData[] as String
         
     }
     
@@ -125,47 +149,40 @@ class GameViewController: UIViewController, gotDatasProtocol {
     }
 
 
-    var realTimeChangeColors: Any? {
-        didSet {
-            if count != 0 {
-//                changeColor()
-//                print("realTimeChangeColors:\(realTimeChangeColors)")
-            }
-    }
-}
+    var realTimeChangeColors: Any?
     
     // 対戦相手の行動による色の変化
     func changeColor() {
-        // 相手のカウントと場所を変数に格納する
-        // 相手のターンにするためにcount変数プラスいちする
-        var yourCount = count! + 1
-        //　ボタンの色を変更する
-
-        roomData.moveCordinate[cordinateNumber[count!]!]!["plyerInfo"] = yourUserID
-        uiButtonDic[realTimeChangeColors as! String]!.backgroundColor = yourColor
-        uiLabelDic[realTimeChangeColors as! String]!.backgroundColor = yourColor
-            
-                // ボタンの無効化
-                uiButtonDic[realTimeChangeColors as! String]!.isEnabled = true
-                // 色の格納
-                saveColor.saveColor(inputColor: "you", placeNumber: Int(realTimeChangeColors as! String)!)
-                // 勝者判定
-                if realTimeChangeColors as! String == "16" {
-                    // 裏切り者の色変更処理
-                    saveColor.changeColorOfBetrayer(inputMyNumber: judgementBetrayer.betrayerDic["myUserID"]!, inputYourNumber: judgementBetrayer.betrayerDic["you"]!)
-                    // 勝敗判定
-                    var winer = judgmentWiner.judgmentWiner(afterColorDic: saveColor.colorDic)
-                    
-                    if winer == 1 {
-                        wiinerLabel.text = "You Win"
-                    } else if winer == 2 {
-                        wiinerLabel.text = "You Lose"
-                    } else if winer == 3 {
-                        wiinerLabel.text = "引き分け"
-                }
-                    operateDatabase.stopRealTimeMonitor()
-        
-                }
+        // countの偶数,奇数で場合わけ
+        if userData.playerCount % 2 != 0 {
+            //　ボタンの色を変更する
+            roomData.moveCordinate[cordinateNumber[userData.playerCount]!]!["plyerInfo"] = yourUserID
+            uiButtonDic[realTimeChangeColors as! String]!.backgroundColor = yourColor
+            uiLabelDic[realTimeChangeColors as! String]!.backgroundColor = yourColor
+                
+                    // ボタンの無効化
+                    uiButtonDic[realTimeChangeColors as! String]!.isEnabled = true
+                    // 色の格納
+                    saveColor.saveColor(inputColor: "you", placeNumber: Int(realTimeChangeColors as! String)!)
+                    // 勝者判定
+                    if userData.playerCount == 16 {
+                        // 裏切り者の色変更処理
+                        saveColor.changeColorOfBetrayer(inputMyNumber: judgementBetrayer.betrayerDic["myUserID"]!, inputYourNumber: judgementBetrayer.betrayerDic["you"]!)
+                        // 勝敗判定
+                        var winer = judgmentWiner.judgmentWiner(afterColorDic: saveColor.colorDic)
+                        
+                        if winer == 1 {
+                            wiinerLabel.text = "You Win"
+                        } else if winer == 2 {
+                            wiinerLabel.text = "You Lose"
+                        } else if winer == 3 {
+                            wiinerLabel.text = "引き分け"
+                    }
+                        operateDatabase.stopRealTimeMonitor()
+                    }
+        }
+        // カウントアップ
+        userData.countUP()
     }
     
     var cordinateNumber: [Int: String] = [
@@ -301,7 +318,7 @@ class GameViewController: UIViewController, gotDatasProtocol {
     
     // 自分の色を変更する
     func buttonAction(buttonNumber: Int, buttonUI: UIButton, label: UILabel) {
-        count! += 1
+        
         if betrayerFlag {
             betray(buttonNumber: buttonNumber)
         }
@@ -312,8 +329,8 @@ class GameViewController: UIViewController, gotDatasProtocol {
         buttonUI.isEnabled = true
         
         // アプリ内に書き込み
-        roomData.moveCordinate[cordinateNumber[count!]!]!["plyerInfo"]! = "myUserID"
-        roomData.moveCordinate[cordinateNumber[count!]!]!["numberInfo"]! = String(buttonNumber)
+        roomData.moveCordinate[cordinateNumber[userData.playerCount]!]!["plyerInfo"]! = "myUserID"
+        roomData.moveCordinate[cordinateNumber[userData.playerCount]!]!["numberInfo"]! = String(buttonNumber)
             
         
         roomData.registeruserDatabaseDic()
@@ -327,7 +344,8 @@ class GameViewController: UIViewController, gotDatasProtocol {
         
         // 色の格納
         saveColor.saveColor(inputColor: "me", placeNumber: buttonNumber)
-        
+        // カウントアップ
+        userData.countUP()
     }
     
    
