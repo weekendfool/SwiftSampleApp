@@ -62,8 +62,8 @@
             filePath = "GetSampleApp/Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "316"
-            endingLineNumber = "316"
+            startingLineNumber = "319"
+            endingLineNumber = "319"
             landmarkName = "changeGotData(inputDatas:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "GetSampleApp/Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "checkedRealTimeMonitorBetrayersDic()"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,13 +126,13 @@
             filePath = "GetSampleApp/Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "GameViewController"
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "884C5670-34D8-4008-971C-C4B29DDF2574 - e372ca0682b81dd5"
+                  uuid = "884C5670-34D8-4008-971C-C4B29DDF2574 - e372ca0682b81d76"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -142,12 +142,12 @@
                   urlString = "file:///Users/nori/GitHub/SwiftSampleApp/GetSampleApp/GetSampleApp/Controller/GameViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "189"
-                  endingLineNumber = "189"
+                  startingLineNumber = "192"
+                  endingLineNumber = "192"
                   offsetFromSymbolStart = "8019">
                </Location>
                <Location
-                  uuid = "884C5670-34D8-4008-971C-C4B29DDF2574 - 19b7c6551d5fa6ce"
+                  uuid = "884C5670-34D8-4008-971C-C4B29DDF2574 - 19b7c6551d5fa66d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -157,8 +157,8 @@
                   urlString = "file:///Users/nori/GitHub/SwiftSampleApp/GetSampleApp/GetSampleApp/Controller/GameViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "189"
-                  endingLineNumber = "189"
+                  startingLineNumber = "192"
+                  endingLineNumber = "192"
                   offsetFromSymbolStart = "7951">
                </Location>
             </Locations>
@@ -174,13 +174,13 @@
             filePath = "GetSampleApp/Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "GameViewController"
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "B1CEFE5E-845F-4DBB-A9E1-0C61C6919149 - e372ca0682b81dd5"
+                  uuid = "B1CEFE5E-845F-4DBB-A9E1-0C61C6919149 - e372ca0682b81d76"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -190,12 +190,12 @@
                   urlString = "file:///Users/nori/GitHub/SwiftSampleApp/GetSampleApp/GetSampleApp/Controller/GameViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "189"
-                  endingLineNumber = "189"
+                  startingLineNumber = "192"
+                  endingLineNumber = "192"
                   offsetFromSymbolStart = "8019">
                </Location>
                <Location
-                  uuid = "B1CEFE5E-845F-4DBB-A9E1-0C61C6919149 - 19b7c6551d5fa6ce"
+                  uuid = "B1CEFE5E-845F-4DBB-A9E1-0C61C6919149 - 19b7c6551d5fa66d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -205,8 +205,8 @@
                   urlString = "file:///Users/nori/GitHub/SwiftSampleApp/GetSampleApp/GetSampleApp/Controller/GameViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "189"
-                  endingLineNumber = "189"
+                  startingLineNumber = "192"
+                  endingLineNumber = "192"
                   offsetFromSymbolStart = "7951">
                </Location>
             </Locations>
@@ -222,8 +222,8 @@
             filePath = "GetSampleApp/Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "487"
-            endingLineNumber = "487"
+            startingLineNumber = "493"
+            endingLineNumber = "493"
             landmarkName = "search()"
             landmarkType = "7">
          </BreakpointContent>
@@ -411,56 +411,8 @@
             filePath = "GetSampleApp/Controller/GameViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "checkedRealTimeMonitorMoveCordinateDic()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C8949964-FC16-4E06-A68E-61D656117299"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GetSampleApp/Controller/GameViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "checkedRealTimeMonitorMoveCordinateDic()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "02E3C332-2634-4FDA-8E9A-F82C0E15CAF0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GetSampleApp/Controller/GameViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "checkedRealTimeMonitorMoveCordinateDic()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0E9ADB3B-B464-405F-85FB-74B130C589E9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GetSampleApp/Controller/GameViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "checkedRealTimeMonitorMoveCordinateDic()"
             landmarkType = "7">
          </BreakpointContent>
