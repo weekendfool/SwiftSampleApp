@@ -27,7 +27,7 @@ struct UserData {
     // ユーザーがランダムマッチングした後に入室許可を発行するフラグ
     var parmitRandomMatchRoomFlag = false
     // 何手目かを記録するカウンター
-    var playerCount = 1 // playerCount <= 16
+    var playerCount = 0 // playerCount <= 16
     
     // MARK: - データベースに登録するユーザーの変数宣言
     var userDatabaseDic: [String: Any] = [

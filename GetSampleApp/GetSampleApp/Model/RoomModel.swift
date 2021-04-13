@@ -20,13 +20,14 @@ struct RoomData {
     var invitedUserStartFlag = false
     // 招待されたユーザーがフィールドを展開したかどうかのフラグ
     var hostUserStartFlag = false
-    // 招待されたユーザーの裏切りが何手目かを記録する変数
+    // ルームが存在しているフラグ
+    var roomFlag = false
+    // ルームを作成したユーザーの裏切りが何手目かを記録する変数
     var betrayersDic: [String: String] = [
         "betrayerOfInvitedUser": "",
         "betrayerOfHostUser": ""
     ]
-
-    // ルームを作成したユーザーの裏切りが何手目かを記録する変数
+    // 招待されたユーザーの裏切りが何手目かを記録する変数
     // 打った手の座標を記録する変数
     var moveCordinate: [String: [String: String]] = [
         "firstMoveCordinate": ["plyerInfo": "", "numberInfo": ""],

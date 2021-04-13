@@ -87,14 +87,17 @@ class GameViewController: UIViewController, gotDatasProtocol {
 //        print("realTimeChangeColors:\(operateDatabase.realTimeMonitorMoveCordinateDic!["secondMoveCordinate"]!["plyerInfo"]!)")
         if let realTimeChangeColorPlyerInfo = operateDatabase.realTimeMonitorMoveCordinateDic![cordinateNumber[userData.playerCount]!]!["plyerInfo"] {
             if let realTimeChangeColorNumberInfo = operateDatabase.realTimeMonitorMoveCordinateDic![cordinateNumber[userData.playerCount]!]!["numberInfo"] {
-            print("realTimeChangeColors:\(realTimeChangeColors)")
+                print("realTimeChangeColorPlyerInfo:\(realTimeChangeColorPlyerInfo)")
+                print("realTimeChangeColorNumberInfo:\(realTimeChangeColorNumberInfo)")
+                print("playerCount:\(userData.playerCount)")
             // countの偶数,奇数で場合わけ
-            if userData.playerCount % 2 != 0 {
-                //　ボタンの色を変更する
-//                roomData.moveCordinate[cordinateNumber[userData.playerCount]!]!["plyerInfo"] = yourUserID
-                uiButtonDic[realTimeChangeColorNumberInfo]!.backgroundColor = yourColor
-                uiLabelDic[realTimeChangeColorNumberInfo]!.backgroundColor = yourColor
-                    
+            //　realTimeChangeColorPlyerInfoとrealTimeChangeColorNumberInfoが空でないとき
+                if realTimeChangeColorPlyerInfo != "" , realTimeChangeColorNumberInfo != "" {
+                    if userData.playerCount % 2 == 0 {
+                        //　ボタンの色を変更する
+        //                roomData.moveCordinate[cordinateNumber[userData.playerCount]!]!["plyerInfo"] = yourUserID
+                        uiButtonDic[realTimeChangeColorNumberInfo]!.backgroundColor = yourColor
+                        uiLabelDic[realTimeChangeColorNumberInfo]!.backgroundColor = yourColor
                         // ボタンの無効化
                         uiButtonDic[realTimeChangeColorNumberInfo]!.isEnabled = true
                         // 色の格納
@@ -102,26 +105,24 @@ class GameViewController: UIViewController, gotDatasProtocol {
                         // 勝者判定
                         if userData.playerCount == 16 {
                             // 裏切り者の色変更処理
-                            saveColor.changeColorOfBetrayer(inputMyNumber: judgementBetrayer.betrayerDic["myUserID"]!, inputYourNumber: judgementBetrayer.betrayerDic["you"]!)
+                            saveColor.changeColorOfBetrayer(inputMyNumber: judgementBetrayer.betrayerDic[myUserID]!, inputYourNumber: judgementBetrayer.betrayerDic["you"]!)
                             // 勝敗判定
                             var winer = judgmentWiner.judgmentWiner(afterColorDic: saveColor.colorDic)
-                            
                             if winer == 1 {
                                 wiinerLabel.text = "You Win"
                             } else if winer == 2 {
                                 wiinerLabel.text = "You Lose"
                             } else if winer == 3 {
                                 wiinerLabel.text = "引き分け"
-                        }
+                            }
                             operateDatabase.stopRealTimeMonitor()
-                        }
+                            }
+                    }
+                    // カウントアップ
+                    userData.countUP()
+                }
             }
-            }
-            // カウントアップ
-            userData.countUP()
         }
-        
-        
     }
     
     // リアルタイムに更新された時にはしる処理
@@ -149,41 +150,41 @@ class GameViewController: UIViewController, gotDatasProtocol {
     }
 
 
-    var realTimeChangeColors: Any?
-    
-    // 対戦相手の行動による色の変化
-    func changeColor() {
-        // countの偶数,奇数で場合わけ
-        if userData.playerCount % 2 != 0 {
-            //　ボタンの色を変更する
-            roomData.moveCordinate[cordinateNumber[userData.playerCount]!]!["plyerInfo"] = yourUserID
-            uiButtonDic[realTimeChangeColors as! String]!.backgroundColor = yourColor
-            uiLabelDic[realTimeChangeColors as! String]!.backgroundColor = yourColor
-                
-                    // ボタンの無効化
-                    uiButtonDic[realTimeChangeColors as! String]!.isEnabled = true
-                    // 色の格納
-                    saveColor.saveColor(inputColor: "you", placeNumber: Int(realTimeChangeColors as! String)!)
-                    // 勝者判定
-                    if userData.playerCount == 16 {
-                        // 裏切り者の色変更処理
-                        saveColor.changeColorOfBetrayer(inputMyNumber: judgementBetrayer.betrayerDic["myUserID"]!, inputYourNumber: judgementBetrayer.betrayerDic["you"]!)
-                        // 勝敗判定
-                        var winer = judgmentWiner.judgmentWiner(afterColorDic: saveColor.colorDic)
-                        
-                        if winer == 1 {
-                            wiinerLabel.text = "You Win"
-                        } else if winer == 2 {
-                            wiinerLabel.text = "You Lose"
-                        } else if winer == 3 {
-                            wiinerLabel.text = "引き分け"
-                    }
-                        operateDatabase.stopRealTimeMonitor()
-                    }
-        }
-        // カウントアップ
-        userData.countUP()
-    }
+//    var realTimeChangeColors: Any?
+//    
+//    // 対戦相手の行動による色の変化
+//    func changeColor() {
+//        // countの偶数,奇数で場合わけ
+//        if userData.playerCount % 2 != 0 {
+//            //　ボタンの色を変更する
+//            roomData.moveCordinate[cordinateNumber[userData.playerCount]!]!["plyerInfo"] = yourUserID
+//            uiButtonDic[realTimeChangeColors as! String]!.backgroundColor = yourColor
+//            uiLabelDic[realTimeChangeColors as! String]!.backgroundColor = yourColor
+//                
+//                    // ボタンの無効化
+//                    uiButtonDic[realTimeChangeColors as! String]!.isEnabled = true
+//                    // 色の格納
+//                    saveColor.saveColor(inputColor: "you", placeNumber: Int(realTimeChangeColors as! String)!)
+//                    // 勝者判定
+//                    if userData.playerCount == 16 {
+//                        // 裏切り者の色変更処理
+//                        saveColor.changeColorOfBetrayer(inputMyNumber: judgementBetrayer.betrayerDic["myUserID"]!, inputYourNumber: judgementBetrayer.betrayerDic["you"]!)
+//                        // 勝敗判定
+//                        var winer = judgmentWiner.judgmentWiner(afterColorDic: saveColor.colorDic)
+//                        
+//                        if winer == 1 {
+//                            wiinerLabel.text = "You Win"
+//                        } else if winer == 2 {
+//                            wiinerLabel.text = "You Lose"
+//                        } else if winer == 3 {
+//                            wiinerLabel.text = "引き分け"
+//                    }
+//                        operateDatabase.stopRealTimeMonitor()
+//                    }
+//        }
+//        // カウントアップ
+//        userData.countUP()
+//    }
     
     var cordinateNumber: [Int: String] = [
         1: "firstMoveCordinate",
@@ -302,7 +303,7 @@ class GameViewController: UIViewController, gotDatasProtocol {
         roomData.betrayersDic[myBetrayerName] = String(buttonNumber)
         roomData.registeruserDatabaseDic()
         operateDatabase.updateDatabase(targetCollection: targetRoomCorection, targetDocument: roomData.roomID, TargetFieldName: myBetrayerName, dataOfTarget: roomData.betrayersDic[myBetrayerName])
-        judgementBetrayer.recordBetrayer(playerName: "myUserID", choosePlaceNumber: buttonNumber)
+        judgementBetrayer.recordBetrayer(playerName: myUserID, choosePlaceNumber: buttonNumber)
     }
     
     // 相手のボタンの動きに対応して自分の色を変更する
@@ -329,7 +330,7 @@ class GameViewController: UIViewController, gotDatasProtocol {
         buttonUI.isEnabled = true
         
         // アプリ内に書き込み
-        roomData.moveCordinate[cordinateNumber[userData.playerCount]!]!["plyerInfo"]! = "myUserID"
+        roomData.moveCordinate[cordinateNumber[userData.playerCount]!]!["plyerInfo"]! = myUserID
         roomData.moveCordinate[cordinateNumber[userData.playerCount]!]!["numberInfo"]! = String(buttonNumber)
             
         
