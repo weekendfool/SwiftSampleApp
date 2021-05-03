@@ -98,18 +98,24 @@ class ViewController: UIViewController {
         scrollView.backgroundColor = UIColor.black
         inView.backgroundColor = UIColor.blue
         view.backgroundColor = UIColor.systemBlue
-        // かくviewに子要素を追加
+        
+        // かくviewに子要素として追加
         scrollView.addSubview(inView)
         view.addSubview(scrollView)
         
+        // scrollViewの制約の設定
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         scrollView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
+        // inViewの制約の設定
+        // inView：AutoLayoutで使用したContainerViewに該当
+        // Autosizingという仕組みをAutoLayoutに変換する設定するフラグ：falseでAutoLayoutを有効化
         inView.translatesAutoresizingMaskIntoConstraints = false
 //        inView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+        // 横スクロールにするため、高さ：scrollViewと同一、幅：2000.0に設定
         inView.widthAnchor.constraint(equalToConstant: 2000.0).isActive = true
         inView.heightAnchor.constraint(equalTo: scrollView.heightAnchor).isActive = true
 //        inView.heightAnchor.constraint(equalToConstant: 2000.0).isActive = true
