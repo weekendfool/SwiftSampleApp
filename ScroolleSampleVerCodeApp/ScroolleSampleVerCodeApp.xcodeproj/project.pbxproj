@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C1BD2402640666900466C49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1BD23F2640666900466C49 /* AppDelegate.swift */; };
+		8C1BD2422640666900466C49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1BD2412640666900466C49 /* SceneDelegate.swift */; };
+		8C1BD2442640666900466C49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1BD2432640666900466C49 /* ViewController.swift */; };
+		8C1BD2472640666900466C49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C1BD2452640666900466C49 /* Main.storyboard */; };
+		8C1BD24A2640666900466C49 /* ScroolleSampleVerCodeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C1BD2482640666900466C49 /* ScroolleSampleVerCodeApp.xcdatamodeld */; };
+		8C1BD24C2640666C00466C49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C1BD24B2640666C00466C49 /* Assets.xcassets */; };
+		8C1BD24F2640666C00466C49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C1BD24D2640666C00466C49 /* LaunchScreen.storyboard */; };
+		8C1BD25A2640666D00466C49 /* ScroolleSampleVerCodeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1BD2592640666D00466C49 /* ScroolleSampleVerCodeAppTests.swift */; };
+		8C1BD2652640666D00466C49 /* ScroolleSampleVerCodeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1BD2642640666D00466C49 /* ScroolleSampleVerCodeAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C1BD2562640666D00466C49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C1BD2342640666900466C49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C1BD23B2640666900466C49;
+			remoteInfo = ScroolleSampleVerCodeApp;
+		};
+		8C1BD2612640666D00466C49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C1BD2342640666900466C49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C1BD23B2640666900466C49;
+			remoteInfo = ScroolleSampleVerCodeApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8C1BD23C2640666900466C49 /* ScroolleSampleVerCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScroolleSampleVerCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C1BD23F2640666900466C49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8C1BD2412640666900466C49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8C1BD2432640666900466C49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8C1BD2462640666900466C49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C1BD2492640666900466C49 /* ScroolleSampleVerCodeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScroolleSampleVerCodeApp.xcdatamodel; sourceTree = "<group>"; };
+		8C1BD24B2640666C00466C49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C1BD24E2640666C00466C49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C1BD2502640666C00466C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C1BD2552640666D00466C49 /* ScroolleSampleVerCodeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScroolleSampleVerCodeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C1BD2592640666D00466C49 /* ScroolleSampleVerCodeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScroolleSampleVerCodeAppTests.swift; sourceTree = "<group>"; };
+		8C1BD25B2640666D00466C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C1BD2602640666D00466C49 /* ScroolleSampleVerCodeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScroolleSampleVerCodeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C1BD2642640666D00466C49 /* ScroolleSampleVerCodeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScroolleSampleVerCodeAppUITests.swift; sourceTree = "<group>"; };
+		8C1BD2662640666D00466C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C1BD2392640666900466C49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C1BD2522640666D00466C49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C1BD25D2640666D00466C49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C1BD2332640666900466C49 = {
+			isa = PBXGroup;
+			children = (
+				8C1BD23E2640666900466C49 /* ScroolleSampleVerCodeApp */,
+				8C1BD2582640666D00466C49 /* ScroolleSampleVerCodeAppTests */,
+				8C1BD2632640666D00466C49 /* ScroolleSampleVerCodeAppUITests */,
+				8C1BD23D2640666900466C49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C1BD23D2640666900466C49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C1BD23C2640666900466C49 /* ScroolleSampleVerCodeApp.app */,
+				8C1BD2552640666D00466C49 /* ScroolleSampleVerCodeAppTests.xctest */,
+				8C1BD2602640666D00466C49 /* ScroolleSampleVerCodeAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C1BD23E2640666900466C49 /* ScroolleSampleVerCodeApp */ = {
+			isa = PBXGroup;
+			children = (
+				8C1BD23F2640666900466C49 /* AppDelegate.swift */,
+				8C1BD2412640666900466C49 /* SceneDelegate.swift */,
+				8C1BD2432640666900466C49 /* ViewController.swift */,
+				8C1BD2452640666900466C49 /* Main.storyboard */,
+				8C1BD24B2640666C00466C49 /* Assets.xcassets */,
+				8C1BD24D2640666C00466C49 /* LaunchScreen.storyboard */,
+				8C1BD2502640666C00466C49 /* Info.plist */,
+				8C1BD2482640666900466C49 /* ScroolleSampleVerCodeApp.xcdatamodeld */,
+			);
+			path = ScroolleSampleVerCodeApp;
+			sourceTree = "<group>";
+		};
+		8C1BD2582640666D00466C49 /* ScroolleSampleVerCodeAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C1BD2592640666D00466C49 /* ScroolleSampleVerCodeAppTests.swift */,
+				8C1BD25B2640666D00466C49 /* Info.plist */,
+			);
+			path = ScroolleSampleVerCodeAppTests;
+			sourceTree = "<group>";
+		};
+		8C1BD2632640666D00466C49 /* ScroolleSampleVerCodeAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8C1BD2642640666D00466C49 /* ScroolleSampleVerCodeAppUITests.swift */,
+				8C1BD2662640666D00466C49 /* Info.plist */,
+			);
+			path = ScroolleSampleVerCodeAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C1BD23B2640666900466C49 /* ScroolleSampleVerCodeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C1BD2692640666D00466C49 /* Build configuration list for PBXNativeTarget "ScroolleSampleVerCodeApp" */;
+			buildPhases = (
+				8C1BD2382640666900466C49 /* Sources */,
+				8C1BD2392640666900466C49 /* Frameworks */,
+				8C1BD23A2640666900466C49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScroolleSampleVerCodeApp;
+			productName = ScroolleSampleVerCodeApp;
+			productReference = 8C1BD23C2640666900466C49 /* ScroolleSampleVerCodeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C1BD2542640666D00466C49 /* ScroolleSampleVerCodeAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C1BD26C2640666D00466C49 /* Build configuration list for PBXNativeTarget "ScroolleSampleVerCodeAppTests" */;
+			buildPhases = (
+				8C1BD2512640666D00466C49 /* Sources */,
+				8C1BD2522640666D00466C49 /* Frameworks */,
+				8C1BD2532640666D00466C49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C1BD2572640666D00466C49 /* PBXTargetDependency */,
+			);
+			name = ScroolleSampleVerCodeAppTests;
+			productName = ScroolleSampleVerCodeAppTests;
+			productReference = 8C1BD2552640666D00466C49 /* ScroolleSampleVerCodeAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8C1BD25F2640666D00466C49 /* ScroolleSampleVerCodeAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C1BD26F2640666D00466C49 /* Build configuration list for PBXNativeTarget "ScroolleSampleVerCodeAppUITests" */;
+			buildPhases = (
+				8C1BD25C2640666D00466C49 /* Sources */,
+				8C1BD25D2640666D00466C49 /* Frameworks */,
+				8C1BD25E2640666D00466C49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C1BD2622640666D00466C49 /* PBXTargetDependency */,
+			);
+			name = ScroolleSampleVerCodeAppUITests;
+			productName = ScroolleSampleVerCodeAppUITests;
+			productReference = 8C1BD2602640666D00466C49 /* ScroolleSampleVerCodeAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C1BD2342640666900466C49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					8C1BD23B2640666900466C49 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					8C1BD2542640666D00466C49 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 8C1BD23B2640666900466C49;
+					};
+					8C1BD25F2640666D00466C49 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 8C1BD23B2640666900466C49;
+					};
+				};
+			};
+			buildConfigurationList = 8C1BD2372640666900466C49 /* Build configuration list for PBXProject "ScroolleSampleVerCodeApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C1BD2332640666900466C49;
+			productRefGroup = 8C1BD23D2640666900466C49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C1BD23B2640666900466C49 /* ScroolleSampleVerCodeApp */,
+				8C1BD2542640666D00466C49 /* ScroolleSampleVerCodeAppTests */,
+				8C1BD25F2640666D00466C49 /* ScroolleSampleVerCodeAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C1BD23A2640666900466C49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C1BD24F2640666C00466C49 /* LaunchScreen.storyboard in Resources */,
+				8C1BD24C2640666C00466C49 /* Assets.xcassets in Resources */,
+				8C1BD2472640666900466C49 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C1BD2532640666D00466C49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C1BD25E2640666D00466C49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C1BD2382640666900466C49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C1BD2442640666900466C49 /* ViewController.swift in Sources */,
+				8C1BD2402640666900466C49 /* AppDelegate.swift in Sources */,
+				8C1BD2422640666900466C49 /* SceneDelegate.swift in Sources */,
+				8C1BD24A2640666900466C49 /* ScroolleSampleVerCodeApp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C1BD2512640666D00466C49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C1BD25A2640666D00466C49 /* ScroolleSampleVerCodeAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C1BD25C2640666D00466C49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C1BD2652640666D00466C49 /* ScroolleSampleVerCodeAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C1BD2572640666D00466C49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C1BD23B2640666900466C49 /* ScroolleSampleVerCodeApp */;
+			targetProxy = 8C1BD2562640666D00466C49 /* PBXContainerItemProxy */;
+		};
+		8C1BD2622640666D00466C49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C1BD23B2640666900466C49 /* ScroolleSampleVerCodeApp */;
+			targetProxy = 8C1BD2612640666D00466C49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C1BD2452640666900466C49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C1BD2462640666900466C49 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8C1BD24D2640666C00466C49 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C1BD24E2640666C00466C49 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C1BD2672640666D00466C49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8C1BD2682640666D00466C49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C1BD26A2640666D00466C49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = ScroolleSampleVerCodeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.ScroolleSampleVerCodeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C1BD26B2640666D00466C49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = ScroolleSampleVerCodeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.ScroolleSampleVerCodeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8C1BD26D2640666D00466C49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = ScroolleSampleVerCodeAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.ScroolleSampleVerCodeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScroolleSampleVerCodeApp.app/ScroolleSampleVerCodeApp";
+			};
+			name = Debug;
+		};
+		8C1BD26E2640666D00466C49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = ScroolleSampleVerCodeAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.ScroolleSampleVerCodeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScroolleSampleVerCodeApp.app/ScroolleSampleVerCodeApp";
+			};
+			name = Release;
+		};
+		8C1BD2702640666D00466C49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = ScroolleSampleVerCodeAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.ScroolleSampleVerCodeAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScroolleSampleVerCodeApp;
+			};
+			name = Debug;
+		};
+		8C1BD2712640666D00466C49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = ScroolleSampleVerCodeAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.ScroolleSampleVerCodeAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScroolleSampleVerCodeApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C1BD2372640666900466C49 /* Build configuration list for PBXProject "ScroolleSampleVerCodeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C1BD2672640666D00466C49 /* Debug */,
+				8C1BD2682640666D00466C49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C1BD2692640666D00466C49 /* Build configuration list for PBXNativeTarget "ScroolleSampleVerCodeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C1BD26A2640666D00466C49 /* Debug */,
+				8C1BD26B2640666D00466C49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C1BD26C2640666D00466C49 /* Build configuration list for PBXNativeTarget "ScroolleSampleVerCodeAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C1BD26D2640666D00466C49 /* Debug */,
+				8C1BD26E2640666D00466C49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C1BD26F2640666D00466C49 /* Build configuration list for PBXNativeTarget "ScroolleSampleVerCodeAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C1BD2702640666D00466C49 /* Debug */,
+				8C1BD2712640666D00466C49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8C1BD2482640666900466C49 /* ScroolleSampleVerCodeApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8C1BD2492640666900466C49 /* ScroolleSampleVerCodeApp.xcdatamodel */,
+			);
+			currentVersion = 8C1BD2492640666900466C49 /* ScroolleSampleVerCodeApp.xcdatamodel */;
+			path = ScroolleSampleVerCodeApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8C1BD2342640666900466C49 /* Project object */;
+}
