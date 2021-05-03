@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        typeIn()
+        myScrollView()
         
         
     }
@@ -89,6 +89,34 @@ class ViewController: UIViewController {
         inView.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: -50.0).isActive = true
         inView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 50.0).isActive = true
         inView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -50.0).isActive = true
+    }
+    
+    func myScrollView() {
+        
+        
+        // 背景色の決定
+        scrollView.backgroundColor = UIColor.black
+        inView.backgroundColor = UIColor.blue
+        view.backgroundColor = UIColor.systemBlue
+        // かくviewに子要素を追加
+        scrollView.addSubview(inView)
+        view.addSubview(scrollView)
+        
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        scrollView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        inView.translatesAutoresizingMaskIntoConstraints = false
+//        inView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+        inView.widthAnchor.constraint(equalToConstant: 2000.0).isActive = true
+        inView.heightAnchor.constraint(equalTo: scrollView.heightAnchor).isActive = true
+//        inView.heightAnchor.constraint(equalToConstant: 2000.0).isActive = true
+        inView.leftAnchor.constraint(equalTo: scrollView.leftAnchor).isActive = true
+        inView.rightAnchor.constraint(equalTo: scrollView.rightAnchor).isActive = true
+        inView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+        inView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
     }
 
 }
