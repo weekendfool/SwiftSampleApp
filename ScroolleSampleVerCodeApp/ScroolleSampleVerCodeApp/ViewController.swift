@@ -20,7 +20,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        typeIn()
         
+        
+    }
+    
+    func typeOut() {
         // 背景色の決定
         outView.backgroundColor = UIColor.red
         scrollView.backgroundColor = UIColor.orange
@@ -51,9 +56,40 @@ class ViewController: UIViewController {
         inView.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: -50.0).isActive = true
         inView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 50.0).isActive = true
         inView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -50.0).isActive = true
-        
     }
 
+    func typeIn() {
+        // 背景色の決定
+        outView.backgroundColor = UIColor.red
+        scrollView.backgroundColor = UIColor.blue
+        inView.backgroundColor = UIColor.yellow
+        
+        // かくviewに子要素を追加
+        scrollView.addSubview(inView)
+        outView.addSubview(scrollView)
+        view.addSubview(outView)
+        
+        // サイズ調整
+        outView.translatesAutoresizingMaskIntoConstraints = false
+        outView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50.0).isActive = true
+        outView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50.0).isActive = true
+        outView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50.0).isActive = true
+        outView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50.0).isActive = true
+        
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.leftAnchor.constraint(equalTo: outView.leftAnchor, constant: 50.0).isActive = true
+        scrollView.rightAnchor.constraint(equalTo: outView.rightAnchor, constant: -50.0).isActive = true
+        scrollView.topAnchor.constraint(equalTo: outView.topAnchor, constant: 50.0).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: outView.bottomAnchor, constant: -50.0).isActive = true
+        
+        inView.translatesAutoresizingMaskIntoConstraints = false
+        inView.widthAnchor.constraint(equalTo: outView.widthAnchor).isActive = true
+        inView.heightAnchor.constraint(equalToConstant: 1000.0).isActive = true
+        inView.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 50.0).isActive = true
+        inView.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: -50.0).isActive = true
+        inView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 50.0).isActive = true
+        inView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -50.0).isActive = true
+    }
 
 }
 
