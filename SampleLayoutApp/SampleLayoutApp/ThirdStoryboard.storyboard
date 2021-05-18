@@ -21,9 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="cau-pQ-ph3" kind="popoverPresentation" popoverAnchorView="5SH-EV-aIF" id="evB-2k-R0x">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="cau-pQ-ph3" kind="show" id="evB-2k-R0x"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -38,7 +36,9 @@
         <!--Main-->
         <scene sceneID="SON-Oz-zdS">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="cau-pQ-ph3" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" id="cau-pQ-ph3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vgA-uc-mic"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODU-JW-Cjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1265" y="123"/>

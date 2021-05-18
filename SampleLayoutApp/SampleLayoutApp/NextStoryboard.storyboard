@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="cRT-IW-Ijj" kind="presentation" id="NhN-j7-Pzu"/>
+                                    <segue destination="cRT-IW-Ijj" kind="show" id="NhN-j7-Pzu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -36,7 +36,9 @@
         <!--ThirdStoryboard-->
         <scene sceneID="imj-7g-iUA">
             <objects>
-                <viewControllerPlaceholder storyboardName="ThirdStoryboard" id="cRT-IW-Ijj" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ThirdStoryboard" id="cRT-IW-Ijj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4FX-hn-JGN"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qqr-tx-xcT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1009" y="100"/>

@@ -20,26 +20,60 @@
                                 <rect key="frame" x="53" y="283" width="308" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="KvH-5Q-fsH" kind="showDetail" id="WzC-tn-ljU"/>
-                                </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="77w-91-K2K">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGv-hU-C7T">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="404"/>
+                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Kxw-9z-Lld" kind="show" id="YhB-oW-wLK"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWc-OX-R5E">
+                                        <rect key="frame" x="0.0" y="414" width="414" height="404"/>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Xrs-Rq-O0c" kind="show" id="DM9-ad-dU0"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="77w-91-K2K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="94s-Ro-gec"/>
+                            <constraint firstItem="77w-91-K2K" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="g61-gv-CsY"/>
+                            <constraint firstItem="77w-91-K2K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lyB-jy-m5e"/>
+                            <constraint firstItem="77w-91-K2K" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rQH-Zp-NSI"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+            <point key="canvasLocation" x="866.66666666666674" y="-393.08035714285711"/>
         </scene>
-        <!--NextStoryboard-->
-        <scene sceneID="bJv-pJ-RY6">
+        <!--UIView1Storyboard-->
+        <scene sceneID="Bzn-LL-vZA">
             <objects>
-                <viewControllerPlaceholder storyboardName="NextStoryboard" id="KvH-5Q-fsH" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dc3-Yn-UD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="UIView1Storyboard" id="Kxw-9z-Lld" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="B5b-PU-XoG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UdK-gy-F7L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="810" y="30"/>
+            <point key="canvasLocation" x="1479" y="-544"/>
+        </scene>
+        <!--UIView2Storyboard-->
+        <scene sceneID="4mI-zn-Tns">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UIView2Storyboard" id="Xrs-Rq-O0c" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MQL-A9-emc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDs-1G-c6E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1643" y="-262"/>
         </scene>
     </scenes>
     <resources>
