@@ -8,10 +8,27 @@
 import Foundation
 
 final class SampleData {
-//    var chara = CharacterModel()
-    func getSampleData() {
+    
+    var character = CharacterModel(name: "Non", consonantName: "Non", vowelName: "Non", imageCount: 6)
+    
+    func getSampleData() -> Any {
         
+        var inputDatas = [character]
+        
+        inputDatas.remove(at: 0)
+        for inputData in 0 ..< sampleData.count {
+            character.name = sampleData[inputData][0]["name"]! as! String
+            character.consonantName = sampleData[inputData][1]["consonantName"]! as! String
+            character.vowelName = sampleData[inputData][2]["vowelName"]! as! String
+            character.imageCount = sampleData[inputData][3]["imageCount"]! as! Int
+
+            inputDatas.append(character)
+        }
+
+        return inputDatas
     }
+    
+    
     
     var sampleData = [
         [["name": "あ"],

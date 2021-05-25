@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct CharacterModel: Codable {
+struct CharacterModel {
     var name: String
     var consonantName: String
     var vowelName: String

@@ -15,6 +15,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     //インスタンス化
     private var character: [CharacterModel] = []
     private var heightCache: [CGFloat] = []
+    var getDataModel = SampleData()
     
     // パーツの紐付け
     @IBOutlet weak var tableView: UITableView! {
@@ -34,6 +35,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        character = getDataModel.getSampleData() as! [CharacterModel]
     }
     
     // MARK: -
