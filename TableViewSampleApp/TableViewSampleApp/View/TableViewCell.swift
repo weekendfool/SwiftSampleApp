@@ -38,28 +38,28 @@ class TableViewCell: UITableViewCell {
         switch character.imageCount {
         case 1:
             vowelStarImage01.image = UIImage(named: "image")
-            vowelStarImage02.isHidden = true
-            vowelStarImage03.isHidden = true
-            vowelStarImage04.isHidden = true
-            vowelStarImage05.isHidden = true
+            vowelStarImage02.isHidden = false
+            vowelStarImage03.isHidden = false
+            vowelStarImage04.isHidden = false
+            vowelStarImage05.isHidden = false
         case 2:
             vowelStarImage01.image = UIImage(named: "image")
             vowelStarImage02.image = UIImage(named: "image")
-            vowelStarImage03.isHidden = true
-            vowelStarImage04.isHidden = true
-            vowelStarImage05.isHidden = true
+            vowelStarImage03.isHidden = false
+            vowelStarImage04.isHidden = false
+            vowelStarImage05.isHidden = false
         case 3:
             vowelStarImage01.image = UIImage(named: "image")
             vowelStarImage02.image = UIImage(named: "image")
             vowelStarImage03.image = UIImage(named: "image")
-            vowelStarImage04.isHidden = true
-            vowelStarImage05.isHidden = true
+            vowelStarImage04.isHidden = false
+            vowelStarImage05.isHidden = false
         case 4:
             vowelStarImage01.image = UIImage(named: "image")
             vowelStarImage02.image = UIImage(named: "image")
             vowelStarImage03.image = UIImage(named: "image")
             vowelStarImage04.image = UIImage(named: "image")
-            vowelStarImage05.isHidden = true
+            vowelStarImage05.isHidden = false
         case 5:
             vowelStarImage01.image = UIImage(named: "image")
             vowelStarImage02.image = UIImage(named: "image")

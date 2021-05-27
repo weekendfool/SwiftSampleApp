@@ -9,7 +9,7 @@ import UIKit
 
 class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    private let cellClassName = "TableviewCell"
+    private let cellClassName = "TableViewCell"
     private let reusedId = "TableViewCell"
     
     //インスタンス化
