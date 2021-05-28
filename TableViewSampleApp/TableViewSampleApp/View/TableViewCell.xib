@@ -16,17 +16,17 @@
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qim-s2-IcJ">
                     <rect key="frame" x="0.0" y="0.0" width="551" height="178"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLR-WU-FNW">
-                            <rect key="frame" x="0.0" y="0.0" width="193" height="178"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLR-WU-FNW">
+                            <rect key="frame" x="0.0" y="0.0" width="151" height="178"/>
                             <fontDescription key="fontDescription" type="system" pointSize="150"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dqj-oW-yuk">
-                            <rect key="frame" x="193" y="0.0" width="358" height="178"/>
+                            <rect key="frame" x="151" y="0.0" width="400" height="178"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFi-M1-x3V">
-                                    <rect key="frame" x="0.0" y="0.0" width="358" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="70"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="子音" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwf-Je-9xL">
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="70"/>
@@ -38,7 +38,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="母音" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWD-FP-bDf">
-                                            <rect key="frame" x="180" y="0.0" width="178" height="70"/>
+                                            <rect key="frame" x="180" y="0.0" width="220" height="70"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="70" id="e5W-se-xHJ"/>
                                             </constraints>
@@ -49,34 +49,34 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gF1-bE-VLF">
-                                    <rect key="frame" x="0.0" y="70" width="358" height="108"/>
+                                    <rect key="frame" x="0.0" y="70" width="400" height="108"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Cct-Dr-Rel">
-                                            <rect key="frame" x="0.0" y="0.0" width="72" height="108"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Cct-Dr-Rel">
+                                            <rect key="frame" x="0.0" y="0.0" width="71.5" height="108"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="71.700000000000003" id="bHs-jr-n6Y"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ic0-eR-biH">
-                                            <rect key="frame" x="72" y="0.0" width="71" height="108"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ic0-eR-biH">
+                                            <rect key="frame" x="82" y="0.0" width="71.5" height="108"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="71.099999999999994" id="x4w-MD-RjI"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ROn-FB-1NE">
-                                            <rect key="frame" x="143" y="0.0" width="71.5" height="108"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ROn-FB-1NE">
+                                            <rect key="frame" x="164" y="0.0" width="71.5" height="108"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="71.700000000000003" id="kyd-sS-kuP"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="mgc-pG-Q02">
-                                            <rect key="frame" x="214.5" y="0.0" width="72" height="108"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="mgc-pG-Q02">
+                                            <rect key="frame" x="246" y="0.0" width="72" height="108"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="71.700000000000003" id="TJd-37-yr6"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="cb7-U5-CFN">
-                                            <rect key="frame" x="286.5" y="0.0" width="71.5" height="108"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="cb7-U5-CFN">
+                                            <rect key="frame" x="328.5" y="0.0" width="71.5" height="108"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="71.700000000000003" id="pXi-Ix-RdR"/>
                                             </constraints>
@@ -104,7 +104,7 @@
                 <outlet property="vowelStarImage02" destination="ic0-eR-biH" id="4n5-sg-Tk2"/>
                 <outlet property="vowelStarImage03" destination="ROn-FB-1NE" id="U5z-uk-8lm"/>
                 <outlet property="vowelStarImage04" destination="mgc-pG-Q02" id="sKM-ce-v2I"/>
-                <outlet property="vowelStarImage05" destination="mgc-pG-Q02" id="rKt-WZ-2Ud"/>
+                <outlet property="vowelStarImage05" destination="cb7-U5-CFN" id="qAl-du-Zfa"/>
             </connections>
             <point key="canvasLocation" x="476" y="-106"/>
         </view>
