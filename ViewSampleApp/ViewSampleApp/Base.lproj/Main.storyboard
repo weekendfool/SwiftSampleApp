@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8A-FI-e8d">
                                 <rect key="frame" x="0.0" y="44" width="414" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4L-gN-MdU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4L-gN-MdU">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="opo-gQ-ocu"/>
@@ -29,17 +29,38 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LK1-W1-gsx">
-                                        <rect key="frame" x="150" y="0.0" width="50" height="200"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="LK1-W1-gsx">
+                                        <rect key="frame" x="150" y="0.0" width="104" height="200"/>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8e-AX-4bx">
-                                        <rect key="frame" x="200" y="0.0" width="0.0" height="200"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="h8e-AX-4bx">
+                                        <rect key="frame" x="254" y="0.0" width="80" height="200"/>
+                                        <color key="backgroundColor" red="0.60784313729999995" green="0.76078431369999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="f48-Du-flx"/>
+                                        </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wFa-AM-vib">
-                                        <rect key="frame" x="200" y="0.0" width="214" height="200"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="wFa-AM-vib">
+                                        <rect key="frame" x="334" y="0.0" width="80" height="200"/>
+                                        <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="JP8-zb-OTc"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="h8e-AX-4bx" firstAttribute="leading" secondItem="LK1-W1-gsx" secondAttribute="trailing" id="4Sm-PV-W2H"/>
+                                    <constraint firstAttribute="bottom" secondItem="h8e-AX-4bx" secondAttribute="bottom" id="7Mz-BU-QJx"/>
+                                    <constraint firstItem="h8e-AX-4bx" firstAttribute="top" secondItem="p8A-FI-e8d" secondAttribute="top" id="ELG-Ym-HaR"/>
+                                    <constraint firstItem="LK1-W1-gsx" firstAttribute="leading" secondItem="x4L-gN-MdU" secondAttribute="trailing" id="N6W-40-aDS"/>
+                                    <constraint firstAttribute="bottom" secondItem="wFa-AM-vib" secondAttribute="bottom" id="Yg7-nJ-X7X"/>
+                                    <constraint firstItem="wFa-AM-vib" firstAttribute="leading" secondItem="h8e-AX-4bx" secondAttribute="trailing" id="bsh-rJ-zFI"/>
+                                    <constraint firstAttribute="bottom" secondItem="LK1-W1-gsx" secondAttribute="bottom" id="oMl-tX-9l1"/>
+                                    <constraint firstItem="LK1-W1-gsx" firstAttribute="top" secondItem="p8A-FI-e8d" secondAttribute="top" id="ocC-1h-ZAF"/>
+                                    <constraint firstItem="wFa-AM-vib" firstAttribute="top" secondItem="p8A-FI-e8d" secondAttribute="top" id="pWJ-zP-OLb"/>
+                                    <constraint firstAttribute="trailing" secondItem="wFa-AM-vib" secondAttribute="trailing" id="zH8-zw-s16"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEv-k1-A9s">
                                 <rect key="frame" x="20" y="402" width="374" height="56"/>
