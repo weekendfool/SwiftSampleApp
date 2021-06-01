@@ -20,6 +20,8 @@ final class Router {
     func showRoot(window: UIWindow?) {
         
         // パラメータから初期画面を切り替える
-        if !UserDefaults.standard.isLogined
+        if !UserDefaults.standard.isLogined {
+            let vc = FirstViewController.
+        }
     }
 }
