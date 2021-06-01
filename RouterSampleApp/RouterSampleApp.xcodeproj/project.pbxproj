@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8C5B27092663731E00F114C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B27082663731E00F114C0 /* AppDelegate.swift */; };
-		8C5B270B2663731E00F114C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B270A2663731E00F114C0 /* SceneDelegate.swift */; };
-		8C5B270D2663731E00F114C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B270C2663731E00F114C0 /* ViewController.swift */; };
-		8C5B27102663731E00F114C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B270E2663731E00F114C0 /* Main.storyboard */; };
 		8C5B27132663731E00F114C0 /* RouterSampleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B27112663731E00F114C0 /* RouterSampleApp.xcdatamodeld */; };
 		8C5B27152663731F00F114C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B27142663731F00F114C0 /* Assets.xcassets */; };
 		8C5B27182663731F00F114C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B27162663731F00F114C0 /* LaunchScreen.storyboard */; };
@@ -48,9 +45,6 @@
 /* Begin PBXFileReference section */
 		8C5B27052663731E00F114C0 /* RouterSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouterSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5B27082663731E00F114C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C5B270A2663731E00F114C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8C5B270C2663731E00F114C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8C5B270F2663731E00F114C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C5B27122663731E00F114C0 /* RouterSampleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RouterSampleApp.xcdatamodel; sourceTree = "<group>"; };
 		8C5B27142663731F00F114C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C5B27172663731F00F114C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,9 +122,6 @@
 				8C5B273F266373DC00F114C0 /* First */,
 				8C5B273E266373C500F114C0 /* Extension */,
 				8C5B27082663731E00F114C0 /* AppDelegate.swift */,
-				8C5B270A2663731E00F114C0 /* SceneDelegate.swift */,
-				8C5B270C2663731E00F114C0 /* ViewController.swift */,
-				8C5B270E2663731E00F114C0 /* Main.storyboard */,
 				8C5B27142663731F00F114C0 /* Assets.xcassets */,
 				8C5B27162663731F00F114C0 /* LaunchScreen.storyboard */,
 				8C5B27192663731F00F114C0 /* Info.plist */,
@@ -314,7 +305,6 @@
 			files = (
 				8C5B27182663731F00F114C0 /* LaunchScreen.storyboard in Resources */,
 				8C5B27152663731F00F114C0 /* Assets.xcassets in Resources */,
-				8C5B27102663731E00F114C0 /* Main.storyboard in Resources */,
 				8C5B2752266379E300F114C0 /* Second.storyboard in Resources */,
 				8C5B276126637A2100F114C0 /* Third.storyboard in Resources */,
 				8C5B274D266379C700F114C0 /* First.storyboard in Resources */,
@@ -348,10 +338,8 @@
 				8C5B2745266379AF00F114C0 /* FirstViewController.swift in Sources */,
 				8C5B27132663731E00F114C0 /* RouterSampleApp.xcdatamodeld in Sources */,
 				8C5B275C26637A0F00F114C0 /* ThirdViewController.swift in Sources */,
-				8C5B270D2663731E00F114C0 /* ViewController.swift in Sources */,
 				8C5B277026637A6700F114C0 /* UserDefault+.swift in Sources */,
 				8C5B27092663731E00F114C0 /* AppDelegate.swift in Sources */,
-				8C5B270B2663731E00F114C0 /* SceneDelegate.swift in Sources */,
 				8C5B276B26637A4700F114C0 /* CountModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,14 +376,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8C5B270E2663731E00F114C0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C5B270F2663731E00F114C0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8C5B27162663731F00F114C0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

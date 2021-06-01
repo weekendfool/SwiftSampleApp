@@ -25,10 +25,12 @@ final class Router {
             let vc = FirstViewController.makeFromStoryboard()
             // ナビゲーションコントローラーのrootを指定
             let nav = UINavigationController(rootViewController: vc)
+            nav.navigationBar.isHidden = true
             window?.rootViewController = nav
         } else {
             let vc = SecondViewController.makeFromStoryboard()
             let nav = UINavigationController(rootViewController: vc)
+            nav.navigationBar.isHidden = true
             window?.rootViewController = nav
         }
         window?.makeKeyAndVisible()
