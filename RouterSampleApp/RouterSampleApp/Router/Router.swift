@@ -45,8 +45,10 @@ final class Router {
         show(from: from, next: vc)
     }
     
-    func showThird(from: UIViewController) {
-        let vc = ThirdViewController.make
+    func showThird(from: UIViewController, countModel: CountModel) {
+        let vc = ThirdViewController.makeFromStoryboard(countModel: countModel)
+        show(from: from, next: vc)
+        
     }
 
     func showReStart() {
