@@ -27,7 +27,39 @@ final class Router {
             let nav = UINavigationController(rootViewController: vc)
             window?.rootViewController = nav
         } else {
-            let vc = SecondViewController.make
+            let vc = SecondViewController.makeFromStoryboard()
+            let nav = UINavigationController(rootViewController: vc)
+            window?.rootViewController = nav
         }
+        window?.makeKeyAndVisible()
+        self.window = window
+    }
+    
+    func showFirst(from: UIViewController) {
+        let vc = FirstViewController.makeFromStoryboard()
+        show(from: from, next: vc)
+    }
+    
+    func  showSecond(from: UIViewController) {
+        let vc = SecondViewController.makeFromStoryboard()
+        show(from: from, next: vc)
+    }
+
+    func showReStart() {
+        UserDefaults.standard.isLogined = [true, false].randomElement()!
+        // 最初から画面構築を行う
+        showRoot(window: window)
     }
 }
+    
+    private extension Router {
+        func show(from: UIViewController, next: UIViewController, animated: Bool = true) {
+            if let nav = from.navigationController {
+                nav.pushViewController(next, animated: animated)
+            } else {
+                from.present(next, animated: animated, completion: nil)
+            }
+        }
+    }
+    
+
