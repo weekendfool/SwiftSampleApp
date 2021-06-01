@@ -9,5 +9,12 @@ import UIKit
 
 final class SecondViewController: UIViewController {
     
+    // storyboardからvcを生成する
+    static func makeFromStoryboard() -> SecondViewController {
+        
+        let vc = UIStoryboard.secondViewController
+        return vc
+    }
     
+    private var countModel.
 }

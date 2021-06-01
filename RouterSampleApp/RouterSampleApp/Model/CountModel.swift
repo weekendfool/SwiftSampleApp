@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct CountModel {
+    var count: Int = 0
+}

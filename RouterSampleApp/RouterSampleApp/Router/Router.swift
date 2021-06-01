@@ -21,7 +21,13 @@ final class Router {
         
         // パラメータから初期画面を切り替える
         if !UserDefaults.standard.isLogined {
-            let vc = FirstViewController.
+            // viewcontrollerを作成
+            let vc = FirstViewController.makeFromStoryboard()
+            // ナビゲーションコントローラーのrootを指定
+            let nav = UINavigationController(rootViewController: vc)
+            window?.rootViewController = nav
+        } else {
+            let vc = SecondViewController.make
         }
     }
 }
