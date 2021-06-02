@@ -9,9 +9,9 @@ import UIKit
 
 final class MVCTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var atNameLabel: UILabel!
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var userSwitch: UISwitch!
+    @IBOutlet private weak var atNameLabel: UILabel!
+    @IBOutlet private weak var userNameLabel: UILabel!
+    @IBOutlet private weak var userSwitch: UISwitch!
     
     // セルの初期化メソッド、再利用時に使用
     override func prepareForReuse() {
