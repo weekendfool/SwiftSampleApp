@@ -13,7 +13,7 @@ final class MVCCountryViewController: UIViewController {
     private let CELL_ID = String(describing: MVCCountryTableViewCell.self)
     
     
-    @IBOutlet weak var tableView: UITableView! {
+    @IBOutlet private weak var tableView: UITableView! {
         didSet {
             // storyboardから読み込んだ時にセルの登録を済ませる
             let cellNIB = UINib(nibName: CELL_NIB_NAME, bundle: nil)

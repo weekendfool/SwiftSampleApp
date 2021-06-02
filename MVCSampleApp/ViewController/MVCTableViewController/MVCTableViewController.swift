@@ -10,8 +10,8 @@ import UIKit
 final class MVCTableViewController: UIViewController {
     
     // cellのファイル名を指定しておく
-    private let CELL_NIB_NAME = "MVCTableViewCell"
-    private let CELL_ID = "MVCTableViewCell"
+    private let CELL_NIB_NAME = String(describing: MVCTableViewCell.self)
+    private let CELL_ID = String(describing: MVCTableViewCell.self)
     
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
@@ -20,7 +20,7 @@ final class MVCTableViewController: UIViewController {
             tableView.register(cellNib, forCellReuseIdentifier: CELL_ID)
             
             // データを取得するまでviewを消す
-            tableView.isHidden = true
+//            tableView.isHidden = true
         }
     }
     
@@ -78,8 +78,9 @@ extension MVCTableViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as? MVCTableViewCell
         else {
             // エラー処理
-            return UITableViewCell()
             print("error")
+            return UITableViewCell()
+            
         }
         // apiから取得したデータからインスタンスを取得
         let user = users[indexPath.row]
