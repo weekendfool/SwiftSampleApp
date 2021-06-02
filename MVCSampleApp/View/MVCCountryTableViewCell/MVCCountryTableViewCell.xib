@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="109" id="4Jk-vi-day">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="109" id="4Jk-vi-day" customClass="MVCCountryTableViewCell" customModule="MVCSampleApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Jk-vi-day" id="s7B-zf-m3l">
@@ -64,6 +64,11 @@
                     <constraint firstAttribute="bottom" secondItem="Vmg-lv-QgY" secondAttribute="bottom" id="jxG-Ny-kvf"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="countryImageView" destination="bt9-qk-rDN" id="PD2-0f-VlC"/>
+                <outlet property="moneyRationalLabel" destination="cMS-wq-9PF" id="nJl-iA-Tpj"/>
+                <outlet property="nameLabel" destination="hZp-bV-Q1R" id="I6l-vH-sOt"/>
+            </connections>
             <point key="canvasLocation" x="111.59420289855073" y="43.861607142857139"/>
         </tableViewCell>
     </objects>
