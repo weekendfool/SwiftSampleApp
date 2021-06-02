@@ -6,3 +6,20 @@
 //
 
 import Foundation
+
+struct MVCUserModel: Codable {
+    var name: String = ""
+    var atName: String = ""
+    var isOn: Bool = false
+    
+    // jsonのキーとパラメータの対応付け
+    enum CodingKeys: String, CodingKey {
+        case name
+        case atName = "at_naem"
+        case isOn = "switch"
+    }
+    
+    var alertText: String {
+        name + "\n" + atName
+    }
+}
