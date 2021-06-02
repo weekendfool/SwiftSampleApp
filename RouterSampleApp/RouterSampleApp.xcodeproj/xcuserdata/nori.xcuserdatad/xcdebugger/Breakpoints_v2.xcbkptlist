@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "61036A10-D6B2-4D53-BD25-0950A262A476"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00D41690-D9B0-4EB7-B8AB-F70C63022D39"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/Extension/StoryBoard+.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "firstViewController"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F11DCE34-2DD3-4839-BA1A-A17AF0344ED3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/Extension/StoryBoard+.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "secondViewController"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CBB18FF4-924C-4251-AF69-0C150FA2BBA1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/Extension/StoryBoard+.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "thirdViewController"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C4B47530-0305-4CE1-A0C5-DDD1947C874F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/First/FirstViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "makeFromStoryboard()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF155087-1BE0-45ED-8C03-7CAAAD0A0A3D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/Router/Router.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "Router"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "DF155087-1BE0-45ED-8C03-7CAAAD0A0A3D - a86bae3e52ceebdf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_D84F21B4C66296D69FA16082A537D9BF_func0"
+                  moduleName = "RouterSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/RouterSampleApp/RouterSampleApp/Router/Router.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "11">
+               </Location>
+               <Location
+                  uuid = "DF155087-1BE0-45ED-8C03-7CAAAD0A0A3D - 121005536efabedb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RouterSampleApp.Router.shared.unsafeMutableAddressor : RouterSampleApp.Router"
+                  moduleName = "RouterSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/RouterSampleApp/RouterSampleApp/Router/Router.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0305908D-EC25-4063-A495-AC05A2EC6D3C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/Router/Router.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "Router"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "0305908D-EC25-4063-A495-AC05A2EC6D3C - ccc263620d65396e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RouterSampleApp.Router.__allocating_init() -&gt; RouterSampleApp.Router"
+                  moduleName = "RouterSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/RouterSampleApp/RouterSampleApp/Router/Router.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "0305908D-EC25-4063-A495-AC05A2EC6D3C - 5f48481cb0444403"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RouterSampleApp.Router.() -&gt; RouterSampleApp.Router(in _D84F21B4C66296D69FA16082A537D9BF).init() -&gt; RouterSampleApp.Router"
+                  moduleName = "RouterSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/RouterSampleApp/RouterSampleApp/Router/Router.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FF01756-EBB6-47C8-8126-E1CB8EEEFB74"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/Router/Router.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "Router"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C86ABDEE-D7B0-4105-AA40-0C9E35A44AE7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/Router/Router.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "showRoot(window:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47A9A588-D822-4E71-81A3-308A2F7EF3DB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/Router/Router.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "showFirst(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E80C44AC-1AC7-46DA-8FEE-E37576257784"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/Router/Router.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "Router"
+            landmarkType = "21">
+            <Locations>
+               <Location
+                  uuid = "E80C44AC-1AC7-46DA-8FEE-E37576257784 - db60b7cb7b0130de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 2 of RouterSampleApp.Router.(show in _D84F21B4C66296D69FA16082A537D9BF)(from: __C.UIViewController, next: __C.UIViewController, animated: Swift.Bool) -&gt; ()"
+                  moduleName = "RouterSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/RouterSampleApp/RouterSampleApp/Router/Router.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "6">
+               </Location>
+               <Location
+                  uuid = "E80C44AC-1AC7-46DA-8FEE-E37576257784 - 736832a39e8b8eee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RouterSampleApp.Router.(show in _D84F21B4C66296D69FA16082A537D9BF)(from: __C.UIViewController, next: __C.UIViewController, animated: Swift.Bool) -&gt; ()"
+                  moduleName = "RouterSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/RouterSampleApp/RouterSampleApp/Router/Router.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "170">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "879E6E60-8B87-4D75-88BC-041081C33800"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/Model/CountModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "CountModel"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "879E6E60-8B87-4D75-88BC-041081C33800 - 9e9c234241c08607"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RouterSampleApp.CountModel.init(count: Swift.Int) -&gt; RouterSampleApp.CountModel"
+                  moduleName = "RouterSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/RouterSampleApp/RouterSampleApp/Model/CountModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "879E6E60-8B87-4D75-88BC-041081C33800 - f3fea5cb48823ba2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RouterSampleApp.CountModel.init() -&gt; RouterSampleApp.CountModel"
+                  moduleName = "RouterSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/RouterSampleApp/RouterSampleApp/Model/CountModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "14">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41097533-E6D8-4045-998B-300E8BA43BE8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/Third/ThirdViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "makeFromStoryboard(countModel:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68527067-7D1D-4B58-8D6F-7E1526D7793E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/Third/ThirdViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "ThirdViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "68527067-7D1D-4B58-8D6F-7E1526D7793E - 6bfc24b2cd44232d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RouterSampleApp.ThirdViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; RouterSampleApp.ThirdViewController"
+                  moduleName = "RouterSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/RouterSampleApp/RouterSampleApp/Third/ThirdViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "250">
+               </Location>
+               <Location
+                  uuid = "68527067-7D1D-4B58-8D6F-7E1526D7793E - 21da9aebb2eb2860"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RouterSampleApp.ThirdViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;RouterSampleApp.ThirdViewController&gt;"
+                  moduleName = "RouterSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/RouterSampleApp/RouterSampleApp/Third/ThirdViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "170">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E84B435-265E-487E-BB0E-6B01859180F0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2A2F672-1EC7-4C5F-95FB-A3A1A9C7982B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/Router/Router.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "showReStart()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B07ED913-4AF1-4AD1-B5EA-53BFE1B88610"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RouterSampleApp/Router/Router.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "showThird(from:countModel:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
