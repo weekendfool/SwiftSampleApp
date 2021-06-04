@@ -20,7 +20,7 @@ final class MVCTableViewController: UIViewController {
             tableView.register(cellNib, forCellReuseIdentifier: CELL_ID)
             
             // データを取得するまでviewを消す
-//            tableView.isHidden = true
+            tableView.isHidden = true
         }
     }
     
@@ -28,7 +28,7 @@ final class MVCTableViewController: UIViewController {
     private var users: [MVCUserModel] = []
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
         
         // apiからデータの取得
         // クロージャー、非同期処理
