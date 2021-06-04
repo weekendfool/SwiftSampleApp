@@ -15,7 +15,7 @@ struct MVCUserModel: Codable {
     // jsonのキーとパラメータの対応付け
     enum CodingKeys: String, CodingKey {
         case name
-        case atName = "at_naem"
+        case atName = "at_name"
         case isOn = "switch"
     }
     

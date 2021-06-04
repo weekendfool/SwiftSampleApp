@@ -7,9 +7,6 @@
 
 import Foundation
 
-
-import Foundation
-
 final class API {
   //シングルトンパターンの書き方
   static let shared = API()

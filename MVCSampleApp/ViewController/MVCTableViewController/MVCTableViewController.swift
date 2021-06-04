@@ -29,7 +29,9 @@ final class MVCTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // デリゲートの設定
+        tableView.delegate = self
+        tableView.dataSource = self
         // apiからデータの取得
         // クロージャー、非同期処理
         API.shared.getUsers(completion: {[weak self] users in
@@ -38,12 +40,7 @@ final class MVCTableViewController: UIViewController {
             self?.tableView.reloadData()
             self?.tableView.isHidden = false
         } )
-        // デリゲートの設定
-        tableView.delegate = self
-        tableView.dataSource = self
     }
-    
-    
 }
 
     // 拡張する

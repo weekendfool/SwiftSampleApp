@@ -55,22 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0CFE8CCA-5C33-4665-9211-E76C86D2D0C3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/MVCTableViewController/MVCTableViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "tableView"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "AFE3F30D-B10B-40C3-92EE-FDC4DC34B4D7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -94,13 +78,13 @@
             filePath = "ViewController/MVCTableViewController/MVCTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "0B36CCB7-7BB0-42A2-AD34-AF1B61B7C305 - 978618bb508e18e8"
+                  uuid = "0B36CCB7-7BB0-42A2-AD34-AF1B61B7C305 - 978618bb508e1756"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -110,12 +94,12 @@
                   urlString = "file:///Users/nori/GitHub/SwiftSampleApp/MVCSampleApp/ViewController/MVCTableViewController/MVCTableViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "124">
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "725">
                </Location>
                <Location
-                  uuid = "0B36CCB7-7BB0-42A2-AD34-AF1B61B7C305 - 49da65c3f9ac5fec"
+                  uuid = "0B36CCB7-7BB0-42A2-AD34-AF1B61B7C305 - 49da65c3f9ac5052"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -125,8 +109,8 @@
                   urlString = "file:///Users/nori/GitHub/SwiftSampleApp/MVCSampleApp/ViewController/MVCTableViewController/MVCTableViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
                   offsetFromSymbolStart = "113">
                </Location>
             </Locations>
@@ -135,162 +119,20 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "14AA16D0-3E66-479C-BDA2-DFBCC2FDAD06"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/MVCTableViewController/MVCTableViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9C5C19C8-B64A-413D-8AF9-5C0214744314"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/MVCTableViewController/MVCTableViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5C9D84A8-4FD9-4A57-BABC-7FF1542C8D21"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/MVCTableViewController/MVCTableViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FC099BEE-1A5E-4F66-B7B8-663A77646EE0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/MVCTableViewController/MVCTableViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CDB897FB-B80B-4078-8EC6-DFC7D028E12F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/MVCTableViewController/MVCTableViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "MVCTableViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "CDB897FB-B80B-4078-8EC6-DFC7D028E12F - 158c78e65292a6ba"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MVCSampleApp.MVCTableViewController.(tableView in _A48CE11788B82FF0FD952AB6A7C8F893).getter : Swift.Optional&lt;__C.UITableView&gt;"
-                  moduleName = "MVCSampleApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/MVCSampleApp/ViewController/MVCTableViewController/MVCTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "88">
-               </Location>
-               <Location
-                  uuid = "CDB897FB-B80B-4078-8EC6-DFC7D028E12F - 158c78e65292a6ba"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MVCSampleApp.MVCTableViewController.(tableView in _A48CE11788B82FF0FD952AB6A7C8F893).setter : Swift.Optional&lt;__C.UITableView&gt;"
-                  moduleName = "MVCSampleApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/MVCSampleApp/ViewController/MVCTableViewController/MVCTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "166">
-               </Location>
-               <Location
-                  uuid = "CDB897FB-B80B-4078-8EC6-DFC7D028E12F - 37adf3b5c9ab8d36"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MVCSampleApp.MVCTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MVCSampleApp.MVCTableViewController"
-                  moduleName = "MVCSampleApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/MVCSampleApp/ViewController/MVCTableViewController/MVCTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "410">
-               </Location>
-               <Location
-                  uuid = "CDB897FB-B80B-4078-8EC6-DFC7D028E12F - 7060fc8fdb1adfda"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MVCSampleApp.MVCTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MVCSampleApp.MVCTableViewController&gt;"
-                  moduleName = "MVCSampleApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/MVCSampleApp/ViewController/MVCTableViewController/MVCTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "342">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "75C84395-9793-43C8-945E-1E80090EF02F"
+            uuid = "98DA68E7-5CB4-4197-92E5-87B4E032AA4E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Utility/API.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "getUsers(completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "75C84395-9793-43C8-945E-1E80090EF02F - c96855d9d2557d83"
+                  uuid = "98DA68E7-5CB4-4197-92E5-87B4E032AA4E - c96855d9d2557d6e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -300,12 +142,12 @@
                   urlString = "file:///Users/nori/GitHub/SwiftSampleApp/MVCSampleApp/Utility/API.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
                   offsetFromSymbolStart = "8">
                </Location>
                <Location
-                  uuid = "75C84395-9793-43C8-945E-1E80090EF02F - 116cc7d8ab811eab"
+                  uuid = "98DA68E7-5CB4-4197-92E5-87B4E032AA4E - 116cc7d8ab811f4e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -315,11 +157,155 @@
                   urlString = "file:///Users/nori/GitHub/SwiftSampleApp/MVCSampleApp/Utility/API.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
                   offsetFromSymbolStart = "252">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E95A7F6-9B4D-4959-9DC7-681BD8A12BCF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Utility/API.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "API"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1E95A7F6-9B4D-4959-9DC7-681BD8A12BCF - 50950fd6104572f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_020_63C2A8A81133A2A9F95B11C68E1CA1676_func0"
+                  moduleName = "MVCSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/MVCSampleApp/Utility/API.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "11">
+               </Location>
+               <Location
+                  uuid = "1E95A7F6-9B4D-4959-9DC7-681BD8A12BCF - 45102a33190e79f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVCSampleApp.API.shared.unsafeMutableAddressor : MVCSampleApp.API"
+                  moduleName = "MVCSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/MVCSampleApp/Utility/API.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9FD894D-9D68-4725-B161-D02CC1062AB4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Utility/API.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getUsers(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B9FD894D-9D68-4725-B161-D02CC1062AB4 - 116cc7d8ab811f4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVCSampleApp.API.getUsers(completion: Swift.Optional&lt;(Swift.Array&lt;MVCSampleApp.MVCUserModel&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "MVCSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/MVCSampleApp/Utility/API.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "B9FD894D-9D68-4725-B161-D02CC1062AB4 - ca9032ec0f35cd97"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in MVCSampleApp.API.getUsers(completion: Swift.Optional&lt;(Swift.Array&lt;MVCSampleApp.MVCUserModel&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "MVCSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nori/GitHub/SwiftSampleApp/MVCSampleApp/Utility/API.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "147">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2625D540-DC80-4EE5-9ABA-320121BC8FE0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Utility/API.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getUsers(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48EA0457-835E-464E-AC63-76832FBB1AFF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Utility/API.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "getUsers(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C311DEA-4CE6-4C52-B0E1-C2B3775C2483"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Utility/API.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getUsers(completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
