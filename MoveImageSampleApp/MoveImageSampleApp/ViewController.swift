@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var sampleSlider: UISlider!
+    @IBOutlet weak var sampleLabel: UILabel!
     
     // uiimageの初期化
     
@@ -70,6 +71,22 @@ class ViewController: UIViewController {
         // 画像のサイズを合わせる
         imageview.frame = rect
         
+    }
+    
+    
+    func changeSize() {
+        var nowValue = 0
+        var counter = 0
+        while counter < 50 {
+            nowValue += 1
+            sampleLabel.text = "現在値：\(nowValue)"
+            counter += 1
+        }
+        
+    }
+    
+    @IBAction func startButton(_ sender: Any) {
+        changeSize()
     }
     
 }
