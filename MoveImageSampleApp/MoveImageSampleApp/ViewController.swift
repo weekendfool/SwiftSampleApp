@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     
     
     let imageview = UIImageView()
+    var timer: Timer!
+    
+    var count = 1.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,8 +88,28 @@ class ViewController: UIViewController {
         
     }
     
+    func startTimer() {
+        
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.timerCounter), userInfo: nil, repeats: true)
+
+    }
+    
+    @objc func timerCounter() {
+        if count <= 30 {
+            print("count:\(count)")
+            count += 1
+        } else {
+            print("fin")
+            timer.invalidate()
+        }
+        
+    }
+    
     @IBAction func startButton(_ sender: Any) {
-        changeSize()
+        startTimer()
+        
+        
     }
     
 }
