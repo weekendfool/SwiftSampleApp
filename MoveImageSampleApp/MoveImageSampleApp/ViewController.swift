@@ -18,7 +18,9 @@ class ViewController: UIViewController {
     let imageview = UIImageView()
     var timer: Timer!
     
-    var count = 1.0
+    var count = 0
+    
+    var upDown = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,17 +78,17 @@ class ViewController: UIViewController {
         
     }
     
-    
-    func changeSize() {
-        var nowValue = 0
-        var counter = 0
-        while counter < 50 {
-            nowValue += 1
-            sampleLabel.text = "現在値：\(nowValue)"
-            counter += 1
-        }
-        
-    }
+//
+//    func changeSize() {
+//        var nowValue = 0
+//        var counter = 0
+//        while counter < 50 {
+//            nowValue += 1
+//            sampleLabel.text = "現在値：\(nowValue)"
+//            counter += 1
+//        }
+//
+//    }
     
     func startTimer() {
         
@@ -96,12 +98,47 @@ class ViewController: UIViewController {
     }
     
     @objc func timerCounter() {
-        if count <= 30 {
-            print("count:\(count)")
-            count += 1
-        } else {
-            print("fin")
-            timer.invalidate()
+        var number = 0
+       
+        switch count {
+        case 0:
+            upDown = true
+        case 10:
+            upDown = false
+        default:
+            break
+        }
+        
+            if upDown {
+                number = 1
+                print("count:\(count)")
+                
+               
+                var imageWidth: CGFloat = CGFloat(count * 10)
+                var imageHeight: CGFloat = CGFloat(count * 10)
+                
+                var rect: CGRect = CGRect(x: 100, y: 100, width: imageWidth, height: imageHeight)
+                
+                // 画像のサイズを合わせる
+                imageview.frame = rect
+                
+                count += 1
+            } else {
+                number = -1
+                print("count:\(count)")
+                
+                var imageWidth: CGFloat = CGFloat(count * 10)
+                var imageHeight: CGFloat = CGFloat(count * 10)
+                
+                var rect: CGRect = CGRect(x: 100, y: 100, width: imageWidth, height: imageHeight)
+                
+                // 画像のサイズを合わせる
+                imageview.frame = rect
+                
+                count -= 1
+
+            
+            
         }
         
     }
