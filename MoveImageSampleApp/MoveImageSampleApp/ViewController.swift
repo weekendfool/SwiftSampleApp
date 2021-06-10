@@ -109,31 +109,32 @@ class ViewController: UIViewController {
             break
         }
         
+        print("count:\(count)")
+        
+       
+        var imageWidth: CGFloat = CGFloat(count * 10)
+        var imageHeight: CGFloat = CGFloat(count * 10)
+        
+        var rect: CGRect = CGRect(x: 100, y: 100, width: imageWidth, height: imageHeight)
+        
+        // 画像のサイズを合わせる
+        imageview.frame = rect
             if upDown {
                 number = 1
-                print("count:\(count)")
                 
-               
-                var imageWidth: CGFloat = CGFloat(count * 10)
-                var imageHeight: CGFloat = CGFloat(count * 10)
-                
-                var rect: CGRect = CGRect(x: 100, y: 100, width: imageWidth, height: imageHeight)
-                
-                // 画像のサイズを合わせる
-                imageview.frame = rect
                 
                 count += 1
             } else {
-                number = -1
-                print("count:\(count)")
-                
-                var imageWidth: CGFloat = CGFloat(count * 10)
-                var imageHeight: CGFloat = CGFloat(count * 10)
-                
-                var rect: CGRect = CGRect(x: 100, y: 100, width: imageWidth, height: imageHeight)
-                
-                // 画像のサイズを合わせる
-                imageview.frame = rect
+//                number = -1
+//                print("count:\(count)")
+//
+//                var imageWidth: CGFloat = CGFloat(count * 10)
+//                var imageHeight: CGFloat = CGFloat(count * 10)
+//
+//                var rect: CGRect = CGRect(x: 100, y: 100, width: imageWidth, height: imageHeight)
+//
+//                // 画像のサイズを合わせる
+//                imageview.frame = rect
                 
                 count -= 1
 
