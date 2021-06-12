@@ -26,6 +26,9 @@
                                     <constraint firstAttribute="height" constant="30" id="g3d-Xs-JtK"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="gunButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ent-K0-ja0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
