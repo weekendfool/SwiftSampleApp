@@ -26,7 +26,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }()
     
     lazy var boxNode: SCNNode = {
-        
+        let cylinder = SCNCylinder(radius: 0.1, height: 0.05)
+        let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.01)
+        box.firstMaterial?.diffuse.contents = UIColor.red
+        let node = SCNNode(geometry: box)
+        node.name = "box"
+        node.position = SCNVector3Make(0, 0, -1.5)
+    
+        return node
     }()
     
     @IBAction func gunButton(_ sender: Any) {
