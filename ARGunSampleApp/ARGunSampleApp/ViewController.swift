@@ -12,6 +12,22 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet weak var sampleLabel: UILabel! {
+        didSet {
+            sampleLabel.isHidden = true
+        }
+    }
+    
+    let defaultConfiguration: ARWorldTrackingConfiguration = {
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
+        configuration.environmentTexturing = .automatic
+        return configuration
+    }()
+    
+    lazy var boxNode: SCNNode = {
+        
+    }()
     
     @IBAction func gunButton(_ sender: Any) {
     }
@@ -29,6 +45,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .horizontal
         sceneView.session.run(configuration)
+        
+    }
+    
+    func doPhyisicsView() {
         
     }
 }
