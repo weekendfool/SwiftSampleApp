@@ -32,6 +32,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let node = SCNNode(geometry: box)
         node.name = "box"
         node.position = SCNVector3Make(0, 0, -1.5)
+        
+        let shape = SCNPhysicsShape(geometry: box, options: nil)
+        node.physicsBody = SCNPhysicsBody(type: .dynamic, shape: shape)
+        node.physicsBody?.isAffectedByGravity = false
     
         return node
     }()
@@ -49,14 +53,24 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         sceneView.autoenablesDefaultLighting = true
         
+        sceneView.scene.rootNode.addChildNode(boxNode)
+        
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .horizontal
         sceneView.session.run(configuration)
         
     }
     
+    
     func doPhyisicsView() {
+        let ball = SCNSphere(radius: 0.1)
+        ball.firstMaterial?.diffuse.contents = UIColor.blue
         
+        let node = SCNNode(geometry: ball)
+        node.name = "ball"
+        node.position = SCNVector3Make(0, 0.1, 0)
+        
+        let shape = SCNPhysicsBody(type: .dynamic, shape: <#T##SCNPhysicsShape?#>)
     }
 }
     
