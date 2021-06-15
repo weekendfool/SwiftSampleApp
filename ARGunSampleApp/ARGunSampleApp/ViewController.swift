@@ -61,6 +61,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        sceneView.session.pause()
+    }
+    
     
     func doPhyisicsView() {
         let ball = SCNSphere(radius: 0.1)
@@ -70,7 +75,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         node.name = "ball"
         node.position = SCNVector3Make(0, 0.1, 0)
         
-        let shape = SCNPhysicsBody(type: .dynamic, shape: <#T##SCNPhysicsShape?#>)
+        let shape = SCNPhysicsShape(geometry: ball, options: nil)
+        node.physicsBody = SCNPhysicsBody(type: .dynamic, shape: shape)
+        node.physicsBody?.contactTestBitMask = 1
+        node.physicsBody?.isAffectedByGravity = false
     }
 }
     
