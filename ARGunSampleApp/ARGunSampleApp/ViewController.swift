@@ -79,6 +79,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         node.physicsBody = SCNPhysicsBody(type: .dynamic, shape: shape)
         node.physicsBody?.contactTestBitMask = 1
         node.physicsBody?.isAffectedByGravity = false
+        
+        if let camera = sceneView.pointOfView {
+            node.position = camera.position
+            
+            let
+        }
     }
 }
     
