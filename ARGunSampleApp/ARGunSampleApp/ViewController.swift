@@ -83,8 +83,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         if let camera = sceneView.pointOfView {
             node.position = camera.position
             
-            let
+            let toPositionCamera = SCNVector3Make(0, 0, -3)
+            let toPosition = camera.convertPosition(toPositionCamera, to: nil)
+            
+            // 射撃に必要なコード
+            let move = SCNAction.move(by: toPosition, duration: 0.5)
+            move.timingMode = .easeOut
+            node.runAction(move) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    node.removeFromParentNode()
+                }
+            }
         }
+        sceneView.scene.rootNode.addChildNode(node)
     }
 }
     
