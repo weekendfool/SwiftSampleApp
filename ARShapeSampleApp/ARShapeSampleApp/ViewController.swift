@@ -13,6 +13,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
+    private let device = MTLCreateSystemDefaultDevice()!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,4 +30,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.run(configuration)
     }
     
+    // 平面の検出時の挙動
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        guard let planeAnchor = anchor as? ARPlaneAnchor else { fatalError() }
+        
+        // 平面ジオメトリの作成
+        let planeGeometry = ARSCNPlaneGeometry(device: device)!
+        planeGeometry.update(from: planeAnchor.geometry)
+        planeGeometry.materials.first?.diffuse.contents = UIColor.white.withAlphaComponent(0.5)
+        
+        // 平面ノードの作成
+        let planeNode = SCNNode()
+        planeNode.geometry = planeGeometry
+        
+        // ノードの追加
+        node.addChildNode(planeNode)
+    }
 }
