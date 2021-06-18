@@ -46,4 +46,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // ノードの追加
         node.addChildNode(planeNode)
     }
+    
+    // 平面の形状が更新された時に実行
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
+        guard let planeGeometry = node.childNodes.first!.geometry as? ARSCNPlaneGeometry else { return }
+        
+        // 平面の形状をアップデート
+        planeGeometry.update(from: planeAnchor.geometry)
+    }
 }
