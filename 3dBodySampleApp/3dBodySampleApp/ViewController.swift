@@ -9,14 +9,21 @@ import UIKit
 import Combine
 import ARKit
 import RealityKit
+import SceneKit
 
 class ViewController: UIViewController, ARSessionDelegate {
 
    
-    @IBOutlet weak var sceneView: ARView!
+    @IBOutlet var sceneView: ARView!
+    
+    var character = ARBodyAnchor
+        
+    let characterAnchor = AnchorEntity()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
     }
 }
