@@ -25,6 +25,7 @@ class Game {
     weak var delegate: GameDelegate?
     
     func start() {
+        // 全てGameDelegateのものにアクセス？
         print("Number Of Players is \(delegate?.numberOfPlayers ?? 1)") // デリゲート内の変数にアクセス
         delegate?.gameDidStart(self)// デリゲート内の関数にアクセス
         print("playing")
