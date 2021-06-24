@@ -43,6 +43,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         spherelNode.geometry = sphereGeometry
         spherelNode.position = SCNVector3(hitResult.worldTransform.columns.3.x, hitResult.worldTransform.columns.3.y + 0.05, hitResult.worldTransform.columns.3.z)
         
+        spherelNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
+        spherelNode.physicsBody?.mass = 1.0
+        spherelNode.physicsBody?.friction = 1.5
+        spherelNode.physicsBody?.rollingFriction = 1.0
+        spherelNode.physicsBody?.damping = 0.5
+        spherelNode.physicsBody?.angularDamping = 0.5
+        spherelNode.physicsBody?.isAffectedByGravity = true
+        
+        spherelNode.physicsBody?.applyForce(SCNVector3(0, 1.5, 0), asImpulse: true)
+        
         // ノードの追加
         sceneView.scene.rootNode.addChildNode(spherelNode)
     }
