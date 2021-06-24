@@ -46,4 +46,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // ノードの追加
         sceneView.scene.rootNode.addChildNode(spherelNode)
     }
+    
+    // 画面タップ時の挙動
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let touchPos = touch.location(in: sceneView)
+        
+        let hitTestResult = sceneView.hitTest(touchPos, types: .existingPlaneUsingExtent)
+        if !hitTestResult.isEmpty {
+            if let hitResult = hitTestResult.first {
+                addSphere(hitResult: hitResult)
+            }
+        }
+    }
 }
