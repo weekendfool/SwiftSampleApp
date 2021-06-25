@@ -49,14 +49,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     // 平面の形状が更新された時に実行
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        guard let planeAnchor = anchor as? ARPlaneAnchor else { fatalError() }
-        guard let geometryPlaneNode = node.childNodes.first, let planeGeometory = geometryPlaneNode.geometry as? SCNPlane else { fatalError() }
-        
-        planeGeometory.width = cg
+        guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
+        guard let planeGeometry = node.childNodes.first!.geometry as? ARSCNPlaneGeometry else { return }
         
         // 平面の形状をアップデート
         planeGeometry.update(from: planeAnchor.geometry)
     }
-    
-    
 }
