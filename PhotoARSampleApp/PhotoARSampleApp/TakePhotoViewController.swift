@@ -30,6 +30,10 @@ class TakePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     
     // シャッターボタン押した後の処理
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        <#code#>
+        let image = info[.originalImage] as! UIImage
+        
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        
+        self.dismiss(animated: true, completion: nil)
     }
 }
