@@ -69,4 +69,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
         }
     }
+    
+    // 画面を更新した時に呼ばれる
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        guard let planeAnchor = anchor as? ARPlaneAnchor else { fatalError() }
+        guard let geometryPlaneNode = node.childNodes.first, let planeGeometry = geometryPlaneNode.geometry as? SCNPlane else { fatalError() }
+        
+        // ジオメトリをアップデートする
+        planeGeometry.width = CGFloat(planeAnchor.extent.x)
+        planeGeometry.height = CGFloat(planeAnchor.extent.z)
+        geometryPlaneNode.simdPosition = float3(planeAnchor.center.x, 0, planeAnchor.center.z)
+        
+        // 平面に対しての設定
+        geometryPlaneNode.physicsBody = SCNPhysicsBody(type: .kinematic, shape: SCNPhysicsShape(geometry: planeGeometry, options: nil))
+    }
 }
