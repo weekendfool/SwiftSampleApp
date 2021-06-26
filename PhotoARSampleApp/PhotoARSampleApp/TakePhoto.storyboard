@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Take Photo View Controller-->
         <scene sceneID="Dub-Pt-23E">
             <objects>
-                <viewController id="qcC-E2-kQn" sceneMemberID="viewController">
+                <viewController id="qcC-E2-kQn" customClass="TakePhotoViewController" customModule="PhotoARSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Iq-t6-Ees">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,6 +24,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="takePhotoButtonAction:" destination="qcC-E2-kQn" eventType="touchUpInside" id="tGh-lL-20v"/>
                                     <segue destination="HUZ-sf-KC1" kind="presentation" id="GiR-Xe-oVP"/>
                                 </connections>
                             </button>

@@ -9,12 +9,27 @@ import UIKit
 
 
 
-class TakePhotoViewController: UIViewController {
+class TakePhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
-
+    @IBAction func takePhotoButtonAction(_ sender: Any) {
+    }
+    
+    
+    func launchCamera() {
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.delegate = self
+        // カメラ起動
+        present(picker, animated: true, completion: nil)
+    }
+    
+    // シャッターボタン押した後の処理
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        <#code#>
+    }
 }
