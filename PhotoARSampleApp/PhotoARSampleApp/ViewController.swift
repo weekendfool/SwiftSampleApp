@@ -27,4 +27,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // ライトの追加
         sceneView.autoenablesDefaultLighting = true
     }
+    
+    func ARImageTracking() {
+        var arImage = UserDefaults.standard.value(forKey: "photo")
+        
+        let configuration = ARImageTrackingConfiguration()
+        configuration.trackingImages = arImage as! Set<ARReferenceImage>
+//        configuration.trackingImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil)!
+        
+        sceneView.session.run(configuration)
+    }
 }

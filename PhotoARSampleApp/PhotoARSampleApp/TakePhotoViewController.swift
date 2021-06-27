@@ -34,6 +34,11 @@ class TakePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         
+        // イメージの保存
+        UserDefaults.standard.setValue(image, forKey: "photo")
+        
         self.dismiss(animated: true, completion: nil)
+        
+        
     }
 }
