@@ -14,9 +14,11 @@ class TakePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        launchCamera()
     }
 
     @IBAction func takePhotoButtonAction(_ sender: Any) {
+        
     }
     
     

@@ -16,7 +16,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        lunchAR()
+        ARImageTracking()
     }
     
     func lunchAR() {
@@ -36,5 +37,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //        configuration.trackingImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil)!
         
         sceneView.session.run(configuration)
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        let boxNode = SCNNode()
+        boxNode.geometry = SCNBox(width: 0.05, height: 0.05, length: 0.05, chamferRadius: 0)
+        boxNode.position.y = 0.025
+        
+        node.addChildNode(boxNode)
     }
 }
