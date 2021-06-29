@@ -88,7 +88,22 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     }
 }
     
-    
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        for metadata in metadataObjects as! [AVMetadataMachineReadableCodeObject] {
+            // バーコードの内容がからかどうかの確認
+            if metadata.stringValue == nil { continue }
+            
+            // 読み取ったデータの値
+            print("metadata.type:\(metadata.type)")
+            print("metadata.stringValue:\(metadata.stringValue!)")
+            
+            // 取得したデータの処理を行う
+            let alert: UIAlertController = UIAlertController(title: "バーコードの中身", message: metadata.stringValue, preferredStyle: .alert)
+            let cancel: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler: nil)
+            alert.addAction(cancel)
+            present(alert, animated: true, completion: nil)
+        }
+    }
     
     // 閉じる時の挙動
     @objc func closeTaped(sender: UIButton) {
