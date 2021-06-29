@@ -62,12 +62,37 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                         previewLayer.frame = self.view.bounds
                         previewLayer.videoGravity = .resizeAspectFill
                         self.view.layer.addSublayer(previewLayer)
+                        
+                        // 読み取り可能エリアに赤い枠を追加する
+                        let detectionArea = UIView()
+                        detectionArea.frame = CGRect(x: view.frame.size.width * x, y: view.frame.size.height * y, width: view.frame.size.width * width, height: view.frame.size.height * height)
+                        detectionArea.layer.borderColor = UIColor.red.cgColor
+                        detectionArea.layer.borderWidth = 3
+                        view.addSubview(detectionArea)
+                        
+                        // 閉じるボタン
+                        let closeButton: UIButton = UIButton()
+                        closeButton.frame = CGRect(x: 20, y: 20, width: 100, height: 40)
+                        closeButton.setTitle("閉じる", for: UIControl.State.normal)
+                        closeButton.backgroundColor = UIColor.lightGray
+                        closeButton.addTarget(self, action: #selector(closeTaped(sender:)), for: .touchUpInside)
+                        self.view.addSubview(closeButton)
+                        
+                        self.session.startRunning()
                     }
                 }
             
         } catch {
+            print("error occured while creating video device input: \(error)")
         }
-        }
+    }
+}
+    
+    
+    
+    // 閉じる時の挙動
+    @objc func closeTaped(sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
