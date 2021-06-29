@@ -41,6 +41,28 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                     self.session.addInput(deviceInput)
                     
                     // 背面カメラの映像からバーコードを読み取るための設定
+                    let metadataOutput = AVCaptureMetadataOutput()
+                    if self.session.canAddOutput(metadataOutput) {
+                        self.session.addOutput(metadataOutput)
+                        
+                        metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+                        // 読み取りたいバーコードの種類を指定
+                        metadataOutput.metadataObjectTypes = [.ean13]
+                        
+                        // 読みとり可能エリアの設定を行う
+                        let x: CGFloat = 0.1
+                        let y: CGFloat = 0.4
+                        let width: CGFloat = 0.8
+                        let height: CGFloat = 0.2
+                        
+                        metadataOutput.rectOfInterest = CGRect(x: x, y: y, width: width, height: height)
+                        
+                        // 背面カメラの映像を画面に表示するためのレイヤーを生成
+                        let previewLayer = AVCaptureVideoPreviewLayer(session: self.session)
+                        previewLayer.frame = self.view.bounds
+                        previewLayer.videoGravity = .resizeAspectFill
+                        self.view.layer.addSublayer(previewLayer)
+                    }
                 }
             
         } catch {
