@@ -17,7 +17,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        setUpCamera2()
     }
 
 
@@ -108,6 +108,51 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     // 閉じる時の挙動
     @objc func closeTaped(sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func setUpCamera2() {
+        // カメラの設定
+        let discoverySession = AVCaptureDevice.DiscoverySession(
+            deviceTypes: [.builtInWideAngleCamera],
+            mediaType: .video,
+            position: .back)
+        
+        let devices = discoverySession.devices
+        if let backCamera = devices.first {
+            do {
+                // カメラで読み取り成功したときの処理
+                let deviceInput = try AVCaptureDeviceInput(device: backCamera)
+                doInit(deviceInput: deviceInput)
+            } catch {
+                print("error occured while creating video device input: \(error)")
+            }
+        }
+    }
+    
+    private func doInit(deviceInput: AVCaptureDeviceInput) {
+        if !session.canAddInput(deviceInput) {
+            return
+        }
+        
+        session.addInput(deviceInput)
+        
+        let metadataOutput = AVCaptureMetadataOutput()
+        if !session.canAddOutput(metadataOutput) {
+            return
+        }
+        
+        session.addOutput(metadataOutput)
+        
+        metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+        metadataOutput.metadataObjectTypes = [.ean13]
+        
+        // カメラを起動
+        let previewLayer = AVCaptureVideoPreviewLayer(session: session)
+        previewLayer.frame = view.bounds
+        previewLayer.videoGravity = .resizeAspectFill
+        view.layer.addSublayer(previewLayer)
+        
+        session.startRunning()
     }
 }
 
