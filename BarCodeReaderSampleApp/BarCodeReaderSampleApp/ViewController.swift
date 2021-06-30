@@ -22,7 +22,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         
         setUpCamera2()
         
-        setUpView()
+//        setUpView()
     }
 
 
@@ -136,6 +136,13 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     }
     
     private func doInit(deviceInput: AVCaptureDeviceInput) {
+        
+        // 読みとり可能エリアの設定を行う
+        let x: CGFloat = 0.1
+        let y: CGFloat = 0.4
+        let width: CGFloat = 0.8
+        let height: CGFloat = 0.2
+        
         if !session.canAddInput(deviceInput) {
             return
         }
@@ -143,6 +150,8 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         session.addInput(deviceInput)
         
         let metadataOutput = AVCaptureMetadataOutput()
+        metadataOutput.rectOfInterest = CGRect(x: x, y: y, width: width, height: height)
+        
         if !session.canAddOutput(metadataOutput) {
             return
         }
@@ -152,25 +161,13 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         metadataOutput.metadataObjectTypes = [.ean13]
         
-//        // 読みとり可能エリアの設定を行う
-//        let x: CGFloat = 0.1
-//        let y: CGFloat = 0.4
-//        let width: CGFloat = 0.8
-//        let height: CGFloat = 0.2
-//
-//        // 読み取り可能エリアに赤い枠を追加する
-//        let detectionArea = UIView()
-//        detectionArea.frame = CGRect(
-//            x: self.view.frame.size.width * x,
-//            y: self.view.frame.size.height * y,
-//            width: self.view.frame.size.width * width,
-//            height: self.view.frame.size.height * height
-//        )
-//        detectionArea.layer.borderColor = UIColor.red.cgColor
-//        detectionArea.layer.borderWidth = 3
-//        view.addSubview(detectionArea)
-
-//        metadataOutput.rectOfInterest = CGRect(x: x, y: y, width: width, height: height)
+        metadataOutput.rectOfInterest = CGRect(
+            x: y,
+            y: x,
+            width: height,
+            height: width
+        )
+        
 //
         
         
@@ -180,7 +177,25 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
         
+//        metadataOutput.rectOfInterest = CGRect(x: x, y: y, width: width, height: height)
+        
         session.startRunning()
+        
+//        metadataOutput.rectOfInterest = CGRect(x: x, y: y, width: width, height: height)
+
+        // 読み取り可能エリアに赤い枠を追加する
+        let detectionArea = UIView()
+        detectionArea.frame = CGRect(
+            x: self.view.frame.size.width * x,
+            y: self.view.frame.size.height * y,
+            width: self.view.frame.size.width * width,
+            height: self.view.frame.size.height * height
+        )
+        detectionArea.layer.borderColor = UIColor.red.cgColor
+        detectionArea.layer.borderWidth = 3
+        view.addSubview(detectionArea)
+
+        
     }
     
     func setUpView() {
