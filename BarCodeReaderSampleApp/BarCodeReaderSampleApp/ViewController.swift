@@ -17,7 +17,12 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+       
+        
         setUpCamera2()
+        
+        setUpView()
     }
 
 
@@ -115,7 +120,8 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         let discoverySession = AVCaptureDevice.DiscoverySession(
             deviceTypes: [.builtInWideAngleCamera],
             mediaType: .video,
-            position: .back)
+            position: .back
+        )
         
         let devices = discoverySession.devices
         if let backCamera = devices.first {
@@ -146,6 +152,28 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         metadataOutput.metadataObjectTypes = [.ean13]
         
+//        // 読みとり可能エリアの設定を行う
+//        let x: CGFloat = 0.1
+//        let y: CGFloat = 0.4
+//        let width: CGFloat = 0.8
+//        let height: CGFloat = 0.2
+//
+//        // 読み取り可能エリアに赤い枠を追加する
+//        let detectionArea = UIView()
+//        detectionArea.frame = CGRect(
+//            x: self.view.frame.size.width * x,
+//            y: self.view.frame.size.height * y,
+//            width: self.view.frame.size.width * width,
+//            height: self.view.frame.size.height * height
+//        )
+//        detectionArea.layer.borderColor = UIColor.red.cgColor
+//        detectionArea.layer.borderWidth = 3
+//        view.addSubview(detectionArea)
+
+//        metadataOutput.rectOfInterest = CGRect(x: x, y: y, width: width, height: height)
+//
+        
+        
         // カメラを起動
         let previewLayer = AVCaptureVideoPreviewLayer(session: session)
         previewLayer.frame = view.bounds
@@ -153,6 +181,21 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         view.layer.addSublayer(previewLayer)
         
         session.startRunning()
+    }
+    
+    func setUpView() {
+        // 読みとり可能エリアの設定を行う
+               let x: CGFloat = 0.1
+               let y: CGFloat = 0.4
+               let width: CGFloat = 0.8
+               let height: CGFloat = 0.2
+               
+               // 読み取り可能エリアに赤い枠を追加する
+               let detectionArea = UIView()
+               detectionArea.frame = CGRect(x: self.view.frame.size.width * x, y: self.view.frame.size.height * y, width: self.view.frame.size.width * width, height: self.view.frame.size.height * height)
+               detectionArea.layer.borderColor = UIColor.red.cgColor
+               detectionArea.layer.borderWidth = 10
+               self.view.addSubview(detectionArea)
     }
 }
 
