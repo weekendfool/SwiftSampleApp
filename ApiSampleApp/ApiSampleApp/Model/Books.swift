@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct Books: Codable {
+struct books: Codable {
     let name: String
     let isbn: Int
 //    let image: UIImage
