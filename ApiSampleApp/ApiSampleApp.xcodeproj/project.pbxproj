@@ -16,6 +16,8 @@
 		8C4694D92689B025003BB066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4694D72689B025003BB066 /* LaunchScreen.storyboard */; };
 		8C4694E42689B025003BB066 /* ApiSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4694E32689B025003BB066 /* ApiSampleAppTests.swift */; };
 		8C4694EF2689B025003BB066 /* ApiSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4694EE2689B025003BB066 /* ApiSampleAppUITests.swift */; };
+		8C4BB798268D825C00C79DD9 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB797268D825C00C79DD9 /* Books.swift */; };
+		8C4BB79A268D843800C79DD9 /* GetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB799268D843800C79DD9 /* GetAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		8C4694EA2689B025003BB066 /* ApiSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApiSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4694EE2689B025003BB066 /* ApiSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSampleAppUITests.swift; sourceTree = "<group>"; };
 		8C4694F02689B025003BB066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C4BB797268D825C00C79DD9 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		8C4BB799268D843800C79DD9 /* GetAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,9 @@
 		8C4694C82689B023003BB066 /* ApiSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				8C4BB794268D821600C79DD9 /* Model */,
+				8C4BB796268D823800C79DD9 /* View */,
+				8C4BB795268D822900C79DD9 /* Controller */,
 				8C4694C92689B023003BB066 /* AppDelegate.swift */,
 				8C4694CB2689B023003BB066 /* SceneDelegate.swift */,
 				8C4694CD2689B023003BB066 /* ViewController.swift */,
@@ -129,6 +136,29 @@
 				8C4694F02689B025003BB066 /* Info.plist */,
 			);
 			path = ApiSampleAppUITests;
+			sourceTree = "<group>";
+		};
+		8C4BB794268D821600C79DD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C4BB797268D825C00C79DD9 /* Books.swift */,
+				8C4BB799268D843800C79DD9 /* GetAPI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C4BB795268D822900C79DD9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8C4BB796268D823800C79DD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +292,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C4694CE2689B023003BB066 /* ViewController.swift in Sources */,
+				8C4BB79A268D843800C79DD9 /* GetAPI.swift in Sources */,
 				8C4694CA2689B023003BB066 /* AppDelegate.swift in Sources */,
 				8C4694D42689B023003BB066 /* ApiSampleApp.xcdatamodeld in Sources */,
 				8C4694CC2689B023003BB066 /* SceneDelegate.swift in Sources */,
+				8C4BB798268D825C00C79DD9 /* Books.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
