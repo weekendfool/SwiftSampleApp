@@ -18,7 +18,8 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         // Do any additional setup after loading the view.
         
         setUpWebView()
-        recuestURL()
+//        recuestURL()
+        setImage()
     }
     
     // webViewの設定
@@ -32,10 +33,21 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     }
     
     func recuestURL() {
-        let myUrl = URL(string: "http://books.google.com/books/content?id=hsFCMQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api")
+        let myUrl = URL(string: "https://books.google.com/books/content?id=hsFCMQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api")
         let myRecuest = URLRequest(url: myUrl!)
         
         sampleWebView.load(myRecuest)
+    }
+    
+    func setImage() {
+        let myUrl = URL(string: "https://books.google.com/books/content?id=hsFCMQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api")
+        
+        do {
+            let data = try Data(contentsOf: myUrl!)
+            sampleImageView.image = UIImage(data: data)
+        } catch let error {
+            print("error: \(error)")
+        }
     }
 
 //    extension ViewController: WKUIDelegate {

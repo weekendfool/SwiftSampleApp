@@ -16,6 +16,7 @@
 		8C4BB7B9268F641C00C79DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4BB7B7268F641C00C79DD9 /* LaunchScreen.storyboard */; };
 		8C4BB7C4268F641C00C79DD9 /* GetImageSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB7C3268F641C00C79DD9 /* GetImageSampleAppTests.swift */; };
 		8C4BB7CF268F641C00C79DD9 /* GetImageSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB7CE268F641C00C79DD9 /* GetImageSampleAppUITests.swift */; };
+		8C4BB7DD268F7F4F00C79DD9 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB7DC268F7F4F00C79DD9 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8C4BB7CA268F641C00C79DD9 /* GetImageSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetImageSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4BB7CE268F641C00C79DD9 /* GetImageSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageSampleAppUITests.swift; sourceTree = "<group>"; };
 		8C4BB7D0268F641C00C79DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C4BB7DC268F7F4F00C79DD9 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				8C4BB7A9268F641A00C79DD9 /* AppDelegate.swift */,
 				8C4BB7AB268F641A00C79DD9 /* SceneDelegate.swift */,
+				8C4BB7DC268F7F4F00C79DD9 /* ImageViewController.swift */,
 				8C4BB7AD268F641A00C79DD9 /* ViewController.swift */,
 				8C4BB7AF268F641A00C79DD9 /* Main.storyboard */,
 				8C4BB7B5268F641C00C79DD9 /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			files = (
 				8C4BB7B4268F641A00C79DD9 /* GetImageSampleApp.xcdatamodeld in Sources */,
 				8C4BB7AE268F641A00C79DD9 /* ViewController.swift in Sources */,
+				8C4BB7DD268F7F4F00C79DD9 /* ImageViewController.swift in Sources */,
 				8C4BB7AA268F641A00C79DD9 /* AppDelegate.swift in Sources */,
 				8C4BB7AC268F641A00C79DD9 /* SceneDelegate.swift in Sources */,
 			);
