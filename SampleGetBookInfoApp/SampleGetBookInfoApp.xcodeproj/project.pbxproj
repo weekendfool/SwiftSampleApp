@@ -1,0 +1,655 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C4BB82A268F8A4C00C79DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB829268F8A4C00C79DD9 /* AppDelegate.swift */; };
+		8C4BB82C268F8A4C00C79DD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB82B268F8A4C00C79DD9 /* SceneDelegate.swift */; };
+		8C4BB834268F8A4C00C79DD9 /* SampleGetBookInfoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB832268F8A4C00C79DD9 /* SampleGetBookInfoApp.xcdatamodeld */; };
+		8C4BB836268F8A4E00C79DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C4BB835268F8A4E00C79DD9 /* Assets.xcassets */; };
+		8C4BB839268F8A4E00C79DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4BB837268F8A4E00C79DD9 /* LaunchScreen.storyboard */; };
+		8C4BB844268F8A4E00C79DD9 /* SampleGetBookInfoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB843268F8A4E00C79DD9 /* SampleGetBookInfoAppTests.swift */; };
+		8C4BB84F268F8A4E00C79DD9 /* SampleGetBookInfoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB84E268F8A4E00C79DD9 /* SampleGetBookInfoAppUITests.swift */; };
+		8C4BB860268F8AB000C79DD9 /* ChangeHttpToHttps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB85F268F8AB000C79DD9 /* ChangeHttpToHttps.swift */; };
+		8C4BB862268F8ACC00C79DD9 /* BarcodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB861268F8ACC00C79DD9 /* BarcodeReader.swift */; };
+		8C4BB864268F8AE300C79DD9 /* GetGoogleBooksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB863268F8AE300C79DD9 /* GetGoogleBooksAPI.swift */; };
+		8C4BB866268F8B2200C79DD9 /* BarcodeReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4BB865268F8B2200C79DD9 /* BarcodeReader.storyboard */; };
+		8C4BB868268F8B3F00C79DD9 /* BarcodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB867268F8B3F00C79DD9 /* BarcodeReaderViewController.swift */; };
+		8C4BB86A268F8B8300C79DD9 /* ResultImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4BB869268F8B8300C79DD9 /* ResultImage.storyboard */; };
+		8C4BB86C268F8B9B00C79DD9 /* ResultImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB86B268F8B9B00C79DD9 /* ResultImageViewController.swift */; };
+		8C4BB86E268F8C5900C79DD9 /* BarcodeReaderTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB86D268F8C5900C79DD9 /* BarcodeReaderTarget.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C4BB840268F8A4E00C79DD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C4BB81E268F8A4C00C79DD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C4BB825268F8A4C00C79DD9;
+			remoteInfo = SampleGetBookInfoApp;
+		};
+		8C4BB84B268F8A4E00C79DD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C4BB81E268F8A4C00C79DD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C4BB825268F8A4C00C79DD9;
+			remoteInfo = SampleGetBookInfoApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8C4BB826268F8A4C00C79DD9 /* SampleGetBookInfoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleGetBookInfoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C4BB829268F8A4C00C79DD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8C4BB82B268F8A4C00C79DD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8C4BB833268F8A4C00C79DD9 /* SampleGetBookInfoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleGetBookInfoApp.xcdatamodel; sourceTree = "<group>"; };
+		8C4BB835268F8A4E00C79DD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C4BB838268F8A4E00C79DD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C4BB83A268F8A4E00C79DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C4BB83F268F8A4E00C79DD9 /* SampleGetBookInfoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleGetBookInfoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C4BB843268F8A4E00C79DD9 /* SampleGetBookInfoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleGetBookInfoAppTests.swift; sourceTree = "<group>"; };
+		8C4BB845268F8A4E00C79DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C4BB84A268F8A4E00C79DD9 /* SampleGetBookInfoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleGetBookInfoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C4BB84E268F8A4E00C79DD9 /* SampleGetBookInfoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleGetBookInfoAppUITests.swift; sourceTree = "<group>"; };
+		8C4BB850268F8A4E00C79DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C4BB85F268F8AB000C79DD9 /* ChangeHttpToHttps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeHttpToHttps.swift; sourceTree = "<group>"; };
+		8C4BB861268F8ACC00C79DD9 /* BarcodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReader.swift; sourceTree = "<group>"; };
+		8C4BB863268F8AE300C79DD9 /* GetGoogleBooksAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoogleBooksAPI.swift; sourceTree = "<group>"; };
+		8C4BB865268F8B2200C79DD9 /* BarcodeReader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BarcodeReader.storyboard; sourceTree = "<group>"; };
+		8C4BB867268F8B3F00C79DD9 /* BarcodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderViewController.swift; sourceTree = "<group>"; };
+		8C4BB869268F8B8300C79DD9 /* ResultImage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultImage.storyboard; sourceTree = "<group>"; };
+		8C4BB86B268F8B9B00C79DD9 /* ResultImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultImageViewController.swift; sourceTree = "<group>"; };
+		8C4BB86D268F8C5900C79DD9 /* BarcodeReaderTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderTarget.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C4BB823268F8A4C00C79DD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C4BB83C268F8A4E00C79DD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C4BB847268F8A4E00C79DD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C4BB81D268F8A4C00C79DD9 = {
+			isa = PBXGroup;
+			children = (
+				8C4BB828268F8A4C00C79DD9 /* SampleGetBookInfoApp */,
+				8C4BB842268F8A4E00C79DD9 /* SampleGetBookInfoAppTests */,
+				8C4BB84D268F8A4E00C79DD9 /* SampleGetBookInfoAppUITests */,
+				8C4BB827268F8A4C00C79DD9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C4BB827268F8A4C00C79DD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C4BB826268F8A4C00C79DD9 /* SampleGetBookInfoApp.app */,
+				8C4BB83F268F8A4E00C79DD9 /* SampleGetBookInfoAppTests.xctest */,
+				8C4BB84A268F8A4E00C79DD9 /* SampleGetBookInfoAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C4BB828268F8A4C00C79DD9 /* SampleGetBookInfoApp */ = {
+			isa = PBXGroup;
+			children = (
+				8C4BB85E268F8A7A00C79DD9 /* Model */,
+				8C4BB85D268F8A6F00C79DD9 /* View */,
+				8C4BB85C268F8A6100C79DD9 /* Controller */,
+				8C4BB829268F8A4C00C79DD9 /* AppDelegate.swift */,
+				8C4BB82B268F8A4C00C79DD9 /* SceneDelegate.swift */,
+				8C4BB865268F8B2200C79DD9 /* BarcodeReader.storyboard */,
+				8C4BB869268F8B8300C79DD9 /* ResultImage.storyboard */,
+				8C4BB835268F8A4E00C79DD9 /* Assets.xcassets */,
+				8C4BB837268F8A4E00C79DD9 /* LaunchScreen.storyboard */,
+				8C4BB83A268F8A4E00C79DD9 /* Info.plist */,
+				8C4BB832268F8A4C00C79DD9 /* SampleGetBookInfoApp.xcdatamodeld */,
+			);
+			path = SampleGetBookInfoApp;
+			sourceTree = "<group>";
+		};
+		8C4BB842268F8A4E00C79DD9 /* SampleGetBookInfoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C4BB843268F8A4E00C79DD9 /* SampleGetBookInfoAppTests.swift */,
+				8C4BB845268F8A4E00C79DD9 /* Info.plist */,
+			);
+			path = SampleGetBookInfoAppTests;
+			sourceTree = "<group>";
+		};
+		8C4BB84D268F8A4E00C79DD9 /* SampleGetBookInfoAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8C4BB84E268F8A4E00C79DD9 /* SampleGetBookInfoAppUITests.swift */,
+				8C4BB850268F8A4E00C79DD9 /* Info.plist */,
+			);
+			path = SampleGetBookInfoAppUITests;
+			sourceTree = "<group>";
+		};
+		8C4BB85C268F8A6100C79DD9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8C4BB867268F8B3F00C79DD9 /* BarcodeReaderViewController.swift */,
+				8C4BB86B268F8B9B00C79DD9 /* ResultImageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8C4BB85D268F8A6F00C79DD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C4BB86D268F8C5900C79DD9 /* BarcodeReaderTarget.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C4BB85E268F8A7A00C79DD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C4BB85F268F8AB000C79DD9 /* ChangeHttpToHttps.swift */,
+				8C4BB861268F8ACC00C79DD9 /* BarcodeReader.swift */,
+				8C4BB863268F8AE300C79DD9 /* GetGoogleBooksAPI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C4BB825268F8A4C00C79DD9 /* SampleGetBookInfoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C4BB853268F8A4E00C79DD9 /* Build configuration list for PBXNativeTarget "SampleGetBookInfoApp" */;
+			buildPhases = (
+				8C4BB822268F8A4C00C79DD9 /* Sources */,
+				8C4BB823268F8A4C00C79DD9 /* Frameworks */,
+				8C4BB824268F8A4C00C79DD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampleGetBookInfoApp;
+			productName = SampleGetBookInfoApp;
+			productReference = 8C4BB826268F8A4C00C79DD9 /* SampleGetBookInfoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C4BB83E268F8A4E00C79DD9 /* SampleGetBookInfoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C4BB856268F8A4E00C79DD9 /* Build configuration list for PBXNativeTarget "SampleGetBookInfoAppTests" */;
+			buildPhases = (
+				8C4BB83B268F8A4E00C79DD9 /* Sources */,
+				8C4BB83C268F8A4E00C79DD9 /* Frameworks */,
+				8C4BB83D268F8A4E00C79DD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C4BB841268F8A4E00C79DD9 /* PBXTargetDependency */,
+			);
+			name = SampleGetBookInfoAppTests;
+			productName = SampleGetBookInfoAppTests;
+			productReference = 8C4BB83F268F8A4E00C79DD9 /* SampleGetBookInfoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8C4BB849268F8A4E00C79DD9 /* SampleGetBookInfoAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C4BB859268F8A4E00C79DD9 /* Build configuration list for PBXNativeTarget "SampleGetBookInfoAppUITests" */;
+			buildPhases = (
+				8C4BB846268F8A4E00C79DD9 /* Sources */,
+				8C4BB847268F8A4E00C79DD9 /* Frameworks */,
+				8C4BB848268F8A4E00C79DD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C4BB84C268F8A4E00C79DD9 /* PBXTargetDependency */,
+			);
+			name = SampleGetBookInfoAppUITests;
+			productName = SampleGetBookInfoAppUITests;
+			productReference = 8C4BB84A268F8A4E00C79DD9 /* SampleGetBookInfoAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C4BB81E268F8A4C00C79DD9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					8C4BB825268F8A4C00C79DD9 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					8C4BB83E268F8A4E00C79DD9 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 8C4BB825268F8A4C00C79DD9;
+					};
+					8C4BB849268F8A4E00C79DD9 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 8C4BB825268F8A4C00C79DD9;
+					};
+				};
+			};
+			buildConfigurationList = 8C4BB821268F8A4C00C79DD9 /* Build configuration list for PBXProject "SampleGetBookInfoApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C4BB81D268F8A4C00C79DD9;
+			productRefGroup = 8C4BB827268F8A4C00C79DD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C4BB825268F8A4C00C79DD9 /* SampleGetBookInfoApp */,
+				8C4BB83E268F8A4E00C79DD9 /* SampleGetBookInfoAppTests */,
+				8C4BB849268F8A4E00C79DD9 /* SampleGetBookInfoAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C4BB824268F8A4C00C79DD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C4BB839268F8A4E00C79DD9 /* LaunchScreen.storyboard in Resources */,
+				8C4BB836268F8A4E00C79DD9 /* Assets.xcassets in Resources */,
+				8C4BB866268F8B2200C79DD9 /* BarcodeReader.storyboard in Resources */,
+				8C4BB86A268F8B8300C79DD9 /* ResultImage.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C4BB83D268F8A4E00C79DD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C4BB848268F8A4E00C79DD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C4BB822268F8A4C00C79DD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C4BB868268F8B3F00C79DD9 /* BarcodeReaderViewController.swift in Sources */,
+				8C4BB86E268F8C5900C79DD9 /* BarcodeReaderTarget.swift in Sources */,
+				8C4BB834268F8A4C00C79DD9 /* SampleGetBookInfoApp.xcdatamodeld in Sources */,
+				8C4BB82A268F8A4C00C79DD9 /* AppDelegate.swift in Sources */,
+				8C4BB86C268F8B9B00C79DD9 /* ResultImageViewController.swift in Sources */,
+				8C4BB860268F8AB000C79DD9 /* ChangeHttpToHttps.swift in Sources */,
+				8C4BB862268F8ACC00C79DD9 /* BarcodeReader.swift in Sources */,
+				8C4BB82C268F8A4C00C79DD9 /* SceneDelegate.swift in Sources */,
+				8C4BB864268F8AE300C79DD9 /* GetGoogleBooksAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C4BB83B268F8A4E00C79DD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C4BB844268F8A4E00C79DD9 /* SampleGetBookInfoAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C4BB846268F8A4E00C79DD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C4BB84F268F8A4E00C79DD9 /* SampleGetBookInfoAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C4BB841268F8A4E00C79DD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C4BB825268F8A4C00C79DD9 /* SampleGetBookInfoApp */;
+			targetProxy = 8C4BB840268F8A4E00C79DD9 /* PBXContainerItemProxy */;
+		};
+		8C4BB84C268F8A4E00C79DD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C4BB825268F8A4C00C79DD9 /* SampleGetBookInfoApp */;
+			targetProxy = 8C4BB84B268F8A4E00C79DD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C4BB837268F8A4E00C79DD9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C4BB838268F8A4E00C79DD9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C4BB851268F8A4E00C79DD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8C4BB852268F8A4E00C79DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C4BB854268F8A4E00C79DD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = SampleGetBookInfoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.SampleGetBookInfoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C4BB855268F8A4E00C79DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = SampleGetBookInfoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.SampleGetBookInfoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8C4BB857268F8A4E00C79DD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = SampleGetBookInfoAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.SampleGetBookInfoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleGetBookInfoApp.app/SampleGetBookInfoApp";
+			};
+			name = Debug;
+		};
+		8C4BB858268F8A4E00C79DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = SampleGetBookInfoAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.SampleGetBookInfoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleGetBookInfoApp.app/SampleGetBookInfoApp";
+			};
+			name = Release;
+		};
+		8C4BB85A268F8A4E00C79DD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = SampleGetBookInfoAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.SampleGetBookInfoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SampleGetBookInfoApp;
+			};
+			name = Debug;
+		};
+		8C4BB85B268F8A4E00C79DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = SampleGetBookInfoAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.SampleGetBookInfoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SampleGetBookInfoApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C4BB821268F8A4C00C79DD9 /* Build configuration list for PBXProject "SampleGetBookInfoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C4BB851268F8A4E00C79DD9 /* Debug */,
+				8C4BB852268F8A4E00C79DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C4BB853268F8A4E00C79DD9 /* Build configuration list for PBXNativeTarget "SampleGetBookInfoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C4BB854268F8A4E00C79DD9 /* Debug */,
+				8C4BB855268F8A4E00C79DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C4BB856268F8A4E00C79DD9 /* Build configuration list for PBXNativeTarget "SampleGetBookInfoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C4BB857268F8A4E00C79DD9 /* Debug */,
+				8C4BB858268F8A4E00C79DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C4BB859268F8A4E00C79DD9 /* Build configuration list for PBXNativeTarget "SampleGetBookInfoAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C4BB85A268F8A4E00C79DD9 /* Debug */,
+				8C4BB85B268F8A4E00C79DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8C4BB832268F8A4C00C79DD9 /* SampleGetBookInfoApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8C4BB833268F8A4C00C79DD9 /* SampleGetBookInfoApp.xcdatamodel */,
+			);
+			currentVersion = 8C4BB833268F8A4C00C79DD9 /* SampleGetBookInfoApp.xcdatamodel */;
+			path = SampleGetBookInfoApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8C4BB81E268F8A4C00C79DD9 /* Project object */;
+}
