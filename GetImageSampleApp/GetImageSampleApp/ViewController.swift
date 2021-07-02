@@ -18,7 +18,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         // Do any additional setup after loading the view.
         
         setUpWebView()
-//        recuestURL()
+        recuestURL()
         setImage()
     }
     
@@ -26,10 +26,11 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     // @Configuration意味は構成
     func setUpWebView() {
         let webConfiguration = WKWebViewConfiguration()
-        sampleWebView = WKWebView(frame: .zero, configuration: webConfiguration)
+//        sampleWebView = WKWebView(frame: .zero, configuration: webConfiguration)
+//        sampleWebView.frame = CGRect(x: 0, y: 0, width: 200, height: 400)
         sampleWebView.uiDelegate = self
         sampleWebView.navigationDelegate = self
-        view = sampleWebView
+//        view = sampleWebView
     }
     
     func recuestURL() {

@@ -19,7 +19,7 @@ class ImageViewController: UIViewController {
     
 
     func setImage() {
-        let myUrl = URL(string: "https://books.google.com/books/content?id=hsFCMQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api")
+        let myUrl = URL(string: "https://books.google.com/books/content?id=hsFCMQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api")
         
         do {
             let data = try Data(contentsOf: myUrl!)
