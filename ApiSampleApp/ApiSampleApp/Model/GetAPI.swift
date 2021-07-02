@@ -9,13 +9,16 @@ import Foundation
 
 
 struct Books: Codable {
-    let name: String
-    let isbn: Int
+    let bib_key: String
+    let info_url: String
+    let preview_url: String
+    let thumbanil_url: String
+    let preview: String
 
 }
 
 func getAPI(query: String) {
-    print("query:\(query)")
+//    print("query:\(query)")
     // リクエストの作成
     let url = URL(string: "https://wwww.googleapis.com/books/vi/volumes?q=isbn:" + query)!
     let request = URLRequest(url: url)
