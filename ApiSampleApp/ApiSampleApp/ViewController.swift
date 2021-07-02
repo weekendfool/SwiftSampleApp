@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         
     }
 
-
+    @IBAction func getButtonAction(_ sender: Any) {
+    }
+    
 }
 

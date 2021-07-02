@@ -17,7 +17,7 @@ struct Books: Codable {
 func getAPI(query: String) {
     print("query:\(query)")
     // リクエストの作成
-    let url = URL(string: "https://wwww.googleapis.com/books/vi/volumes?q=" + query)!
+    let url = URL(string: "https://wwww.googleapis.com/books/vi/volumes?q=isbn:" + query)!
     let request = URLRequest(url: url)
     let decoder: JSONDecoder = JSONDecoder()
     

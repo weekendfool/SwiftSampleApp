@@ -18,6 +18,7 @@
 		8C4694EF2689B025003BB066 /* ApiSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4694EE2689B025003BB066 /* ApiSampleAppUITests.swift */; };
 		8C4BB798268D825C00C79DD9 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB797268D825C00C79DD9 /* Books.swift */; };
 		8C4BB79A268D843800C79DD9 /* GetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB799268D843800C79DD9 /* GetAPI.swift */; };
+		8C4BB79C268F247500C79DD9 /* GetGitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB79B268F247500C79DD9 /* GetGitAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		8C4694F02689B025003BB066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C4BB797268D825C00C79DD9 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		8C4BB799268D843800C79DD9 /* GetAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAPI.swift; sourceTree = "<group>"; };
+		8C4BB79B268F247500C79DD9 /* GetGitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGitAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				8C4BB797268D825C00C79DD9 /* Books.swift */,
 				8C4BB799268D843800C79DD9 /* GetAPI.swift */,
+				8C4BB79B268F247500C79DD9 /* GetGitAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				8C4694CE2689B023003BB066 /* ViewController.swift in Sources */,
 				8C4BB79A268D843800C79DD9 /* GetAPI.swift in Sources */,
 				8C4694CA2689B023003BB066 /* AppDelegate.swift in Sources */,
+				8C4BB79C268F247500C79DD9 /* GetGitAPI.swift in Sources */,
 				8C4694D42689B023003BB066 /* ApiSampleApp.xcdatamodeld in Sources */,
 				8C4694CC2689B023003BB066 /* SceneDelegate.swift in Sources */,
 				8C4BB798268D825C00C79DD9 /* Books.swift in Sources */,
