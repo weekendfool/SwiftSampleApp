@@ -11,29 +11,33 @@ import Foundation
 struct Books: Codable {
     let kind: String
     let totalItems: Int
-//    let items: [Item]
-//
-//    struct Item: Codable {
-//        let kind: String
-//        let id: String
-//        let etag: String
-//        var volumeInfo: [String: String] = [
-//            "title": "",
-//            "author": ""
-//        ]
+    let items: [Item]
+
+    struct Item: Codable {
+        let kind: String
+        let id: String
+        let etag: String
+        var volumeInfo: VolumeInfo
+    }
+    
+    struct VolumeInfo: Codable {
+        let title: String
+        let authors: [String]
 //        let publisher: String
 //        let pageCount: Int
-//        var industryIdentiers: [String: String] = [
-//            "type": "",
-//            "identifier": ""
-//        ]
-//        let imageLinks: [String: String] = [
-//            "smallThumbnail": "",
-//            "thumbnail": ""
-//        ]
-//
-//    }
+        var industryIdentifiers: [IndustryIdentifiers]
+        let imageLinks: ImageLinks
+    }
 
+    struct IndustryIdentifiers: Codable {
+        var type: String
+        var identifier: String
+    }
+        
+    struct ImageLinks: Codable {
+        let smallThumbnail: String
+        let thumbnail: String
+    }
 }
 
 func getAPI(query: String) {
