@@ -14,11 +14,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        getAPI(query: "9784041042083")
+//        getAPI(query: "9784041042083")
         
     }
 
     @IBAction func getButtonAction(_ sender: Any) {
+        searchGithubUser(query: "weekendfool")
     }
     
 }

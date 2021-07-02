@@ -9,33 +9,33 @@ import Foundation
 
 // ＠受け取った後のデータをデコードするために入れる変数の設定
 struct User: Codable {
-    let totalCount: Int
-    let incompleteResults: Bool
-    let items: [Item]
-    
-    struct Item: Codable {
-        let login: String
-        let id: Int
-        let node_id: String
-        let avatar_url: URL
-        let gravatar_id: String?
-        let url: URL
-        let html_url: URL
-        let followers_url: URL
-        let subscriptions_url: URL
-        let organizattions_url: URL
-        let repons_url: URL
-        let received_events_url: URL
-        let type: String
-        let score: Double
-    }
+    let total_count: Int
+        let incomplete_results: Bool
+        let items: [Item]
+
+        struct Item: Codable {
+            let login: String
+            let id: Int
+            let node_id: String
+            let avatar_url: URL
+            let gravatar_id: String?
+            let url: URL
+            let html_url: URL
+            let followers_url: URL
+            let subscriptions_url: URL
+            let organizations_url: URL
+            let repos_url: URL
+            let received_events_url: URL
+            let type: String
+            let score: Double
+        }
 }
 
 func searchGithubUser(query: String) {
     // httpリクエストを作る
     // @どこに何が欲しいかを送る送り状をイメージ
     // @q=以降が検索したい情報、今回はqueryに代入して実行
-    let url = URL(string: "htps://api.github.com/search/users?q=" + query)!
+    let url = URL(string: "https://api.github.com/search/users?q=" + query)!
     let request = URLRequest(url: url)
     let decoder: JSONDecoder = JSONDecoder()
     // サーバーと通信する処理
