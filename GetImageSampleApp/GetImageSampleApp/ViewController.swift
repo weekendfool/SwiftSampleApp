@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 
     @IBOutlet weak var sampleWebView: WKWebView!
     @IBOutlet weak var sampleImageView: UIImageView!
@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        setUpWebView()
+        recuestURL()
     }
     
     // webViewの設定
@@ -24,9 +27,23 @@ class ViewController: UIViewController {
         let webConfiguration = WKWebViewConfiguration()
         sampleWebView = WKWebView(frame: .zero, configuration: webConfiguration)
         sampleWebView.uiDelegate = self
+        sampleWebView.navigationDelegate = self
         view = sampleWebView
     }
+    
+    func recuestURL() {
+        let myUrl = URL(string: "http://books.google.com/books/content?id=hsFCMQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api")
+        let myRecuest = URLRequest(url: myUrl!)
+        
+        sampleWebView.load(myRecuest)
+    }
 
+//    extension ViewController: WKUIDelegate {
+//    }
+//
+//    extension ViewController: WKNavigationDelegate {
+//
+//    }
 }
 
 
