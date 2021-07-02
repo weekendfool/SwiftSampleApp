@@ -9,9 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+//    var api = getAPI(query: "チェンソーマン")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        getAPI(query: "9784041042083")
+        
     }
 
 
