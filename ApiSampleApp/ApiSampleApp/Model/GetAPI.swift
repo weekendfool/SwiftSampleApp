@@ -9,11 +9,30 @@ import Foundation
 
 
 struct Books: Codable {
-    let bib_key: String
-    let info_url: String
-    let preview_url: String
-    let thumbanil_url: String
-    let preview: String
+    let kind: String
+    let totalItems: Int
+    let items: [Item]
+    
+    struct Item: Codable {
+        let kind: String
+        let id: String
+        let etag: String
+        var volumeInfo: [String: String] = [
+            "title": "",
+            "author": ""
+        ]
+        let publisher: String
+        let pageCount: Int
+        var industryIdentiers: [String: String] = [
+            "type": "",
+            "identifier": ""
+        ]
+        let imageLinks: [String: String] = [
+            "smallThumbnail": "",
+            "thumbnail": ""
+        ]
+        
+    }
 
 }
 
@@ -31,8 +50,9 @@ func getAPI(query: String) {
             let books: Books = try decoder.decode(Books.self, from: data)
             print(books)
         } catch let error {
+            print("-----------------------------")
             print("JSON Decode Error:\(error)")
-            fatalError()
+//            fatalError()
         }
     }
     task.resume()
