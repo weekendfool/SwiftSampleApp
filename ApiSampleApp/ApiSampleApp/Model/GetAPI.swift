@@ -11,35 +11,35 @@ import Foundation
 struct Books: Codable {
     let kind: String
     let totalItems: Int
-    let items: [Item]
-    
-    struct Item: Codable {
-        let kind: String
-        let id: String
-        let etag: String
-        var volumeInfo: [String: String] = [
-            "title": "",
-            "author": ""
-        ]
-        let publisher: String
-        let pageCount: Int
-        var industryIdentiers: [String: String] = [
-            "type": "",
-            "identifier": ""
-        ]
-        let imageLinks: [String: String] = [
-            "smallThumbnail": "",
-            "thumbnail": ""
-        ]
-        
-    }
+//    let items: [Item]
+//
+//    struct Item: Codable {
+//        let kind: String
+//        let id: String
+//        let etag: String
+//        var volumeInfo: [String: String] = [
+//            "title": "",
+//            "author": ""
+//        ]
+//        let publisher: String
+//        let pageCount: Int
+//        var industryIdentiers: [String: String] = [
+//            "type": "",
+//            "identifier": ""
+//        ]
+//        let imageLinks: [String: String] = [
+//            "smallThumbnail": "",
+//            "thumbnail": ""
+//        ]
+//
+//    }
 
 }
 
 func getAPI(query: String) {
 //    print("query:\(query)")
     // リクエストの作成
-    let url = URL(string: "https://wwww.googleapis.com/books/vi/volumes?q=isbn:" + query)!
+    let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:" + query)!
     let request = URLRequest(url: url)
     let decoder: JSONDecoder = JSONDecoder()
     
