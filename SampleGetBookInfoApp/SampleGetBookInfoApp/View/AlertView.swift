@@ -11,6 +11,7 @@ import UIKit
 struct AlertView {
     //
     func setAlertController(vc: UIViewController, metaData: String) {
+        
         let alert: UIAlertController = UIAlertController(
             title: "バーコードの中身",
             message: metaData,

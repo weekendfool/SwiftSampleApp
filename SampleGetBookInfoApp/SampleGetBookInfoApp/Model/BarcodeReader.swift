@@ -66,5 +66,22 @@ struct BarcodeReader {
             width: height,
             height: width
         )
+        
+        
     }
+    
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) -> String {
+        var gotAPI: String?
+        for metadata in metadataObjects as! [AVMetadataMachineReadableCodeObject] {
+            if metadata.stringValue == nil { continue }
+            
+            // 読み取ったデータの値
+            print("metadata.type:\(metadata.type)")
+            print("metadata.stringValue:\(metadata.stringValue!)")
+            
+            gotAPI =  metadata.stringValue!
+        }
+        return gotAPI!
+    }
+
 }
