@@ -35,7 +35,7 @@ struct GetGoogleBooksAPI {
 //        let smallThumbnail: String
         let thumbnail: String
     }
-    
+    // 
     // apiを取得する処理
     func getGoogleBooksAPI(query: String) {
         // リクエストの作成
@@ -50,7 +50,8 @@ struct GetGoogleBooksAPI {
             do {
                 let books: Books = try decoder.decode(Books.self, from: gotData)
                 print("===========================")
-                print("books:\(books)")
+                print("books:\(books.items[0].volumeInfo.industryIdentifiers[0].identifier)")
+                
             } catch let error {
                 print("-----------------------------")
                 print("JSON Decode Error:\(error)")
