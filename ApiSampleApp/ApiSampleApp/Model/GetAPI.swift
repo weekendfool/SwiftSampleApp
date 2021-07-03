@@ -13,6 +13,7 @@ struct Books: Codable {
     let totalItems: Int
     let items: [Item]
 
+}
     struct Item: Codable {
         let kind: String
         let id: String
@@ -38,7 +39,7 @@ struct Books: Codable {
         let smallThumbnail: String
         let thumbnail: String
     }
-}
+
 
 func getAPI(query: String) {
 //    print("query:\(query)")

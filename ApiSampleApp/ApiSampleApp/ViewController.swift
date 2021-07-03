@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBAction func getButtonAction(_ sender: Any) {
 //        searchGithubUser(query: "weekendfool")
         getAPI(query: "9784041042083")
+        print("Books:\(books.self)")
     }
     
 }
