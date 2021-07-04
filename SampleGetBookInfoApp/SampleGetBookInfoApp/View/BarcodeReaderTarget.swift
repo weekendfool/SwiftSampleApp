@@ -26,7 +26,7 @@ struct BarcodeReaderTarget {
             height: height
         )
         
-        barcodeReadAreaView.layer.backgroundColor = UIColor.red.cgColor
+        barcodeReadAreaView.layer.borderColor = UIColor.red.cgColor
         barcodeReadAreaView.layer.borderWidth = 4
         vc.view.addSubview(barcodeReadAreaView)
     }

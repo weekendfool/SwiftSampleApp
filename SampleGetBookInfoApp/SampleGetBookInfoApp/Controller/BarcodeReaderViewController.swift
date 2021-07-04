@@ -25,6 +25,7 @@ class BarcodeReaderViewController: UIViewController {
         super.viewDidLoad()
 
         // バーコードリーダーの設定
+//        let view = BarcodeReaderViewController.self
         barcodeReader.setUpCamera(vc: self)
         barcodeReaderTarget.setUpTargetView(vc: self)
         
