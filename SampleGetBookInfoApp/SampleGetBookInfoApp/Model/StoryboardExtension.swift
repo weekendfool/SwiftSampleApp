@@ -9,10 +9,10 @@ import UIKit
 
 extension UIStoryboard {
     static var barcodeReaderViewController: BarcodeReaderViewController {
-        UIStoryboard.init(name: "barcodeReaderView", bundle: nil).instantiateInitialViewController() as! BarcodeReaderViewController
+        UIStoryboard.init(name: "BarcodeReader", bundle: nil).instantiateInitialViewController() as! BarcodeReaderViewController
     }
     
     static var resultImageViewController: ResultImageViewController {
-        UIStoryboard.init(name: "resultImageView", bundle: nil).instantiateInitialViewController() as! ResultImageViewController
+        UIStoryboard.init(name: "ResultImage", bundle: nil).instantiateInitialViewController() as! ResultImageViewController
     }
 }
