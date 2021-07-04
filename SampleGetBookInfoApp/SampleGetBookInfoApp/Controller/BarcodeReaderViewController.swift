@@ -10,6 +10,13 @@ import AVFoundation
 
 class BarcodeReaderViewController: UIViewController {
     
+    // storyboardからVCを生成する
+    static func makeFromStoryboard() -> BarcodeReaderViewController {
+        // StoryboardExtensionで実装したgetがある変数を代入している
+        let vc = UIStoryboard.barcodeReaderViewController
+        return vc
+    }
+    
     let barcodeReader = BarcodeReader()
     let barcodeReaderTarget = BarcodeReaderTarget()
     let getGoogleBooksAPI = GetGoogleBooksAPI()
