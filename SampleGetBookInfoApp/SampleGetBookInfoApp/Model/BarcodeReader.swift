@@ -13,7 +13,7 @@ struct BarcodeReader {
     //　カメラの入力を管理するインスタンスの生成
     private let avCaptureSession = AVCaptureSession()
     
-    func setUpCamera(vc: AVCaptureMetadataOutputObjectsDelegate) {
+    func setUpCamera(delegate: AVCaptureMetadataOutputObjectsDelegate, vc: UIViewController) {
         // カメラ設定
         let discoverySession = AVCaptureDevice.DiscoverySession(
             deviceTypes: [.builtInWideAngleCamera],
@@ -26,7 +26,7 @@ struct BarcodeReader {
             do {
                 // カメラで読み取りが成功した時の処理
                 let deviceInput = try AVCaptureDeviceInput(device: backCamera)
-                doInit(deviceInput: deviceInput, vc: vc)
+                doInit(deviceInput: deviceInput, delegate: delegate, vc: vc)
             } catch {
                 print("------------------------------------------")
                 print("error occured while creating video device input: \(error)")
@@ -34,7 +34,7 @@ struct BarcodeReader {
         }
     }
     
-    private func doInit(deviceInput: AVCaptureDeviceInput, vc: AVCaptureMetadataOutputObjectsDelegate) {
+    private func doInit(deviceInput: AVCaptureDeviceInput, delegate: AVCaptureMetadataOutputObjectsDelegate, vc: UIViewController) {
         // 読み取り可能エリアの設定
         let x: CGFloat = 0.1
         let y: CGFloat = 0.4
@@ -57,7 +57,7 @@ struct BarcodeReader {
         
         avCaptureSession.addOutput(metadataOutput)
         
-        metadataOutput.setMetadataObjectsDelegate(vc, queue: DispatchQueue.main)
+        metadataOutput.setMetadataObjectsDelegate(delegate, queue: DispatchQueue.main)
         metadataOutput.metadataObjectTypes = [.ean13]
         
         metadataOutput.rectOfInterest = CGRect(
@@ -67,21 +67,34 @@ struct BarcodeReader {
             height: width
         )
         
+        // カメラの起動
+        let previewLayer = AVCaptureVideoPreviewLayer(session: avCaptureSession)
+        previewLayer.frame = vc.view.bounds
+        previewLayer.videoGravity = .resizeAspectFill
+        vc.view.layer.addSublayer(previewLayer)
+        
+        avCaptureSession.startRunning()
+        
         
     }
     
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) -> String {
+    func metadataOutput(metadataObjects: [AVMetadataObject]) -> String {
         var gotAPI: String?
         for metadata in metadataObjects as! [AVMetadataMachineReadableCodeObject] {
+//            guard let metadata = metadata.stringValue else { return "non" }
             if metadata.stringValue == nil { continue }
-            
             // 読み取ったデータの値
-            print("metadata.type:\(metadata.type)")
-            print("metadata.stringValue:\(metadata.stringValue!)")
-            
-            gotAPI =  metadata.stringValue!
+//            print("metadata.type:\(metadata.type)")
+//            print("metadata.stringValue:\(metadata.stringValue!)")
+            print("metadata:\(metadata)")
+            gotAPI = metadata.stringValue
+//            break
         }
-        return gotAPI!
+        if let gotAPI = gotAPI {
+            return gotAPI
+        } else {
+            return "non"
+        }
     }
 
 }

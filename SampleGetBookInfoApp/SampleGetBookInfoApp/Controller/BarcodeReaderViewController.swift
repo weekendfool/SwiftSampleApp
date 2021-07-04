@@ -26,13 +26,16 @@ class BarcodeReaderViewController: UIViewController {
 
         // バーコードリーダーの設定
 //        let view = BarcodeReaderViewController.self
-        barcodeReader.setUpCamera(vc: self)
+        barcodeReader.setUpCamera(delegate: self, vc: self)
         barcodeReaderTarget.setUpTargetView(vc: self)
+        
         
     }
 
 }
 
 extension BarcodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
-    
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        barcodeReader.metadataOutput(metadataObjects: metadataObjects)
+    }
 }
