@@ -40,11 +40,15 @@ class BarcodeReaderViewController: UIViewController {
 extension BarcodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
-        var gotAPI: String?
-        var query: String?
-        gotAPI = barcodeReader.metadataOutput(metadataObjects: metadataObjects)
-        query = changeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotAPI)
-        getGoogleBooksAPI.getGoogleBooksAPI(query: query!)
+        var gotIsbn: String?
+        var gotUrl: String?
+        // isbnを取得
+        gotIsbn = barcodeReader.metadataOutput(metadataObjects: metadataObjects)
+        //　isbnから画像用のURL取得
+        getGoogleBooksAPI.getGoogleBooksAPI(query: gotIsbn!)
+        print("gotUrl:\(gotUrl)")
+//        hangeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotAPI)
+        
 
         
     }

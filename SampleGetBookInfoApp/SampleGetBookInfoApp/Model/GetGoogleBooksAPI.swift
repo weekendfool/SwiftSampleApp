@@ -37,20 +37,25 @@ struct GetGoogleBooksAPI {
     }
     // 
     // apiを取得する処理
-    func getGoogleBooksAPI(query: String) {
+    func getGoogleBooksAPI(query: String) -> String? {
         // リクエストの作成
         // isbnで検索するパターンを実装
         let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:" + query)!
         let request = URLRequest(url: url)
         let decoder = JSONDecoder()
         
+        var thumbnailLinkUrl: String?
+        var returnUrl: String?
         // サーバとの通信処理
         let task = URLSession.shared.dataTask(with: request) { (data, request, error) in
             guard let gotData = data else { return }
             do {
                 let books: Books = try decoder.decode(Books.self, from: gotData)
                 print("===========================")
-                print("books:\(books.items[0].volumeInfo.industryIdentifiers[0].identifier)")
+                print("books:\(books.items[0].volumeInfo.industryIdentifiers[1].identifier)")
+                thumbnailLinkUrl = books.items[0].volumeInfo.imageLinks.thumbnail
+                print("thumbnailLinkUrl:\(thumbnailLinkUrl)")
+                // 非同期処理
                 
             } catch let error {
                 print("-----------------------------")
@@ -59,6 +64,7 @@ struct GetGoogleBooksAPI {
             }
         }
         task.resume()
+        return thumbnailLinkUrl
     }
             
     
