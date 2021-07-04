@@ -22,16 +22,16 @@ class BarcodeReaderViewController: UIViewController {
     let getGoogleBooksAPI = GetGoogleBooksAPI()
     let changeHttpToHttps = ChangeHttpToHttps()
     
+    var gotUrl: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let delegate:GetApiProtocol?
         // バーコードリーダーの設定
 //        let view = BarcodeReaderViewController.self
         barcodeReader.setUpCamera(delegate: self, vc: self)
         barcodeReaderTarget.setUpTargetView(vc: self)
-        // isbnから探索
-        
-        
         
     }
 
@@ -41,15 +41,27 @@ extension BarcodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
         var gotIsbn: String?
-        var gotUrl: String?
+        
         // isbnを取得
         gotIsbn = barcodeReader.metadataOutput(metadataObjects: metadataObjects)
         //　isbnから画像用のURL取得
         getGoogleBooksAPI.getGoogleBooksAPI(query: gotIsbn!)
-        print("gotUrl:\(gotUrl)")
-//        hangeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotAPI)
         
-
         
     }
 }
+
+extension BarcodeReaderViewController: GetApiDelegate {
+    func reStart() {
+        gotUrl = getGoogleBooksAPI.thumbnailLinkUrl
+        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+        print("gotUrl:\(gotUrl)")
+        if let gotUrl = gotUrl {
+            changeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotUrl)
+            print("gotUrl:\(gotUrl)")
+        }
+    }
+    
+    
+}
+

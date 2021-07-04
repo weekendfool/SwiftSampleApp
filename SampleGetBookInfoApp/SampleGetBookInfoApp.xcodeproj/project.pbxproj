@@ -25,6 +25,7 @@
 		8C4BB8702690B5A200C79DD9 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB86F2690B5A200C79DD9 /* AlertView.swift */; };
 		8C4BB8722691327E00C79DD9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB8712691327E00C79DD9 /* Router.swift */; };
 		8C4BB87426913C8800C79DD9 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB87326913C8800C79DD9 /* StoryboardExtension.swift */; };
+		8C4BB8782691895000C79DD9 /* GetApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB8772691895000C79DD9 /* GetApiProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		8C4BB86F2690B5A200C79DD9 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		8C4BB8712691327E00C79DD9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8C4BB87326913C8800C79DD9 /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		8C4BB8772691895000C79DD9 /* GetApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetApiProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		8C4BB828268F8A4C00C79DD9 /* SampleGetBookInfoApp */ = {
 			isa = PBXGroup;
 			children = (
+				8C4BB8762691892E00C79DD9 /* Protocol */,
 				8C4BB85E268F8A7A00C79DD9 /* Model */,
 				8C4BB85D268F8A6F00C79DD9 /* View */,
 				8C4BB85C268F8A6100C79DD9 /* Controller */,
@@ -188,6 +191,14 @@
 				8C4BB869268F8B8300C79DD9 /* ResultImage.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		8C4BB8762691892E00C79DD9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				8C4BB8772691895000C79DD9 /* GetApiProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +340,7 @@
 				8C4BB86C268F8B9B00C79DD9 /* ResultImageViewController.swift in Sources */,
 				8C4BB860268F8AB000C79DD9 /* ChangeHttpToHttps.swift in Sources */,
 				8C4BB862268F8ACC00C79DD9 /* BarcodeReader.swift in Sources */,
+				8C4BB8782691895000C79DD9 /* GetApiProtocol.swift in Sources */,
 				8C4BB8702690B5A200C79DD9 /* AlertView.swift in Sources */,
 				8C4BB82C268F8A4C00C79DD9 /* SceneDelegate.swift in Sources */,
 				8C4BB87426913C8800C79DD9 /* StoryboardExtension.swift in Sources */,
