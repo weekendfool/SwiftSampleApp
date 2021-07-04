@@ -55,7 +55,7 @@ struct GetGoogleBooksAPI {
             } catch let error {
                 print("-----------------------------")
                 print("JSON Decode Error:\(error)")
-                fatalError()
+//                fatalError()
             }
         }
         task.resume()

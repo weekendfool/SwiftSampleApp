@@ -20,7 +20,8 @@ class BarcodeReaderViewController: UIViewController {
     let barcodeReader = BarcodeReader()
     let barcodeReaderTarget = BarcodeReaderTarget()
     let getGoogleBooksAPI = GetGoogleBooksAPI()
-
+    let changeHttpToHttps = ChangeHttpToHttps()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +29,8 @@ class BarcodeReaderViewController: UIViewController {
 //        let view = BarcodeReaderViewController.self
         barcodeReader.setUpCamera(delegate: self, vc: self)
         barcodeReaderTarget.setUpTargetView(vc: self)
+        // isbnから探索
+        
         
         
     }
@@ -36,6 +39,13 @@ class BarcodeReaderViewController: UIViewController {
 
 extension BarcodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        barcodeReader.metadataOutput(metadataObjects: metadataObjects)
+        
+        var gotAPI: String?
+        var query: String?
+        gotAPI = barcodeReader.metadataOutput(metadataObjects: metadataObjects)
+        query = changeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotAPI)
+        getGoogleBooksAPI.getGoogleBooksAPI(query: query!)
+
+        
     }
 }
