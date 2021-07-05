@@ -12,14 +12,14 @@ final class MyColor {
     var delegate: ChangeColorDelegate?
     
     func changeMyColor() {
-        if let delegate = delegate {
-            // 処理を任せる相手が決まっていない時
-            print("No Change")
-            return
-        } else  {
+//        if let delegate = delegate {
+//            // 処理を任せる相手が決まっていない時
+//            print("No Change")
+//            return
+//        } else  {
             // 任せたい処理、具体的な内容は記述しない
             delegate?.changeColor()
         }
-    }
+//    }
         
 }

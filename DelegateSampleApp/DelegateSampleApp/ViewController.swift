@@ -16,7 +16,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         myColor.delegate = blueColorAge
-        blueColorAge.changeColor()
+        
+        myColor.changeMyColor()
+//        blueColorAge.changeColor()
         
     }
 
