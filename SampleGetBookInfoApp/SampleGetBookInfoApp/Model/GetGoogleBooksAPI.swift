@@ -44,7 +44,7 @@ class GetGoogleBooksAPI {
     }
 
     // デリゲート相手を保持
-    let delegate: GetApiDelegate?
+    var delegate: GetApiDelegate? = nil
     // apiを取得する処理
     func getGoogleBooksAPI(query: String) {
         // リクエストの作成

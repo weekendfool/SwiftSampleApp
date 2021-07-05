@@ -27,7 +27,7 @@ class BarcodeReaderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let delegate:GetApiProtocol?
+        let delegate: GetApiProtocol?
         // バーコードリーダーの設定
 //        let view = BarcodeReaderViewController.self
         barcodeReader.setUpCamera(delegate: self, vc: self)
