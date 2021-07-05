@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+final class BlueColorAge: ChangeColorDelegate {
+    var myColor = "blue"
+    func changeColor() {
+        myColor = "red"
+        print("myColor:\(myColor)")
+    }
+    
+    
+}

@@ -8,10 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let myColor = MyColor()
+    let blueColorAge = BlueColorAge()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        myColor.delegate = blueColorAge
+        blueColorAge.changeColor()
+        
     }
 
 
