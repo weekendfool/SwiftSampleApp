@@ -33,7 +33,7 @@ struct ChangeHttpToHttps {
                 // httpかhttpsを見つけた場合
                 if let searchStringRange = searchStringRange {
                     let searchString = bforeChangeString[searchStringRange]
-                    print("searchString\(searchString)")
+                    print("searchString:\(searchString)")
                     switch searchString {
                     case "https": // 通信上問題ないので変更なし
                         return bforeChangeString

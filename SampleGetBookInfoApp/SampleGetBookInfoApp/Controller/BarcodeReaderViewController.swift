@@ -54,12 +54,12 @@ extension BarcodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
 
 extension BarcodeReaderViewController: ThumbnailLinkUrlDelegate {
     func accessThumbnailLinkUrl() {
-        gotUrl = getGoogleBooksAPI.thumbnailLinkUrl
+        
         print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-        print("gotUrl:\(gotUrl)")
-        if let gotUrl = gotUrl {
-            changeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotUrl)
-            print("gotUrl:\(gotUrl)")
+        print("getGoogleBooksAPI.thumbnailLinkUrl:\(getGoogleBooksAPI.thumbnailLinkUrl)")
+        if let gotUrl = getGoogleBooksAPI.thumbnailLinkUrl {
+            var getThumbnailLinkUrl = changeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotUrl)
+            print("getThumbnailLinkUrl:\(getThumbnailLinkUrl)")
         }
     }
     
