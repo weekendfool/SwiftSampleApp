@@ -8,6 +8,8 @@
 import Foundation
 
 class GetGoogleBooksAPI {
+    
+    // MARK:- データの構造
     // 返却されたデータを変換し格納する構造体の宣言
     struct Books: Codable {
         let totalItems: Int
@@ -35,6 +37,8 @@ class GetGoogleBooksAPI {
 //        let smallThumbnail: String
         let thumbnail: String
     }
+    
+    // MARK:- 変数の宣言
     // 画像取得用のURLをstringとして保管する変数
     var thumbnailLinkUrl: String? {
         didSet {
@@ -45,6 +49,8 @@ class GetGoogleBooksAPI {
 
     // デリゲート相手を保持
     var delegate: GetApiDelegate? = nil
+    
+    // MARK:- 関数郡
     // apiを取得する処理
     func getGoogleBooksAPI(query: String) {
         // リクエストの作成
