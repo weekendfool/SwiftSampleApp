@@ -88,7 +88,8 @@ struct BarcodeReader {
 //            print("metadata.stringValue:\(metadata.stringValue!)")
             print("metadata:\(metadata)")
             gotAPI = metadata.stringValue
-//            break
+            // 読み込めたらキャプチャセッションをストップ
+            avCaptureSession.stopRunning()
         }
         if let gotAPI = gotAPI {
             return gotAPI

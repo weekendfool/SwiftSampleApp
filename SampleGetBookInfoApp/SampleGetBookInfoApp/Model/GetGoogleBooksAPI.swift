@@ -71,16 +71,17 @@ class GetGoogleBooksAPI {
                 thumbnailLinkUrl = books.items[0].volumeInfo.imageLinks.thumbnail
                 print("thumbnailLinkUrl:\(thumbnailLinkUrl)")
                 
-                // 非同期処理
-                
             } catch let error {
                 print("-----------------------------")
                 print("JSON Decode Error:\(error)")
 //                fatalError()
             }
+            //　読み取りを停止
+//            task.cancel()
+
         }
         task.resume()
-        
+    
     }
 }
 

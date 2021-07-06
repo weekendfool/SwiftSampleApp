@@ -21,8 +21,9 @@ class BarcodeReaderViewController: UIViewController {
     let barcodeReaderTarget = BarcodeReaderTarget()
     let getGoogleBooksAPI = GetGoogleBooksAPI()
     let changeHttpToHttps = ChangeHttpToHttps()
+    let alertView = AlertView()
     
-    var gotUrl: String?
+    var gotThumbnailLinkUrl: String? = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,8 @@ class BarcodeReaderViewController: UIViewController {
         barcodeReader.setUpCamera(delegate: self, vc: self)
         barcodeReaderTarget.setUpTargetView(vc: self)
         
+        
+        
     }
 
 }
@@ -41,25 +44,31 @@ class BarcodeReaderViewController: UIViewController {
 extension BarcodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
-        var gotIsbn: String?
+        var gotIsbn: String? {
+            didSet{
+                // アラートの設定
+                if let gotIsbn = gotIsbn {
+                    alertView.setAlertController(vc: self, metaData: gotIsbn)
+                }
+            }
+        }
         
         // isbnを取得
         gotIsbn = barcodeReader.metadataOutput(metadataObjects: metadataObjects)
         //　isbnから画像用のURL取得
         getGoogleBooksAPI.getGoogleBooksAPI(query: gotIsbn!)
-        
-        
     }
 }
 
 extension BarcodeReaderViewController: ThumbnailLinkUrlDelegate {
+    //　GoogleBooksAPIからThumbnailLinkUrlを取得した時に実行させる処理
     func accessThumbnailLinkUrl() {
-        
+        // GoogleBooksAPIから取得したurlをhttps方式に書き換える
         print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-        print("getGoogleBooksAPI.thumbnailLinkUrl:\(getGoogleBooksAPI.thumbnailLinkUrl)")
+        print("gotGoogleBooksAPI.thumbnailLinkUrl:\(getGoogleBooksAPI.thumbnailLinkUrl)")
         if let gotUrl = getGoogleBooksAPI.thumbnailLinkUrl {
-            var getThumbnailLinkUrl = changeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotUrl)
-            print("getThumbnailLinkUrl:\(getThumbnailLinkUrl)")
+            gotThumbnailLinkUrl = changeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotUrl)
+//            print("getThumbnailLinkUrl:\(gotThumbnailLinkUrl)")
         }
     }
     
