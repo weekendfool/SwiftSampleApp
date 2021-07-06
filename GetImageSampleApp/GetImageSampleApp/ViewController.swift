@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var sampleWebView: WKWebView!
     @IBOutlet weak var sampleImageView: UIImageView!
@@ -50,13 +50,14 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
             print("error: \(error)")
         }
     }
-
-//    extension ViewController: WKUIDelegate {
-//    }
-//
-//    extension ViewController: WKNavigationDelegate {
-//
-//    }
 }
+
+    extension ViewController: WKUIDelegate {
+    }
+
+    extension ViewController: WKNavigationDelegate {
+
+    }
+
 
 
