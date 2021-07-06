@@ -11,17 +11,36 @@ class ViewController: UIViewController {
     
     let myColor = MyColor()
     let blueColorAge = BlueColorAge()
+    
+    var count: Int? {
+        didSet{
+            if let count = count {
+                if count % 2 == 0 {
+                    myColor.changeMyColor()
+                } else {
+                    print("stay")
+                }
+                print("count is nil")
+            }
+            
+            }
+            
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        count = 0
         myColor.delegate = blueColorAge
-        
-        myColor.changeMyColor()
+        blueColorAge.beforeDo()
+//        myColor.changeMyColor()
 //        blueColorAge.changeColor()
         
     }
 
-
+    @IBAction func buttonAction(_ sender: Any) {
+        count! += 1
+    }
+    
 }
 

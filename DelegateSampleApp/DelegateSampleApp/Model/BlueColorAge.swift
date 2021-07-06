@@ -9,7 +9,12 @@ import Foundation
 
 final class BlueColorAge: ChangeColorDelegate {
     var myColor = "blue"
+    
+    func beforeDo() {
+        print("before color is \(myColor)")
+    }
     func changeColor() {
+        
         myColor = "red"
         print("myColor:\(myColor)")
     }
