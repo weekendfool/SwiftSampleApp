@@ -42,13 +42,13 @@ class GetGoogleBooksAPI {
     // 画像取得用のURLをstringとして保管する変数
     var thumbnailLinkUrl: String? {
         didSet {
-            // thumbnailLinkUrlの値が更新されたら、デリゲート相手に通知して処理を行ってもらう
-            delegate?.reStart()
+            // thumbnailLinkUrlの値が更新されたら、デリゲート相手に通知してaccessThumbnailLinkUrlを実行
+            thumbnailLinkUrlDelegate?.accessThumbnailLinkUrl()
         }
     }
 
-    // デリゲート相手を保持
-    var delegate: GetApiDelegate? = nil
+    // 処理を委譲する相手を保持
+    var thumbnailLinkUrlDelegate: ThumbnailLinkUrlDelegate?
     
     // MARK:- 関数郡
     // apiを取得する処理
