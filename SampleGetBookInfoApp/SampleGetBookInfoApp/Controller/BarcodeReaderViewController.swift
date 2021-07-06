@@ -27,7 +27,8 @@ class BarcodeReaderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let delegate: GetApiProtocol?
+        // delegateの委譲先にBarcodeReaderViewController自身を設定
+        getGoogleBooksAPI.thumbnailLinkUrlDelegate = self
         // バーコードリーダーの設定
 //        let view = BarcodeReaderViewController.self
         barcodeReader.setUpCamera(delegate: self, vc: self)
@@ -51,8 +52,8 @@ extension BarcodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
     }
 }
 
-extension BarcodeReaderViewController: GetApiDelegate {
-    func reStart() {
+extension BarcodeReaderViewController: ThumbnailLinkUrlDelegate {
+    func accessThumbnailLinkUrl() {
         gotUrl = getGoogleBooksAPI.thumbnailLinkUrl
         print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
         print("gotUrl:\(gotUrl)")
