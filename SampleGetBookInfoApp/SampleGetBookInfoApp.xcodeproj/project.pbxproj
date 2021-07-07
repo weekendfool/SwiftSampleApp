@@ -26,6 +26,7 @@
 		8C4BB8722691327E00C79DD9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB8712691327E00C79DD9 /* Router.swift */; };
 		8C4BB87426913C8800C79DD9 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB87326913C8800C79DD9 /* StoryboardExtension.swift */; };
 		8C4BB8782691895000C79DD9 /* ThumbnailLinkUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB8772691895000C79DD9 /* ThumbnailLinkUrl.swift */; };
+		8C4BB8C02695845C00C79DD9 /* PresentNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB8BF2695845C00C79DD9 /* PresentNext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		8C4BB8712691327E00C79DD9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8C4BB87326913C8800C79DD9 /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
 		8C4BB8772691895000C79DD9 /* ThumbnailLinkUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailLinkUrl.swift; sourceTree = "<group>"; };
+		8C4BB8BF2695845C00C79DD9 /* PresentNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentNext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				8C4BB863268F8AE300C79DD9 /* GetGoogleBooksAPI.swift */,
 				8C4BB8712691327E00C79DD9 /* Router.swift */,
 				8C4BB87326913C8800C79DD9 /* StoryboardExtension.swift */,
+				8C4BB8BF2695845C00C79DD9 /* PresentNext.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				8C4BB8702690B5A200C79DD9 /* AlertView.swift in Sources */,
 				8C4BB82C268F8A4C00C79DD9 /* SceneDelegate.swift in Sources */,
 				8C4BB87426913C8800C79DD9 /* StoryboardExtension.swift in Sources */,
+				8C4BB8C02695845C00C79DD9 /* PresentNext.swift in Sources */,
 				8C4BB864268F8AE300C79DD9 /* GetGoogleBooksAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

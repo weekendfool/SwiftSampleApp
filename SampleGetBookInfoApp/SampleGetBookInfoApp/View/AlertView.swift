@@ -10,7 +10,7 @@ import UIKit
 
 struct AlertView {
     //
-    func setAlertController(vc: UIViewController, metaData: String) {
+    func setAlertController(vc: UIViewController, metaData: String, defaultButtonAction: Void, cancelButtonAction: Void) {
         
         let alert: UIAlertController = UIAlertController(
             title: "バーコードの中身",
@@ -20,15 +20,17 @@ struct AlertView {
         
         let defaultButtonAction: UIAlertAction = UIAlertAction(
             title: "検索する",
-            style: UIAlertAction.Style.default,
-            handler: nil
-        )
+            style: UIAlertAction.Style.default
+        ) { defaultButtonAction in
+            print("コードで遷移する")
+        }
         
         let cancelButtonAction: UIAlertAction = UIAlertAction(
             title: "cancel",
-            style: UIAlertAction.Style.cancel,
-            handler: nil
-        )
+            style: UIAlertAction.Style.cancel
+        ) { cancelButtonAction in
+            print("バーコードを再検索する")
+        }
         
         alert.addAction(defaultButtonAction)
         alert.addAction(cancelButtonAction)

@@ -11,7 +11,7 @@ final class Router {
     // ＠init関数を格納した変数の宣言
     static let shared: Router = .init()
     // ＠init関数の宣言？
-    private init() {}
+     init() {}
     
     private (set) var window: UIWindow?
     
