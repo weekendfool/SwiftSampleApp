@@ -10,8 +10,6 @@ import AVFoundation
 
 class BarcodeReaderViewController: UIViewController {
     
-    var router = Router()
-    
     // storyboardからVCを生成する
     static func makeFromStoryboard() -> BarcodeReaderViewController {
         // StoryboardExtensionで実装したgetがある変数を代入している
@@ -24,7 +22,7 @@ class BarcodeReaderViewController: UIViewController {
     let getGoogleBooksAPI = GetGoogleBooksAPI()
     let changeHttpToHttps = ChangeHttpToHttps()
     let alertView = AlertView()
-//    var router = Router()
+    var router = Router()
     
     
     var gotThumbnailLinkUrl: String? = ""
@@ -39,7 +37,7 @@ class BarcodeReaderViewController: UIViewController {
         barcodeReader.setUpCamera(delegate: self, vc: self)
         barcodeReaderTarget.setUpTargetView(vc: self)
         
-        router.showResultImageView(from: self)
+        
         
     }
 
@@ -53,7 +51,12 @@ extension BarcodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
                 // アラートの設定
                 if let gotIsbn = gotIsbn {
                     // アラートの発報
-//                    alertView.setAlertController(vc: self, metaData: gotIsbn, defaultButtonAction: ,router. cancelButtonAction: )
+                    alertView.setAlertController(
+                        vc: self,
+                        metaData: gotIsbn,
+                        defaultButtonAction: router.showResultImageView(from: self),
+                        cancelButtonAction: barcodeReader.setUpCamera(delegate: self, vc: self)
+                    )
                     //　isbnから画像用のURL取得
                     // okが押された後の処理
                     getGoogleBooksAPI.getGoogleBooksAPI(query: gotIsbn)
