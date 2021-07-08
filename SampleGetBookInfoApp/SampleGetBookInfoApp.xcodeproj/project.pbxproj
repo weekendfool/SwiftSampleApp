@@ -27,6 +27,7 @@
 		8C4BB87426913C8800C79DD9 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB87326913C8800C79DD9 /* StoryboardExtension.swift */; };
 		8C4BB8782691895000C79DD9 /* ThumbnailLinkUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB8772691895000C79DD9 /* ThumbnailLinkUrl.swift */; };
 		8C4BB8C02695845C00C79DD9 /* PresentNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB8BF2695845C00C79DD9 /* PresentNext.swift */; };
+		8C4BB9082696D39500C79DD9 /* RouterAtAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB9072696D39500C79DD9 /* RouterAtAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		8C4BB87326913C8800C79DD9 /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
 		8C4BB8772691895000C79DD9 /* ThumbnailLinkUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailLinkUrl.swift; sourceTree = "<group>"; };
 		8C4BB8BF2695845C00C79DD9 /* PresentNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentNext.swift; sourceTree = "<group>"; };
+		8C4BB9072696D39500C79DD9 /* RouterAtAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterAtAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				8C4BB8772691895000C79DD9 /* ThumbnailLinkUrl.swift */,
+				8C4BB9072696D39500C79DD9 /* RouterAtAlert.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				8C4BB86C268F8B9B00C79DD9 /* ResultImageViewController.swift in Sources */,
 				8C4BB860268F8AB000C79DD9 /* ChangeHttpToHttps.swift in Sources */,
 				8C4BB862268F8ACC00C79DD9 /* BarcodeReader.swift in Sources */,
+				8C4BB9082696D39500C79DD9 /* RouterAtAlert.swift in Sources */,
 				8C4BB8782691895000C79DD9 /* ThumbnailLinkUrl.swift in Sources */,
 				8C4BB8702690B5A200C79DD9 /* AlertView.swift in Sources */,
 				8C4BB82C268F8A4C00C79DD9 /* SceneDelegate.swift in Sources */,

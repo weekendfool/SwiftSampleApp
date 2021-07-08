@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E6C611E8-AE16-48C1-8B6B-69007B19294E"
+            uuid = "50630DF9-674D-48BC-A9B4-EDD696A6288F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SampleGetBookInfoApp/Model/GetGoogleBooksAPI.swift"
+            filePath = "SampleGetBookInfoApp/View/AlertView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "getGoogleBooksAPI(query:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "setAlertController(vc:metaData:buttonAction:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

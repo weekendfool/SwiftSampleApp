@@ -9,8 +9,12 @@ import Foundation
 import UIKit
 
 struct AlertView {
-    //
-    func setAlertController(vc: UIViewController, metaData: String, defaultButtonAction: Void, cancelButtonAction: Void) {
+    
+    
+    //　デリゲート先を保持する変数
+    var routerAtAlertDelegate: RouterAtAlertDelegate?
+    
+    func setAlertController(vc: UIViewController, metaData: String, buttonAction: Void) {
         
         let alert: UIAlertController = UIAlertController(
             title: "バーコードの中身",
@@ -21,14 +25,15 @@ struct AlertView {
         let defaultButtonAction: UIAlertAction = UIAlertAction(
             title: "検索する",
             style: UIAlertAction.Style.default
-        ) { defaultButtonAction in
-            print("コードで遷移する")
+        ) { _ in
+            routerAtAlertDelegate?.goResultImageView()
         }
         
         let cancelButtonAction: UIAlertAction = UIAlertAction(
             title: "cancel",
             style: UIAlertAction.Style.cancel
-        ) { cancelButtonAction in
+        ) { ＿ in
+            routerAtAlertDelegate?.reStatBarcodeReader()
             print("バーコードを再検索する")
         }
         

@@ -43,9 +43,15 @@ class BarcodeReaderViewController: UIViewController {
 
 }
 
+
 extension BarcodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
+    func doIt() {
+//        Router.showResultImageView(self)
+//        router.showResultImageView(from: self)
+        print("do it")
+    }
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        
+        var r = doIt()
         var gotIsbn: String? {
             didSet{
                 // アラートの設定
@@ -54,8 +60,8 @@ extension BarcodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
                     alertView.setAlertController(
                         vc: self,
                         metaData: gotIsbn,
-                        defaultButtonAction: router.showResultImageView(from: self),
-                        cancelButtonAction: barcodeReader.setUpCamera(delegate: self, vc: self)
+                        buttonAction: r
+//                        cancelButtonAction: barcodeReader.setUpCamera(delegate: self, vc: self)
                     )
                     //　isbnから画像用のURL取得
                     // okが押された後の処理
