@@ -14,7 +14,7 @@ struct AlertView {
     //　デリゲート先を保持する変数
     var routerAtAlertDelegate: RouterAtAlertDelegate?
     
-    func setAlertController(vc: UIViewController, metaData: String, buttonAction: Void) {
+    func setAlertController(vc: UIViewController, metaData: String) {
         
         let alert: UIAlertController = UIAlertController(
             title: "バーコードの中身",

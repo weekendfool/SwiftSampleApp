@@ -79,7 +79,7 @@ struct BarcodeReader {
     }
     
     func metadataOutput(metadataObjects: [AVMetadataObject]) -> String {
-        var gotAPI: String?
+        var gotIsbn: String?
         for metadata in metadataObjects as! [AVMetadataMachineReadableCodeObject] {
 //            guard let metadata = metadata.stringValue else { return "non" }
             if metadata.stringValue == nil { continue }
@@ -87,12 +87,12 @@ struct BarcodeReader {
 //            print("metadata.type:\(metadata.type)")
 //            print("metadata.stringValue:\(metadata.stringValue!)")
             print("metadata:\(metadata)")
-            gotAPI = metadata.stringValue
+            gotIsbn = metadata.stringValue
             // 読み込めたらキャプチャセッションをストップ
             avCaptureSession.stopRunning()
         }
-        if let gotAPI = gotAPI {
-            return gotAPI
+        if let gotIsbn = gotIsbn {
+            return gotIsbn
         } else {
             return "non"
         }

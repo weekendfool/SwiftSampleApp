@@ -10,6 +10,8 @@ import AVFoundation
 
 class BarcodeReaderViewController: UIViewController {
     
+    
+    
     // storyboardからVCを生成する
     static func makeFromStoryboard() -> BarcodeReaderViewController {
         // StoryboardExtensionで実装したgetがある変数を代入している
@@ -21,19 +23,33 @@ class BarcodeReaderViewController: UIViewController {
     let barcodeReaderTarget = BarcodeReaderTarget()
     let getGoogleBooksAPI = GetGoogleBooksAPI()
     let changeHttpToHttps = ChangeHttpToHttps()
-    let alertView = AlertView()
+    var alertView = AlertView()
     var router = Router()
     
     
     var gotThumbnailLinkUrl: String? = ""
+    
+    var gotIsbn: String? {
+        didSet{
+            // アラートの設定
+            if let gotIsbn = gotIsbn {
+                // アラートの発報
+                alertView.setAlertController(
+                    vc: self,
+                    metaData: gotIsbn
+                )
+            }
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // delegateの委譲先にBarcodeReaderViewController自身を設定
         getGoogleBooksAPI.thumbnailLinkUrlDelegate = self
+        alertView.routerAtAlertDelegate = self
         // バーコードリーダーの設定
-//        let view = BarcodeReaderViewController.self
         barcodeReader.setUpCamera(delegate: self, vc: self)
         barcodeReaderTarget.setUpTargetView(vc: self)
         
@@ -43,39 +59,36 @@ class BarcodeReaderViewController: UIViewController {
 
 }
 
-
+// カメラからバーコードを取得した後の挙動
 extension BarcodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
-    func doIt() {
-//        Router.showResultImageView(self)
-//        router.showResultImageView(from: self)
-        print("do it")
-    }
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        var r = doIt()
-        var gotIsbn: String? {
-            didSet{
-                // アラートの設定
-                if let gotIsbn = gotIsbn {
-                    // アラートの発報
-                    alertView.setAlertController(
-                        vc: self,
-                        metaData: gotIsbn,
-                        buttonAction: r
-//                        cancelButtonAction: barcodeReader.setUpCamera(delegate: self, vc: self)
-                    )
-                    //　isbnから画像用のURL取得
-                    // okが押された後の処理
-                    getGoogleBooksAPI.getGoogleBooksAPI(query: gotIsbn)
-                }
-            }
-        }
-        
         // isbnを取得
         gotIsbn = barcodeReader.metadataOutput(metadataObjects: metadataObjects)
-        
     }
 }
 
+// アラートのボタンが押された時の挙動
+extension BarcodeReaderViewController: RouterAtAlertDelegate {
+    
+    // okが押された後の処理
+    func goResultImageView() {
+        
+        //　isbnから画像用のURL取得
+        getGoogleBooksAPI.getGoogleBooksAPI(query: gotIsbn!)
+        // gotThumbnailLinkUrlから画像を取得する
+        
+        
+        // 画面遷移
+        router.showResultImageView(from: self)
+    }
+    
+    func reStatBarcodeReader() {
+        barcodeReader.setUpCamera(delegate: self, vc: self)
+    }
+}
+
+
+// isbnから画像用のURL取得した後の挙動
 extension BarcodeReaderViewController: ThumbnailLinkUrlDelegate {
     //　GoogleBooksAPIからThumbnailLinkUrlを取得した時に実行させる処理
     func accessThumbnailLinkUrl() {
@@ -87,7 +100,6 @@ extension BarcodeReaderViewController: ThumbnailLinkUrlDelegate {
 //            print("getThumbnailLinkUrl:\(gotThumbnailLinkUrl)")
         }
     }
-    
-    
 }
+
 
