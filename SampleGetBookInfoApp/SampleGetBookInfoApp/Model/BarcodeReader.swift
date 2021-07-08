@@ -13,6 +13,11 @@ struct BarcodeReader {
     //　カメラの入力を管理するインスタンスの生成
     private let avCaptureSession = AVCaptureSession()
     
+    // バーコードスキャンの再起動
+    func reStartSession() {
+        avCaptureSession.startRunning()
+    }
+    
     func setUpCamera(delegate: AVCaptureMetadataOutputObjectsDelegate, vc: UIViewController) {
         // カメラ設定
         let discoverySession = AVCaptureDevice.DiscoverySession(

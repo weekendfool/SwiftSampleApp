@@ -25,6 +25,7 @@ class BarcodeReaderViewController: UIViewController {
     let changeHttpToHttps = ChangeHttpToHttps()
     var alertView = AlertView()
     var router = Router()
+    var getImageFromGotThumbnailLinkUrl = GetImageFromGotThumbnailLinkUrl()
     
     
     var gotThumbnailLinkUrl: String? = ""
@@ -83,7 +84,7 @@ extension BarcodeReaderViewController: RouterAtAlertDelegate {
     }
     
     func reStatBarcodeReader() {
-        barcodeReader.setUpCamera(delegate: self, vc: self)
+        barcodeReader.reStartSession()
     }
 }
 
@@ -98,6 +99,12 @@ extension BarcodeReaderViewController: ThumbnailLinkUrlDelegate {
         if let gotUrl = getGoogleBooksAPI.thumbnailLinkUrl {
             gotThumbnailLinkUrl = changeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotUrl)
 //            print("getThumbnailLinkUrl:\(gotThumbnailLinkUrl)")
+            
+            
+        }
+        if let gotThumbnailLinkUrl = gotThumbnailLinkUrl {
+            // urlから画像を取得する処理
+            getImageFromGotThumbnailLinkUrl.getImageFromGotThumbnailLinkUrl(myUrl: gotThumbnailLinkUrl)
         }
     }
 }
