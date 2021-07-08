@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 struct MakeAlert {
+    var printDo = PrintDo()
+    var sampleDelegate: SampleDelegate?
     
     func makeAlert(vc: UIViewController, buttonAction: Void) {
         
@@ -20,12 +22,15 @@ struct MakeAlert {
         )
         
         //button押した時のアクションの設定
-        let alertAction: UIAlertAction = UIAlertAction(title: "ok", style: .default) { buttonAction in
-            buttonAction
+        let alertAction: UIAlertAction = UIAlertAction(title: "ok", style: .default) { _ in 
+            printDo.printDo()
+            print("=======================")
+            sampleDelegate?.printingDo()
+            print("action")
         }
         
         alertView.addAction(alertAction)
-        vc.present(vc, animated: true, completion: nil)
+        vc.present(alertView, animated: true, completion: nil)
     }
     
     

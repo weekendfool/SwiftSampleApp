@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct printDo {
+struct PrintDo {
     func printDo() {
         print("Do!")
     }

@@ -18,6 +18,7 @@
 		8C4BB8F32695EEDF00C79DD9 /* AlertSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB8F22695EEDF00C79DD9 /* AlertSampleAppUITests.swift */; };
 		8C4BB9022695EEFE00C79DD9 /* MakeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB9012695EEFE00C79DD9 /* MakeAlert.swift */; };
 		8C4BB9042695EF1000C79DD9 /* PrintDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB9032695EF1000C79DD9 /* PrintDo.swift */; };
+		8C4BB9062696D0E900C79DD9 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB9052696D0E900C79DD9 /* Delegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		8C4BB8F42695EEDF00C79DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C4BB9012695EEFE00C79DD9 /* MakeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeAlert.swift; sourceTree = "<group>"; };
 		8C4BB9032695EF1000C79DD9 /* PrintDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintDo.swift; sourceTree = "<group>"; };
+		8C4BB9052696D0E900C79DD9 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				8C4BB9012695EEFE00C79DD9 /* MakeAlert.swift */,
 				8C4BB9032695EF1000C79DD9 /* PrintDo.swift */,
+				8C4BB9052696D0E900C79DD9 /* Delegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				8C4BB8D22695EEDC00C79DD9 /* ViewController.swift in Sources */,
 				8C4BB9042695EF1000C79DD9 /* PrintDo.swift in Sources */,
 				8C4BB8CE2695EEDC00C79DD9 /* AppDelegate.swift in Sources */,
+				8C4BB9062696D0E900C79DD9 /* Delegate.swift in Sources */,
 				8C4BB8D82695EEDC00C79DD9 /* AlertSampleApp.xcdatamodeld in Sources */,
 				8C4BB8D02695EEDC00C79DD9 /* SceneDelegate.swift in Sources */,
 				8C4BB9022695EEFE00C79DD9 /* MakeAlert.swift in Sources */,
