@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }
 }
     // カメラからバーコードを取得した後の挙動
-    extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
+extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
             // isbnを取得
 //            gotIsbn = barcodeReader.metadataOutput(metadataObjects: metadataObjects)

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8C4BB91A2698316C00C79DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB9192698316C00C79DD9 /* AppDelegate.swift */; };
-		8C4BB91C2698316C00C79DD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB91B2698316C00C79DD9 /* SceneDelegate.swift */; };
 		8C4BB91E2698316C00C79DD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB91D2698316C00C79DD9 /* ViewController.swift */; };
 		8C4BB9212698316C00C79DD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4BB91F2698316C00C79DD9 /* Main.storyboard */; };
 		8C4BB9242698316C00C79DD9 /* NavigationControllerSampleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB9222698316C00C79DD9 /* NavigationControllerSampleApp.xcdatamodeld */; };
@@ -17,6 +16,8 @@
 		8C4BB9342698317000C79DD9 /* NavigationControllerSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB9332698317000C79DD9 /* NavigationControllerSampleAppTests.swift */; };
 		8C4BB93F2698317000C79DD9 /* NavigationControllerSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB93E2698317000C79DD9 /* NavigationControllerSampleAppUITests.swift */; };
 		8C4BB94D2698320D00C79DD9 /* barcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB94C2698320D00C79DD9 /* barcode.swift */; };
+		8C4BB95226983C9C00C79DD9 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB95126983C9C00C79DD9 /* SubViewController.swift */; };
+		8C4BB95426983E2900C79DD9 /* MakeNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB95326983E2900C79DD9 /* MakeNav.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,6 @@
 /* Begin PBXFileReference section */
 		8C4BB9162698316C00C79DD9 /* NavigationControllerSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationControllerSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4BB9192698316C00C79DD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C4BB91B2698316C00C79DD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8C4BB91D2698316C00C79DD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8C4BB9202698316C00C79DD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C4BB9232698316C00C79DD9 /* NavigationControllerSampleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NavigationControllerSampleApp.xcdatamodel; sourceTree = "<group>"; };
@@ -53,6 +53,8 @@
 		8C4BB93E2698317000C79DD9 /* NavigationControllerSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerSampleAppUITests.swift; sourceTree = "<group>"; };
 		8C4BB9402698317000C79DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C4BB94C2698320D00C79DD9 /* barcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barcode.swift; sourceTree = "<group>"; };
+		8C4BB95126983C9C00C79DD9 /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
+		8C4BB95326983E2900C79DD9 /* MakeNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNav.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,8 @@
 		8C4BB9182698316C00C79DD9 /* NavigationControllerSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				8C4BB95026983C8000C79DD9 /* Sub */,
 				8C4BB9192698316C00C79DD9 /* AppDelegate.swift */,
-				8C4BB91B2698316C00C79DD9 /* SceneDelegate.swift */,
 				8C4BB94C2698320D00C79DD9 /* barcode.swift */,
 				8C4BB91D2698316C00C79DD9 /* ViewController.swift */,
 				8C4BB91F2698316C00C79DD9 /* Main.storyboard */,
@@ -132,6 +134,15 @@
 				8C4BB9402698317000C79DD9 /* Info.plist */,
 			);
 			path = NavigationControllerSampleAppUITests;
+			sourceTree = "<group>";
+		};
+		8C4BB95026983C8000C79DD9 /* Sub */ = {
+			isa = PBXGroup;
+			children = (
+				8C4BB95126983C9C00C79DD9 /* SubViewController.swift */,
+				8C4BB95326983E2900C79DD9 /* MakeNav.swift */,
+			);
+			path = Sub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +278,9 @@
 				8C4BB94D2698320D00C79DD9 /* barcode.swift in Sources */,
 				8C4BB91E2698316C00C79DD9 /* ViewController.swift in Sources */,
 				8C4BB9242698316C00C79DD9 /* NavigationControllerSampleApp.xcdatamodeld in Sources */,
+				8C4BB95426983E2900C79DD9 /* MakeNav.swift in Sources */,
+				8C4BB95226983C9C00C79DD9 /* SubViewController.swift in Sources */,
 				8C4BB91A2698316C00C79DD9 /* AppDelegate.swift in Sources */,
-				8C4BB91C2698316C00C79DD9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
