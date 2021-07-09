@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    //　UINavigationController型の変数を宣言
     var navigationController: UINavigationController?
 
     @available(iOS 13.0, *)
