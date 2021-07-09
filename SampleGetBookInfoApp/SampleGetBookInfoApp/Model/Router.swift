@@ -23,12 +23,16 @@ final class Router {
         
         window?.makeKeyAndVisible()
         self.window = window
+        print("nav:\(nav)")
     }
     
     // BarcodeReaderViewを表示する処理
     func showBarcodeReaderView(from: UIViewController) {
         let vc = BarcodeReaderViewController.makeFromStoryboard()
+//        let nav = UINavigationController(rootViewController: vc)
+//        window?.rootViewController = nav
         show(from: from, next: vc)
+        print("nav2: \(vc.navigationController)")
     }
     
     // showBarcodeReaderViewを表示する処理
@@ -40,10 +44,13 @@ final class Router {
 
 private extension Router {
     func show(from: UIViewController, next: UIViewController, animated: Bool = true) {
+        print("from:\(from)")
+        print("from.navigationController:\(from.navigationController)")
         if let nav = from.navigationController {
             nav.pushViewController(next, animated: animated)
         } else {
             from.present(next, animated: animated, completion: nil)
+//            from.navigationController!.pushViewController(next, animated: animated)
         }
     }
 }

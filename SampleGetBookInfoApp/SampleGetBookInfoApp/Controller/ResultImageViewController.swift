@@ -14,9 +14,20 @@ class ResultImageViewController: UIViewController {
         return vc
     }
 
+    let getImageFromGotThumbnailLinkUrl = GetImageFromGotThumbnailLinkUrl()
+    let makeImageView = MakeImageView()
+    let router = Router()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let gotImage =  getImageFromGotThumbnailLinkUrl.gotImage {
+            makeImageView.setUpImageView(vc: self, myImage: gotImage)
+        } else {
+            // getImageFromGotThumbnailLinkUrl.gotImageがnilの場合BarcodeReaderViewへ戻る
+            router.showBarcodeReaderView(from: self)
+        }
+        
         // Do any additional setup after loading the view.
     }
 
