@@ -29,8 +29,8 @@ final class Router {
     // BarcodeReaderViewを表示する処理
     func showBarcodeReaderView(from: UIViewController) {
         let vc = BarcodeReaderViewController.makeFromStoryboard()
-//        let nav = UINavigationController(rootViewController: vc)
-//        window?.rootViewController = nav
+        let nav = UINavigationController(rootViewController: vc)
+        window?.rootViewController = nav
         show(from: from, next: vc)
         print("nav2: \(vc.navigationController)")
     }

@@ -11,11 +11,19 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    var window: UIWindow?
+    var nav: UINavigationController?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        Router.shared.showRoot(window: UIWindow(frame: UIScreen.main.bounds))
+//        Router.shared.showRoot(window: UIWindow(frame: UIScreen.main.bounds))
+        
+        let vc = BarcodeReaderViewController()
+        nav = UINavigationController(rootViewController: vc)
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = nav
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
     
