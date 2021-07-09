@@ -98,9 +98,7 @@ extension BarcodeReaderViewController: ThumbnailLinkUrlDelegate {
         print("gotGoogleBooksAPI.thumbnailLinkUrl:\(getGoogleBooksAPI.thumbnailLinkUrl)")
         if let gotUrl = getGoogleBooksAPI.thumbnailLinkUrl {
             gotThumbnailLinkUrl = changeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotUrl)
-//            print("getThumbnailLinkUrl:\(gotThumbnailLinkUrl)")
-            
-            
+            print("getThumbnailLinkUrl:\(gotThumbnailLinkUrl)")
         }
         if let gotThumbnailLinkUrl = gotThumbnailLinkUrl {
             // urlから画像を取得する処理

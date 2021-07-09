@@ -25,7 +25,7 @@ class ResultImageViewController: UIViewController {
             makeImageView.setUpImageView(vc: self, myImage: gotImage)
         } else {
             // getImageFromGotThumbnailLinkUrl.gotImageがnilの場合BarcodeReaderViewへ戻る
-            router.showBarcodeReaderView(from: self)
+//            router.showBarcodeReaderView(from: self)
         }
         
         // Do any additional setup after loading the view.

@@ -16,11 +16,21 @@ final class Router {
     private (set) var window: UIWindow?
     
     // 起動直後の画面を表示する
-    func showRoot(window: UIWindow?) {
+    func showRootInAppDelegate(window: UIWindow?) {
         let vc = BarcodeReaderViewController.makeFromStoryboard()
         let nav = UINavigationController(rootViewController: vc)
         window?.rootViewController = nav
-        
+        self.window? = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        self.window = window
+        print("nav:\(nav)")
+    }
+    
+    func showRootInSceneDelegate(window: UIWindow?, scene: UIWindowScene) {
+        let vc = BarcodeReaderViewController.makeFromStoryboard()
+        let nav = UINavigationController(rootViewController: vc)
+        window?.rootViewController = nav
+        self.window = UIWindow(windowScene: scene)
         window?.makeKeyAndVisible()
         self.window = window
         print("nav:\(nav)")

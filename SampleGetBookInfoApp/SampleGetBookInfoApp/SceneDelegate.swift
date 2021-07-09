@@ -19,12 +19,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-//        Router.shared.showRoot(window: UIWindow(frame: UIScreen.main.bounds))
-        let vc = BarcodeReaderViewController()
-        nav = UINavigationController(rootViewController: vc)
-        self.window = UIWindow(windowScene: scene as! UIWindowScene)
-        self.window?.rootViewController = nav
-        self.window?.makeKeyAndVisible()
+        Router.shared.showRootInSceneDelegate(window: window, scene: scene as! UIWindowScene)
+        
+//        let vc = BarcodeReaderViewController.makeFromStoryboard()
+//        nav = UINavigationController(rootViewController: vc)
+//        self.window = UIWindow(windowScene: scene as! UIWindowScene)
+//        self.window?.rootViewController = nav
+//        self.window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
