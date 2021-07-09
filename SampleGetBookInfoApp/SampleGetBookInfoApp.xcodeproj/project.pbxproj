@@ -28,6 +28,7 @@
 		8C4BB9082696D39500C79DD9 /* RouterAtAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB9072696D39500C79DD9 /* RouterAtAlert.swift */; };
 		8C4BB90A2696DE6C00C79DD9 /* GetImageFromGotThumbnailLinkUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB9092696DE6C00C79DD9 /* GetImageFromGotThumbnailLinkUrl.swift */; };
 		8C4BB90C269783AA00C79DD9 /* MakeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB90B269783AA00C79DD9 /* MakeImageView.swift */; };
+		8C4BB9972698905500C79DD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB9962698905500C79DD9 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		8C4BB9072696D39500C79DD9 /* RouterAtAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterAtAlert.swift; sourceTree = "<group>"; };
 		8C4BB9092696DE6C00C79DD9 /* GetImageFromGotThumbnailLinkUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageFromGotThumbnailLinkUrl.swift; sourceTree = "<group>"; };
 		8C4BB90B269783AA00C79DD9 /* MakeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeImageView.swift; sourceTree = "<group>"; };
+		8C4BB9962698905500C79DD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				8C4BB85C268F8A6100C79DD9 /* Controller */,
 				8C4BB87526913F3F00C79DD9 /* Storyboard */,
 				8C4BB829268F8A4C00C79DD9 /* AppDelegate.swift */,
+				8C4BB9962698905500C79DD9 /* SceneDelegate.swift */,
 				8C4BB835268F8A4E00C79DD9 /* Assets.xcassets */,
 				8C4BB83A268F8A4E00C79DD9 /* Info.plist */,
 				8C4BB832268F8A4C00C79DD9 /* SampleGetBookInfoApp.xcdatamodeld */,
@@ -345,6 +348,7 @@
 				8C4BB834268F8A4C00C79DD9 /* SampleGetBookInfoApp.xcdatamodeld in Sources */,
 				8C4BB82A268F8A4C00C79DD9 /* AppDelegate.swift in Sources */,
 				8C4BB86C268F8B9B00C79DD9 /* ResultImageViewController.swift in Sources */,
+				8C4BB9972698905500C79DD9 /* SceneDelegate.swift in Sources */,
 				8C4BB860268F8AB000C79DD9 /* ChangeHttpToHttps.swift in Sources */,
 				8C4BB862268F8ACC00C79DD9 /* BarcodeReader.swift in Sources */,
 				8C4BB9082696D39500C79DD9 /* RouterAtAlert.swift in Sources */,
