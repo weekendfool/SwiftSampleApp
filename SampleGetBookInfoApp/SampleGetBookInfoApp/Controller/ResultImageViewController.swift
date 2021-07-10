@@ -21,6 +21,7 @@ class ResultImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
         if let gotImage =  getImageFromGotThumbnailLinkUrl.gotImage {
             makeImageView.setUpImageView(vc: self, myImage: gotImage)
         } else {

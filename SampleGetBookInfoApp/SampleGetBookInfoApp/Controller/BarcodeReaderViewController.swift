@@ -28,7 +28,13 @@ class BarcodeReaderViewController: UIViewController {
     var getImageFromGotThumbnailLinkUrl = GetImageFromGotThumbnailLinkUrl()
     
     
-    var gotThumbnailLinkUrl: String? = ""
+    var gotThumbnailLinkUrl: String? = "" {
+        didSet {
+            DispatchQueue.main.async { [self] in
+                router.showResultImageView(from: self)
+            }
+        }
+    }
     
     var gotIsbn: String? {
         didSet{
@@ -76,11 +82,7 @@ extension BarcodeReaderViewController: RouterAtAlertDelegate {
         
         //　isbnから画像用のURL取得
         getGoogleBooksAPI.getGoogleBooksAPI(query: gotIsbn!)
-        // gotThumbnailLinkUrlから画像を取得する
         
-        
-        // 画面遷移
-        router.showResultImageView(from: self)
     }
     
     func reStatBarcodeReader() {
@@ -99,10 +101,12 @@ extension BarcodeReaderViewController: ThumbnailLinkUrlDelegate {
         if let gotUrl = getGoogleBooksAPI.thumbnailLinkUrl {
             gotThumbnailLinkUrl = changeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotUrl)
             print("getThumbnailLinkUrl:\(gotThumbnailLinkUrl)")
+            // urlから画像を取得する処理
+            getImageFromGotThumbnailLinkUrl.getImageFromGotThumbnailLinkUrl(myUrl: gotThumbnailLinkUrl!, ResultImageViewController: print("OK"))
         }
         if let gotThumbnailLinkUrl = gotThumbnailLinkUrl {
             // urlから画像を取得する処理
-            getImageFromGotThumbnailLinkUrl.getImageFromGotThumbnailLinkUrl(myUrl: gotThumbnailLinkUrl)
+//            getImageFromGotThumbnailLinkUrl.getImageFromGotThumbnailLinkUrl(myUrl: gotThumbnailLinkUrl)
         }
     }
 }
