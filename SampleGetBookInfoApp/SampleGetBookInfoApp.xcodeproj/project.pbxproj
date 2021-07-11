@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2B4905269ACABB00EF3ABB /* GotImageOfBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B4904269ACABA00EF3ABB /* GotImageOfBook.swift */; };
 		8C4BB82A268F8A4C00C79DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB829268F8A4C00C79DD9 /* AppDelegate.swift */; };
 		8C4BB834268F8A4C00C79DD9 /* SampleGetBookInfoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB832268F8A4C00C79DD9 /* SampleGetBookInfoApp.xcdatamodeld */; };
 		8C4BB836268F8A4E00C79DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C4BB835268F8A4E00C79DD9 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C2B4904269ACABA00EF3ABB /* GotImageOfBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotImageOfBook.swift; sourceTree = "<group>"; };
 		8C4BB826268F8A4C00C79DD9 /* SampleGetBookInfoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleGetBookInfoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4BB829268F8A4C00C79DD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C4BB833268F8A4C00C79DD9 /* SampleGetBookInfoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleGetBookInfoApp.xcdatamodel; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				8C4BB8772691895000C79DD9 /* ThumbnailLinkUrl.swift */,
 				8C4BB9072696D39500C79DD9 /* RouterAtAlert.swift */,
+				8C2B4904269ACABA00EF3ABB /* GotImageOfBook.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				8C4BB90A2696DE6C00C79DD9 /* GetImageFromGotThumbnailLinkUrl.swift in Sources */,
 				8C4BB868268F8B3F00C79DD9 /* BarcodeReaderViewController.swift in Sources */,
 				8C4BB86E268F8C5900C79DD9 /* BarcodeReaderTarget.swift in Sources */,
+				8C2B4905269ACABB00EF3ABB /* GotImageOfBook.swift in Sources */,
 				8C4BB834268F8A4C00C79DD9 /* SampleGetBookInfoApp.xcdatamodeld in Sources */,
 				8C4BB82A268F8A4C00C79DD9 /* AppDelegate.swift in Sources */,
 				8C4BB86C268F8B9B00C79DD9 /* ResultImageViewController.swift in Sources */,

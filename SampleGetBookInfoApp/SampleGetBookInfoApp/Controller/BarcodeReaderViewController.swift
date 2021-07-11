@@ -102,7 +102,7 @@ extension BarcodeReaderViewController: ThumbnailLinkUrlDelegate {
             gotThumbnailLinkUrl = changeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotUrl)
             print("getThumbnailLinkUrl:\(gotThumbnailLinkUrl)")
             // urlから画像を取得する処理
-            getImageFromGotThumbnailLinkUrl.getImageFromGotThumbnailLinkUrl(myUrl: gotThumbnailLinkUrl!, ResultImageViewController: print("OK"))
+            getImageFromGotThumbnailLinkUrl.getImageFromGotThumbnailLinkUrl(myUrl: gotThumbnailLinkUrl!)
         }
         if let gotThumbnailLinkUrl = gotThumbnailLinkUrl {
             // urlから画像を取得する処理

@@ -22,14 +22,22 @@ class ResultImageViewController: UIViewController {
         super.viewDidLoad()
 
         print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
+        makeImageView.setUpImageView(vc: self)
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         if let gotImage =  getImageFromGotThumbnailLinkUrl.gotImage {
-            makeImageView.setUpImageView(vc: self, myImage: gotImage)
+            print("gotImage:\(gotImage)")
+            makeImageView.setImage(myImage: gotImage)
         } else {
             // getImageFromGotThumbnailLinkUrl.gotImageがnilの場合BarcodeReaderViewへ戻る
 //            router.showBarcodeReaderView(from: self)
         }
-        
-        // Do any additional setup after loading the view.
     }
 
 }
+
+
