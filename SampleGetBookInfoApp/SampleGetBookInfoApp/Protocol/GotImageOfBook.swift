@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol gotImageOfBookDelegate {
+protocol GotImageOfBookDelegate {
     // 取得したimageを表示する処理
     func setupImageOfBook()
 }

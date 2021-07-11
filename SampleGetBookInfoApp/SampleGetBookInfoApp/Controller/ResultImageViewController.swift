@@ -40,4 +40,10 @@ class ResultImageViewController: UIViewController {
 
 }
 
-
+extension ResultImageViewController: GotImageOfBookDelegate {
+    func setupImageOfBook() {
+        <#code#>
+    }
+    
+    
+}
