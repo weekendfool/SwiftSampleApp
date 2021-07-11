@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2B49032699E48A00EF3ABB /* ImageViewAtCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B49022699E48A00EF3ABB /* ImageViewAtCodeViewController.swift */; };
 		8C4BB7AA268F641A00C79DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB7A9268F641A00C79DD9 /* AppDelegate.swift */; };
 		8C4BB7AC268F641A00C79DD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB7AB268F641A00C79DD9 /* SceneDelegate.swift */; };
 		8C4BB7AE268F641A00C79DD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BB7AD268F641A00C79DD9 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C2B49022699E48A00EF3ABB /* ImageViewAtCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewAtCodeViewController.swift; sourceTree = "<group>"; };
 		8C4BB7A6268F641A00C79DD9 /* GetImageSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetImageSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4BB7A9268F641A00C79DD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C4BB7AB268F641A00C79DD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				8C4BB7A8268F641A00C79DD9 /* GetImageSampleApp */,
-				8C4BB7C2268F641C00C79DD9 /* GetImageSampleAppTests */,
 				8C4BB7CD268F641C00C79DD9 /* GetImageSampleAppUITests */,
 				8C4BB7A7268F641A00C79DD9 /* Products */,
 			);
@@ -106,12 +107,14 @@
 				8C4BB7A9268F641A00C79DD9 /* AppDelegate.swift */,
 				8C4BB7AB268F641A00C79DD9 /* SceneDelegate.swift */,
 				8C4BB7DC268F7F4F00C79DD9 /* ImageViewController.swift */,
+				8C4BB7C2268F641C00C79DD9 /* GetImageSampleAppTests */,
 				8C4BB7AD268F641A00C79DD9 /* ViewController.swift */,
 				8C4BB7AF268F641A00C79DD9 /* Main.storyboard */,
 				8C4BB7B5268F641C00C79DD9 /* Assets.xcassets */,
 				8C4BB7B7268F641C00C79DD9 /* LaunchScreen.storyboard */,
 				8C4BB7BA268F641C00C79DD9 /* Info.plist */,
 				8C4BB7B2268F641A00C79DD9 /* GetImageSampleApp.xcdatamodeld */,
+				8C2B49022699E48A00EF3ABB /* ImageViewAtCodeViewController.swift */,
 			);
 			path = GetImageSampleApp;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				8C4BB7DD268F7F4F00C79DD9 /* ImageViewController.swift in Sources */,
 				8C4BB7AA268F641A00C79DD9 /* AppDelegate.swift in Sources */,
 				8C4BB7AC268F641A00C79DD9 /* SceneDelegate.swift in Sources */,
+				8C2B49032699E48A00EF3ABB /* ImageViewAtCodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

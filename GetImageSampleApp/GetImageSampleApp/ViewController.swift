@@ -17,8 +17,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        setUpWebView()
-        recuestURL()
+//        setUpWebView()
+//        recuestURL()
         setImage()
     }
     
