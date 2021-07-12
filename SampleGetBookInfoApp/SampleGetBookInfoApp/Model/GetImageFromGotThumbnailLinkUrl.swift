@@ -4,13 +4,22 @@
 //
 //  Created by 尾原徳泰 on 2021/07/08.
 //
-
-import Foundation
 import UIKit
 
-class GetImageFromGotThumbnailLinkUrl {
+struct GetImageFromGotThumbnailLinkUrl {
     
-    var myVc: UIViewController?
+    init() {
+        print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+        print("make class")
+        print("gotImageOfBookDelegate:\(gotImageOfBookDelegate)")
+    }
+    // デリゲートの委譲先の保持
+    var gotImageOfBookDelegate: GotImageOfBookDelegate? {
+        didSet {
+            print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+            print("gotImageOfBookDelegate:\(gotImageOfBookDelegate)")
+        }
+    }
     
     // 取得した画像を保存しておく変数
     var gotImage: UIImage? {
@@ -18,24 +27,28 @@ class GetImageFromGotThumbnailLinkUrl {
         }
     }
     
-
-    func getImageFromGotThumbnailLinkUrl(myUrl: String) {
-        let myUrl = URL(string: myUrl)
+    // 取得したurlを保存しておく変数
+    var linkThumbnailUrl: String?
         
+    
+    
+    func doit() {
+        gotImageOfBookDelegate?.showImage()
+    }
+
+    mutating func getImageFromGotThumbnailLinkUrl(myUrl: String) {
+        let myUrl = URL(string: myUrl)
+       
         do {
-            print("3----------------------------------3")
+            
             let data = try Data(contentsOf: myUrl!)
             gotImage = UIImage(data: data)!
-            
-            print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
-           
             
         } catch let error {
             print("----------------------------------")
             print("error at getImageFromGotThumbnailLinkUrl: \(error)")
             return
         }
-
     }
 }
 

@@ -47,7 +47,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "12"
-            endingLineNumber = "12">
+            endingLineNumber = "12"
+            landmarkName = "GotImageOfBookDelegate"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -60,8 +62,8 @@
             filePath = "SampleGetBookInfoApp/Model/GetImageFromGotThumbnailLinkUrl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "getImageFromGotThumbnailLinkUrl(myUrl:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -76,8 +78,8 @@
             filePath = "SampleGetBookInfoApp/Model/GetImageFromGotThumbnailLinkUrl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "getImageFromGotThumbnailLinkUrl(myUrl:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -85,16 +87,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "246E8CD9-0661-4940-9BD9-6697E1C70757"
+            uuid = "25E10198-1462-495A-A2A6-80344B924A0D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SampleGetBookInfoApp/Controller/ResultImageViewController.swift"
+            filePath = "SampleGetBookInfoApp/Model/GetImageFromGotThumbnailLinkUrl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "doit()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
