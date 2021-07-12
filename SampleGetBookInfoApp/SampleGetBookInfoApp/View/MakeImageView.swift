@@ -12,7 +12,7 @@ struct MakeImageView {
     
     
     // imegeViewのインスタンスを作成
-    let imegeView: UIImageView = UIImageView()
+    let imageView: UIImageView = UIImageView()
     
     
     // imageViewの生成のみ担当
@@ -23,15 +23,17 @@ struct MakeImageView {
         
         // imageViewの大きさ指定
         let rect: CGRect = CGRect(x: 100, y: 100, width: vc.view.frame.size.width / 3, height: vc.view.frame.size.height / 3)
-        imegeView.frame = rect
+        imageView.frame = rect
         
-        vc.view.addSubview(imegeView)
+        imageView.backgroundColor = UIColor.red
+        
+        vc.view.addSubview(imageView)
     }
     
 
     // イメージの代入
     func setImage(myImage: UIImage) {
-        imegeView.image = myImage
+        imageView.image = myImage
     }
     
 }

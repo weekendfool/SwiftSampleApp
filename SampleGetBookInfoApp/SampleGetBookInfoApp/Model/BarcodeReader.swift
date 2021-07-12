@@ -91,7 +91,7 @@ struct BarcodeReader {
             // 読み取ったデータの値
 //            print("metadata.type:\(metadata.type)")
 //            print("metadata.stringValue:\(metadata.stringValue!)")
-            print("metadata:\(metadata)")
+//            print("metadata:\(metadata)")
             gotIsbn = metadata.stringValue
             // 読み込めたらキャプチャセッションをストップ
             avCaptureSession.stopRunning()

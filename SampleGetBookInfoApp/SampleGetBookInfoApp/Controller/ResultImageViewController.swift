@@ -9,41 +9,21 @@ import UIKit
 
 class ResultImageViewController: UIViewController {
     
+    
     static func makeFromStoryboadrd() -> ResultImageViewController {
         let vc = UIStoryboard.resultImageViewController
         return vc
     }
 
-    let getImageFromGotThumbnailLinkUrl = GetImageFromGotThumbnailLinkUrl()
+    var getImageFromGotThumbnailLinkUrl = GetImageFromGotThumbnailLinkUrl()
     let makeImageView = MakeImageView()
     let router = Router()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
+       
         makeImageView.setUpImageView(vc: self)
+        // delegateの移譲先を保持
         
-        
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        if let gotImage =  getImageFromGotThumbnailLinkUrl.gotImage {
-            print("gotImage:\(gotImage)")
-            makeImageView.setImage(myImage: gotImage)
-        } else {
-            // getImageFromGotThumbnailLinkUrl.gotImageがnilの場合BarcodeReaderViewへ戻る
-//            router.showBarcodeReaderView(from: self)
-        }
-    }
-
-}
-
-extension ResultImageViewController: GotImageOfBookDelegate {
-    func setupImageOfBook() {
-        <#code#>
-    }
-    
-    
 }

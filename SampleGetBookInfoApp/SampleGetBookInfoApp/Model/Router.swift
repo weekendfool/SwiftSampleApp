@@ -23,7 +23,7 @@ final class Router {
         self.window? = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         self.window = window
-        print("nav:\(nav)")
+//        print("nav:\(nav)")
     }
     
     func showRootInSceneDelegate(window: UIWindow?, scene: UIWindowScene) {
@@ -33,7 +33,7 @@ final class Router {
         self.window = UIWindow(windowScene: scene)
         window?.makeKeyAndVisible()
         self.window = window
-        print("nav:\(nav)")
+//        print("nav:\(nav)")
     }
     
     // BarcodeReaderViewを表示する処理
@@ -42,7 +42,7 @@ final class Router {
         let nav = UINavigationController(rootViewController: vc)
         window?.rootViewController = nav
         show(from: from, next: vc)
-        print("nav2: \(vc.navigationController)")
+//        print("nav2: \(vc.navigationController)")
     }
     
     // showBarcodeReaderViewを表示する処理
@@ -54,8 +54,8 @@ final class Router {
 
 private extension Router {
     func show(from: UIViewController, next: UIViewController, animated: Bool = true) {
-        print("from:\(from)")
-        print("from.navigationController:\(from.navigationController)")
+//        print("from:\(from)")
+//        print("from.navigationController:\(from.navigationController)")
         if let nav = from.navigationController {
             nav.pushViewController(next, animated: animated)
         } else {

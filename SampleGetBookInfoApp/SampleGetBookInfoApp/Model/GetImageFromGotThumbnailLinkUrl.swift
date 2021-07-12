@@ -8,25 +8,32 @@
 import Foundation
 import UIKit
 
-struct GetImageFromGotThumbnailLinkUrl {
+class GetImageFromGotThumbnailLinkUrl {
+    
+    var myVc: UIViewController?
+    
     // 取得した画像を保存しておく変数
-    var gotImage: UIImage?
+    var gotImage: UIImage? {
+        didSet {
+        }
+    }
     
-    // delegateの移譲先を保持する
-    var gotImageOfBookDelegate: GotImageOfBookDelegate?
-    
-    mutating func getImageFromGotThumbnailLinkUrl(myUrl: String) {
+
+    func getImageFromGotThumbnailLinkUrl(myUrl: String) {
         let myUrl = URL(string: myUrl)
         
         do {
+            print("3----------------------------------3")
             let data = try Data(contentsOf: myUrl!)
-            gotImage = UIImage(data: data)
-            // 画像取得後に表示させる処理を委譲する
-            gotImageOfBookDelegate?.setupImageOfBook()
+            gotImage = UIImage(data: data)!
+            
+            print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+           
             
         } catch let error {
             print("----------------------------------")
             print("error at getImageFromGotThumbnailLinkUrl: \(error)")
+            return
         }
 
     }

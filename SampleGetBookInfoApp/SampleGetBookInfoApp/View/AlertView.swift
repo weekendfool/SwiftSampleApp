@@ -34,7 +34,7 @@ struct AlertView {
             style: UIAlertAction.Style.cancel
         ) { ＿ in
             routerAtAlertDelegate?.reStatBarcodeReader()
-            print("バーコードを再検索する")
+//            print("バーコードを再検索する")
         }
         
         alert.addAction(defaultButtonAction)

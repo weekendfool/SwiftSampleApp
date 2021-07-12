@@ -69,7 +69,7 @@ class GetGoogleBooksAPI {
                 print("===========================")
                 print("books:\(books.items[0].volumeInfo.industryIdentifiers[1].identifier)")
                 thumbnailLinkUrl = books.items[0].volumeInfo.imageLinks.thumbnail
-                print("thumbnailLinkUrl:\(thumbnailLinkUrl)")
+//                print("thumbnailLinkUrl:\(thumbnailLinkUrl)")
                 
             } catch let error {
                 print("-----------------------------")

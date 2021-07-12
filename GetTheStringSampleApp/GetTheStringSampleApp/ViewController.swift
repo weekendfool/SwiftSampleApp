@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
     
     func chuseTargetString() {
-        var targetString = "http://books.google.com/books/content?id=hsFCMQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
+        var targetString = "htt://books.google.com/books/content?id=hsFCMQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         
         let result = targetString.range(of: "http")
         

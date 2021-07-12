@@ -97,7 +97,7 @@ extension BarcodeReaderViewController: ThumbnailLinkUrlDelegate {
     func accessThumbnailLinkUrl() {
         // GoogleBooksAPIから取得したurlをhttps方式に書き換える
         print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-        print("gotGoogleBooksAPI.thumbnailLinkUrl:\(getGoogleBooksAPI.thumbnailLinkUrl)")
+//        print("gotGoogleBooksAPI.thumbnailLinkUrl:\(getGoogleBooksAPI.thumbnailLinkUrl)")
         if let gotUrl = getGoogleBooksAPI.thumbnailLinkUrl {
             gotThumbnailLinkUrl = changeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotUrl)
             print("getThumbnailLinkUrl:\(gotThumbnailLinkUrl)")
