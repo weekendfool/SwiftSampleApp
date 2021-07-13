@@ -6,7 +6,7 @@
 //
 import UIKit
 
-struct GetImageFromGotThumbnailLinkUrl {
+class GetImageFromGotThumbnailLinkUrl {
     
     init() {
         print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
@@ -24,10 +24,14 @@ struct GetImageFromGotThumbnailLinkUrl {
     // 取得した画像を保存しておく変数
     var gotImage: UIImage? {
         didSet {
+            if let gotImage = gotImage {
+                gotImageOfBookDelegate?.showImage()
+            }
         }
     }
     
     // 取得したurlを保存しておく変数
+    // 切り分ける。ResultImageViewController以外では極力使わない
     var linkThumbnailUrl: String?
         
     
@@ -36,19 +40,24 @@ struct GetImageFromGotThumbnailLinkUrl {
         gotImageOfBookDelegate?.showImage()
     }
 
-    mutating func getImageFromGotThumbnailLinkUrl(myUrl: String) {
-        let myUrl = URL(string: myUrl)
-       
+    func getImageFromGotThumbnailLinkUrl() {
+        // imageを取得するためのURLが格納されてたら
+        guard let linkThumbnailUrl = linkThumbnailUrl else { return }
+        let myUrl = URL(string: linkThumbnailUrl)
+           
         do {
-            
+    
             let data = try Data(contentsOf: myUrl!)
             gotImage = UIImage(data: data)!
-            
+            print("====================================")
+            print("gotImage:\(gotImage)")
+                
         } catch let error {
             print("----------------------------------")
             print("error at getImageFromGotThumbnailLinkUrl: \(error)")
             return
         }
     }
+    
 }
 

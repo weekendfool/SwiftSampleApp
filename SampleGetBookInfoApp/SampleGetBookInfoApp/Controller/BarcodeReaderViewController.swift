@@ -27,7 +27,7 @@ class BarcodeReaderViewController: UIViewController {
     var router = Router()
     var getImageFromGotThumbnailLinkUrl = GetImageFromGotThumbnailLinkUrl()
     
-    
+    // ページ遷移のトリガーに使用
     var gotThumbnailLinkUrl: String? = "" {
         didSet {
             DispatchQueue.main.async { [self] in
@@ -100,10 +100,11 @@ extension BarcodeReaderViewController: ThumbnailLinkUrlDelegate {
 //        print("gotGoogleBooksAPI.thumbnailLinkUrl:\(getGoogleBooksAPI.thumbnailLinkUrl)")
         if let gotUrl = getGoogleBooksAPI.thumbnailLinkUrl {
             gotThumbnailLinkUrl = changeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotUrl)
-            getImageFromGotThumbnailLinkUrl.
+            // https方式に変形したurlを格納する
+            getImageFromGotThumbnailLinkUrl.linkThumbnailUrl = changeHttpToHttps.ChangeHttpToHttps(bforeChangeString: gotUrl)
             print("getThumbnailLinkUrl:\(gotThumbnailLinkUrl)")
             // urlから画像を取得する処理
-            getImageFromGotThumbnailLinkUrl.getImageFromGotThumbnailLinkUrl(myUrl: gotThumbnailLinkUrl!)
+//            getImageFromGotThumbnailLinkUrl.getImageFromGotThumbnailLinkUrl(myUrl: gotThumbnailLinkUrl!)
         }
         if let gotThumbnailLinkUrl = gotThumbnailLinkUrl {
             // urlから画像を取得する処理
