@@ -29,7 +29,7 @@ class ResultImageViewController: UIViewController {
  
         //getImageFromGotThumbnailLinkUrlインスタンスの生成とデリゲートの指定
 //        getImageFromGotThumbnailLinkUrl = GetImageFromGotThumbnailLinkUrl()
-        
+        getImageFromGotThumbnailLinkUrl.gotImageOfBookDelegate = self
         print("'''''''''''''''''''''''''''''''''''")
         print("delegate oN")
         print("delegate:\(getImageFromGotThumbnailLinkUrl.gotImageOfBookDelegate)")
@@ -50,7 +50,7 @@ class ResultImageViewController: UIViewController {
 
 extension ResultImageViewController: GotImageOfBookDelegate {
     func showImage() {
-        print("OK")
+        makeImageView.setImage(myImage: getImageFromGotThumbnailLinkUrl.gotImage!)
     }
     
     
