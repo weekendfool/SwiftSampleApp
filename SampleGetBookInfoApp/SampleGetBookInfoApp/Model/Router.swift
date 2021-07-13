@@ -45,11 +45,18 @@ final class Router {
 //        print("nav2: \(vc.navigationController)")
     }
     
-    // showBarcodeReaderViewを表示する処理
-    func showResultImageView(from: UIViewController) {
-        let vc = ResultImageViewController.makeFromStoryboadrd()
-        show(from: from, next: vc)
-    }
+//    // showBarcodeReaderViewを表示する処理
+//    func showResultImageView(from: UIViewController) {
+//        let vc = ResultImageViewController.makeFromStoryboadrd()
+//        show(from: from, next: vc)
+//    }
+//}
+
+// showBarcodeReaderViewを表示する処理
+    func showResultImageView(from: UIViewController, getImageFromGotThumbnailLinkUrl: GetImageFromGotThumbnailLinkUrl) {
+        let vc = ResultImageViewController.makeFromStoryboadrd(getImageFromGotThumbnailLinkUrl: getImageFromGotThumbnailLinkUrl)
+    show(from: from, next: vc)
+}
 }
 
 private extension Router {

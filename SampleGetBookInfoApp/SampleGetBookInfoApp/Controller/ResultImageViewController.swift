@@ -10,13 +10,14 @@ import UIKit
 class ResultImageViewController: UIViewController {
     
     // storyboardの展開
-    static func makeFromStoryboadrd() -> ResultImageViewController {
+    static func makeFromStoryboadrd(getImageFromGotThumbnailLinkUrl: GetImageFromGotThumbnailLinkUrl) -> ResultImageViewController {
         let vc = UIStoryboard.resultImageViewController
+        vc.getImageFromGotThumbnailLinkUrl = getImageFromGotThumbnailLinkUrl
         return vc
     }
 
     // インスタンスの生成
-    var getImageFromGotThumbnailLinkUrl :GetImageFromGotThumbnailLinkUrl?
+    var getImageFromGotThumbnailLinkUrl = GetImageFromGotThumbnailLinkUrl()
     let makeImageView = MakeImageView()
     let router = Router()
     
@@ -27,14 +28,14 @@ class ResultImageViewController: UIViewController {
         makeImageView.setUpImageView(vc: self)
  
         //getImageFromGotThumbnailLinkUrlインスタンスの生成とデリゲートの指定
-        getImageFromGotThumbnailLinkUrl = GetImageFromGotThumbnailLinkUrl()
-        getImageFromGotThumbnailLinkUrl!.gotImageOfBookDelegate = self
+//        getImageFromGotThumbnailLinkUrl = GetImageFromGotThumbnailLinkUrl()
+        
         print("'''''''''''''''''''''''''''''''''''")
         print("delegate oN")
-        print("delegate:\(getImageFromGotThumbnailLinkUrl!.gotImageOfBookDelegate)")
+        print("delegate:\(getImageFromGotThumbnailLinkUrl.gotImageOfBookDelegate)")
         
         // imageの取得
-        getImageFromGotThumbnailLinkUrl?.getImageFromGotThumbnailLinkUrl()
+        getImageFromGotThumbnailLinkUrl.getImageFromGotThumbnailLinkUrl()
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -31,7 +31,7 @@ class BarcodeReaderViewController: UIViewController {
     var gotThumbnailLinkUrl: String? = "" {
         didSet {
             DispatchQueue.main.async { [self] in
-                router.showResultImageView(from: self)
+                router.showResultImageView(from: self, getImageFromGotThumbnailLinkUrl: getImageFromGotThumbnailLinkUrl)
             }
         }
     }
